@@ -28,6 +28,7 @@ using System.Configuration;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Net.Mime;
 using System.Numerics;
 using Color = GameOverlay.Drawing.Color;
 using Font = GameOverlay.Drawing.Font;
@@ -35,6 +36,7 @@ using Graphics = GameOverlay.Drawing.Graphics;
 using Image = GameOverlay.Drawing.Image;
 using Point = GameOverlay.Drawing.Point;
 using SolidBrush = GameOverlay.Drawing.SolidBrush;
+using UnitAny = MapAssist.Structs.UnitAny;
 
 namespace MapAssist
 {
@@ -56,7 +58,7 @@ namespace MapAssist
         public Overlay(IKeyboardMouseEvents keyboardMouseEvents)
         {
             _gameDataCache = new GameDataCache();
-            
+
             var gfx = new Graphics() {MeasureFPS = true};
 
             _brushes = new Dictionary<string, SolidBrush>();
@@ -291,18 +293,52 @@ namespace MapAssist
         {
             // Setup
             var screenW = _window.Width;
-            var blackBarWidth = screenW > 2880 ? (screenW - 2880) / 4 : 0;
-            var textXOffset = blackBarWidth + (int)(screenW * .06f);
+            var screenH = _window.Height;
 
             var fontSize = MapAssistConfiguration.Loaded.ItemLog.LabelFontSize;
             var fontHeight = (fontSize + fontSize / 2);
             var fontOffset = fontHeight;
 
-            // Game IP
-            gfx.DrawText(_fonts["consolas"], _brushes["red"], textXOffset, fontOffset,
-                "Game IP: " + _currentGameData.GameIP);
-            fontOffset += fontHeight + 5;
+            var blackBarWidth = screenW > 2880 ? (screenW - 2880) / 4 : 0;
+            int textXOffset;
+            switch (MapAssistConfiguration.Loaded.GameInfo.Position)
+            {
+                case GameInfoPosition.TopLeft:
+                    textXOffset = blackBarWidth + (int)(screenW * .06f);
+                    DrawGameIP(textXOffset, fontOffset, gfx);
+                    fontOffset += fontHeight + 5;
+                    DrawOverlayFPS(renderDeltaText, textXOffset, fontOffset, gfx);
+                    fontOffset += fontHeight + 5;
+                    for (var i = 0; i < Items.CurrentItemLog.Count; i++)
+                    {
+                        DrawItemLogUnit(Items.CurrentItemLog[i], textXOffset, fontOffset + (i * fontHeight), gfx);
+                    }
 
+                    break;
+                case GameInfoPosition.BottomRight:
+                    textXOffset = screenW - (blackBarWidth + (int)(screenW * 0.17f));
+                    fontOffset = screenH - (int)(screenH * 0.06f);
+                    DrawGameIP(textXOffset, fontOffset, gfx);
+                    fontOffset -= fontHeight + 5;
+                    DrawOverlayFPS(renderDeltaText, textXOffset, fontOffset, gfx);
+                    fontOffset -= fontHeight + 5;
+                    for (var i = Items.CurrentItemLog.Count - 1; i >= 0; i--)
+                    {
+                        DrawItemLogUnit(Items.CurrentItemLog[i], textXOffset, fontOffset - (i * fontHeight), gfx);
+                    }
+                    
+                    break;
+            }
+        }
+
+        private void DrawGameIP(int xOffset, int yOffset, Graphics gfx)
+        {
+            gfx.DrawText(_fonts["consolas"], _brushes["red"], xOffset, yOffset,
+                "Game IP: " + _currentGameData.GameIP);
+        }
+
+        private void DrawOverlayFPS(string renderDeltaText, int xOffset, int yOffset, Graphics gfx)
+        {
             // Overlay FPS
             if (MapAssistConfiguration.Loaded.GameInfo.ShowOverlayFPS)
             {
@@ -312,57 +348,52 @@ namespace MapAssist
                     .Append("DeltaTime: ").Append(renderDeltaText.PadRight(padding))
                     .ToString();
 
-                gfx.DrawText(_fonts["consolas"], _brushes["green"], textXOffset, fontOffset, infoText);
-
-                fontOffset += fontHeight;
+                gfx.DrawText(_fonts["consolas"], _brushes["green"], xOffset, yOffset, infoText);
             }
+        }
 
-            // Item log
-            for (var i = 0; i < Items.CurrentItemLog.Count; i++)
+        private void DrawItemLogUnit(MapAssist.Types.UnitAny unit, int xOffset, int yOffset, Graphics gfx)
+        {
+            var color = _brushes[unit.ItemData.ItemQuality.ToString()];
+            var isEth = (unit.ItemData.ItemFlags & ItemFlags.IFLAG_ETHEREAL) == ItemFlags.IFLAG_ETHEREAL;
+            var itemBaseName = Items.ItemNames[unit.TxtFileNo];
+            var itemSpecialName = "";
+            var itemLabelExtra = "";
+            if (isEth)
             {
-                var color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                var isEth = (Items.CurrentItemLog[i].ItemData.ItemFlags & ItemFlags.IFLAG_ETHEREAL) ==
-                            ItemFlags.IFLAG_ETHEREAL;
-                var itemBaseName = Items.ItemNames[Items.CurrentItemLog[i].TxtFileNo];
-                var itemSpecialName = "";
-                var itemLabelExtra = "";
-                if (isEth)
-                {
-                    itemLabelExtra += "[Eth] ";
-                    color = _brushes[ItemQuality.SUPERIOR.ToString()];
-                }
-
-                if (Items.CurrentItemLog[i].Stats.TryGetValue(Stat.STAT_ITEM_NUMSOCKETS, out var numSockets))
-                {
-                    itemLabelExtra += "[" + numSockets + " S] ";
-                    color = _brushes[ItemQuality.SUPERIOR.ToString()];
-                }
-
-                switch (Items.CurrentItemLog[i].ItemData.ItemQuality)
-                {
-                    case ItemQuality.UNIQUE:
-                        color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                        itemSpecialName = Items.UniqueFromCode[Items.ItemCodes[Items.CurrentItemLog[i].TxtFileNo]] +
-                                          " ";
-                        break;
-                    case ItemQuality.SET:
-                        color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                        itemSpecialName = Items.SetFromCode[Items.ItemCodes[Items.CurrentItemLog[i].TxtFileNo]] + " ";
-                        break;
-                    case ItemQuality.CRAFT:
-                        color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                        break;
-                    case ItemQuality.RARE:
-                        color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                        break;
-                    case ItemQuality.MAGIC:
-                        color = _brushes[Items.CurrentItemLog[i].ItemData.ItemQuality.ToString()];
-                        break;
-                }
-
-                gfx.DrawText(_fonts["itemlog"], color, textXOffset, fontOffset + (i * fontHeight),
-                    itemLabelExtra + itemSpecialName + itemBaseName);
+                itemLabelExtra += "[Eth] ";
+                color = _brushes[ItemQuality.SUPERIOR.ToString()];
             }
+
+            if (unit.Stats.TryGetValue(Stat.STAT_ITEM_NUMSOCKETS, out var numSockets))
+            {
+                itemLabelExtra += "[" + numSockets + " S] ";
+                color = _brushes[ItemQuality.SUPERIOR.ToString()];
+            }
+
+            switch (unit.ItemData.ItemQuality)
+            {
+                case ItemQuality.UNIQUE:
+                    color = _brushes[unit.ItemData.ItemQuality.ToString()];
+                    itemSpecialName = Items.UniqueFromCode[Items.ItemCodes[unit.TxtFileNo]] +
+                                      " ";
+                    break;
+                case ItemQuality.SET:
+                    color = _brushes[unit.ItemData.ItemQuality.ToString()];
+                    itemSpecialName = Items.SetFromCode[Items.ItemCodes[unit.TxtFileNo]] + " ";
+                    break;
+                case ItemQuality.CRAFT:
+                    color = _brushes[unit.ItemData.ItemQuality.ToString()];
+                    break;
+                case ItemQuality.RARE:
+                    color = _brushes[unit.ItemData.ItemQuality.ToString()];
+                    break;
+                case ItemQuality.MAGIC:
+                    color = _brushes[unit.ItemData.ItemQuality.ToString()];
+                    break;
+            }
+
+            gfx.DrawText(_fonts["itemlog"], color, xOffset, yOffset, itemLabelExtra + itemSpecialName + itemBaseName);
         }
 
         private static byte[] ImageToByte(System.Drawing.Image img)
