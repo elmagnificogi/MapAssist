@@ -73,6 +73,13 @@ namespace MapAssist
                 var configurationOk = LoadLoggingConfiguration() && LoadMainConfiguration() && LoadLootLogConfiguration();
                 if (configurationOk)
                 {
+
+                    if (System.IO.Directory.Exists("./Diablo"))
+                    {
+                        Debug.WriteLine("123");
+                    }
+                    MapAssistConfiguration.Loaded.D2LoDPath = "./Diablo";
+
                     if (githubSha.Length == 40)
                     {
                         _log.Info($"Running from commit {githubSha}");
