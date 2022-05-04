@@ -292,6 +292,9 @@ public class HotkeyConfiguration
 
     [YamlMember(Alias = "ExportItemsKey", ApplyNamingConventions = false)]
     public string ExportItemsKey { get; set; }
+
+    [YamlMember(Alias = "ShareRoomKey", ApplyNamingConventions = false)]
+    public string ShareRoomKey { get; set; }
 }
 
 public class GameInfoConfiguration

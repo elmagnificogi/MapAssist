@@ -113,6 +113,7 @@ namespace MapAssist
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ZoomInKey.ToString()).Monitor(txtZoomInKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ZoomOutKey.ToString()).Monitor(txtZoomOutKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ExportItemsKey.ToString()).Monitor(txtExportItemsKey);
+            new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey.ToString()).Monitor(txtShareRoomKey);
 
             cboItemLogPosition.SelectedIndex = cboItemLogPosition.FindStringExact(MapAssistConfiguration.Loaded.ItemLog.Position.ToString().ToProperCase());
             chkItemLogEnabled.Checked = MapAssistConfiguration.Loaded.ItemLog.Enabled;
@@ -902,6 +903,11 @@ namespace MapAssist
         private void chkDPIAware_CheckedChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.DPIAware = chkDPIAware.Checked;
+        }
+
+        private void textShareRoomKey_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey = txtShareRoomKey.Text;
         }
     }
 }

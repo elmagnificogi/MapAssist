@@ -117,10 +117,10 @@ namespace MapAssist
 
                     var contextMenu = new ContextMenuStrip();
 
-                    var configMenuItem = new ToolStripMenuItem("Config", null, ShowConfigEditor);
-                    var lootFilterMenuItem = new ToolStripMenuItem("Loot Filter", null, LootFilter);
-                    var restartMenuItem = new ToolStripMenuItem("Restart", null, TrayRestart);
-                    var exitMenuItem = new ToolStripMenuItem("Exit", null, TrayExit);
+                    var configMenuItem = new ToolStripMenuItem("设置", null, ShowConfigEditor);
+                    var lootFilterMenuItem = new ToolStripMenuItem("物品过滤", null, LootFilter);
+                    var restartMenuItem = new ToolStripMenuItem("重启地图", null, TrayRestart);
+                    var exitMenuItem = new ToolStripMenuItem("退出", null, TrayExit);
                     contextMenu.Items.Add(exitMenuItem);
 
                     contextMenu.Items.AddRange(new ToolStripItem[] {

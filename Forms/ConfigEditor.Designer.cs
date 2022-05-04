@@ -53,6 +53,7 @@
             this.chkShowGameName = new System.Windows.Forms.CheckBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.chkMonsterHealthBar = new System.Windows.Forms.CheckBox();
             this.btnClearBorderColor = new System.Windows.Forms.Button();
             this.btnClearWalkableColor = new System.Windows.Forms.Button();
@@ -153,6 +154,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.grpHotkeys = new System.Windows.Forms.GroupBox();
+            this.txtShareRoomKey = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtHideMapKey = new System.Windows.Forms.TextBox();
             this.lblHideMapKey = new System.Windows.Forms.Label();
             this.txtZoomOutKey = new System.Windows.Forms.TextBox();
@@ -230,7 +233,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(367, 324);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.TabStop = false;
             // 
             // tabPage5
             // 
@@ -241,7 +243,7 @@
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(359, 298);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Main";
+            this.tabPage5.Text = "主要";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // groupBox5
@@ -254,7 +256,7 @@
             this.groupBox5.Size = new System.Drawing.Size(335, 54);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Translation";
+            this.groupBox5.Text = "地图显示语言";
             // 
             // cboLanguage
             // 
@@ -286,7 +288,7 @@
             this.groupBox4.Size = new System.Drawing.Size(335, 64);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "D2 LOD 1.13c Path";
+            this.groupBox4.Text = "Diablo目录";
             // 
             // txtD2Path
             // 
@@ -303,7 +305,7 @@
             this.btnBrowseD2Location.Name = "btnBrowseD2Location";
             this.btnBrowseD2Location.Size = new System.Drawing.Size(75, 21);
             this.btnBrowseD2Location.TabIndex = 17;
-            this.btnBrowseD2Location.Text = "Browse";
+            this.btnBrowseD2Location.Text = "浏览";
             this.btnBrowseD2Location.UseVisualStyleBackColor = true;
             this.btnBrowseD2Location.Click += new System.EventHandler(this.btnBrowseD2Location_Click);
             // 
@@ -314,9 +316,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(7, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Leave blank to auto-detect";
+            this.label1.Text = "不知道就默认";
             // 
             // grpGameInfo
             // 
@@ -338,16 +340,16 @@
             this.grpGameInfo.Size = new System.Drawing.Size(335, 133);
             this.grpGameInfo.TabIndex = 23;
             this.grpGameInfo.TabStop = false;
-            this.grpGameInfo.Text = "Game Info";
+            this.grpGameInfo.Text = "游戏信息显示";
             // 
             // chkShowAreaLevel
             // 
             this.chkShowAreaLevel.AutoSize = true;
             this.chkShowAreaLevel.Location = new System.Drawing.Point(192, 60);
             this.chkShowAreaLevel.Name = "chkShowAreaLevel";
-            this.chkShowAreaLevel.Size = new System.Drawing.Size(84, 16);
+            this.chkShowAreaLevel.Size = new System.Drawing.Size(96, 16);
             this.chkShowAreaLevel.TabIndex = 39;
-            this.chkShowAreaLevel.Text = "Area Level";
+            this.chkShowAreaLevel.Text = "显示场景等级";
             this.chkShowAreaLevel.UseVisualStyleBackColor = true;
             this.chkShowAreaLevel.CheckedChanged += new System.EventHandler(this.chkShowAreaLevel_CheckedChanged);
             // 
@@ -364,20 +366,20 @@
             // lblGameInfoPosition
             // 
             this.lblGameInfoPosition.AutoSize = true;
-            this.lblGameInfoPosition.Location = new System.Drawing.Point(189, 105);
+            this.lblGameInfoPosition.Location = new System.Drawing.Point(159, 106);
             this.lblGameInfoPosition.Name = "lblGameInfoPosition";
-            this.lblGameInfoPosition.Size = new System.Drawing.Size(53, 12);
+            this.lblGameInfoPosition.Size = new System.Drawing.Size(77, 12);
             this.lblGameInfoPosition.TabIndex = 35;
-            this.lblGameInfoPosition.Text = "Position";
+            this.lblGameInfoPosition.Text = "信息显示位置";
             // 
             // chkGameInfoTextShadow
             // 
             this.chkGameInfoTextShadow.AutoSize = true;
             this.chkGameInfoTextShadow.Location = new System.Drawing.Point(11, 110);
             this.chkGameInfoTextShadow.Name = "chkGameInfoTextShadow";
-            this.chkGameInfoTextShadow.Size = new System.Drawing.Size(90, 16);
+            this.chkGameInfoTextShadow.Size = new System.Drawing.Size(72, 16);
             this.chkGameInfoTextShadow.TabIndex = 34;
-            this.chkGameInfoTextShadow.Text = "Text Shadow";
+            this.chkGameInfoTextShadow.Text = "字体阴影";
             this.chkGameInfoTextShadow.UseVisualStyleBackColor = true;
             this.chkGameInfoTextShadow.CheckedChanged += new System.EventHandler(this.chkGameInfoTextShadow_CheckedChanged);
             // 
@@ -386,9 +388,9 @@
             this.chkShowOverlayFPS.AutoSize = true;
             this.chkShowOverlayFPS.Location = new System.Drawing.Point(192, 81);
             this.chkShowOverlayFPS.Name = "chkShowOverlayFPS";
-            this.chkShowOverlayFPS.Size = new System.Drawing.Size(90, 16);
+            this.chkShowOverlayFPS.Size = new System.Drawing.Size(66, 16);
             this.chkShowOverlayFPS.TabIndex = 2;
-            this.chkShowOverlayFPS.Text = "Overlay FPS";
+            this.chkShowOverlayFPS.Text = "显示FPS";
             this.chkShowOverlayFPS.UseVisualStyleBackColor = true;
             this.chkShowOverlayFPS.CheckedChanged += new System.EventHandler(this.chkShowOverlayFPS_CheckedChanged);
             // 
@@ -397,9 +399,9 @@
             this.chkShowDifficulty.AutoSize = true;
             this.chkShowDifficulty.Location = new System.Drawing.Point(11, 60);
             this.chkShowDifficulty.Name = "chkShowDifficulty";
-            this.chkShowDifficulty.Size = new System.Drawing.Size(84, 16);
+            this.chkShowDifficulty.Size = new System.Drawing.Size(72, 16);
             this.chkShowDifficulty.TabIndex = 38;
-            this.chkShowDifficulty.Text = "Difficulty";
+            this.chkShowDifficulty.Text = "显示难度";
             this.chkShowDifficulty.UseVisualStyleBackColor = true;
             this.chkShowDifficulty.CheckedChanged += new System.EventHandler(this.chkShowDifficulty_CheckedChanged);
             // 
@@ -423,7 +425,7 @@
             this.btnGameInfoFont.Name = "btnGameInfoFont";
             this.btnGameInfoFont.Size = new System.Drawing.Size(75, 21);
             this.btnGameInfoFont.TabIndex = 32;
-            this.btnGameInfoFont.Text = "Font";
+            this.btnGameInfoFont.Text = "字体";
             this.btnGameInfoFont.UseVisualStyleBackColor = false;
             this.btnGameInfoFont.Click += new System.EventHandler(this.btnGameInfoFont_Click);
             // 
@@ -432,9 +434,9 @@
             this.chkShowAreaTimer.AutoSize = true;
             this.chkShowAreaTimer.Location = new System.Drawing.Point(192, 39);
             this.chkShowAreaTimer.Name = "chkShowAreaTimer";
-            this.chkShowAreaTimer.Size = new System.Drawing.Size(84, 16);
+            this.chkShowAreaTimer.Size = new System.Drawing.Size(96, 16);
             this.chkShowAreaTimer.TabIndex = 41;
-            this.chkShowAreaTimer.Text = "Area Timer";
+            this.chkShowAreaTimer.Text = "显示场景用时";
             this.chkShowAreaTimer.UseVisualStyleBackColor = true;
             this.chkShowAreaTimer.CheckedChanged += new System.EventHandler(this.chkShowAreaTimer_CheckedChanged);
             // 
@@ -443,9 +445,9 @@
             this.chkShowGameTimer.AutoSize = true;
             this.chkShowGameTimer.Location = new System.Drawing.Point(11, 39);
             this.chkShowGameTimer.Name = "chkShowGameTimer";
-            this.chkShowGameTimer.Size = new System.Drawing.Size(84, 16);
+            this.chkShowGameTimer.Size = new System.Drawing.Size(96, 16);
             this.chkShowGameTimer.TabIndex = 40;
-            this.chkShowGameTimer.Text = "Game Timer";
+            this.chkShowGameTimer.Text = "显示游戏计时";
             this.chkShowGameTimer.UseVisualStyleBackColor = true;
             this.chkShowGameTimer.CheckedChanged += new System.EventHandler(this.chkShowGameTimer_CheckedChanged);
             // 
@@ -454,9 +456,9 @@
             this.chkShowArea.AutoSize = true;
             this.chkShowArea.Location = new System.Drawing.Point(192, 18);
             this.chkShowArea.Name = "chkShowArea";
-            this.chkShowArea.Size = new System.Drawing.Size(48, 16);
+            this.chkShowArea.Size = new System.Drawing.Size(96, 16);
             this.chkShowArea.TabIndex = 16;
-            this.chkShowArea.Text = "Area";
+            this.chkShowArea.Text = "显示场景名称";
             this.chkShowArea.UseVisualStyleBackColor = true;
             this.chkShowArea.CheckedChanged += new System.EventHandler(this.chkShowArea_CheckedChanged);
             // 
@@ -467,7 +469,7 @@
             this.chkShowGameName.Name = "chkShowGameName";
             this.chkShowGameName.Size = new System.Drawing.Size(120, 16);
             this.chkShowGameName.TabIndex = 37;
-            this.chkShowGameName.Text = "Game Name && Pass";
+            this.chkShowGameName.Text = "显示房间名和密码";
             this.chkShowGameName.UseVisualStyleBackColor = true;
             this.chkShowGameName.CheckedChanged += new System.EventHandler(this.chkShowGameName_CheckedChanged);
             // 
@@ -480,11 +482,12 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(359, 298);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Map";
+            this.tabPage1.Text = "地图";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.chkMonsterHealthBar);
             this.groupBox1.Controls.Add(this.btnClearBorderColor);
             this.groupBox1.Controls.Add(this.btnClearWalkableColor);
@@ -515,14 +518,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rendering";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("宋体", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(9, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 10);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "左右时起作用";
+            // 
             // chkMonsterHealthBar
             // 
             this.chkMonsterHealthBar.AutoSize = true;
             this.chkMonsterHealthBar.Location = new System.Drawing.Point(10, 165);
             this.chkMonsterHealthBar.Name = "chkMonsterHealthBar";
-            this.chkMonsterHealthBar.Size = new System.Drawing.Size(162, 16);
+            this.chkMonsterHealthBar.Size = new System.Drawing.Size(96, 16);
             this.chkMonsterHealthBar.TabIndex = 26;
-            this.chkMonsterHealthBar.Text = "Show Monster Health Bar";
+            this.chkMonsterHealthBar.Text = "显示怪物血条";
             this.chkMonsterHealthBar.UseVisualStyleBackColor = true;
             this.chkMonsterHealthBar.CheckedChanged += new System.EventHandler(this.chkMonsterHealthBar_CheckedChanged);
             // 
@@ -557,31 +570,31 @@
             this.chkStickToLastGameWindow.AutoSize = true;
             this.chkStickToLastGameWindow.Location = new System.Drawing.Point(10, 229);
             this.chkStickToLastGameWindow.Name = "chkStickToLastGameWindow";
-            this.chkStickToLastGameWindow.Size = new System.Drawing.Size(258, 16);
+            this.chkStickToLastGameWindow.Size = new System.Drawing.Size(180, 16);
             this.chkStickToLastGameWindow.TabIndex = 25;
-            this.chkStickToLastGameWindow.Text = "Keep Overlay Active On Last Game Window";
+            this.chkStickToLastGameWindow.Text = "失去游戏焦点时依然显示地图";
             this.chkStickToLastGameWindow.UseVisualStyleBackColor = true;
             this.chkStickToLastGameWindow.CheckedChanged += new System.EventHandler(this.chkStickToLastGameWindow_CheckedChanged);
             // 
             // btnBorderColor
             // 
             this.btnBorderColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorderColor.Location = new System.Drawing.Point(140, 252);
+            this.btnBorderColor.Location = new System.Drawing.Point(140, 251);
             this.btnBorderColor.Name = "btnBorderColor";
-            this.btnBorderColor.Size = new System.Drawing.Size(91, 21);
+            this.btnBorderColor.Size = new System.Drawing.Size(91, 22);
             this.btnBorderColor.TabIndex = 23;
-            this.btnBorderColor.Text = "Border Color";
+            this.btnBorderColor.Text = "边缘颜色";
             this.btnBorderColor.UseVisualStyleBackColor = true;
             this.btnBorderColor.Click += new System.EventHandler(this.btnBorderColor_Click);
             // 
             // btnWalkableColor
             // 
             this.btnWalkableColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWalkableColor.Location = new System.Drawing.Point(10, 252);
+            this.btnWalkableColor.Location = new System.Drawing.Point(10, 251);
             this.btnWalkableColor.Name = "btnWalkableColor";
-            this.btnWalkableColor.Size = new System.Drawing.Size(91, 21);
+            this.btnWalkableColor.Size = new System.Drawing.Size(86, 22);
             this.btnWalkableColor.TabIndex = 22;
-            this.btnWalkableColor.Text = "Walkable Color";
+            this.btnWalkableColor.Text = "地图颜色";
             this.btnWalkableColor.UseVisualStyleBackColor = true;
             this.btnWalkableColor.Click += new System.EventHandler(this.btnWalkableColor_Click);
             // 
@@ -590,9 +603,9 @@
             this.chkOverlayMode.AutoSize = true;
             this.chkOverlayMode.Location = new System.Drawing.Point(10, 144);
             this.chkOverlayMode.Name = "chkOverlayMode";
-            this.chkOverlayMode.Size = new System.Drawing.Size(96, 16);
+            this.chkOverlayMode.Size = new System.Drawing.Size(72, 16);
             this.chkOverlayMode.TabIndex = 5;
-            this.chkOverlayMode.Text = "Overlay Mode";
+            this.chkOverlayMode.Text = "覆盖模式";
             this.chkOverlayMode.UseVisualStyleBackColor = true;
             this.chkOverlayMode.CheckedChanged += new System.EventHandler(this.chkOverlayMode_CheckedChanged);
             // 
@@ -603,7 +616,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Position";
+            this.label2.Text = "地图位置";
             // 
             // cboPosition
             // 
@@ -662,9 +675,9 @@
             this.lblZoom.BackColor = System.Drawing.Color.Transparent;
             this.lblZoom.Location = new System.Drawing.Point(7, 112);
             this.lblZoom.Name = "lblZoom";
-            this.lblZoom.Size = new System.Drawing.Size(65, 12);
+            this.lblZoom.Size = new System.Drawing.Size(53, 12);
             this.lblZoom.TabIndex = 14;
-            this.lblZoom.Text = "Zoom Level";
+            this.lblZoom.Text = "地图轮廓";
             // 
             // lblMapSizeValue
             // 
@@ -698,7 +711,7 @@
             this.lblMapSize.Name = "lblMapSize";
             this.lblMapSize.Size = new System.Drawing.Size(53, 12);
             this.lblMapSize.TabIndex = 11;
-            this.lblMapSize.Text = "Map Size";
+            this.lblMapSize.Text = "地图大小";
             // 
             // lblIconOpacityValue
             // 
@@ -741,18 +754,18 @@
             this.lblOpacity.BackColor = System.Drawing.Color.Transparent;
             this.lblOpacity.Location = new System.Drawing.Point(6, 20);
             this.lblOpacity.Name = "lblOpacity";
-            this.lblOpacity.Size = new System.Drawing.Size(71, 12);
+            this.lblOpacity.Size = new System.Drawing.Size(65, 12);
             this.lblOpacity.TabIndex = 2;
-            this.lblOpacity.Text = "Map Opacity";
+            this.lblOpacity.Text = "地图透明度";
             // 
             // chkToggleViaMap
             // 
             this.chkToggleViaMap.AutoSize = true;
             this.chkToggleViaMap.Location = new System.Drawing.Point(10, 186);
             this.chkToggleViaMap.Name = "chkToggleViaMap";
-            this.chkToggleViaMap.Size = new System.Drawing.Size(186, 16);
+            this.chkToggleViaMap.Size = new System.Drawing.Size(132, 16);
             this.chkToggleViaMap.TabIndex = 8;
-            this.chkToggleViaMap.Text = "Show/Hide Using In-Game Map";
+            this.chkToggleViaMap.Text = "使用内置地图快捷键";
             this.chkToggleViaMap.UseVisualStyleBackColor = true;
             this.chkToggleViaMap.CheckedChanged += new System.EventHandler(this.chkToggleViaMap_CheckedChanged);
             // 
@@ -762,18 +775,18 @@
             this.lblIconOpacity.BackColor = System.Drawing.Color.Transparent;
             this.lblIconOpacity.Location = new System.Drawing.Point(6, 51);
             this.lblIconOpacity.Name = "lblIconOpacity";
-            this.lblIconOpacity.Size = new System.Drawing.Size(77, 12);
+            this.lblIconOpacity.Size = new System.Drawing.Size(65, 12);
             this.lblIconOpacity.TabIndex = 4;
-            this.lblIconOpacity.Text = "Icon Opacity";
+            this.lblIconOpacity.Text = "图标透明度";
             // 
             // chkToggleViaPanels
             // 
             this.chkToggleViaPanels.AutoSize = true;
             this.chkToggleViaPanels.Location = new System.Drawing.Point(10, 208);
             this.chkToggleViaPanels.Name = "chkToggleViaPanels";
-            this.chkToggleViaPanels.Size = new System.Drawing.Size(216, 16);
+            this.chkToggleViaPanels.Size = new System.Drawing.Size(168, 16);
             this.chkToggleViaPanels.TabIndex = 9;
-            this.chkToggleViaPanels.Text = "Hide When In-Game Menus Are Open";
+            this.chkToggleViaPanels.Text = "打开游戏内菜单时自动隐藏";
             this.chkToggleViaPanels.UseVisualStyleBackColor = true;
             this.chkToggleViaPanels.CheckedChanged += new System.EventHandler(this.chkToggleViaPanels_CheckedChanged);
             // 
@@ -787,7 +800,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(359, 298);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Overlay";
+            this.tabPage3.Text = "状态栏";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox7
@@ -805,16 +818,16 @@
             this.groupBox7.Size = new System.Drawing.Size(335, 83);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Player Info";
+            this.groupBox7.Text = "玩家状态信息";
             // 
             // chkPotionBelt
             // 
             this.chkPotionBelt.AutoSize = true;
             this.chkPotionBelt.Location = new System.Drawing.Point(9, 60);
             this.chkPotionBelt.Name = "chkPotionBelt";
-            this.chkPotionBelt.Size = new System.Drawing.Size(90, 16);
+            this.chkPotionBelt.Size = new System.Drawing.Size(72, 16);
             this.chkPotionBelt.TabIndex = 25;
-            this.chkPotionBelt.Text = "Potion Belt";
+            this.chkPotionBelt.Text = "药品数量";
             this.chkPotionBelt.UseVisualStyleBackColor = true;
             this.chkPotionBelt.CheckedChanged += new System.EventHandler(this.chkPotionBelt_CheckedChanged);
             // 
@@ -823,9 +836,9 @@
             this.chkResistances.AutoSize = true;
             this.chkResistances.Location = new System.Drawing.Point(102, 60);
             this.chkResistances.Name = "chkResistances";
-            this.chkResistances.Size = new System.Drawing.Size(90, 16);
+            this.chkResistances.Size = new System.Drawing.Size(48, 16);
             this.chkResistances.TabIndex = 24;
-            this.chkResistances.Text = "Resistances";
+            this.chkResistances.Text = "抗性";
             this.chkResistances.UseVisualStyleBackColor = true;
             this.chkResistances.CheckedChanged += new System.EventHandler(this.chkResistances_CheckedChanged);
             // 
@@ -834,9 +847,9 @@
             this.chkExpProgress.AutoSize = true;
             this.chkExpProgress.Location = new System.Drawing.Point(240, 39);
             this.chkExpProgress.Name = "chkExpProgress";
-            this.chkExpProgress.Size = new System.Drawing.Size(96, 16);
+            this.chkExpProgress.Size = new System.Drawing.Size(84, 16);
             this.chkExpProgress.TabIndex = 5;
-            this.chkExpProgress.Text = "Exp Progress";
+            this.chkExpProgress.Text = "经验百分比";
             this.chkExpProgress.UseVisualStyleBackColor = true;
             this.chkExpProgress.CheckedChanged += new System.EventHandler(this.chkExpProgress_CheckedChanged);
             // 
@@ -845,9 +858,9 @@
             this.chkCurrentLevel.AutoSize = true;
             this.chkCurrentLevel.Location = new System.Drawing.Point(240, 18);
             this.chkCurrentLevel.Name = "chkCurrentLevel";
-            this.chkCurrentLevel.Size = new System.Drawing.Size(102, 16);
+            this.chkCurrentLevel.Size = new System.Drawing.Size(72, 16);
             this.chkCurrentLevel.TabIndex = 4;
-            this.chkCurrentLevel.Text = "Current Level";
+            this.chkCurrentLevel.Text = "当前级别";
             this.chkCurrentLevel.UseVisualStyleBackColor = true;
             this.chkCurrentLevel.CheckedChanged += new System.EventHandler(this.chkCurrentLevel_CheckedChanged);
             // 
@@ -856,9 +869,9 @@
             this.chkManaPerc.AutoSize = true;
             this.chkManaPerc.Location = new System.Drawing.Point(102, 39);
             this.chkManaPerc.Name = "chkManaPerc";
-            this.chkManaPerc.Size = new System.Drawing.Size(96, 16);
+            this.chkManaPerc.Size = new System.Drawing.Size(84, 16);
             this.chkManaPerc.TabIndex = 3;
-            this.chkManaPerc.Text = "Mana Percent";
+            this.chkManaPerc.Text = "魔法百分比";
             this.chkManaPerc.UseVisualStyleBackColor = true;
             this.chkManaPerc.CheckedChanged += new System.EventHandler(this.chkManaPerc_CheckedChanged);
             // 
@@ -869,7 +882,7 @@
             this.chkMana.Name = "chkMana";
             this.chkMana.Size = new System.Drawing.Size(48, 16);
             this.chkMana.TabIndex = 2;
-            this.chkMana.Text = "Mana";
+            this.chkMana.Text = "魔法";
             this.chkMana.UseVisualStyleBackColor = true;
             this.chkMana.CheckedChanged += new System.EventHandler(this.chkMana_CheckedChanged);
             // 
@@ -878,9 +891,9 @@
             this.chkLifePerc.AutoSize = true;
             this.chkLifePerc.Location = new System.Drawing.Point(102, 18);
             this.chkLifePerc.Name = "chkLifePerc";
-            this.chkLifePerc.Size = new System.Drawing.Size(96, 16);
+            this.chkLifePerc.Size = new System.Drawing.Size(84, 16);
             this.chkLifePerc.TabIndex = 1;
-            this.chkLifePerc.Text = "Life Percent";
+            this.chkLifePerc.Text = "生命百分比";
             this.chkLifePerc.UseVisualStyleBackColor = true;
             this.chkLifePerc.CheckedChanged += new System.EventHandler(this.chkLifePerc_CheckedChanged);
             // 
@@ -891,7 +904,7 @@
             this.chkLife.Name = "chkLife";
             this.chkLife.Size = new System.Drawing.Size(48, 16);
             this.chkLife.TabIndex = 0;
-            this.chkLife.Text = "Life";
+            this.chkLife.Text = "生命";
             this.chkLife.UseVisualStyleBackColor = true;
             this.chkLife.CheckedChanged += new System.EventHandler(this.chkLife_CheckedChanged);
             // 
@@ -947,9 +960,9 @@
             this.chkAlertLowerRes.AutoSize = true;
             this.chkAlertLowerRes.Location = new System.Drawing.Point(9, 72);
             this.chkAlertLowerRes.Name = "chkAlertLowerRes";
-            this.chkAlertLowerRes.Size = new System.Drawing.Size(192, 16);
+            this.chkAlertLowerRes.Size = new System.Drawing.Size(96, 16);
             this.chkAlertLowerRes.TabIndex = 23;
-            this.chkAlertLowerRes.Text = "Alert If Lowered Resistances";
+            this.chkAlertLowerRes.Text = "抵抗性时提醒";
             this.chkAlertLowerRes.UseVisualStyleBackColor = true;
             this.chkAlertLowerRes.CheckedChanged += new System.EventHandler(this.chkAlertLowerRes_CheckedChanged);
             // 
@@ -969,19 +982,19 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 50);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 12);
+            this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Buff Bar Position";
+            this.label5.Text = "状态栏位置";
             // 
             // lblBuffSize
             // 
             this.lblBuffSize.AutoSize = true;
             this.lblBuffSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuffSize.Location = new System.Drawing.Point(6, 19);
+            this.lblBuffSize.Location = new System.Drawing.Point(6, 22);
             this.lblBuffSize.Name = "lblBuffSize";
-            this.lblBuffSize.Size = new System.Drawing.Size(59, 12);
+            this.lblBuffSize.Size = new System.Drawing.Size(77, 12);
             this.lblBuffSize.TabIndex = 16;
-            this.lblBuffSize.Text = "Icon Size";
+            this.lblBuffSize.Text = "状态图标大小";
             // 
             // cboBuffPosition
             // 
@@ -1017,7 +1030,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(359, 298);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Drawing";
+            this.tabPage2.Text = "绘制";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabDrawing
@@ -1052,18 +1065,18 @@
             this.tabIcon.Padding = new System.Windows.Forms.Padding(3);
             this.tabIcon.Size = new System.Drawing.Size(345, 238);
             this.tabIcon.TabIndex = 0;
-            this.tabIcon.Text = "Icon";
+            this.tabIcon.Text = "图标";
             this.tabIcon.UseVisualStyleBackColor = true;
             // 
             // btnIconColor
             // 
             this.btnIconColor.BackColor = System.Drawing.Color.Transparent;
             this.btnIconColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIconColor.Location = new System.Drawing.Point(11, 10);
+            this.btnIconColor.Location = new System.Drawing.Point(11, 6);
             this.btnIconColor.Name = "btnIconColor";
-            this.btnIconColor.Size = new System.Drawing.Size(75, 21);
+            this.btnIconColor.Size = new System.Drawing.Size(75, 25);
             this.btnIconColor.TabIndex = 10;
-            this.btnIconColor.Text = "Fill Color";
+            this.btnIconColor.Text = "填充颜色";
             this.btnIconColor.UseVisualStyleBackColor = false;
             this.btnIconColor.Click += new System.EventHandler(this.btnIconColor_Click);
             // 
@@ -1071,11 +1084,11 @@
             // 
             this.btnIconOutlineColor.BackColor = System.Drawing.Color.Transparent;
             this.btnIconOutlineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIconOutlineColor.Location = new System.Drawing.Point(142, 10);
+            this.btnIconOutlineColor.Location = new System.Drawing.Point(142, 3);
             this.btnIconOutlineColor.Name = "btnIconOutlineColor";
-            this.btnIconOutlineColor.Size = new System.Drawing.Size(85, 21);
+            this.btnIconOutlineColor.Size = new System.Drawing.Size(85, 28);
             this.btnIconOutlineColor.TabIndex = 18;
-            this.btnIconOutlineColor.Text = "Outline Color";
+            this.btnIconOutlineColor.Text = "轮廓线颜色";
             this.btnIconOutlineColor.UseVisualStyleBackColor = false;
             this.btnIconOutlineColor.Click += new System.EventHandler(this.btnIconOutlineColor_Click);
             // 
@@ -1133,9 +1146,9 @@
             this.lblIconThickness.BackColor = System.Drawing.Color.Transparent;
             this.lblIconThickness.Location = new System.Drawing.Point(8, 149);
             this.lblIconThickness.Name = "lblIconThickness";
-            this.lblIconThickness.Size = new System.Drawing.Size(47, 12);
+            this.lblIconThickness.Size = new System.Drawing.Size(41, 12);
             this.lblIconThickness.TabIndex = 17;
-            this.lblIconThickness.Text = "Outline";
+            this.lblIconThickness.Text = "轮廓线";
             // 
             // iconThickness
             // 
@@ -1159,7 +1172,7 @@
             this.lblIconSize.Name = "lblIconSize";
             this.lblIconSize.Size = new System.Drawing.Size(29, 12);
             this.lblIconSize.TabIndex = 15;
-            this.lblIconSize.Text = "Size";
+            this.lblIconSize.Text = "大小";
             // 
             // iconSize
             // 
@@ -1180,9 +1193,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(8, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 12);
+            this.label9.Size = new System.Drawing.Size(29, 12);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Shape";
+            this.label9.Text = "形状";
             // 
             // cboIconShape
             // 
@@ -1206,7 +1219,7 @@
             this.tabLabel.Padding = new System.Windows.Forms.Padding(3);
             this.tabLabel.Size = new System.Drawing.Size(345, 238);
             this.tabLabel.TabIndex = 1;
-            this.tabLabel.Text = "Label";
+            this.tabLabel.Text = "文字";
             this.tabLabel.UseVisualStyleBackColor = true;
             // 
             // chkTextShadow
@@ -1284,7 +1297,7 @@
             this.tabLine.Name = "tabLine";
             this.tabLine.Size = new System.Drawing.Size(345, 238);
             this.tabLine.TabIndex = 2;
-            this.tabLine.Text = "Line";
+            this.tabLine.Text = "线";
             this.tabLine.UseVisualStyleBackColor = true;
             // 
             // btnClearLineColor
@@ -1385,11 +1398,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 8);
+            this.label8.Location = new System.Drawing.Point(6, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 12);
+            this.label8.Size = new System.Drawing.Size(77, 12);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Configure Setting For";
+            this.label8.Text = "选择绘制配置";
             // 
             // cboRenderOption
             // 
@@ -1408,7 +1421,7 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(359, 298);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Item Log";
+            this.tabPage6.Text = "掉落过滤";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -1439,7 +1452,7 @@
             this.groupBox6.Size = new System.Drawing.Size(335, 282);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Item Log";
+            this.groupBox6.Text = "掉落物";
             // 
             // chkItemLogVendorItems
             // 
@@ -1456,7 +1469,7 @@
             // 
             this.lblSoundVolumeValue.AutoSize = true;
             this.lblSoundVolumeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblSoundVolumeValue.Location = new System.Drawing.Point(292, 173);
+            this.lblSoundVolumeValue.Location = new System.Drawing.Point(292, 181);
             this.lblSoundVolumeValue.Name = "lblSoundVolumeValue";
             this.lblSoundVolumeValue.Size = new System.Drawing.Size(23, 12);
             this.lblSoundVolumeValue.TabIndex = 29;
@@ -1479,9 +1492,9 @@
             this.chkLogTextShadow.AutoSize = true;
             this.chkLogTextShadow.Location = new System.Drawing.Point(127, 249);
             this.chkLogTextShadow.Name = "chkLogTextShadow";
-            this.chkLogTextShadow.Size = new System.Drawing.Size(90, 16);
+            this.chkLogTextShadow.Size = new System.Drawing.Size(72, 16);
             this.chkLogTextShadow.TabIndex = 31;
-            this.chkLogTextShadow.Text = "Text Shadow";
+            this.chkLogTextShadow.Text = "字体阴影";
             this.chkLogTextShadow.UseVisualStyleBackColor = true;
             this.chkLogTextShadow.CheckedChanged += new System.EventHandler(this.chkLogTextShadow_CheckedChanged);
             // 
@@ -1503,11 +1516,11 @@
             this.itemDisplayForSeconds.AutoSize = false;
             this.itemDisplayForSeconds.BackColor = System.Drawing.Color.White;
             this.itemDisplayForSeconds.LargeChange = 1;
-            this.itemDisplayForSeconds.Location = new System.Drawing.Point(85, 210);
+            this.itemDisplayForSeconds.Location = new System.Drawing.Point(113, 204);
             this.itemDisplayForSeconds.Maximum = 24;
             this.itemDisplayForSeconds.Minimum = 1;
             this.itemDisplayForSeconds.Name = "itemDisplayForSeconds";
-            this.itemDisplayForSeconds.Size = new System.Drawing.Size(201, 25);
+            this.itemDisplayForSeconds.Size = new System.Drawing.Size(173, 25);
             this.itemDisplayForSeconds.SmallChange = 25;
             this.itemDisplayForSeconds.TabIndex = 11;
             this.itemDisplayForSeconds.Value = 1;
@@ -1519,9 +1532,9 @@
             this.chkItemLogEnabled.AutoSize = true;
             this.chkItemLogEnabled.Location = new System.Drawing.Point(11, 18);
             this.chkItemLogEnabled.Name = "chkItemLogEnabled";
-            this.chkItemLogEnabled.Size = new System.Drawing.Size(66, 16);
+            this.chkItemLogEnabled.Size = new System.Drawing.Size(48, 16);
             this.chkItemLogEnabled.TabIndex = 0;
-            this.chkItemLogEnabled.Text = "Enabled";
+            this.chkItemLogEnabled.Text = "启用";
             this.chkItemLogEnabled.UseVisualStyleBackColor = true;
             this.chkItemLogEnabled.CheckedChanged += new System.EventHandler(this.chkItemLogEnabled_CheckedChanged);
             // 
@@ -1530,9 +1543,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(8, 84);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 12);
+            this.label16.Size = new System.Drawing.Size(53, 12);
             this.label16.TabIndex = 1;
-            this.label16.Text = "Filter File";
+            this.label16.Text = "过滤文件";
             // 
             // btnLogFont
             // 
@@ -1541,18 +1554,18 @@
             this.btnLogFont.Name = "btnLogFont";
             this.btnLogFont.Size = new System.Drawing.Size(75, 21);
             this.btnLogFont.TabIndex = 22;
-            this.btnLogFont.Text = "Font";
+            this.btnLogFont.Text = "字体";
             this.btnLogFont.UseVisualStyleBackColor = false;
             this.btnLogFont.Click += new System.EventHandler(this.btnLogFont_Click);
             // 
             // lblItemLogPosition
             // 
             this.lblItemLogPosition.AutoSize = true;
-            this.lblItemLogPosition.Location = new System.Drawing.Point(188, 21);
+            this.lblItemLogPosition.Location = new System.Drawing.Point(183, 21);
             this.lblItemLogPosition.Name = "lblItemLogPosition";
             this.lblItemLogPosition.Size = new System.Drawing.Size(53, 12);
             this.lblItemLogPosition.TabIndex = 37;
-            this.lblItemLogPosition.Text = "Position";
+            this.lblItemLogPosition.Text = "显示位置";
             // 
             // soundVolume
             // 
@@ -1560,10 +1573,10 @@
             this.soundVolume.BackColor = System.Drawing.Color.White;
             this.soundVolume.Cursor = System.Windows.Forms.Cursors.Default;
             this.soundVolume.LargeChange = 1;
-            this.soundVolume.Location = new System.Drawing.Point(85, 173);
+            this.soundVolume.Location = new System.Drawing.Point(113, 175);
             this.soundVolume.Maximum = 20;
             this.soundVolume.Name = "soundVolume";
-            this.soundVolume.Size = new System.Drawing.Size(201, 25);
+            this.soundVolume.Size = new System.Drawing.Size(173, 25);
             this.soundVolume.SmallChange = 25;
             this.soundVolume.TabIndex = 28;
             this.soundVolume.Scroll += new System.EventHandler(this.soundVolume_Scroll);
@@ -1574,38 +1587,38 @@
             this.chkPlaySound.AutoSize = true;
             this.chkPlaySound.Location = new System.Drawing.Point(11, 117);
             this.chkPlaySound.Name = "chkPlaySound";
-            this.chkPlaySound.Size = new System.Drawing.Size(132, 16);
+            this.chkPlaySound.Size = new System.Drawing.Size(72, 16);
             this.chkPlaySound.TabIndex = 3;
-            this.chkPlaySound.Text = "Play Sound On Drop";
+            this.chkPlaySound.Text = "掉落声音";
             this.chkPlaySound.UseVisualStyleBackColor = true;
             this.chkPlaySound.CheckedChanged += new System.EventHandler(this.chkPlaySound_CheckedChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 173);
+            this.label10.Location = new System.Drawing.Point(8, 181);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Volume";
+            this.label10.Text = "掉落音量";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 138);
+            this.label17.Location = new System.Drawing.Point(10, 141);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 12);
+            this.label17.Size = new System.Drawing.Size(53, 12);
             this.label17.TabIndex = 4;
-            this.label17.Text = "Sound File";
+            this.label17.Text = "声音文件";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 210);
+            this.label18.Location = new System.Drawing.Point(6, 210);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 12);
+            this.label18.Size = new System.Drawing.Size(101, 12);
             this.label18.TabIndex = 6;
-            this.label18.Text = "Hide item after";
+            this.label18.Text = "掉落提示消失时间";
             // 
             // txtSoundFile
             // 
@@ -1650,9 +1663,9 @@
             this.chkItemLogItemsOnIdentify.AutoSize = true;
             this.chkItemLogItemsOnIdentify.Location = new System.Drawing.Point(11, 39);
             this.chkItemLogItemsOnIdentify.Name = "chkItemLogItemsOnIdentify";
-            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(162, 16);
+            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(84, 16);
             this.chkItemLogItemsOnIdentify.TabIndex = 39;
-            this.chkItemLogItemsOnIdentify.Text = "Check Items On Identify";
+            this.chkItemLogItemsOnIdentify.Text = "识别掉落者";
             this.chkItemLogItemsOnIdentify.UseVisualStyleBackColor = true;
             this.chkItemLogItemsOnIdentify.CheckedChanged += new System.EventHandler(this.chkItemLogItemsOnIdentify_CheckedChanged);
             // 
@@ -1663,9 +1676,9 @@
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label21.Location = new System.Drawing.Point(82, 102);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 13);
+            this.label21.Size = new System.Drawing.Size(97, 13);
             this.label21.TabIndex = 26;
-            this.label21.Text = "Requires restart";
+            this.label21.Text = "设置后需要重启地图";
             // 
             // tabPage7
             // 
@@ -1675,11 +1688,13 @@
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(359, 298);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Hotkeys";
+            this.tabPage7.Text = "快捷键";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // grpHotkeys
             // 
+            this.grpHotkeys.Controls.Add(this.txtShareRoomKey);
+            this.grpHotkeys.Controls.Add(this.label6);
             this.grpHotkeys.Controls.Add(this.txtHideMapKey);
             this.grpHotkeys.Controls.Add(this.lblHideMapKey);
             this.grpHotkeys.Controls.Add(this.txtZoomOutKey);
@@ -1697,7 +1712,26 @@
             this.grpHotkeys.Size = new System.Drawing.Size(335, 198);
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
-            this.grpHotkeys.Text = "Hotkeys";
+            this.grpHotkeys.Text = "快捷键";
+            // 
+            // txtShareRoomKey
+            // 
+            this.txtShareRoomKey.Location = new System.Drawing.Point(160, 169);
+            this.txtShareRoomKey.MaxLength = 1;
+            this.txtShareRoomKey.Name = "txtShareRoomKey";
+            this.txtShareRoomKey.Size = new System.Drawing.Size(94, 21);
+            this.txtShareRoomKey.TabIndex = 21;
+            this.txtShareRoomKey.TabStop = false;
+            this.txtShareRoomKey.TextChanged += new System.EventHandler(this.textShareRoomKey_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 174);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 12);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "复制房间名和密码到剪贴板";
             // 
             // txtHideMapKey
             // 
@@ -1714,9 +1748,9 @@
             this.lblHideMapKey.AutoSize = true;
             this.lblHideMapKey.Location = new System.Drawing.Point(6, 46);
             this.lblHideMapKey.Name = "lblHideMapKey";
-            this.lblHideMapKey.Size = new System.Drawing.Size(77, 12);
+            this.lblHideMapKey.Size = new System.Drawing.Size(53, 12);
             this.lblHideMapKey.TabIndex = 18;
-            this.lblHideMapKey.Text = "Hide Map Key";
+            this.lblHideMapKey.Text = "隐藏地图";
             // 
             // txtZoomOutKey
             // 
@@ -1773,45 +1807,45 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 120);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 12);
+            this.label15.Size = new System.Drawing.Size(53, 12);
             this.label15.TabIndex = 11;
-            this.label15.Text = "Zoom Out Key";
+            this.label15.Text = "地图缩小";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(6, 95);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 12);
+            this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 10;
-            this.label14.Text = "Zoom In Key";
+            this.label14.Text = "地图放大";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 70);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 12);
+            this.label13.Size = new System.Drawing.Size(107, 12);
             this.label13.TabIndex = 9;
-            this.label13.Text = "Toggle Area Level Key";
+            this.label13.Text = "显示/隐藏地图等级";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 22);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 12);
+            this.label12.Size = new System.Drawing.Size(53, 12);
             this.label12.TabIndex = 8;
-            this.label12.Text = "Toggle Map Key";
+            this.label12.Text = "显示地图";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(6, 145);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(101, 12);
+            this.label22.Size = new System.Drawing.Size(77, 12);
             this.label22.TabIndex = 17;
-            this.label22.Text = "Export Items Key";
+            this.label22.Text = "导出掉落信息";
             // 
             // tabPage4
             // 
@@ -1835,7 +1869,7 @@
             this.groupBox2.Size = new System.Drawing.Size(335, 92);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hidden Areas";
+            this.groupBox2.Text = "隐藏地图场景";
             // 
             // btnRemoveHidden
             // 
@@ -1925,7 +1959,7 @@
             this.groupBox8.Size = new System.Drawing.Size(335, 54);
             this.groupBox8.TabIndex = 29;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "High DPI";
+            this.groupBox8.Text = "高DPI设置";
             // 
             // label3
             // 
@@ -1934,18 +1968,18 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Location = new System.Drawing.Point(7, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Requires restart";
+            this.label3.Text = "设置后需要重启地图";
             // 
             // chkDPIAware
             // 
             this.chkDPIAware.AutoSize = true;
             this.chkDPIAware.Location = new System.Drawing.Point(10, 18);
             this.chkDPIAware.Name = "chkDPIAware";
-            this.chkDPIAware.Size = new System.Drawing.Size(102, 16);
+            this.chkDPIAware.Size = new System.Drawing.Size(90, 16);
             this.chkDPIAware.TabIndex = 27;
-            this.chkDPIAware.Text = "DPI Awareness";
+            this.chkDPIAware.Text = "DPI自动识别";
             this.chkDPIAware.UseVisualStyleBackColor = true;
             this.chkDPIAware.CheckedChanged += new System.EventHandler(this.chkDPIAware_CheckedChanged);
             // 
@@ -2168,5 +2202,8 @@
         private System.Windows.Forms.CheckBox chkDPIAware;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAuthorizedWindowTitle;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtShareRoomKey;
+        private System.Windows.Forms.Label label6;
     }
 }

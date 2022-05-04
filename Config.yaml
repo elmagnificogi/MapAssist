@@ -6,6 +6,7 @@ HotkeyConfiguration:
   ZoomInKey: Num +
   ZoomOutKey: Num -
   ExportItemsKey: F9
+  ShareRoomKey: F8
 HiddenAreas:
 - Forgotten Tower
 RenderingConfiguration:
@@ -272,9 +273,9 @@ ItemLog:
 MapColorConfiguration:
   Border: 255, 255, 255
 GameInfo:
-  Position: TopRight
+  Position: TopLeft
   ShowGameName: true
-  ShowDifficulty: true
+  ShowDifficulty: false
   ShowArea: true
   ShowAreaLevel: true
   ShowOverlayFPS: false

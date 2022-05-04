@@ -201,6 +201,14 @@ namespace MapAssist
                         ItemExport.ExportPlayerInventory(_gameData.PlayerUnit, _gameData.AllItems);
                     }
                 }
+
+                if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey))
+                {
+                    if (InGame())
+                    {
+                        Clipboard.SetText("我在房间:"+_gameData.Session.GameName+" 密码:"+_gameData.Session.GamePass);
+                    }
+                }
             }
         }
 
