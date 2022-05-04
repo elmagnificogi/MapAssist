@@ -962,7 +962,7 @@
             this.chkAlertLowerRes.Name = "chkAlertLowerRes";
             this.chkAlertLowerRes.Size = new System.Drawing.Size(96, 16);
             this.chkAlertLowerRes.TabIndex = 23;
-            this.chkAlertLowerRes.Text = "抵抗性时提醒";
+            this.chkAlertLowerRes.Text = "低抗性时提醒";
             this.chkAlertLowerRes.UseVisualStyleBackColor = true;
             this.chkAlertLowerRes.CheckedChanged += new System.EventHandler(this.chkAlertLowerRes_CheckedChanged);
             // 
@@ -1459,9 +1459,9 @@
             this.chkItemLogVendorItems.AutoSize = true;
             this.chkItemLogVendorItems.Location = new System.Drawing.Point(11, 60);
             this.chkItemLogVendorItems.Name = "chkItemLogVendorItems";
-            this.chkItemLogVendorItems.Size = new System.Drawing.Size(132, 16);
+            this.chkItemLogVendorItems.Size = new System.Drawing.Size(114, 16);
             this.chkItemLogVendorItems.TabIndex = 40;
-            this.chkItemLogVendorItems.Text = "Check Vendor Items";
+            this.chkItemLogVendorItems.Text = "检查NPC卖的物品";
             this.chkItemLogVendorItems.UseVisualStyleBackColor = true;
             this.chkItemLogVendorItems.CheckedChanged += new System.EventHandler(this.chkItemLogVendorItems_CheckedChanged);
             // 
@@ -1663,9 +1663,9 @@
             this.chkItemLogItemsOnIdentify.AutoSize = true;
             this.chkItemLogItemsOnIdentify.Location = new System.Drawing.Point(11, 39);
             this.chkItemLogItemsOnIdentify.Name = "chkItemLogItemsOnIdentify";
-            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(84, 16);
+            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(132, 16);
             this.chkItemLogItemsOnIdentify.TabIndex = 39;
-            this.chkItemLogItemsOnIdentify.Text = "识别掉落者";
+            this.chkItemLogItemsOnIdentify.Text = "检查已经鉴定的物品";
             this.chkItemLogItemsOnIdentify.UseVisualStyleBackColor = true;
             this.chkItemLogItemsOnIdentify.CheckedChanged += new System.EventHandler(this.chkItemLogItemsOnIdentify_CheckedChanged);
             // 
