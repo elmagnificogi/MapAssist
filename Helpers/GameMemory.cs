@@ -309,9 +309,9 @@ namespace MapAssist.Helpers
 
                     var checkDroppedItem = Items.CheckDroppedItem(item, _currentProcessId);
                     var checkVendorItem = Items.CheckVendorItem(item, _currentProcessId);
-                    if (item.IsValidItem && (checkDroppedItem || checkVendorItem || checkInventoryItem))
+                    if (item.IsValidItem && !item.IsInSocket && (checkDroppedItem || checkVendorItem || checkInventoryItem))
                     {
-                        Items.LogItem(item, areaLevel, _currentProcessId);
+                        Items.LogItem(item, areaLevel, PlayerUnit.Level, _currentProcessId);
                     }
 
                     if (item.Item == Item.HoradricCube)
