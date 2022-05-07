@@ -168,6 +168,19 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.checkSound = new System.Windows.Forms.CheckBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBoxWarnLevel = new System.Windows.Forms.ComboBox();
+            this.checkHard = new System.Windows.Forms.CheckBox();
+            this.checkNormal = new System.Windows.Forms.CheckBox();
+            this.checkClassic = new System.Windows.Forms.CheckBox();
+            this.checkEurope = new System.Windows.Forms.CheckBox();
+            this.checkAmerica = new System.Windows.Forms.CheckBox();
+            this.checkDCTrack = new System.Windows.Forms.CheckBox();
+            this.checkLadder = new System.Windows.Forms.CheckBox();
+            this.checkAsia = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnRemoveHidden = new System.Windows.Forms.Button();
@@ -213,6 +226,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.soundVolume)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.grpHotkeys.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -230,6 +245,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Name = "tabControl1";
@@ -1929,6 +1945,166 @@
             this.label22.TabIndex = 17;
             this.label22.Text = "导出掉落信息";
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.groupBox9);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(359, 298);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "DC追踪";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.checkSound);
+            this.groupBox9.Controls.Add(this.label23);
+            this.groupBox9.Controls.Add(this.comboBoxWarnLevel);
+            this.groupBox9.Controls.Add(this.checkHard);
+            this.groupBox9.Controls.Add(this.checkNormal);
+            this.groupBox9.Controls.Add(this.checkClassic);
+            this.groupBox9.Controls.Add(this.checkEurope);
+            this.groupBox9.Controls.Add(this.checkAmerica);
+            this.groupBox9.Controls.Add(this.checkDCTrack);
+            this.groupBox9.Controls.Add(this.checkLadder);
+            this.groupBox9.Controls.Add(this.checkAsia);
+            this.groupBox9.Location = new System.Drawing.Point(12, 8);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(335, 282);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "追踪";
+            // 
+            // checkSound
+            // 
+            this.checkSound.AutoSize = true;
+            this.checkSound.Location = new System.Drawing.Point(158, 106);
+            this.checkSound.Name = "checkSound";
+            this.checkSound.Size = new System.Drawing.Size(72, 16);
+            this.checkSound.TabIndex = 47;
+            this.checkSound.Text = "发出声音";
+            this.checkSound.UseVisualStyleBackColor = true;
+            this.checkSound.CheckedChanged += new System.EventHandler(this.checkSound_CheckedChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 110);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "提示级别";
+            // 
+            // comboBoxWarnLevel
+            // 
+            this.comboBoxWarnLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxWarnLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWarnLevel.FormattingEnabled = true;
+            this.comboBoxWarnLevel.Items.AddRange(new object[] {
+            "1/6",
+            "2/6",
+            "3/6",
+            "4/6",
+            "5/6",
+            "6/6"});
+            this.comboBoxWarnLevel.Location = new System.Drawing.Point(65, 105);
+            this.comboBoxWarnLevel.Name = "comboBoxWarnLevel";
+            this.comboBoxWarnLevel.Size = new System.Drawing.Size(87, 20);
+            this.comboBoxWarnLevel.TabIndex = 46;
+            this.comboBoxWarnLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxWarnLevel_SelectedIndexChanged);
+            // 
+            // checkHard
+            // 
+            this.checkHard.AutoSize = true;
+            this.checkHard.Location = new System.Drawing.Point(65, 83);
+            this.checkHard.Name = "checkHard";
+            this.checkHard.Size = new System.Drawing.Size(48, 16);
+            this.checkHard.TabIndex = 44;
+            this.checkHard.Text = "专家";
+            this.checkHard.UseVisualStyleBackColor = true;
+            this.checkHard.CheckedChanged += new System.EventHandler(this.checkHard_CheckedChanged);
+            // 
+            // checkNormal
+            // 
+            this.checkNormal.AutoSize = true;
+            this.checkNormal.Location = new System.Drawing.Point(11, 83);
+            this.checkNormal.Name = "checkNormal";
+            this.checkNormal.Size = new System.Drawing.Size(48, 16);
+            this.checkNormal.TabIndex = 43;
+            this.checkNormal.Text = "普通";
+            this.checkNormal.UseVisualStyleBackColor = true;
+            this.checkNormal.CheckedChanged += new System.EventHandler(this.checkNormal_CheckedChanged);
+            // 
+            // checkClassic
+            // 
+            this.checkClassic.AutoSize = true;
+            this.checkClassic.Location = new System.Drawing.Point(65, 61);
+            this.checkClassic.Name = "checkClassic";
+            this.checkClassic.Size = new System.Drawing.Size(48, 16);
+            this.checkClassic.TabIndex = 42;
+            this.checkClassic.Text = "经典";
+            this.checkClassic.UseVisualStyleBackColor = true;
+            this.checkClassic.CheckedChanged += new System.EventHandler(this.checkClassic_CheckedChanged);
+            // 
+            // checkEurope
+            // 
+            this.checkEurope.AutoSize = true;
+            this.checkEurope.Location = new System.Drawing.Point(119, 39);
+            this.checkEurope.Name = "checkEurope";
+            this.checkEurope.Size = new System.Drawing.Size(48, 16);
+            this.checkEurope.TabIndex = 41;
+            this.checkEurope.Text = "欧服";
+            this.checkEurope.UseVisualStyleBackColor = true;
+            this.checkEurope.CheckedChanged += new System.EventHandler(this.checkEurope_CheckedChanged);
+            // 
+            // checkAmerica
+            // 
+            this.checkAmerica.AutoSize = true;
+            this.checkAmerica.Location = new System.Drawing.Point(65, 39);
+            this.checkAmerica.Name = "checkAmerica";
+            this.checkAmerica.Size = new System.Drawing.Size(48, 16);
+            this.checkAmerica.TabIndex = 40;
+            this.checkAmerica.Text = "美服";
+            this.checkAmerica.UseVisualStyleBackColor = true;
+            this.checkAmerica.CheckedChanged += new System.EventHandler(this.checkAmerica_CheckedChanged);
+            // 
+            // checkDCTrack
+            // 
+            this.checkDCTrack.AutoSize = true;
+            this.checkDCTrack.Location = new System.Drawing.Point(11, 18);
+            this.checkDCTrack.Name = "checkDCTrack";
+            this.checkDCTrack.Size = new System.Drawing.Size(48, 16);
+            this.checkDCTrack.TabIndex = 0;
+            this.checkDCTrack.Text = "启用";
+            this.checkDCTrack.UseVisualStyleBackColor = true;
+            this.checkDCTrack.CheckedChanged += new System.EventHandler(this.checkDCTrack_CheckedChanged);
+            // 
+            // checkLadder
+            // 
+            this.checkLadder.AutoSize = true;
+            this.checkLadder.Location = new System.Drawing.Point(11, 61);
+            this.checkLadder.Name = "checkLadder";
+            this.checkLadder.Size = new System.Drawing.Size(48, 16);
+            this.checkLadder.TabIndex = 3;
+            this.checkLadder.Text = "天梯";
+            this.checkLadder.UseVisualStyleBackColor = true;
+            this.checkLadder.CheckedChanged += new System.EventHandler(this.checkLadder_CheckedChanged);
+            // 
+            // checkAsia
+            // 
+            this.checkAsia.AutoSize = true;
+            this.checkAsia.Location = new System.Drawing.Point(11, 39);
+            this.checkAsia.Name = "checkAsia";
+            this.checkAsia.Size = new System.Drawing.Size(48, 16);
+            this.checkAsia.TabIndex = 39;
+            this.checkAsia.Text = "亚服";
+            this.checkAsia.UseVisualStyleBackColor = true;
+            this.checkAsia.CheckedChanged += new System.EventHandler(this.checkAsia_CheckedChanged);
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox2);
@@ -1938,7 +2114,7 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(359, 298);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Advanced";
+            this.tabPage4.Text = "窗口设置";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -2138,6 +2314,9 @@
             this.tabPage7.ResumeLayout(false);
             this.grpHotkeys.ResumeLayout(false);
             this.grpHotkeys.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBoxAuthorizedWindowTitle.ResumeLayout(false);
@@ -2303,5 +2482,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtShareRoomKey;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox checkAmerica;
+        private System.Windows.Forms.CheckBox checkDCTrack;
+        private System.Windows.Forms.CheckBox checkLadder;
+        private System.Windows.Forms.CheckBox checkAsia;
+        private System.Windows.Forms.CheckBox checkEurope;
+        private System.Windows.Forms.CheckBox checkHard;
+        private System.Windows.Forms.CheckBox checkNormal;
+        private System.Windows.Forms.CheckBox checkClassic;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox comboBoxWarnLevel;
+        private System.Windows.Forms.CheckBox checkSound;
     }
 }

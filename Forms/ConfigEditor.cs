@@ -165,6 +165,17 @@ namespace MapAssist
             }
 
             chkDPIAware.Checked = MapAssistConfiguration.Loaded.DPIAware;
+
+            checkDCTrack.Checked = MapAssistConfiguration.Loaded.DCTrack.Enabled;
+            checkAsia.Checked = MapAssistConfiguration.Loaded.DCTrack.Asia;
+            checkAmerica.Checked = MapAssistConfiguration.Loaded.DCTrack.America;
+            checkEurope.Checked = MapAssistConfiguration.Loaded.DCTrack.Europe;
+            checkLadder.Checked = MapAssistConfiguration.Loaded.DCTrack.Ladder;
+            checkClassic.Checked = MapAssistConfiguration.Loaded.DCTrack.Classic;
+            checkNormal.Checked = MapAssistConfiguration.Loaded.DCTrack.Normal;
+            checkHard.Checked = MapAssistConfiguration.Loaded.DCTrack.Hard;
+            checkSound.Checked = MapAssistConfiguration.Loaded.DCTrack.Sound;
+            comboBoxWarnLevel.SelectedIndex = comboBoxWarnLevel.Items.IndexOf(MapAssistConfiguration.Loaded.DCTrack.WarningLevel);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -908,6 +919,56 @@ namespace MapAssist
         private void textShareRoomKey_TextChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey = txtShareRoomKey.Text;
+        }
+
+        private void checkDCTrack_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Enabled = checkDCTrack.Checked;
+        }
+
+        private void checkAsia_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Asia = checkAsia.Checked;
+        }
+
+        private void checkAmerica_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.America = checkAmerica.Checked;
+        }
+
+        private void checkEurope_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Europe = checkEurope.Checked;
+        }
+
+        private void checkLadder_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Ladder = checkLadder.Checked;
+        }
+
+        private void checkClassic_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Classic = checkClassic.Checked;
+        }
+
+        private void checkNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Normal = checkNormal.Checked;
+        }
+
+        private void checkHard_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Hard = checkHard.Checked;
+        }
+
+        private void comboBoxWarnLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.WarningLevel = comboBoxWarnLevel.SelectedItem.ToString();
+        }
+
+        private void checkSound_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.DCTrack.Sound = checkSound.Checked;
         }
     }
 }

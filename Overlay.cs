@@ -18,13 +18,16 @@ namespace MapAssist
         private readonly GraphicsWindow _window;
         private GameDataReader _gameDataReader;
         private GameData _gameData;
+        private DCTrack _dcTrack;
         private Compositor _compositor = new Compositor();
         private bool _show = true;
         private static readonly object _lock = new object();
 
+
         public Overlay()
         {
             _gameDataReader = new GameDataReader();
+            _dcTrack = new DCTrack();
 
             GameOverlay.TimerService.EnableHighPrecisionTimers();
 
@@ -90,7 +93,7 @@ namespace MapAssist
                                     break;
                             }
 
-                            _compositor.Init(gfx, _gameData, drawBounds);
+                            _compositor.Init(gfx, _gameData, _dcTrack, drawBounds);
 
                             if (!overlayHidden)
                             {

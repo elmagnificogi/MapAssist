@@ -21,6 +21,7 @@ namespace MapAssist.Helpers
         private static readonly NLog.Logger _log = NLog.LogManager.GetCurrentClassLogger();
         public GameData _gameData;
         public AreaData _areaData;
+        public DCTrack _dcTrack;
         private IReadOnlyList<PointOfInterest> _pointsOfInterest;
         private int _frameCount = 0;
         private ExocetFont _exocetFont;
@@ -60,8 +61,9 @@ namespace MapAssist.Helpers
             gamemaps = new HashSet<(Bitmap, Point)>();
         }
 
-        public void Init(Graphics gfx, GameData gameData, Rectangle drawBounds)
+        public void Init(Graphics gfx, GameData gameData,DCTrack dcTrack, Rectangle drawBounds)
         {
+            _dcTrack = dcTrack;
             _gameData = gameData;
             _drawBounds = drawBounds;
             _frameCount += 1;
@@ -995,6 +997,20 @@ namespace MapAssist.Helpers
             {
                 var fpsText = "FPS: " + gfx.FPS.ToString() + " / DeltaTime: " + e.DeltaTime.ToString();
                 DrawText(gfx, anchor, fpsText, font, fontSize, textColor, textShadow, textAlign);
+                anchor.Y += lineHeight;
+            }
+
+            // DC track
+            if (MapAssistConfiguration.Loaded.DCTrack.Enabled)
+            {
+                var dcps = _dcTrack.DC;
+                foreach (var dcp in dcps)
+                {
+                    var fpsText = dcp.ToString();
+                    DrawText(gfx, anchor, fpsText, font, fontSize, textColor, textShadow, textAlign);
+                    anchor.Y += lineHeight;
+                }
+               
                 anchor.Y += lineHeight;
             }
 

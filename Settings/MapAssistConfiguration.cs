@@ -57,6 +57,9 @@ namespace MapAssist.Settings
 
         [YamlMember(Alias = "DPIAware", ApplyNamingConventions = false)]
         public bool DPIAware { get; set; }
+
+        [YamlMember(Alias = "DCTrack", ApplyNamingConventions = false)]
+        public DCTrackConfiguration DCTrack { get; set; }
     }
 
     public class MapColorConfiguration
@@ -354,4 +357,37 @@ public class ItemLogConfiguration
 
     [YamlMember(Alias = "LabelTextShadow", ApplyNamingConventions = false)]
     public bool LabelTextShadow { get; set; }
+}
+
+public class DCTrackConfiguration
+{
+    [YamlMember(Alias = "Enabled", ApplyNamingConventions = false)]
+    public bool Enabled { get; set; }
+
+    [YamlMember(Alias = "Asia", ApplyNamingConventions = false)]
+    public bool Asia { get; set; }
+
+    [YamlMember(Alias = "America", ApplyNamingConventions = false)]
+    public bool America { get; set; }
+
+    [YamlMember(Alias = "Europe", ApplyNamingConventions = false)]
+    public bool Europe { get; set; }
+
+    [YamlMember(Alias = "Ladder", ApplyNamingConventions = false)]
+    public bool Ladder { get; set; }
+
+    [YamlMember(Alias = "Classic", ApplyNamingConventions = false)]
+    public bool Classic { get; set; }
+
+    [YamlMember(Alias = "Normal", ApplyNamingConventions = false)]
+    public bool Normal { get; set; }
+
+    [YamlMember(Alias = "Hard", ApplyNamingConventions = false)]
+    public bool Hard { get; set; }
+
+    [YamlMember(Alias = "WarningLevel", ApplyNamingConventions = false)]
+    public string WarningLevel { get; set; }
+
+    [YamlMember(Alias = "Sound", ApplyNamingConventions = false)]
+    public bool Sound { get; set; }
 }
