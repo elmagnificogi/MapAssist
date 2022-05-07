@@ -1,23 +1,4 @@
-﻿/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
-using MapAssist.Helpers;
+﻿using MapAssist.Helpers;
 using MapAssist.Interfaces;
 using MapAssist.Structs;
 using System;
@@ -212,7 +193,7 @@ namespace MapAssist.Types
         Redemption,
         Salvation,
         Bash,
-        SwordMastery,
+        BladeMastery,
         AxeMastery,
         MaceMastery,
         Howl,
@@ -510,7 +491,7 @@ namespace MapAssist.Types
             [SkillTree.PaladinOffensiveAuras] = new Skill[] { Skill.Might, Skill.HolyFire, Skill.Thorns, Skill.BlessedAim, Skill.Concentration, Skill.HolyFreeze, Skill.HolyShock, Skill.Sanctuary, Skill.Fanaticism, Skill.Conviction },
             [SkillTree.PaladinDefensiveAuras] = new Skill[] { Skill.Prayer, Skill.ResistFire, Skill.ResistCold, Skill.ResistLightning, Skill.Defiance, Skill.Cleansing, Skill.Vigor, Skill.Meditation, Skill.Redemption, Skill.Salvation },
             [SkillTree.BarbarianCombatSkills] = new Skill[] { Skill.Bash, Skill.DoubleSwing, Skill.Leap, Skill.DoubleThrow, Skill.Stun, Skill.LeapAttack, Skill.Concentrate, Skill.Frenzy, Skill.Whirlwind, Skill.Berserk },
-            [SkillTree.BarbarianMasteries] = new Skill[] { Skill.SwordMastery, Skill.AxeMastery, Skill.MaceMastery, Skill.PolearmMastery, Skill.ThrowingMastery, Skill.SpearMastery, Skill.IncreasedStamina, Skill.IronSkin, Skill.IncreasedSpeed, Skill.NaturalResistance },
+            [SkillTree.BarbarianMasteries] = new Skill[] { Skill.BladeMastery, Skill.AxeMastery, Skill.MaceMastery, Skill.PolearmMastery, Skill.ThrowingMastery, Skill.SpearMastery, Skill.IncreasedStamina, Skill.IronSkin, Skill.IncreasedSpeed, Skill.NaturalResistance },
             [SkillTree.BarbarianWarcries] = new Skill[] { Skill.Howl, Skill.FindPotion, Skill.Shout, Skill.Taunt, Skill.BattleCry, Skill.FindItem, Skill.BattleOrders, Skill.GrimWard, Skill.WarCry, Skill.BattleCommand },
             [SkillTree.DruidSummoning] = new Skill[] { Skill.Raven, Skill.PoisonCreeper, Skill.OakSage, Skill.SummonSpiritWolf, Skill.CarrionVine, Skill.HeartOfWolverine, Skill.SummonDireWolf, Skill.SolarCreeper, Skill.SpiritOfBarbs, Skill.SummonGrizzly },
             [SkillTree.DruidShapeShifting] = new Skill[] { Skill.Werewolf, Skill.Lycanthropy, Skill.Werebear, Skill.Maul, Skill.FeralRage, Skill.FireClaws, Skill.Rabies, Skill.ShockWave, Skill.Hunger, Skill.Fury },

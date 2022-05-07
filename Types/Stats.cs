@@ -1,23 +1,4 @@
-﻿/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -68,7 +49,7 @@ namespace MapAssist.Types
             State.STATE_BLADESOFICE,
             State.STATE_CLAWSOFTHUNDER,
             State.STATE_SPEARMASTERY,
-            State.STATE_SWORDMASTERY,
+            State.STATE_BLADEMASTERY,
             State.STATE_THROWINGMASTERY,
             State.STATE_WARMTH,
             State.STATE_WEAPONBLOCK
@@ -311,7 +292,7 @@ namespace MapAssist.Types
         STATE_FIREMASTERY,
         STATE_LIGHTNINGMASTERY,
         STATE_COLDMASTERY,
-        STATE_SWORDMASTERY,
+        STATE_BLADEMASTERY,
         STATE_AXEMASTERY,
         STATE_MACEMASTERY,
         STATE_POLEARMMASTERY,
@@ -443,6 +424,25 @@ namespace MapAssist.Types
             [Stat.LifePerLevel] = 2048,
             [Stat.ManaPerLevel] = 2048,
             [Stat.DeadlyStrikePerLevel] = 0.8,
+            [Stat.MagicFindPerLevel] = 8,
+            [Stat.ExtraGoldPerLevel] = 8,
+            [Stat.DamageDemonPerLevel] = 8,
+            [Stat.DamageUndeadPerLevel] = 8,
+            [Stat.DefensePerLevel] = 8,
+            [Stat.MaxDamagePerLevel] = 8,
+            [Stat.MaxDamagePercentPerLevel] = 8,
+            [Stat.AttackRatingUndeadPerLevel] = 2,
+            [Stat.HitCausesMonsterToFlee] = 1.28,
+            [Stat.PoisonLength] = 25,
+            [Stat.StrengthPerLevel] = 8,
+            [Stat.DexterityPerLevel] = 8,
+            [Stat.VitalityPerLevel] = 8,
+            [Stat.EnergyPerLevel] = 8,
+        };
+
+        public static Dictionary<Stat, double> StatInvertDivisors = new Dictionary<Stat, double>()
+        {
+            [Stat.ReplenishDurability] = 100,
         };
 
         public static List<Stat> NegativeValueStats = new List<Stat>()
@@ -451,6 +451,7 @@ namespace MapAssist.Types
             Stat.EnemyLightningResist,
             Stat.EnemyColdResist,
             Stat.EnemyPoisonResist,
+            Stat.TargetDefense,
         };
 
         public enum Stat : short
@@ -479,8 +480,8 @@ namespace MapAssist.Types
             ChanceToBlock,
             MinDamage,
             MaxDamage,
-            SecondMinDamage,
-            SecMaxDamage,
+            TwoHandedMinDamage,
+            TwoHandedMaxDamage,
             DamagePercent,
             ManaRecovery,
             ManaRecoveryBonus,
@@ -542,12 +543,12 @@ namespace MapAssist.Types
             AddClassSkills,
             Unused84,
             AddExperience,
-            HealAfterKill,
+            LifeAfterEachKill,
             ReducePrices,
             DoubleHerbDuration,
             LightRadius,
             LightColor,
-            RequirementPercent,
+            Requirements,
             LevelRequire,
             IncreasedAttackSpeed,
             LevelRequirePercent,
@@ -566,23 +567,23 @@ namespace MapAssist.Types
             SingleSkill,
             SlainMonstersRestInPeace,
             CurseResistance,
-            PoisonLengthResist,
+            PoisonLengthReduced,
             NormalDamage,
-            Howl,
-            Stupidity,
+            HitCausesMonsterToFlee,
+            HitBlindsTarget,
             DamageTakenGoesToMana,
-            IgnoreTargetsAR,
-            FractionalTargetAC,
+            IgnoreTargetsDefense,
+            TargetDefense,
             PreventMonsterHeal,
             HalfFreezeDuration,
             AttackRatingPercent,
-            DamageTargetAC,
+            MonsterDefensePerHit,
             DemonDamagePercent,
             UndeadDamagePercent,
             DemonAttackRating,
             UndeadAttackRating,
             Throwable,
-            ElemSkills,
+            FireSkills,
             AllSkills,
             AttackerTakesLightDamage,
             IronMaidenLevel,
@@ -590,7 +591,7 @@ namespace MapAssist.Types
             ThornsPercent,
             BoneArmor,
             BoneArmorMax,
-            Freeze,
+            FreezesTarget,
             OpenWounds,
             CrushingBlow,
             KickDamage,
@@ -606,15 +607,15 @@ namespace MapAssist.Types
             AbsorbMagic,
             AbsorbColdPercent,
             AbsorbCold,
-            Slow,
+            SlowsTarget,
             Aura,
             Indestructible,
             CannotBeFrozen,
-            StaminaDrainPercent,
+            SlowerStaminaDrain,
             Reanimate,
             Pierce,
-            MagicAarow,
-            ExplosiveAarow,
+            MagicArrow,
+            ExplosiveArrow,
             ThrowMinDamage,
             ThrowMaxDamage,
             SkillHandofAthena,
@@ -670,7 +671,7 @@ namespace MapAssist.Types
             Unused211,
             Unused212,
             Unused213,
-            ArmorPerLevel,
+            DefensePerLevel,
             ArmorPercentPerLevel,
             LifePerLevel,
             ManaPerLevel,
@@ -695,7 +696,7 @@ namespace MapAssist.Types
             AbsorbLightningPerLevel,
             AbsorbPoisonPerLevel,
             ThornsPerLevel,
-            FindGoldPerLevel,
+            ExtraGoldPerLevel,
             MagicFindPerLevel,
             RegenStaminaPerLevel,
             StaminaPerLevel,

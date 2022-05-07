@@ -1,22 +1,3 @@
-/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
 using MapAssist.Helpers;
 using MapAssist.Settings;
 using System;
@@ -36,6 +17,7 @@ namespace MapAssist.Types
         public static Dictionary<int, Dictionary<uint, Npc>> ItemVendors = new Dictionary<int, Dictionary<uint, Npc>>();
         public static Dictionary<int, List<ItemLogEntry>> ItemLog = new Dictionary<int, List<ItemLogEntry>>();
         public static Dictionary<string, LocalizedObj> LocalizedItems = new Dictionary<string, LocalizedObj>();
+        public static Dictionary<ushort, LocalizedObj> LocalizedRunewords = new Dictionary<ushort, LocalizedObj>();
 
         public static void LogItem(UnitItem item, int areaLevel, int playerLevel, int processId)
         {
@@ -287,6 +269,7 @@ namespace MapAssist.Types
                             itemFullName = foundFullUniqueName;
                         }
                         break;
+
                     case ItemQuality.SET:
                         if (_SetFromId.TryGetValue(item.ItemData.uniqueOrSetId, out var foundFullSetName))
                         {
@@ -297,7 +280,13 @@ namespace MapAssist.Types
             }
 
             var localizedName = GetItemNameFromKey(itemFullName);
-            if (localizedName == "ItemNotFound") return itemFullName;
+            if (localizedName == "ItemNotFound") localizedName = itemFullName;
+
+            if (item.IsRuneWord)
+            {
+                return GetRunewordFromId(item.Prefixes[0]) + " " + localizedName;
+            }
+
             return localizedName;
         }
 
@@ -305,6 +294,20 @@ namespace MapAssist.Types
         {
             LocalizedObj localItem;
             if (!LocalizedItems.TryGetValue(key, out localItem))
+            {
+                return "ItemNotFound";
+            }
+
+            var lang = MapAssistConfiguration.Loaded.LanguageCode;
+            var prop = localItem.GetType().GetProperty(lang.ToString()).GetValue(localItem, null);
+
+            return prop.ToString();
+        }
+
+        public static string GetRunewordFromId(ushort id)
+        {
+            LocalizedObj localItem;
+            if (!LocalizedRunewords.TryGetValue(id, out localItem))
             {
                 return "ItemNotFound";
             }
@@ -475,7 +478,8 @@ namespace MapAssist.Types
 
         public static double GetItemStatDecimal(UnitItem item, Stats.Stat stat)
         {
-            return item.Stats.TryGetValue(stat, out var statValue) && Stats.StatDivisors.TryGetValue(stat, out var divisor) ? statValue / divisor : 0;
+            return item.Stats.TryGetValue(stat, out var statValue) && Stats.StatDivisors.TryGetValue(stat, out var divisor) ? statValue / divisor :
+                Stats.StatInvertDivisors.TryGetValue(stat, out var invertDivisor) ? Math.Round(invertDivisor / statValue, 0) : 0;
         }
 
         public static int GetItemStatResists(UnitItem item, bool sumOfEach)
@@ -535,7 +539,7 @@ namespace MapAssist.Types
             return (new Structs.PlayerClass[] { playerClass }, allSkills);
         }
 
-        public static (SkillTree[], int) GetItemStatAddSkillTreeSkills(UnitItem item, SkillTree skillTree)
+        public static (SkillTree[], int) GetItemStatAddSkillTreeSkills(UnitItem item, SkillTree skillTree, bool addClassSkills = true)
         {
             if (skillTree == SkillTree.Any)
             {
@@ -547,7 +551,7 @@ namespace MapAssist.Types
                     if (item.StatLayers.TryGetValue(Stats.Stat.AddSkillTab, out var anyItemStats) &&
                         anyItemStats.TryGetValue((ushort)skillTreeId, out var anyTabSkills))
                     {
-                        anyTabSkills += GetItemStatAddClassSkills(item, skillTreeId.GetPlayerClass()).Item2; // This adds the +class skill points and +all skills points
+                        anyTabSkills += addClassSkills ? GetItemStatAddClassSkills(item, skillTreeId.GetPlayerClass()).Item2 : 0; // This adds the +class skill points and +all skills points
 
                         if (anyTabSkills > maxSkillTreeQuantity)
                         {
@@ -564,7 +568,7 @@ namespace MapAssist.Types
                 return (maxSkillTrees.ToArray(), maxSkillTreeQuantity);
             }
 
-            var baseAddSkills = GetItemStatAddClassSkills(item, skillTree.GetPlayerClass()).Item2; // This adds the +class skill points and +all skills points
+            var baseAddSkills = addClassSkills ? GetItemStatAddClassSkills(item, skillTree.GetPlayerClass()).Item2 : 0; // This adds the +class skill points and +all skills points
 
             if (item.StatLayers.TryGetValue(Stats.Stat.AddSkillTab, out var itemStats) &&
                 itemStats.TryGetValue((ushort)skillTree, out var addSkillTab))
@@ -575,7 +579,7 @@ namespace MapAssist.Types
             return (new SkillTree[] { skillTree }, baseAddSkills);
         }
 
-        public static (Skill[], int) GetItemStatAddSingleSkills(UnitItem item, Skill skill)
+        public static (Skill[], int) GetItemStatAddSingleSkills(UnitItem item, Skill skill, bool addSkillTree = true)
         {
             var itemSkillsStats = new List<Stats.Stat>()
             {
@@ -595,7 +599,7 @@ namespace MapAssist.Types
                         if (item.StatLayers.TryGetValue(statType, out var anyItemStats) &&
                             anyItemStats.TryGetValue((ushort)skillId, out var anySkillLevel))
                         {
-                            anySkillLevel += (statType == Stats.Stat.SingleSkill ? GetItemStatAddSkillTreeSkills(item, skillId.GetSkillTree()).Item2 : 0); // This adds the +skill tree points, +class skill points and +all skills points
+                            anySkillLevel += (addSkillTree && statType == Stats.Stat.SingleSkill ? GetItemStatAddSkillTreeSkills(item, skillId.GetSkillTree()).Item2 : 0); // This adds the +skill tree points, +class skill points and +all skills points
 
                             if (anySkillLevel > maxSkillQuantity)
                             {
@@ -613,7 +617,7 @@ namespace MapAssist.Types
                 return (maxSkills.ToArray(), maxSkillQuantity);
             }
 
-            var baseAddSkills = GetItemStatAddSkillTreeSkills(item, skill.GetSkillTree()).Item2; // This adds the +skill tree points, +class skill points and +all skills points
+            var baseAddSkills = addSkillTree ? GetItemStatAddSkillTreeSkills(item, skill.GetSkillTree()).Item2 : 0; // This adds the +skill tree points, +class skill points and +all skills points
 
             foreach (var statType in itemSkillsStats)
             {

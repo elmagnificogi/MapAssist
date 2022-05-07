@@ -133,6 +133,7 @@
     <Compile Include="Helpers\ItemExport.cs" />
     <Compile Include="Helpers\Localization.cs" />
     <Compile Include="Helpers\LootFilter.cs" />
+    <Compile Include="Helpers\Pattern.cs" />
     <Compile Include="Helpers\ProcessContext.cs" />
     <Compile Include="Helpers\YamlConverters.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
@@ -291,7 +292,7 @@
     <None Include="Resources\Stamina.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SwordMastery.png" />
+    <None Include="Resources\BladeMastery.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Teleport.png" />

@@ -1,23 +1,4 @@
-﻿/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
-using MapAssist.Settings;
+﻿using MapAssist.Settings;
 using MapAssist.Structs;
 using System;
 using System.ComponentModel;
@@ -105,6 +86,13 @@ namespace MapAssist.Helpers
                     ClearLastGameProcess();
                     return;
                 }
+
+                if (process.HasExited) // Game window has exited
+                {
+                    _log.Info($"Game window has exited (handle: {hwnd})");
+                    ClearLastGameProcess();
+                    return;
+                }
             }
             catch
             {
@@ -187,7 +175,7 @@ namespace MapAssist.Helpers
             {
                 if (_UnitHashTableOffset == IntPtr.Zero)
                 {
-                    _UnitHashTableOffset = processContext.GetUnitHashtableOffset();
+                    PopulateMissingOffsets();
                 }
 
                 return processContext.Read<UnitHashTable>(IntPtr.Add(_UnitHashTableOffset, offset));
@@ -203,10 +191,7 @@ namespace MapAssist.Helpers
                     return _ExpansionCheckOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _ExpansionCheckOffset = processContext.GetExpansionOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _ExpansionCheckOffset;
             }
@@ -221,10 +206,7 @@ namespace MapAssist.Helpers
                     return _GameNameOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _GameNameOffset = (IntPtr)processContext.GetGameNameOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _GameNameOffset;
             }
@@ -239,10 +221,7 @@ namespace MapAssist.Helpers
                     return _MenuPanelOpenOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _MenuPanelOpenOffset = (IntPtr)processContext.GetMenuOpenOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _MenuPanelOpenOffset;
             }
@@ -257,10 +236,7 @@ namespace MapAssist.Helpers
                     return _MenuDataOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _MenuDataOffset = (IntPtr)processContext.GetMenuDataOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _MenuDataOffset;
             }
@@ -275,10 +251,7 @@ namespace MapAssist.Helpers
                     return _MapSeedOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _MapSeedOffset = (IntPtr)processContext.GetMapSeedOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _MapSeedOffset;
             }
@@ -293,10 +266,7 @@ namespace MapAssist.Helpers
                     return _RosterDataOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _RosterDataOffset = processContext.GetRosterDataOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _RosterDataOffset;
             }
@@ -311,10 +281,7 @@ namespace MapAssist.Helpers
                     return _LastHoverDataOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _LastHoverDataOffset = processContext.GetLastHoverObjectOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _LastHoverDataOffset;
             }
@@ -329,14 +296,76 @@ namespace MapAssist.Helpers
                     return _InteractedNpcOffset;
                 }
 
-                using (var processContext = GetProcessContext())
-                {
-                    _InteractedNpcOffset = processContext.GetInteractedNpcOffset();
-                }
+                PopulateMissingOffsets();
 
                 return _InteractedNpcOffset;
             }
         }
+
+        private static void PopulateMissingOffsets()
+        {
+            // The fact we are here means we are missing some offset, 
+            // which means we will need the buffer.
+            using (var processContext = GetProcessContext())
+            {
+                var buffer = processContext.Read<byte>(processContext.BaseAddr, processContext.ModuleSize);
+
+                if (_UnitHashTableOffset == IntPtr.Zero)
+                {
+                    _UnitHashTableOffset = processContext.GetUnitHashtableOffset(buffer);
+                    _log.Info($"Found offset {nameof(_UnitHashTableOffset)} {_UnitHashTableOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_ExpansionCheckOffset == IntPtr.Zero)
+                {
+                    _ExpansionCheckOffset = processContext.GetExpansionOffset(buffer);
+                    _log.Info($"Found offset {nameof(_ExpansionCheckOffset)} {_ExpansionCheckOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_GameNameOffset == IntPtr.Zero)
+                {
+                    _GameNameOffset = processContext.GetGameNameOffset(buffer);
+                    _log.Info($"Found offset {nameof(_GameNameOffset)} {_GameNameOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_MenuPanelOpenOffset == IntPtr.Zero)
+                {
+                    _MenuPanelOpenOffset = processContext.GetMenuOpenOffset(buffer);
+                    _log.Info($"Found offset {nameof(_MenuPanelOpenOffset)} {_MenuPanelOpenOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_MenuDataOffset == IntPtr.Zero)
+                {
+                    _MenuDataOffset = processContext.GetMenuDataOffset(buffer);
+                    _log.Info($"Found offset {nameof(_MenuDataOffset)} {_MenuDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_MapSeedOffset == IntPtr.Zero)
+                {
+                    _MapSeedOffset = processContext.GetMapSeedOffset(buffer);
+                    _log.Info($"Found offset {nameof(_MapSeedOffset)} {_MapSeedOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_RosterDataOffset == IntPtr.Zero)
+                {
+                    _RosterDataOffset = processContext.GetRosterDataOffset(buffer);
+                    _log.Info($"Found offset {nameof(_RosterDataOffset)} {_RosterDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_LastHoverDataOffset == IntPtr.Zero)
+                {
+                    _LastHoverDataOffset = processContext.GetLastHoverObjectOffset(buffer);
+                    _log.Info($"Found offset {nameof(_LastHoverDataOffset)} {_LastHoverDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                if (_InteractedNpcOffset == IntPtr.Zero)
+                {
+                    _InteractedNpcOffset = processContext.GetInteractedNpcOffset(buffer);
+                    _log.Info($"Found offset {nameof(_InteractedNpcOffset)} {_InteractedNpcOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+            }
+        }
+
 
         public static void Dispose()
         {

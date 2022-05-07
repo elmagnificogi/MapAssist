@@ -221,6 +221,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -248,6 +251,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox5.Controls.Add(this.cboLanguage);
             this.groupBox5.Controls.Add(this.label11);
@@ -279,6 +285,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox4.Controls.Add(this.txtD2Path);
             this.groupBox4.Controls.Add(this.btnBrowseD2Location);
@@ -292,6 +300,8 @@
             // 
             // txtD2Path
             // 
+            this.txtD2Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtD2Path.Enabled = false;
             this.txtD2Path.Location = new System.Drawing.Point(10, 21);
             this.txtD2Path.Name = "txtD2Path";
@@ -301,7 +311,8 @@
             // 
             // btnBrowseD2Location
             // 
-            this.btnBrowseD2Location.Location = new System.Drawing.Point(251, 18);
+            this.btnBrowseD2Location.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowseD2Location.Location = new System.Drawing.Point(251, 21);
             this.btnBrowseD2Location.Name = "btnBrowseD2Location";
             this.btnBrowseD2Location.Size = new System.Drawing.Size(75, 21);
             this.btnBrowseD2Location.TabIndex = 17;
@@ -322,6 +333,8 @@
             // 
             // grpGameInfo
             // 
+            this.grpGameInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpGameInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grpGameInfo.Controls.Add(this.chkShowAreaLevel);
             this.grpGameInfo.Controls.Add(this.cboGameInfoPosition);
@@ -344,6 +357,8 @@
             // 
             // chkShowAreaLevel
             // 
+            this.chkShowAreaLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowAreaLevel.AutoSize = true;
             this.chkShowAreaLevel.Location = new System.Drawing.Point(192, 60);
             this.chkShowAreaLevel.Name = "chkShowAreaLevel";
@@ -355,6 +370,8 @@
             // 
             // cboGameInfoPosition
             // 
+            this.cboGameInfoPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboGameInfoPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGameInfoPosition.FormattingEnabled = true;
             this.cboGameInfoPosition.Location = new System.Drawing.Point(239, 102);
@@ -365,6 +382,8 @@
             // 
             // lblGameInfoPosition
             // 
+            this.lblGameInfoPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGameInfoPosition.AutoSize = true;
             this.lblGameInfoPosition.Location = new System.Drawing.Point(159, 106);
             this.lblGameInfoPosition.Name = "lblGameInfoPosition";
@@ -385,6 +404,8 @@
             // 
             // chkShowOverlayFPS
             // 
+            this.chkShowOverlayFPS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowOverlayFPS.AutoSize = true;
             this.chkShowOverlayFPS.Location = new System.Drawing.Point(192, 81);
             this.chkShowOverlayFPS.Name = "chkShowOverlayFPS";
@@ -431,6 +452,8 @@
             // 
             // chkShowAreaTimer
             // 
+            this.chkShowAreaTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowAreaTimer.AutoSize = true;
             this.chkShowAreaTimer.Location = new System.Drawing.Point(192, 39);
             this.chkShowAreaTimer.Name = "chkShowAreaTimer";
@@ -453,6 +476,8 @@
             // 
             // chkShowArea
             // 
+            this.chkShowArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowArea.AutoSize = true;
             this.chkShowArea.Location = new System.Drawing.Point(192, 18);
             this.chkShowArea.Name = "chkShowArea";
@@ -621,6 +646,8 @@
             // cboPosition
             // 
             this.cboPosition.AllowDrop = true;
+            this.cboPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.FormattingEnabled = true;
             this.cboPosition.Location = new System.Drawing.Point(222, 139);
@@ -631,6 +658,8 @@
             // 
             // mapZoom
             // 
+            this.mapZoom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mapZoom.AutoSize = false;
             this.mapZoom.BackColor = System.Drawing.Color.White;
             this.mapZoom.LargeChange = 1;
@@ -646,6 +675,8 @@
             // 
             // mapSize
             // 
+            this.mapSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mapSize.AutoSize = false;
             this.mapSize.BackColor = System.Drawing.Color.White;
             this.mapSize.LargeChange = 1;
@@ -660,6 +691,7 @@
             // 
             // lblMapZoomValue
             // 
+            this.lblMapZoomValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMapZoomValue.AutoSize = true;
             this.lblMapZoomValue.BackColor = System.Drawing.Color.Transparent;
             this.lblMapZoomValue.Location = new System.Drawing.Point(298, 112);
@@ -677,10 +709,11 @@
             this.lblZoom.Name = "lblZoom";
             this.lblZoom.Size = new System.Drawing.Size(53, 12);
             this.lblZoom.TabIndex = 14;
-            this.lblZoom.Text = "地图轮廓";
+            this.lblZoom.Text = "地图缩放";
             // 
             // lblMapSizeValue
             // 
+            this.lblMapSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMapSizeValue.AutoSize = true;
             this.lblMapSizeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblMapSizeValue.Location = new System.Drawing.Point(298, 81);
@@ -692,6 +725,8 @@
             // 
             // iconOpacity
             // 
+            this.iconOpacity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconOpacity.AutoSize = false;
             this.iconOpacity.BackColor = System.Drawing.Color.White;
             this.iconOpacity.LargeChange = 1;
@@ -715,6 +750,7 @@
             // 
             // lblIconOpacityValue
             // 
+            this.lblIconOpacityValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconOpacityValue.AutoSize = true;
             this.lblIconOpacityValue.BackColor = System.Drawing.Color.Transparent;
             this.lblIconOpacityValue.Location = new System.Drawing.Point(298, 51);
@@ -726,6 +762,7 @@
             // 
             // lblOpacityValue
             // 
+            this.lblOpacityValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOpacityValue.AutoSize = true;
             this.lblOpacityValue.BackColor = System.Drawing.Color.Transparent;
             this.lblOpacityValue.Location = new System.Drawing.Point(298, 20);
@@ -737,6 +774,8 @@
             // 
             // opacity
             // 
+            this.opacity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.opacity.AutoSize = false;
             this.opacity.BackColor = System.Drawing.Color.White;
             this.opacity.LargeChange = 1;
@@ -805,6 +844,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.chkPotionBelt);
             this.groupBox7.Controls.Add(this.chkResistances);
             this.groupBox7.Controls.Add(this.chkExpProgress);
@@ -910,6 +951,9 @@
             // 
             // grpPresets
             // 
+            this.grpPresets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPresets.Controls.Add(this.lblMapLinesMode);
             this.grpPresets.Controls.Add(this.cboMapLinesMode);
             this.grpPresets.Location = new System.Drawing.Point(11, 243);
@@ -942,6 +986,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.chkAlertLowerRes);
             this.groupBox3.Controls.Add(this.lblBuffSizeValue);
             this.groupBox3.Controls.Add(this.label5);
@@ -968,6 +1014,7 @@
             // 
             // lblBuffSizeValue
             // 
+            this.lblBuffSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBuffSizeValue.AutoSize = true;
             this.lblBuffSizeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblBuffSizeValue.Location = new System.Drawing.Point(298, 19);
@@ -1009,6 +1056,8 @@
             // 
             // buffSize
             // 
+            this.buffSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buffSize.AutoSize = false;
             this.buffSize.BackColor = System.Drawing.Color.White;
             this.buffSize.LargeChange = 1;
@@ -1035,6 +1084,9 @@
             // 
             // tabDrawing
             // 
+            this.tabDrawing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabDrawing.Controls.Add(this.tabIcon);
             this.tabDrawing.Controls.Add(this.tabLabel);
             this.tabDrawing.Controls.Add(this.tabLine);
@@ -1120,6 +1172,7 @@
             // 
             // lblIconThicknessValue
             // 
+            this.lblIconThicknessValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconThicknessValue.AutoSize = true;
             this.lblIconThicknessValue.BackColor = System.Drawing.Color.Transparent;
             this.lblIconThicknessValue.Location = new System.Drawing.Point(308, 149);
@@ -1131,6 +1184,7 @@
             // 
             // lblIconSizeValue
             // 
+            this.lblIconSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconSizeValue.AutoSize = true;
             this.lblIconSizeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblIconSizeValue.Location = new System.Drawing.Point(308, 102);
@@ -1152,6 +1206,8 @@
             // 
             // iconThickness
             // 
+            this.iconThickness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconThickness.AutoSize = false;
             this.iconThickness.BackColor = System.Drawing.Color.White;
             this.iconThickness.LargeChange = 1;
@@ -1176,6 +1232,8 @@
             // 
             // iconSize
             // 
+            this.iconSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconSize.AutoSize = false;
             this.iconSize.BackColor = System.Drawing.Color.White;
             this.iconSize.LargeChange = 1;
@@ -1227,9 +1285,9 @@
             this.chkTextShadow.AutoSize = true;
             this.chkTextShadow.Location = new System.Drawing.Point(142, 60);
             this.chkTextShadow.Name = "chkTextShadow";
-            this.chkTextShadow.Size = new System.Drawing.Size(90, 16);
+            this.chkTextShadow.Size = new System.Drawing.Size(72, 16);
             this.chkTextShadow.TabIndex = 32;
-            this.chkTextShadow.Text = "Text Shadow";
+            this.chkTextShadow.Text = "字体阴影";
             this.chkTextShadow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkTextShadow.UseVisualStyleBackColor = true;
             this.chkTextShadow.CheckedChanged += new System.EventHandler(this.chkTextShadow_CheckedChanged);
@@ -1267,7 +1325,7 @@
             this.btnFont.Name = "btnFont";
             this.btnFont.Size = new System.Drawing.Size(75, 21);
             this.btnFont.TabIndex = 20;
-            this.btnFont.Text = "Font";
+            this.btnFont.Text = "字体";
             this.btnFont.UseVisualStyleBackColor = false;
             this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
             // 
@@ -1277,9 +1335,9 @@
             this.btnLabelColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLabelColor.Location = new System.Drawing.Point(11, 10);
             this.btnLabelColor.Name = "btnLabelColor";
-            this.btnLabelColor.Size = new System.Drawing.Size(75, 21);
+            this.btnLabelColor.Size = new System.Drawing.Size(75, 25);
             this.btnLabelColor.TabIndex = 16;
-            this.btnLabelColor.Text = "Color";
+            this.btnLabelColor.Text = "颜色";
             this.btnLabelColor.UseVisualStyleBackColor = false;
             this.btnLabelColor.Click += new System.EventHandler(this.btnLabelColor_Click);
             // 
@@ -1315,6 +1373,7 @@
             // 
             // lblLineThicknessSizeValue
             // 
+            this.lblLineThicknessSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineThicknessSizeValue.AutoSize = true;
             this.lblLineThicknessSizeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblLineThicknessSizeValue.Location = new System.Drawing.Point(299, 102);
@@ -1326,6 +1385,7 @@
             // 
             // lblLineArrowSizeValue
             // 
+            this.lblLineArrowSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineArrowSizeValue.AutoSize = true;
             this.lblLineArrowSizeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblLineArrowSizeValue.Location = new System.Drawing.Point(299, 56);
@@ -1341,12 +1401,14 @@
             this.lblLineThickness.BackColor = System.Drawing.Color.Transparent;
             this.lblLineThickness.Location = new System.Drawing.Point(8, 102);
             this.lblLineThickness.Name = "lblLineThickness";
-            this.lblLineThickness.Size = new System.Drawing.Size(65, 12);
+            this.lblLineThickness.Size = new System.Drawing.Size(29, 12);
             this.lblLineThickness.TabIndex = 23;
-            this.lblLineThickness.Text = "Thickness ";
+            this.lblLineThickness.Text = "粗细";
             // 
             // lineThicknessSize
             // 
+            this.lineThicknessSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lineThicknessSize.AutoSize = false;
             this.lineThicknessSize.BackColor = System.Drawing.Color.White;
             this.lineThicknessSize.LargeChange = 1;
@@ -1365,12 +1427,14 @@
             this.lblLineArrow.BackColor = System.Drawing.Color.Transparent;
             this.lblLineArrow.Location = new System.Drawing.Point(8, 56);
             this.lblLineArrow.Name = "lblLineArrow";
-            this.lblLineArrow.Size = new System.Drawing.Size(65, 12);
+            this.lblLineArrow.Size = new System.Drawing.Size(53, 12);
             this.lblLineArrow.TabIndex = 21;
-            this.lblLineArrow.Text = "Arrow Size";
+            this.lblLineArrow.Text = "箭头大小";
             // 
             // lineArrowSize
             // 
+            this.lineArrowSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lineArrowSize.AutoSize = false;
             this.lineArrowSize.BackColor = System.Drawing.Color.White;
             this.lineArrowSize.LargeChange = 1;
@@ -1389,9 +1453,9 @@
             this.btnLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLineColor.Location = new System.Drawing.Point(11, 10);
             this.btnLineColor.Name = "btnLineColor";
-            this.btnLineColor.Size = new System.Drawing.Size(75, 21);
+            this.btnLineColor.Size = new System.Drawing.Size(75, 25);
             this.btnLineColor.TabIndex = 18;
-            this.btnLineColor.Text = "Color";
+            this.btnLineColor.Text = "颜色";
             this.btnLineColor.UseVisualStyleBackColor = false;
             this.btnLineColor.Click += new System.EventHandler(this.btnLineColor_Click);
             // 
@@ -1406,6 +1470,8 @@
             // 
             // cboRenderOption
             // 
+            this.cboRenderOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboRenderOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRenderOption.FormattingEnabled = true;
             this.cboRenderOption.Location = new System.Drawing.Point(118, 6);
@@ -1426,6 +1492,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.chkItemLogVendorItems);
             this.groupBox6.Controls.Add(this.lblSoundVolumeValue);
             this.groupBox6.Controls.Add(this.lblItemDisplayForSecondsValue);
@@ -1461,12 +1529,13 @@
             this.chkItemLogVendorItems.Name = "chkItemLogVendorItems";
             this.chkItemLogVendorItems.Size = new System.Drawing.Size(114, 16);
             this.chkItemLogVendorItems.TabIndex = 40;
-            this.chkItemLogVendorItems.Text = "检查NPC卖的物品";
+            this.chkItemLogVendorItems.Text = "过滤NPC卖的物品";
             this.chkItemLogVendorItems.UseVisualStyleBackColor = true;
             this.chkItemLogVendorItems.CheckedChanged += new System.EventHandler(this.chkItemLogVendorItems_CheckedChanged);
             // 
             // lblSoundVolumeValue
             // 
+            this.lblSoundVolumeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSoundVolumeValue.AutoSize = true;
             this.lblSoundVolumeValue.BackColor = System.Drawing.Color.Transparent;
             this.lblSoundVolumeValue.Location = new System.Drawing.Point(292, 181);
@@ -1478,6 +1547,7 @@
             // 
             // lblItemDisplayForSecondsValue
             // 
+            this.lblItemDisplayForSecondsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblItemDisplayForSecondsValue.AutoSize = true;
             this.lblItemDisplayForSecondsValue.BackColor = System.Drawing.Color.Transparent;
             this.lblItemDisplayForSecondsValue.Location = new System.Drawing.Point(292, 210);
@@ -1513,6 +1583,8 @@
             // 
             // itemDisplayForSeconds
             // 
+            this.itemDisplayForSeconds.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.itemDisplayForSeconds.AutoSize = false;
             this.itemDisplayForSeconds.BackColor = System.Drawing.Color.White;
             this.itemDisplayForSeconds.LargeChange = 1;
@@ -1569,6 +1641,8 @@
             // 
             // soundVolume
             // 
+            this.soundVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.soundVolume.AutoSize = false;
             this.soundVolume.BackColor = System.Drawing.Color.White;
             this.soundVolume.Cursor = System.Windows.Forms.Cursors.Default;
@@ -1622,7 +1696,9 @@
             // 
             // txtSoundFile
             // 
-            this.txtSoundFile.Location = new System.Drawing.Point(85, 136);
+            this.txtSoundFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSoundFile.Location = new System.Drawing.Point(85, 147);
             this.txtSoundFile.Name = "txtSoundFile";
             this.txtSoundFile.Size = new System.Drawing.Size(240, 21);
             this.txtSoundFile.TabIndex = 5;
@@ -1631,6 +1707,8 @@
             // 
             // cboItemLogPosition
             // 
+            this.cboItemLogPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboItemLogPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboItemLogPosition.FormattingEnabled = true;
             this.cboItemLogPosition.Location = new System.Drawing.Point(238, 16);
@@ -1641,7 +1719,9 @@
             // 
             // txtFilterFile
             // 
-            this.txtFilterFile.Location = new System.Drawing.Point(85, 81);
+            this.txtFilterFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFilterFile.Location = new System.Drawing.Point(89, 78);
             this.txtFilterFile.Name = "txtFilterFile";
             this.txtFilterFile.Size = new System.Drawing.Size(240, 21);
             this.txtFilterFile.TabIndex = 2;
@@ -1665,7 +1745,7 @@
             this.chkItemLogItemsOnIdentify.Name = "chkItemLogItemsOnIdentify";
             this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(132, 16);
             this.chkItemLogItemsOnIdentify.TabIndex = 39;
-            this.chkItemLogItemsOnIdentify.Text = "检查已经鉴定的物品";
+            this.chkItemLogItemsOnIdentify.Text = "过滤已经鉴定的物品";
             this.chkItemLogItemsOnIdentify.UseVisualStyleBackColor = true;
             this.chkItemLogItemsOnIdentify.CheckedChanged += new System.EventHandler(this.chkItemLogItemsOnIdentify_CheckedChanged);
             // 
@@ -1693,6 +1773,8 @@
             // 
             // grpHotkeys
             // 
+            this.grpHotkeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpHotkeys.Controls.Add(this.txtShareRoomKey);
             this.grpHotkeys.Controls.Add(this.label6);
             this.grpHotkeys.Controls.Add(this.txtHideMapKey);
@@ -1861,6 +1943,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnRemoveHidden);
             this.groupBox2.Controls.Add(this.btnAddHidden);
             this.groupBox2.Controls.Add(this.lstHidden);
@@ -1873,7 +1957,8 @@
             // 
             // btnRemoveHidden
             // 
-            this.btnRemoveHidden.Location = new System.Drawing.Point(309, 44);
+            this.btnRemoveHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveHidden.Location = new System.Drawing.Point(362, 48);
             this.btnRemoveHidden.Name = "btnRemoveHidden";
             this.btnRemoveHidden.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveHidden.TabIndex = 2;
@@ -1883,7 +1968,8 @@
             // 
             // btnAddHidden
             // 
-            this.btnAddHidden.Location = new System.Drawing.Point(309, 18);
+            this.btnAddHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddHidden.Location = new System.Drawing.Point(362, 19);
             this.btnAddHidden.Name = "btnAddHidden";
             this.btnAddHidden.Size = new System.Drawing.Size(20, 21);
             this.btnAddHidden.TabIndex = 1;
@@ -1893,6 +1979,8 @@
             // 
             // lstHidden
             // 
+            this.lstHidden.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstHidden.FormattingEnabled = true;
             this.lstHidden.ItemHeight = 12;
             this.lstHidden.Location = new System.Drawing.Point(10, 18);
@@ -1902,6 +1990,8 @@
             // 
             // groupBoxAuthorizedWindowTitle
             // 
+            this.groupBoxAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.txtAuthorizedWindowTitle);
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.btnRemoveAuthorizedWindowTitle);
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.btnAddAuthorizedWindowTitle);
@@ -1911,10 +2001,12 @@
             this.groupBoxAuthorizedWindowTitle.Size = new System.Drawing.Size(335, 114);
             this.groupBoxAuthorizedWindowTitle.TabIndex = 2;
             this.groupBoxAuthorizedWindowTitle.TabStop = false;
-            this.groupBoxAuthorizedWindowTitle.Text = "Authorized Window Titles";
+            this.groupBoxAuthorizedWindowTitle.Text = "可能的游戏窗口名";
             // 
             // txtAuthorizedWindowTitle
             // 
+            this.txtAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 87);
             this.txtAuthorizedWindowTitle.Name = "txtAuthorizedWindowTitle";
             this.txtAuthorizedWindowTitle.Size = new System.Drawing.Size(293, 21);
@@ -1922,7 +2014,8 @@
             // 
             // btnRemoveAuthorizedWindowTitle
             // 
-            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 41);
+            this.btnRemoveAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 38);
             this.btnRemoveAuthorizedWindowTitle.Name = "btnRemoveAuthorizedWindowTitle";
             this.btnRemoveAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveAuthorizedWindowTitle.TabIndex = 2;
@@ -1932,7 +2025,8 @@
             // 
             // btnAddAuthorizedWindowTitle
             // 
-            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 85);
+            this.btnAddAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 86);
             this.btnAddAuthorizedWindowTitle.Name = "btnAddAuthorizedWindowTitle";
             this.btnAddAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
             this.btnAddAuthorizedWindowTitle.TabIndex = 1;
@@ -1942,6 +2036,8 @@
             // 
             // lstAuthorizedWindowTitle
             // 
+            this.lstAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstAuthorizedWindowTitle.FormattingEnabled = true;
             this.lstAuthorizedWindowTitle.ItemHeight = 12;
             this.lstAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 18);
@@ -1951,6 +2047,8 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.chkDPIAware);

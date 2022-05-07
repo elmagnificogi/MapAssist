@@ -1,23 +1,4 @@
-﻿/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
-using GameOverlay.Drawing;
+﻿using GameOverlay.Drawing;
 using MapAssist.Settings;
 using MapAssist.Types;
 using System.Collections.Generic;
@@ -118,6 +99,35 @@ namespace MapAssist.Helpers
             GameObject.JungleShrine3,
             GameObject.JungleShrine4,
             GameObject.JungleShrine5,
+        };
+
+        private static readonly HashSet<GameObject> Doors = new HashSet<GameObject>
+        {
+            GameObject.DoorCathedralLeft,
+            GameObject.DoorCathedralRight,
+            GameObject.DoorCourtyardLeft,
+            GameObject.DoorCourtyardRight,
+            GameObject.DoorGateLeft,
+            GameObject.DoorGateRight,
+            GameObject.DoorMonasteryDoubleRight,
+            GameObject.DoorWoodenLeft,
+            GameObject.DoorWoodenLeft2,
+            GameObject.DoorWoodenRight,
+            GameObject.IronGrateDoorLeft,
+            GameObject.IronGrateDoorRight,
+            GameObject.SlimeDoor1,
+            GameObject.SlimeDoor2,
+            GameObject.TombDoorLeft,
+            GameObject.TombDoorLeft2,
+            GameObject.TombDoorRight,
+            GameObject.TombDoorRight2,
+            GameObject.WoodenDoorLeft,
+            GameObject.WoodenDoorRight,
+            GameObject.WoodenGrateDoorLeft,
+            GameObject.WoodenGrateDoorRight,
+            GameObject.AndarielDoor,
+            GameObject.PenBreakableDoor,
+            GameObject.SecretDoor1
         };
 
         public static void UpdateLocalizationNames()
@@ -551,6 +561,20 @@ namespace MapAssist.Helpers
                             Position = point,
                             RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.ArmorWeapRack,
                             Type = PoiType.ArmorWeapRack
+                        });
+                    }
+                }
+                else if (Doors.Contains(obj))
+                {
+                    foreach (var point in points)
+                    {
+                        pointsOfInterest.Add(new PointOfInterest
+                        {
+                            Area = areaData.Area,
+                            Label = obj.ToString(),
+                            Position = point,
+                            RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.Door,
+                            Type = PoiType.Door
                         });
                     }
                 }

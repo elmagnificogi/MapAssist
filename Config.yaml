@@ -202,6 +202,10 @@ MapConfiguration:
     IconColor: 132, 132, 132
     IconShape: Square
     IconSize: 4
+  Door:
+    IconColor: 132, 132, 132
+    IconShape: Kite
+    IconSize: 3
   Item:
     IconColor: DarkOrange
     IconShape: Ellipse

@@ -1,22 +1,3 @@
-/**
- *   Copyright (C) 2021 okaygo
- *
- *   https://github.com/misterokaygo/MapAssist/
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- **/
-
 using GameOverlay.Drawing;
 using MapAssist.Helpers;
 using MapAssist.Structs;
@@ -39,7 +20,8 @@ namespace MapAssist.Types
         public StatListStruct StatsStruct { get; private set; }
         public Dictionary<Stats.Stat, Dictionary<ushort, int>> StatLayers { get; private set; }
         public Dictionary<Stats.Stat, int> Stats { get; private set; }
-        protected uint[] StateFlags { get; set; }
+        public uint[] StateFlags { get; set; }
+        public List<State> StateList { get; set; }
         public DateTime FoundTime { get; set; } = DateTime.Now;
         public bool IsHovered { get; set; } = false;
         public bool IsCached { get; set; } = false;
@@ -125,6 +107,24 @@ namespace MapAssist.Types
             return UpdateResult.InvalidUpdate;
         }
 
+        protected List<State> GetStateList()
+        {
+            var stateList = new List<State>();
+            for (var i = 0; i <= States.StateCount; i++)
+            {
+                if (GetState((State)i))
+                {
+                    stateList.Add((State)i);
+                }
+            }
+            return stateList;
+        }
+
+        private bool GetState(State state)
+        {
+            return (StateFlags[(int)state >> 5] & StateMasks.gdwBitMasks[(int)state & 31]) > 0;
+        }
+
         private bool IsMovable => !(Struct.UnitType == UnitType.Object || Struct.UnitType == UnitType.Item);
 
         public bool IsValidPointer => PtrUnit != IntPtr.Zero;
@@ -141,7 +141,8 @@ namespace MapAssist.Types
             {
                 if (Struct.UnitType != UnitType.Monster) return false;
                 if (Struct.Mode == 0 || Struct.Mode == 12) return false;
-                if (NPC.Dummies.ContainsKey(TxtFileNo)) { return false; }
+                if (NPC.Dummies.ContainsKey(TxtFileNo)) return false;
+                if (StateList.Contains(State.STATE_REVIVE)) return false;
 
                 return true;
             }
