@@ -1,3 +1,4 @@
+using MapAssist.Integrations;
 using MapAssist.Settings;
 using MapAssist.Types;
 using System;
@@ -40,6 +41,18 @@ namespace MapAssist.Helpers
             using (processContext)
             {
                 _currentProcessId = processContext.ProcessId;
+
+                foreach (IIntegration integration in Program.Integrations)
+                {
+                    try
+                    {
+                        integration.Run(processContext);
+                    }
+                    catch (Exception e)
+                    {
+                        _log.Error(e, $"Integration {integration.Name} failed");
+                    }
+                }
 
                 var menuOpen = processContext.Read<byte>(GameManager.MenuOpenOffset);
                 var menuData = processContext.Read<Structs.MenuData>(GameManager.MenuDataOffset);

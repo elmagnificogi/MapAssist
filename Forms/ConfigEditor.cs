@@ -1,4 +1,5 @@
 ﻿using MapAssist.Helpers;
+using MapAssist.Integrations;
 using MapAssist.Settings;
 using MapAssist.Types;
 using System;
@@ -176,6 +177,16 @@ namespace MapAssist
             checkHard.Checked = MapAssistConfiguration.Loaded.DCTrack.Hard;
             checkSound.Checked = MapAssistConfiguration.Loaded.DCTrack.Sound;
             comboBoxWarnLevel.SelectedIndex = comboBoxWarnLevel.Items.IndexOf(MapAssistConfiguration.Loaded.DCTrack.WarningLevel);
+
+            foreach (IIntegration integration in Program.Integrations)
+            {
+                var control = integration.ConfigurationControls;
+                control.Dock = DockStyle.Fill;
+                if (control == null) continue;
+                var integrationTab = new TabPage(integration.Name);
+                integrationTab.Controls.Add(control);
+                integrationTabs.TabPages.Add(integrationTab);
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

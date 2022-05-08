@@ -196,6 +196,7 @@
             this.chkDPIAware = new System.Windows.Forms.CheckBox();
             this.integrationTab = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.integrationTabs = new System.Windows.Forms.TabControl();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -233,6 +234,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.integrationTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2261,12 +2263,24 @@
             // 
             // integrationTab
             // 
+            this.integrationTab.Controls.Add(this.integrationTabs);
             this.integrationTab.Location = new System.Drawing.Point(4, 22);
             this.integrationTab.Name = "integrationTab";
             this.integrationTab.Size = new System.Drawing.Size(450, 325);
             this.integrationTab.TabIndex = 8;
             this.integrationTab.Text = "Integration";
             this.integrationTab.UseVisualStyleBackColor = true;
+            // 
+            // integrationTabs
+            // 
+            this.integrationTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.integrationTabs.Location = new System.Drawing.Point(3, 3);
+            this.integrationTabs.Name = "integrationTabs";
+            this.integrationTabs.SelectedIndex = 0;
+            this.integrationTabs.Size = new System.Drawing.Size(444, 319);
+            this.integrationTabs.TabIndex = 0;
             // 
             // ConfigEditor
             // 
@@ -2334,6 +2348,7 @@
             this.groupBoxAuthorizedWindowTitle.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.integrationTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2507,5 +2522,6 @@
         private System.Windows.Forms.ComboBox comboBoxWarnLevel;
         private System.Windows.Forms.CheckBox checkSound;
         private System.Windows.Forms.TabPage integrationTab;
+        private System.Windows.Forms.TabControl integrationTabs;
     }
 }

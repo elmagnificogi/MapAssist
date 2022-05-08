@@ -1,4 +1,5 @@
-﻿using MapAssist.Settings;
+﻿using MapAssist.Integrations;
+using MapAssist.Settings;
 using MapAssist.Structs;
 using System;
 using System.ComponentModel;
@@ -173,12 +174,22 @@ namespace MapAssist.Helpers
         {
             using (var processContext = GetProcessContext())
             {
-                if (_UnitHashTableOffset == IntPtr.Zero)
+                return processContext.Read<UnitHashTable>(IntPtr.Add(UnitHashTableOffset, offset));
+            }
+        }
+
+        public static IntPtr UnitHashTableOffset
+        {
+            get
+            {
+                if (_UnitHashTableOffset != IntPtr.Zero)
                 {
-                    PopulateMissingOffsets();
+                    return _UnitHashTableOffset;
                 }
 
-                return processContext.Read<UnitHashTable>(IntPtr.Add(_UnitHashTableOffset, offset));
+                PopulateMissingOffsets();
+
+                return _UnitHashTableOffset;
             }
         }
 
@@ -362,6 +373,18 @@ namespace MapAssist.Helpers
                 {
                     _InteractedNpcOffset = processContext.GetInteractedNpcOffset(buffer);
                     _log.Info($"Found offset {nameof(_InteractedNpcOffset)} {_InteractedNpcOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                }
+
+                foreach (IIntegration integration in Program.Integrations)
+                {
+                    try
+                    {
+                        integration.Initialize(buffer, processContext);
+                    }
+                    catch (Exception e)
+                    {
+                        _log.Error($"Integration {integration.Name} failed to initialize: {e}");
+                    }
                 }
             }
         }
