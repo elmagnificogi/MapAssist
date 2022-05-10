@@ -38,7 +38,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("亚服") &&
                                         x.ladder.Equals("天梯") &&
                                         x.sc.Equals("普通") &&
@@ -48,7 +48,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("亚服") &&
                                             x.ladder.Equals("天梯") &&
                                             x.sc.Equals("专家") &&
@@ -61,7 +61,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("亚服") &&
                                         x.ladder.Equals("经典") &&
                                         x.sc.Equals("普通") &&
@@ -71,7 +71,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("亚服") &&
                                             x.ladder.Equals("经典") &&
                                             x.sc.Equals("专家") &&
@@ -88,7 +88,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("美服") &&
                                         x.ladder.Equals("天梯") &&
                                         x.sc.Equals("普通") &&
@@ -98,7 +98,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("美服") &&
                                             x.ladder.Equals("天梯") &&
                                             x.sc.Equals("专家") &&
@@ -111,7 +111,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("美服") &&
                                         x.ladder.Equals("经典") &&
                                         x.sc.Equals("普通") &&
@@ -121,7 +121,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("美服") &&
                                             x.ladder.Equals("经典") &&
                                             x.sc.Equals("专家") &&
@@ -138,7 +138,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("欧服") &&
                                         x.ladder.Equals("天梯") &&
                                         x.sc.Equals("普通") &&
@@ -148,7 +148,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("欧服") &&
                                             x.ladder.Equals("天梯") &&
                                             x.sc.Equals("专家") &&
@@ -161,7 +161,7 @@ namespace MapAssist.Types
                                 {
                                     if (MapAssistConfiguration.Loaded.DCTrack.Normal)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("欧服") &&
                                         x.ladder.Equals("经典") &&
                                         x.sc.Equals("普通") &&
@@ -171,7 +171,7 @@ namespace MapAssist.Types
                                     }
                                     if (MapAssistConfiguration.Loaded.DCTrack.Hard)
                                     {
-                                        DC dc = diabloCloneProgress.First(x =>
+                                        var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("欧服") &&
                                             x.ladder.Equals("经典") &&
                                             x.sc.Equals("专家") &&
