@@ -1981,7 +1981,7 @@
             // checkSound
             // 
             this.checkSound.AutoSize = true;
-            this.checkSound.Location = new System.Drawing.Point(158, 106);
+            this.checkSound.Location = new System.Drawing.Point(11, 105);
             this.checkSound.Name = "checkSound";
             this.checkSound.Size = new System.Drawing.Size(72, 16);
             this.checkSound.TabIndex = 47;
@@ -1992,11 +1992,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 110);
+            this.label23.Location = new System.Drawing.Point(89, 107);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.Size = new System.Drawing.Size(77, 12);
             this.label23.TabIndex = 45;
-            this.label23.Text = "提示级别";
+            this.label23.Text = "声音提示级别";
             // 
             // comboBoxWarnLevel
             // 
@@ -2011,7 +2011,7 @@
             "4/6",
             "5/6",
             "6/6"});
-            this.comboBoxWarnLevel.Location = new System.Drawing.Point(65, 105);
+            this.comboBoxWarnLevel.Location = new System.Drawing.Point(172, 103);
             this.comboBoxWarnLevel.Name = "comboBoxWarnLevel";
             this.comboBoxWarnLevel.Size = new System.Drawing.Size(87, 20);
             this.comboBoxWarnLevel.TabIndex = 46;

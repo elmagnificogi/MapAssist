@@ -293,7 +293,7 @@ DCTrack:
   Normal: true
   Hard: true
   WarningLevel: 1/6
-  Sound: true
+  Sound: false
 D2Path: ''
 LanguageCode: zhCN
 DPIAware: false

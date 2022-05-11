@@ -41,8 +41,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("亚服") &&
                                         x.ladder.Equals("天梯") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -51,8 +50,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("亚服") &&
                                             x.ladder.Equals("天梯") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -64,8 +62,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("亚服") &&
                                         x.ladder.Equals("经典") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -74,8 +71,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("亚服") &&
                                             x.ladder.Equals("经典") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -91,8 +87,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("美服") &&
                                         x.ladder.Equals("天梯") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -101,8 +96,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("美服") &&
                                             x.ladder.Equals("天梯") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -114,8 +108,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("美服") &&
                                         x.ladder.Equals("经典") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -124,8 +117,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("美服") &&
                                             x.ladder.Equals("经典") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -141,8 +133,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("欧服") &&
                                         x.ladder.Equals("天梯") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -151,8 +142,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("欧服") &&
                                             x.ladder.Equals("天梯") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -164,8 +154,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                         x.region.Equals("欧服") &&
                                         x.ladder.Equals("经典") &&
-                                        x.sc.Equals("普通") &&
-                                        x.progress >= warningLevel);
+                                        x.sc.Equals("普通"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -174,8 +163,7 @@ namespace MapAssist.Types
                                         var dc = diabloCloneProgress.FirstOrDefault(x =>
                                             x.region.Equals("欧服") &&
                                             x.ladder.Equals("经典") &&
-                                            x.sc.Equals("专家") &&
-                                            x.progress >= warningLevel);
+                                            x.sc.Equals("专家"));
                                         if (dc != null)
                                             show.Add(dc);
                                     }
@@ -185,7 +173,17 @@ namespace MapAssist.Types
                             if (MapAssistConfiguration.Loaded.DCTrack.Sound)
                             {
                                 if(show.Count > 0)
-                                    WindowsExternal.Beep(800, 300);
+                                {
+                                    var beep = false;
+                                    foreach(var dc in show)
+                                    {
+                                        if(dc.progress >= warningLevel)
+                                            beep = true;
+                                    }
+                                    if(beep)
+                                        WindowsExternal.Beep(800, 300);
+                                }
+                                    
                             }
                                 
 
@@ -205,8 +203,9 @@ namespace MapAssist.Types
         {
             var strHTML = "";
             var myWebClient = new WebClient();
-            myWebClient.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; " +
-                                  "Windows NT 5.2; .NET CLR 1.0.3705;)");
+            myWebClient.Headers.Add("user-agent", "Mozilla/5.0 (compatible; MSIE 6.0; " +
+                                  "Windows NT 6.1; .NET CLR 1.0.3705;)");
+            myWebClient.Proxy = null;
             Stream myStream = myWebClient.OpenRead(url);
             var sr = new StreamReader(myStream, System.Text.Encoding.GetEncoding("utf-8"));
             strHTML = sr.ReadToEnd();
