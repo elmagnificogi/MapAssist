@@ -194,6 +194,7 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chkDPIAware = new System.Windows.Forms.CheckBox();
+            this.integrationTab = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -247,10 +248,11 @@
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 11);
+            this.tabControl1.Controls.Add(this.integrationTab);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(367, 324);
+            this.tabControl1.Size = new System.Drawing.Size(458, 351);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage5
@@ -260,7 +262,7 @@
             this.tabPage5.Controls.Add(this.grpGameInfo);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(359, 298);
+            this.tabPage5.Size = new System.Drawing.Size(450, 325);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "主要";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -273,9 +275,9 @@
             this.groupBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox5.Controls.Add(this.cboLanguage);
             this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Location = new System.Drawing.Point(11, 236);
+            this.groupBox5.Location = new System.Drawing.Point(11, 256);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(335, 54);
+            this.groupBox5.Size = new System.Drawing.Size(426, 59);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "地图显示语言";
@@ -284,18 +286,18 @@
             // 
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.FormattingEnabled = true;
-            this.cboLanguage.Location = new System.Drawing.Point(71, 20);
+            this.cboLanguage.Location = new System.Drawing.Point(71, 22);
             this.cboLanguage.Name = "cboLanguage";
-            this.cboLanguage.Size = new System.Drawing.Size(146, 20);
+            this.cboLanguage.Size = new System.Drawing.Size(146, 21);
             this.cboLanguage.TabIndex = 14;
             this.cboLanguage.SelectedIndexChanged += new System.EventHandler(this.cboLanguage_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 23);
+            this.label11.Location = new System.Drawing.Point(7, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 12);
+            this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 13;
             this.label11.Text = "Language";
             // 
@@ -307,9 +309,9 @@
             this.groupBox4.Controls.Add(this.txtD2Path);
             this.groupBox4.Controls.Add(this.btnBrowseD2Location);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(11, 159);
+            this.groupBox4.Location = new System.Drawing.Point(11, 172);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(335, 64);
+            this.groupBox4.Size = new System.Drawing.Size(426, 69);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Diablo目录";
@@ -319,18 +321,18 @@
             this.txtD2Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtD2Path.Enabled = false;
-            this.txtD2Path.Location = new System.Drawing.Point(10, 21);
+            this.txtD2Path.Location = new System.Drawing.Point(10, 23);
             this.txtD2Path.Name = "txtD2Path";
-            this.txtD2Path.Size = new System.Drawing.Size(230, 21);
+            this.txtD2Path.Size = new System.Drawing.Size(321, 20);
             this.txtD2Path.TabIndex = 7;
             this.txtD2Path.TextChanged += new System.EventHandler(this.txtD2Path_TextChanged);
             // 
             // btnBrowseD2Location
             // 
             this.btnBrowseD2Location.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseD2Location.Location = new System.Drawing.Point(251, 21);
+            this.btnBrowseD2Location.Location = new System.Drawing.Point(342, 23);
             this.btnBrowseD2Location.Name = "btnBrowseD2Location";
-            this.btnBrowseD2Location.Size = new System.Drawing.Size(75, 21);
+            this.btnBrowseD2Location.Size = new System.Drawing.Size(75, 23);
             this.btnBrowseD2Location.TabIndex = 17;
             this.btnBrowseD2Location.Text = "浏览";
             this.btnBrowseD2Location.UseVisualStyleBackColor = true;
@@ -341,7 +343,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(7, 42);
+            this.label1.Location = new System.Drawing.Point(7, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 15;
@@ -364,9 +366,9 @@
             this.grpGameInfo.Controls.Add(this.chkShowGameTimer);
             this.grpGameInfo.Controls.Add(this.chkShowArea);
             this.grpGameInfo.Controls.Add(this.chkShowGameName);
-            this.grpGameInfo.Location = new System.Drawing.Point(11, 8);
+            this.grpGameInfo.Location = new System.Drawing.Point(11, 9);
             this.grpGameInfo.Name = "grpGameInfo";
-            this.grpGameInfo.Size = new System.Drawing.Size(335, 133);
+            this.grpGameInfo.Size = new System.Drawing.Size(426, 144);
             this.grpGameInfo.TabIndex = 23;
             this.grpGameInfo.TabStop = false;
             this.grpGameInfo.Text = "游戏信息显示";
@@ -376,9 +378,9 @@
             this.chkShowAreaLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowAreaLevel.AutoSize = true;
-            this.chkShowAreaLevel.Location = new System.Drawing.Point(192, 60);
+            this.chkShowAreaLevel.Location = new System.Drawing.Point(192, 65);
             this.chkShowAreaLevel.Name = "chkShowAreaLevel";
-            this.chkShowAreaLevel.Size = new System.Drawing.Size(96, 16);
+            this.chkShowAreaLevel.Size = new System.Drawing.Size(98, 17);
             this.chkShowAreaLevel.TabIndex = 39;
             this.chkShowAreaLevel.Text = "显示场景等级";
             this.chkShowAreaLevel.UseVisualStyleBackColor = true;
@@ -390,9 +392,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboGameInfoPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGameInfoPosition.FormattingEnabled = true;
-            this.cboGameInfoPosition.Location = new System.Drawing.Point(239, 102);
+            this.cboGameInfoPosition.Location = new System.Drawing.Point(239, 111);
             this.cboGameInfoPosition.Name = "cboGameInfoPosition";
-            this.cboGameInfoPosition.Size = new System.Drawing.Size(87, 20);
+            this.cboGameInfoPosition.Size = new System.Drawing.Size(178, 21);
             this.cboGameInfoPosition.TabIndex = 36;
             this.cboGameInfoPosition.SelectedIndexChanged += new System.EventHandler(this.cboGameInfoPosition_SelectedIndexChanged);
             // 
@@ -401,18 +403,18 @@
             this.lblGameInfoPosition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGameInfoPosition.AutoSize = true;
-            this.lblGameInfoPosition.Location = new System.Drawing.Point(159, 106);
+            this.lblGameInfoPosition.Location = new System.Drawing.Point(159, 115);
             this.lblGameInfoPosition.Name = "lblGameInfoPosition";
-            this.lblGameInfoPosition.Size = new System.Drawing.Size(77, 12);
+            this.lblGameInfoPosition.Size = new System.Drawing.Size(79, 13);
             this.lblGameInfoPosition.TabIndex = 35;
             this.lblGameInfoPosition.Text = "信息显示位置";
             // 
             // chkGameInfoTextShadow
             // 
             this.chkGameInfoTextShadow.AutoSize = true;
-            this.chkGameInfoTextShadow.Location = new System.Drawing.Point(11, 110);
+            this.chkGameInfoTextShadow.Location = new System.Drawing.Point(11, 119);
             this.chkGameInfoTextShadow.Name = "chkGameInfoTextShadow";
-            this.chkGameInfoTextShadow.Size = new System.Drawing.Size(72, 16);
+            this.chkGameInfoTextShadow.Size = new System.Drawing.Size(74, 17);
             this.chkGameInfoTextShadow.TabIndex = 34;
             this.chkGameInfoTextShadow.Text = "字体阴影";
             this.chkGameInfoTextShadow.UseVisualStyleBackColor = true;
@@ -423,9 +425,9 @@
             this.chkShowOverlayFPS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowOverlayFPS.AutoSize = true;
-            this.chkShowOverlayFPS.Location = new System.Drawing.Point(192, 81);
+            this.chkShowOverlayFPS.Location = new System.Drawing.Point(192, 88);
             this.chkShowOverlayFPS.Name = "chkShowOverlayFPS";
-            this.chkShowOverlayFPS.Size = new System.Drawing.Size(66, 16);
+            this.chkShowOverlayFPS.Size = new System.Drawing.Size(70, 17);
             this.chkShowOverlayFPS.TabIndex = 2;
             this.chkShowOverlayFPS.Text = "显示FPS";
             this.chkShowOverlayFPS.UseVisualStyleBackColor = true;
@@ -434,9 +436,9 @@
             // chkShowDifficulty
             // 
             this.chkShowDifficulty.AutoSize = true;
-            this.chkShowDifficulty.Location = new System.Drawing.Point(11, 60);
+            this.chkShowDifficulty.Location = new System.Drawing.Point(11, 65);
             this.chkShowDifficulty.Name = "chkShowDifficulty";
-            this.chkShowDifficulty.Size = new System.Drawing.Size(72, 16);
+            this.chkShowDifficulty.Size = new System.Drawing.Size(74, 17);
             this.chkShowDifficulty.TabIndex = 38;
             this.chkShowDifficulty.Text = "显示难度";
             this.chkShowDifficulty.UseVisualStyleBackColor = true;
@@ -447,9 +449,9 @@
             this.btnClearGameInfoFont.FlatAppearance.BorderSize = 0;
             this.btnClearGameInfoFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearGameInfoFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearGameInfoFont.Location = new System.Drawing.Point(85, 81);
+            this.btnClearGameInfoFont.Location = new System.Drawing.Point(85, 88);
             this.btnClearGameInfoFont.Name = "btnClearGameInfoFont";
-            this.btnClearGameInfoFont.Size = new System.Drawing.Size(23, 21);
+            this.btnClearGameInfoFont.Size = new System.Drawing.Size(23, 23);
             this.btnClearGameInfoFont.TabIndex = 33;
             this.btnClearGameInfoFont.Text = "X";
             this.btnClearGameInfoFont.UseVisualStyleBackColor = true;
@@ -458,9 +460,9 @@
             // btnGameInfoFont
             // 
             this.btnGameInfoFont.BackColor = System.Drawing.Color.Transparent;
-            this.btnGameInfoFont.Location = new System.Drawing.Point(10, 81);
+            this.btnGameInfoFont.Location = new System.Drawing.Point(10, 88);
             this.btnGameInfoFont.Name = "btnGameInfoFont";
-            this.btnGameInfoFont.Size = new System.Drawing.Size(75, 21);
+            this.btnGameInfoFont.Size = new System.Drawing.Size(75, 23);
             this.btnGameInfoFont.TabIndex = 32;
             this.btnGameInfoFont.Text = "字体";
             this.btnGameInfoFont.UseVisualStyleBackColor = false;
@@ -471,9 +473,9 @@
             this.chkShowAreaTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowAreaTimer.AutoSize = true;
-            this.chkShowAreaTimer.Location = new System.Drawing.Point(192, 39);
+            this.chkShowAreaTimer.Location = new System.Drawing.Point(192, 42);
             this.chkShowAreaTimer.Name = "chkShowAreaTimer";
-            this.chkShowAreaTimer.Size = new System.Drawing.Size(96, 16);
+            this.chkShowAreaTimer.Size = new System.Drawing.Size(98, 17);
             this.chkShowAreaTimer.TabIndex = 41;
             this.chkShowAreaTimer.Text = "显示场景用时";
             this.chkShowAreaTimer.UseVisualStyleBackColor = true;
@@ -482,9 +484,9 @@
             // chkShowGameTimer
             // 
             this.chkShowGameTimer.AutoSize = true;
-            this.chkShowGameTimer.Location = new System.Drawing.Point(11, 39);
+            this.chkShowGameTimer.Location = new System.Drawing.Point(11, 42);
             this.chkShowGameTimer.Name = "chkShowGameTimer";
-            this.chkShowGameTimer.Size = new System.Drawing.Size(96, 16);
+            this.chkShowGameTimer.Size = new System.Drawing.Size(98, 17);
             this.chkShowGameTimer.TabIndex = 40;
             this.chkShowGameTimer.Text = "显示游戏计时";
             this.chkShowGameTimer.UseVisualStyleBackColor = true;
@@ -495,9 +497,9 @@
             this.chkShowArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowArea.AutoSize = true;
-            this.chkShowArea.Location = new System.Drawing.Point(192, 18);
+            this.chkShowArea.Location = new System.Drawing.Point(192, 20);
             this.chkShowArea.Name = "chkShowArea";
-            this.chkShowArea.Size = new System.Drawing.Size(96, 16);
+            this.chkShowArea.Size = new System.Drawing.Size(98, 17);
             this.chkShowArea.TabIndex = 16;
             this.chkShowArea.Text = "显示场景名称";
             this.chkShowArea.UseVisualStyleBackColor = true;
@@ -506,9 +508,9 @@
             // chkShowGameName
             // 
             this.chkShowGameName.AutoSize = true;
-            this.chkShowGameName.Location = new System.Drawing.Point(11, 18);
+            this.chkShowGameName.Location = new System.Drawing.Point(11, 20);
             this.chkShowGameName.Name = "chkShowGameName";
-            this.chkShowGameName.Size = new System.Drawing.Size(120, 16);
+            this.chkShowGameName.Size = new System.Drawing.Size(122, 17);
             this.chkShowGameName.TabIndex = 37;
             this.chkShowGameName.Text = "显示房间名和密码";
             this.chkShowGameName.UseVisualStyleBackColor = true;
@@ -521,13 +523,15 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(359, 298);
+            this.tabPage1.Size = new System.Drawing.Size(450, 325);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "地图";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.chkMonsterHealthBar);
             this.groupBox1.Controls.Add(this.btnClearBorderColor);
@@ -552,9 +556,9 @@
             this.groupBox1.Controls.Add(this.chkToggleViaMap);
             this.groupBox1.Controls.Add(this.lblIconOpacity);
             this.groupBox1.Controls.Add(this.chkToggleViaPanels);
-            this.groupBox1.Location = new System.Drawing.Point(11, 8);
+            this.groupBox1.Location = new System.Drawing.Point(11, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 282);
+            this.groupBox1.Size = new System.Drawing.Size(433, 306);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rendering";
@@ -562,8 +566,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(9, 97);
+            this.label4.Font = new System.Drawing.Font("SimSun", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(9, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 10);
             this.label4.TabIndex = 27;
@@ -572,9 +576,9 @@
             // chkMonsterHealthBar
             // 
             this.chkMonsterHealthBar.AutoSize = true;
-            this.chkMonsterHealthBar.Location = new System.Drawing.Point(10, 165);
+            this.chkMonsterHealthBar.Location = new System.Drawing.Point(10, 179);
             this.chkMonsterHealthBar.Name = "chkMonsterHealthBar";
-            this.chkMonsterHealthBar.Size = new System.Drawing.Size(96, 16);
+            this.chkMonsterHealthBar.Size = new System.Drawing.Size(98, 17);
             this.chkMonsterHealthBar.TabIndex = 26;
             this.chkMonsterHealthBar.Text = "显示怪物血条";
             this.chkMonsterHealthBar.UseVisualStyleBackColor = true;
@@ -585,9 +589,9 @@
             this.btnClearBorderColor.FlatAppearance.BorderSize = 0;
             this.btnClearBorderColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearBorderColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearBorderColor.Location = new System.Drawing.Point(232, 252);
+            this.btnClearBorderColor.Location = new System.Drawing.Point(232, 273);
             this.btnClearBorderColor.Name = "btnClearBorderColor";
-            this.btnClearBorderColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearBorderColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearBorderColor.TabIndex = 23;
             this.btnClearBorderColor.Text = "X";
             this.btnClearBorderColor.UseVisualStyleBackColor = true;
@@ -598,9 +602,9 @@
             this.btnClearWalkableColor.FlatAppearance.BorderSize = 0;
             this.btnClearWalkableColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearWalkableColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearWalkableColor.Location = new System.Drawing.Point(102, 252);
+            this.btnClearWalkableColor.Location = new System.Drawing.Point(102, 273);
             this.btnClearWalkableColor.Name = "btnClearWalkableColor";
-            this.btnClearWalkableColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearWalkableColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearWalkableColor.TabIndex = 22;
             this.btnClearWalkableColor.Text = "X";
             this.btnClearWalkableColor.UseVisualStyleBackColor = true;
@@ -609,9 +613,9 @@
             // chkStickToLastGameWindow
             // 
             this.chkStickToLastGameWindow.AutoSize = true;
-            this.chkStickToLastGameWindow.Location = new System.Drawing.Point(10, 229);
+            this.chkStickToLastGameWindow.Location = new System.Drawing.Point(10, 248);
             this.chkStickToLastGameWindow.Name = "chkStickToLastGameWindow";
-            this.chkStickToLastGameWindow.Size = new System.Drawing.Size(180, 16);
+            this.chkStickToLastGameWindow.Size = new System.Drawing.Size(182, 17);
             this.chkStickToLastGameWindow.TabIndex = 25;
             this.chkStickToLastGameWindow.Text = "失去游戏焦点时依然显示地图";
             this.chkStickToLastGameWindow.UseVisualStyleBackColor = true;
@@ -620,9 +624,9 @@
             // btnBorderColor
             // 
             this.btnBorderColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorderColor.Location = new System.Drawing.Point(140, 251);
+            this.btnBorderColor.Location = new System.Drawing.Point(140, 272);
             this.btnBorderColor.Name = "btnBorderColor";
-            this.btnBorderColor.Size = new System.Drawing.Size(91, 22);
+            this.btnBorderColor.Size = new System.Drawing.Size(91, 24);
             this.btnBorderColor.TabIndex = 23;
             this.btnBorderColor.Text = "边缘颜色";
             this.btnBorderColor.UseVisualStyleBackColor = true;
@@ -631,9 +635,9 @@
             // btnWalkableColor
             // 
             this.btnWalkableColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWalkableColor.Location = new System.Drawing.Point(10, 251);
+            this.btnWalkableColor.Location = new System.Drawing.Point(10, 272);
             this.btnWalkableColor.Name = "btnWalkableColor";
-            this.btnWalkableColor.Size = new System.Drawing.Size(86, 22);
+            this.btnWalkableColor.Size = new System.Drawing.Size(86, 24);
             this.btnWalkableColor.TabIndex = 22;
             this.btnWalkableColor.Text = "地图颜色";
             this.btnWalkableColor.UseVisualStyleBackColor = true;
@@ -642,9 +646,9 @@
             // chkOverlayMode
             // 
             this.chkOverlayMode.AutoSize = true;
-            this.chkOverlayMode.Location = new System.Drawing.Point(10, 144);
+            this.chkOverlayMode.Location = new System.Drawing.Point(10, 156);
             this.chkOverlayMode.Name = "chkOverlayMode";
-            this.chkOverlayMode.Size = new System.Drawing.Size(72, 16);
+            this.chkOverlayMode.Size = new System.Drawing.Size(74, 17);
             this.chkOverlayMode.TabIndex = 5;
             this.chkOverlayMode.Text = "覆盖模式";
             this.chkOverlayMode.UseVisualStyleBackColor = true;
@@ -653,9 +657,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 144);
+            this.label2.Location = new System.Drawing.Point(161, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "地图位置";
             // 
@@ -666,9 +670,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.FormattingEnabled = true;
-            this.cboPosition.Location = new System.Drawing.Point(222, 139);
+            this.cboPosition.Location = new System.Drawing.Point(222, 151);
             this.cboPosition.Name = "cboPosition";
-            this.cboPosition.Size = new System.Drawing.Size(107, 20);
+            this.cboPosition.Size = new System.Drawing.Size(205, 21);
             this.cboPosition.TabIndex = 6;
             this.cboPosition.SelectedIndexChanged += new System.EventHandler(this.cboPosition_SelectedIndexChanged);
             // 
@@ -679,11 +683,11 @@
             this.mapZoom.AutoSize = false;
             this.mapZoom.BackColor = System.Drawing.Color.White;
             this.mapZoom.LargeChange = 1;
-            this.mapZoom.Location = new System.Drawing.Point(79, 109);
+            this.mapZoom.Location = new System.Drawing.Point(79, 118);
             this.mapZoom.Maximum = 25;
             this.mapZoom.Minimum = 1;
             this.mapZoom.Name = "mapZoom";
-            this.mapZoom.Size = new System.Drawing.Size(213, 25);
+            this.mapZoom.Size = new System.Drawing.Size(311, 27);
             this.mapZoom.TabIndex = 13;
             this.mapZoom.Value = 1;
             this.mapZoom.Scroll += new System.EventHandler(this.mapZoom_Scroll);
@@ -696,10 +700,10 @@
             this.mapSize.AutoSize = false;
             this.mapSize.BackColor = System.Drawing.Color.White;
             this.mapSize.LargeChange = 1;
-            this.mapSize.Location = new System.Drawing.Point(79, 78);
+            this.mapSize.Location = new System.Drawing.Point(79, 84);
             this.mapSize.Maximum = 16;
             this.mapSize.Name = "mapSize";
-            this.mapSize.Size = new System.Drawing.Size(213, 25);
+            this.mapSize.Size = new System.Drawing.Size(311, 27);
             this.mapSize.SmallChange = 25;
             this.mapSize.TabIndex = 10;
             this.mapSize.Scroll += new System.EventHandler(this.mapSize_Scroll);
@@ -710,9 +714,9 @@
             this.lblMapZoomValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMapZoomValue.AutoSize = true;
             this.lblMapZoomValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblMapZoomValue.Location = new System.Drawing.Point(298, 112);
+            this.lblMapZoomValue.Location = new System.Drawing.Point(396, 121);
             this.lblMapZoomValue.Name = "lblMapZoomValue";
-            this.lblMapZoomValue.Size = new System.Drawing.Size(29, 12);
+            this.lblMapZoomValue.Size = new System.Drawing.Size(31, 13);
             this.lblMapZoomValue.TabIndex = 21;
             this.lblMapZoomValue.Text = "1000";
             this.lblMapZoomValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -721,9 +725,9 @@
             // 
             this.lblZoom.AutoSize = true;
             this.lblZoom.BackColor = System.Drawing.Color.Transparent;
-            this.lblZoom.Location = new System.Drawing.Point(7, 112);
+            this.lblZoom.Location = new System.Drawing.Point(7, 121);
             this.lblZoom.Name = "lblZoom";
-            this.lblZoom.Size = new System.Drawing.Size(53, 12);
+            this.lblZoom.Size = new System.Drawing.Size(55, 13);
             this.lblZoom.TabIndex = 14;
             this.lblZoom.Text = "地图缩放";
             // 
@@ -732,9 +736,9 @@
             this.lblMapSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMapSizeValue.AutoSize = true;
             this.lblMapSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblMapSizeValue.Location = new System.Drawing.Point(298, 81);
+            this.lblMapSizeValue.Location = new System.Drawing.Point(396, 88);
             this.lblMapSizeValue.Name = "lblMapSizeValue";
-            this.lblMapSizeValue.Size = new System.Drawing.Size(29, 12);
+            this.lblMapSizeValue.Size = new System.Drawing.Size(31, 13);
             this.lblMapSizeValue.TabIndex = 20;
             this.lblMapSizeValue.Text = "1000";
             this.lblMapSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -746,10 +750,10 @@
             this.iconOpacity.AutoSize = false;
             this.iconOpacity.BackColor = System.Drawing.Color.White;
             this.iconOpacity.LargeChange = 1;
-            this.iconOpacity.Location = new System.Drawing.Point(79, 48);
+            this.iconOpacity.Location = new System.Drawing.Point(79, 52);
             this.iconOpacity.Maximum = 20;
             this.iconOpacity.Name = "iconOpacity";
-            this.iconOpacity.Size = new System.Drawing.Size(213, 25);
+            this.iconOpacity.Size = new System.Drawing.Size(311, 27);
             this.iconOpacity.TabIndex = 3;
             this.iconOpacity.Scroll += new System.EventHandler(this.iconOpacity_Scroll);
             this.iconOpacity.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.IgnoreMouseWheel);
@@ -758,9 +762,9 @@
             // 
             this.lblMapSize.AutoSize = true;
             this.lblMapSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblMapSize.Location = new System.Drawing.Point(7, 81);
+            this.lblMapSize.Location = new System.Drawing.Point(7, 88);
             this.lblMapSize.Name = "lblMapSize";
-            this.lblMapSize.Size = new System.Drawing.Size(53, 12);
+            this.lblMapSize.Size = new System.Drawing.Size(55, 13);
             this.lblMapSize.TabIndex = 11;
             this.lblMapSize.Text = "地图大小";
             // 
@@ -769,9 +773,9 @@
             this.lblIconOpacityValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconOpacityValue.AutoSize = true;
             this.lblIconOpacityValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconOpacityValue.Location = new System.Drawing.Point(298, 51);
+            this.lblIconOpacityValue.Location = new System.Drawing.Point(396, 55);
             this.lblIconOpacityValue.Name = "lblIconOpacityValue";
-            this.lblIconOpacityValue.Size = new System.Drawing.Size(29, 12);
+            this.lblIconOpacityValue.Size = new System.Drawing.Size(31, 13);
             this.lblIconOpacityValue.TabIndex = 5;
             this.lblIconOpacityValue.Text = "1000";
             this.lblIconOpacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -781,9 +785,9 @@
             this.lblOpacityValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOpacityValue.AutoSize = true;
             this.lblOpacityValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblOpacityValue.Location = new System.Drawing.Point(298, 20);
+            this.lblOpacityValue.Location = new System.Drawing.Point(396, 22);
             this.lblOpacityValue.Name = "lblOpacityValue";
-            this.lblOpacityValue.Size = new System.Drawing.Size(29, 12);
+            this.lblOpacityValue.Size = new System.Drawing.Size(31, 13);
             this.lblOpacityValue.TabIndex = 3;
             this.lblOpacityValue.Text = "1000";
             this.lblOpacityValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -795,10 +799,10 @@
             this.opacity.AutoSize = false;
             this.opacity.BackColor = System.Drawing.Color.White;
             this.opacity.LargeChange = 1;
-            this.opacity.Location = new System.Drawing.Point(79, 18);
+            this.opacity.Location = new System.Drawing.Point(79, 20);
             this.opacity.Maximum = 20;
             this.opacity.Name = "opacity";
-            this.opacity.Size = new System.Drawing.Size(213, 25);
+            this.opacity.Size = new System.Drawing.Size(311, 27);
             this.opacity.TabIndex = 1;
             this.opacity.Scroll += new System.EventHandler(this.opacity_Scroll);
             this.opacity.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.IgnoreMouseWheel);
@@ -807,18 +811,18 @@
             // 
             this.lblOpacity.AutoSize = true;
             this.lblOpacity.BackColor = System.Drawing.Color.Transparent;
-            this.lblOpacity.Location = new System.Drawing.Point(6, 20);
+            this.lblOpacity.Location = new System.Drawing.Point(6, 22);
             this.lblOpacity.Name = "lblOpacity";
-            this.lblOpacity.Size = new System.Drawing.Size(65, 12);
+            this.lblOpacity.Size = new System.Drawing.Size(67, 13);
             this.lblOpacity.TabIndex = 2;
             this.lblOpacity.Text = "地图透明度";
             // 
             // chkToggleViaMap
             // 
             this.chkToggleViaMap.AutoSize = true;
-            this.chkToggleViaMap.Location = new System.Drawing.Point(10, 186);
+            this.chkToggleViaMap.Location = new System.Drawing.Point(10, 202);
             this.chkToggleViaMap.Name = "chkToggleViaMap";
-            this.chkToggleViaMap.Size = new System.Drawing.Size(132, 16);
+            this.chkToggleViaMap.Size = new System.Drawing.Size(134, 17);
             this.chkToggleViaMap.TabIndex = 8;
             this.chkToggleViaMap.Text = "使用内置地图快捷键";
             this.chkToggleViaMap.UseVisualStyleBackColor = true;
@@ -828,18 +832,18 @@
             // 
             this.lblIconOpacity.AutoSize = true;
             this.lblIconOpacity.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconOpacity.Location = new System.Drawing.Point(6, 51);
+            this.lblIconOpacity.Location = new System.Drawing.Point(6, 55);
             this.lblIconOpacity.Name = "lblIconOpacity";
-            this.lblIconOpacity.Size = new System.Drawing.Size(65, 12);
+            this.lblIconOpacity.Size = new System.Drawing.Size(67, 13);
             this.lblIconOpacity.TabIndex = 4;
             this.lblIconOpacity.Text = "图标透明度";
             // 
             // chkToggleViaPanels
             // 
             this.chkToggleViaPanels.AutoSize = true;
-            this.chkToggleViaPanels.Location = new System.Drawing.Point(10, 208);
+            this.chkToggleViaPanels.Location = new System.Drawing.Point(10, 225);
             this.chkToggleViaPanels.Name = "chkToggleViaPanels";
-            this.chkToggleViaPanels.Size = new System.Drawing.Size(168, 16);
+            this.chkToggleViaPanels.Size = new System.Drawing.Size(170, 17);
             this.chkToggleViaPanels.TabIndex = 9;
             this.chkToggleViaPanels.Text = "打开游戏内菜单时自动隐藏";
             this.chkToggleViaPanels.UseVisualStyleBackColor = true;
@@ -853,7 +857,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(359, 298);
+            this.tabPage3.Size = new System.Drawing.Size(450, 325);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "状态栏";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -870,9 +874,9 @@
             this.groupBox7.Controls.Add(this.chkMana);
             this.groupBox7.Controls.Add(this.chkLifePerc);
             this.groupBox7.Controls.Add(this.chkLife);
-            this.groupBox7.Location = new System.Drawing.Point(11, 132);
+            this.groupBox7.Location = new System.Drawing.Point(11, 143);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(335, 83);
+            this.groupBox7.Size = new System.Drawing.Size(426, 90);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "玩家状态信息";
@@ -880,9 +884,9 @@
             // chkPotionBelt
             // 
             this.chkPotionBelt.AutoSize = true;
-            this.chkPotionBelt.Location = new System.Drawing.Point(9, 60);
+            this.chkPotionBelt.Location = new System.Drawing.Point(9, 65);
             this.chkPotionBelt.Name = "chkPotionBelt";
-            this.chkPotionBelt.Size = new System.Drawing.Size(72, 16);
+            this.chkPotionBelt.Size = new System.Drawing.Size(74, 17);
             this.chkPotionBelt.TabIndex = 25;
             this.chkPotionBelt.Text = "药品数量";
             this.chkPotionBelt.UseVisualStyleBackColor = true;
@@ -891,9 +895,9 @@
             // chkResistances
             // 
             this.chkResistances.AutoSize = true;
-            this.chkResistances.Location = new System.Drawing.Point(102, 60);
+            this.chkResistances.Location = new System.Drawing.Point(102, 65);
             this.chkResistances.Name = "chkResistances";
-            this.chkResistances.Size = new System.Drawing.Size(48, 16);
+            this.chkResistances.Size = new System.Drawing.Size(50, 17);
             this.chkResistances.TabIndex = 24;
             this.chkResistances.Text = "抗性";
             this.chkResistances.UseVisualStyleBackColor = true;
@@ -902,9 +906,9 @@
             // chkExpProgress
             // 
             this.chkExpProgress.AutoSize = true;
-            this.chkExpProgress.Location = new System.Drawing.Point(240, 39);
+            this.chkExpProgress.Location = new System.Drawing.Point(240, 42);
             this.chkExpProgress.Name = "chkExpProgress";
-            this.chkExpProgress.Size = new System.Drawing.Size(84, 16);
+            this.chkExpProgress.Size = new System.Drawing.Size(86, 17);
             this.chkExpProgress.TabIndex = 5;
             this.chkExpProgress.Text = "经验百分比";
             this.chkExpProgress.UseVisualStyleBackColor = true;
@@ -913,9 +917,9 @@
             // chkCurrentLevel
             // 
             this.chkCurrentLevel.AutoSize = true;
-            this.chkCurrentLevel.Location = new System.Drawing.Point(240, 18);
+            this.chkCurrentLevel.Location = new System.Drawing.Point(240, 20);
             this.chkCurrentLevel.Name = "chkCurrentLevel";
-            this.chkCurrentLevel.Size = new System.Drawing.Size(72, 16);
+            this.chkCurrentLevel.Size = new System.Drawing.Size(71, 17);
             this.chkCurrentLevel.TabIndex = 4;
             this.chkCurrentLevel.Text = "当前级别";
             this.chkCurrentLevel.UseVisualStyleBackColor = true;
@@ -924,9 +928,9 @@
             // chkManaPerc
             // 
             this.chkManaPerc.AutoSize = true;
-            this.chkManaPerc.Location = new System.Drawing.Point(102, 39);
+            this.chkManaPerc.Location = new System.Drawing.Point(102, 42);
             this.chkManaPerc.Name = "chkManaPerc";
-            this.chkManaPerc.Size = new System.Drawing.Size(84, 16);
+            this.chkManaPerc.Size = new System.Drawing.Size(86, 17);
             this.chkManaPerc.TabIndex = 3;
             this.chkManaPerc.Text = "魔法百分比";
             this.chkManaPerc.UseVisualStyleBackColor = true;
@@ -935,9 +939,9 @@
             // chkMana
             // 
             this.chkMana.AutoSize = true;
-            this.chkMana.Location = new System.Drawing.Point(9, 41);
+            this.chkMana.Location = new System.Drawing.Point(9, 44);
             this.chkMana.Name = "chkMana";
-            this.chkMana.Size = new System.Drawing.Size(48, 16);
+            this.chkMana.Size = new System.Drawing.Size(50, 17);
             this.chkMana.TabIndex = 2;
             this.chkMana.Text = "魔法";
             this.chkMana.UseVisualStyleBackColor = true;
@@ -946,9 +950,9 @@
             // chkLifePerc
             // 
             this.chkLifePerc.AutoSize = true;
-            this.chkLifePerc.Location = new System.Drawing.Point(102, 18);
+            this.chkLifePerc.Location = new System.Drawing.Point(102, 20);
             this.chkLifePerc.Name = "chkLifePerc";
-            this.chkLifePerc.Size = new System.Drawing.Size(84, 16);
+            this.chkLifePerc.Size = new System.Drawing.Size(86, 17);
             this.chkLifePerc.TabIndex = 1;
             this.chkLifePerc.Text = "生命百分比";
             this.chkLifePerc.UseVisualStyleBackColor = true;
@@ -957,9 +961,9 @@
             // chkLife
             // 
             this.chkLife.AutoSize = true;
-            this.chkLife.Location = new System.Drawing.Point(9, 19);
+            this.chkLife.Location = new System.Drawing.Point(9, 21);
             this.chkLife.Name = "chkLife";
-            this.chkLife.Size = new System.Drawing.Size(48, 16);
+            this.chkLife.Size = new System.Drawing.Size(50, 17);
             this.chkLife.TabIndex = 0;
             this.chkLife.Text = "生命";
             this.chkLife.UseVisualStyleBackColor = true;
@@ -972,9 +976,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPresets.Controls.Add(this.lblMapLinesMode);
             this.grpPresets.Controls.Add(this.cboMapLinesMode);
-            this.grpPresets.Location = new System.Drawing.Point(11, 243);
+            this.grpPresets.Location = new System.Drawing.Point(11, 263);
             this.grpPresets.Name = "grpPresets";
-            this.grpPresets.Size = new System.Drawing.Size(335, 47);
+            this.grpPresets.Size = new System.Drawing.Size(426, 51);
             this.grpPresets.TabIndex = 24;
             this.grpPresets.TabStop = false;
             this.grpPresets.Text = "Presets";
@@ -982,9 +986,9 @@
             // lblMapLinesMode
             // 
             this.lblMapLinesMode.AutoSize = true;
-            this.lblMapLinesMode.Location = new System.Drawing.Point(6, 22);
+            this.lblMapLinesMode.Location = new System.Drawing.Point(6, 24);
             this.lblMapLinesMode.Name = "lblMapLinesMode";
-            this.lblMapLinesMode.Size = new System.Drawing.Size(89, 12);
+            this.lblMapLinesMode.Size = new System.Drawing.Size(86, 13);
             this.lblMapLinesMode.TabIndex = 21;
             this.lblMapLinesMode.Text = "Map Lines Mode";
             this.lblMapLinesMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -994,9 +998,9 @@
             this.cboMapLinesMode.AllowDrop = true;
             this.cboMapLinesMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMapLinesMode.FormattingEnabled = true;
-            this.cboMapLinesMode.Location = new System.Drawing.Point(117, 19);
+            this.cboMapLinesMode.Location = new System.Drawing.Point(117, 21);
             this.cboMapLinesMode.Name = "cboMapLinesMode";
-            this.cboMapLinesMode.Size = new System.Drawing.Size(124, 20);
+            this.cboMapLinesMode.Size = new System.Drawing.Size(124, 21);
             this.cboMapLinesMode.TabIndex = 20;
             this.cboMapLinesMode.SelectedIndexChanged += new System.EventHandler(this.cboMapLinesMode_SelectedIndexChanged);
             // 
@@ -1010,9 +1014,9 @@
             this.groupBox3.Controls.Add(this.lblBuffSize);
             this.groupBox3.Controls.Add(this.cboBuffPosition);
             this.groupBox3.Controls.Add(this.buffSize);
-            this.groupBox3.Location = new System.Drawing.Point(11, 8);
+            this.groupBox3.Location = new System.Drawing.Point(11, 9);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(335, 99);
+            this.groupBox3.Size = new System.Drawing.Size(426, 107);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buffs";
@@ -1020,9 +1024,9 @@
             // chkAlertLowerRes
             // 
             this.chkAlertLowerRes.AutoSize = true;
-            this.chkAlertLowerRes.Location = new System.Drawing.Point(9, 72);
+            this.chkAlertLowerRes.Location = new System.Drawing.Point(9, 78);
             this.chkAlertLowerRes.Name = "chkAlertLowerRes";
-            this.chkAlertLowerRes.Size = new System.Drawing.Size(96, 16);
+            this.chkAlertLowerRes.Size = new System.Drawing.Size(98, 17);
             this.chkAlertLowerRes.TabIndex = 23;
             this.chkAlertLowerRes.Text = "低抗性时提醒";
             this.chkAlertLowerRes.UseVisualStyleBackColor = true;
@@ -1033,9 +1037,9 @@
             this.lblBuffSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBuffSizeValue.AutoSize = true;
             this.lblBuffSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuffSizeValue.Location = new System.Drawing.Point(298, 19);
+            this.lblBuffSizeValue.Location = new System.Drawing.Point(389, 21);
             this.lblBuffSizeValue.Name = "lblBuffSizeValue";
-            this.lblBuffSizeValue.Size = new System.Drawing.Size(29, 12);
+            this.lblBuffSizeValue.Size = new System.Drawing.Size(31, 13);
             this.lblBuffSizeValue.TabIndex = 22;
             this.lblBuffSizeValue.Text = "1000";
             this.lblBuffSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1043,9 +1047,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 50);
+            this.label5.Location = new System.Drawing.Point(6, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 19;
             this.label5.Text = "状态栏位置";
             // 
@@ -1053,9 +1057,9 @@
             // 
             this.lblBuffSize.AutoSize = true;
             this.lblBuffSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuffSize.Location = new System.Drawing.Point(6, 22);
+            this.lblBuffSize.Location = new System.Drawing.Point(6, 24);
             this.lblBuffSize.Name = "lblBuffSize";
-            this.lblBuffSize.Size = new System.Drawing.Size(77, 12);
+            this.lblBuffSize.Size = new System.Drawing.Size(79, 13);
             this.lblBuffSize.TabIndex = 16;
             this.lblBuffSize.Text = "状态图标大小";
             // 
@@ -1064,9 +1068,9 @@
             this.cboBuffPosition.AllowDrop = true;
             this.cboBuffPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuffPosition.FormattingEnabled = true;
-            this.cboBuffPosition.Location = new System.Drawing.Point(102, 47);
+            this.cboBuffPosition.Location = new System.Drawing.Point(102, 51);
             this.cboBuffPosition.Name = "cboBuffPosition";
-            this.cboBuffPosition.Size = new System.Drawing.Size(124, 20);
+            this.cboBuffPosition.Size = new System.Drawing.Size(124, 21);
             this.cboBuffPosition.TabIndex = 18;
             this.cboBuffPosition.SelectedIndexChanged += new System.EventHandler(this.cboBuffPosition_SelectedIndexChanged);
             // 
@@ -1077,10 +1081,10 @@
             this.buffSize.AutoSize = false;
             this.buffSize.BackColor = System.Drawing.Color.White;
             this.buffSize.LargeChange = 1;
-            this.buffSize.Location = new System.Drawing.Point(79, 17);
+            this.buffSize.Location = new System.Drawing.Point(79, 18);
             this.buffSize.Maximum = 20;
             this.buffSize.Name = "buffSize";
-            this.buffSize.Size = new System.Drawing.Size(213, 25);
+            this.buffSize.Size = new System.Drawing.Size(304, 27);
             this.buffSize.TabIndex = 15;
             this.buffSize.Scroll += new System.EventHandler(this.buffSize_Scroll);
             this.buffSize.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.IgnoreMouseWheel);
@@ -1093,7 +1097,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(359, 298);
+            this.tabPage2.Size = new System.Drawing.Size(450, 325);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "绘制";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1106,10 +1110,10 @@
             this.tabDrawing.Controls.Add(this.tabIcon);
             this.tabDrawing.Controls.Add(this.tabLabel);
             this.tabDrawing.Controls.Add(this.tabLine);
-            this.tabDrawing.Location = new System.Drawing.Point(3, 30);
+            this.tabDrawing.Location = new System.Drawing.Point(3, 32);
             this.tabDrawing.Name = "tabDrawing";
             this.tabDrawing.SelectedIndex = 0;
-            this.tabDrawing.Size = new System.Drawing.Size(353, 264);
+            this.tabDrawing.Size = new System.Drawing.Size(444, 286);
             this.tabDrawing.TabIndex = 10;
             this.tabDrawing.Visible = false;
             this.tabDrawing.SelectedIndexChanged += new System.EventHandler(this.tabDrawing_SelectedIndexChanged);
@@ -1131,7 +1135,7 @@
             this.tabIcon.Location = new System.Drawing.Point(4, 22);
             this.tabIcon.Name = "tabIcon";
             this.tabIcon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIcon.Size = new System.Drawing.Size(345, 238);
+            this.tabIcon.Size = new System.Drawing.Size(436, 260);
             this.tabIcon.TabIndex = 0;
             this.tabIcon.Text = "图标";
             this.tabIcon.UseVisualStyleBackColor = true;
@@ -1142,7 +1146,7 @@
             this.btnIconColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIconColor.Location = new System.Drawing.Point(11, 6);
             this.btnIconColor.Name = "btnIconColor";
-            this.btnIconColor.Size = new System.Drawing.Size(75, 25);
+            this.btnIconColor.Size = new System.Drawing.Size(75, 27);
             this.btnIconColor.TabIndex = 10;
             this.btnIconColor.Text = "填充颜色";
             this.btnIconColor.UseVisualStyleBackColor = false;
@@ -1154,7 +1158,7 @@
             this.btnIconOutlineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIconOutlineColor.Location = new System.Drawing.Point(142, 3);
             this.btnIconOutlineColor.Name = "btnIconOutlineColor";
-            this.btnIconOutlineColor.Size = new System.Drawing.Size(85, 28);
+            this.btnIconOutlineColor.Size = new System.Drawing.Size(85, 30);
             this.btnIconOutlineColor.TabIndex = 18;
             this.btnIconOutlineColor.Text = "轮廓线颜色";
             this.btnIconOutlineColor.UseVisualStyleBackColor = false;
@@ -1165,9 +1169,9 @@
             this.btnClearOutlineColor.FlatAppearance.BorderSize = 0;
             this.btnClearOutlineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearOutlineColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearOutlineColor.Location = new System.Drawing.Point(227, 10);
+            this.btnClearOutlineColor.Location = new System.Drawing.Point(227, 11);
             this.btnClearOutlineColor.Name = "btnClearOutlineColor";
-            this.btnClearOutlineColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearOutlineColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearOutlineColor.TabIndex = 26;
             this.btnClearOutlineColor.Text = "X";
             this.btnClearOutlineColor.UseVisualStyleBackColor = true;
@@ -1178,9 +1182,9 @@
             this.btnClearFillColor.FlatAppearance.BorderSize = 0;
             this.btnClearFillColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFillColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearFillColor.Location = new System.Drawing.Point(86, 10);
+            this.btnClearFillColor.Location = new System.Drawing.Point(86, 11);
             this.btnClearFillColor.Name = "btnClearFillColor";
-            this.btnClearFillColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearFillColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearFillColor.TabIndex = 25;
             this.btnClearFillColor.Text = "X";
             this.btnClearFillColor.UseVisualStyleBackColor = true;
@@ -1191,9 +1195,9 @@
             this.lblIconThicknessValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconThicknessValue.AutoSize = true;
             this.lblIconThicknessValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconThicknessValue.Location = new System.Drawing.Point(308, 149);
+            this.lblIconThicknessValue.Location = new System.Drawing.Point(399, 161);
             this.lblIconThicknessValue.Name = "lblIconThicknessValue";
-            this.lblIconThicknessValue.Size = new System.Drawing.Size(29, 12);
+            this.lblIconThicknessValue.Size = new System.Drawing.Size(31, 13);
             this.lblIconThicknessValue.TabIndex = 24;
             this.lblIconThicknessValue.Text = "1000";
             this.lblIconThicknessValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1203,9 +1207,9 @@
             this.lblIconSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconSizeValue.AutoSize = true;
             this.lblIconSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconSizeValue.Location = new System.Drawing.Point(308, 102);
+            this.lblIconSizeValue.Location = new System.Drawing.Point(399, 111);
             this.lblIconSizeValue.Name = "lblIconSizeValue";
-            this.lblIconSizeValue.Size = new System.Drawing.Size(29, 12);
+            this.lblIconSizeValue.Size = new System.Drawing.Size(31, 13);
             this.lblIconSizeValue.TabIndex = 23;
             this.lblIconSizeValue.Text = "1000";
             this.lblIconSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1214,9 +1218,9 @@
             // 
             this.lblIconThickness.AutoSize = true;
             this.lblIconThickness.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconThickness.Location = new System.Drawing.Point(8, 149);
+            this.lblIconThickness.Location = new System.Drawing.Point(8, 161);
             this.lblIconThickness.Name = "lblIconThickness";
-            this.lblIconThickness.Size = new System.Drawing.Size(41, 12);
+            this.lblIconThickness.Size = new System.Drawing.Size(43, 13);
             this.lblIconThickness.TabIndex = 17;
             this.lblIconThickness.Text = "轮廓线";
             // 
@@ -1227,10 +1231,10 @@
             this.iconThickness.AutoSize = false;
             this.iconThickness.BackColor = System.Drawing.Color.White;
             this.iconThickness.LargeChange = 1;
-            this.iconThickness.Location = new System.Drawing.Point(75, 147);
+            this.iconThickness.Location = new System.Drawing.Point(75, 159);
             this.iconThickness.Maximum = 20;
             this.iconThickness.Name = "iconThickness";
-            this.iconThickness.Size = new System.Drawing.Size(227, 25);
+            this.iconThickness.Size = new System.Drawing.Size(318, 27);
             this.iconThickness.TabIndex = 16;
             this.iconThickness.Value = 1;
             this.iconThickness.Scroll += new System.EventHandler(this.iconThickness_Scroll);
@@ -1240,9 +1244,9 @@
             // 
             this.lblIconSize.AutoSize = true;
             this.lblIconSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconSize.Location = new System.Drawing.Point(8, 102);
+            this.lblIconSize.Location = new System.Drawing.Point(8, 111);
             this.lblIconSize.Name = "lblIconSize";
-            this.lblIconSize.Size = new System.Drawing.Size(29, 12);
+            this.lblIconSize.Size = new System.Drawing.Size(31, 13);
             this.lblIconSize.TabIndex = 15;
             this.lblIconSize.Text = "大小";
             // 
@@ -1253,10 +1257,10 @@
             this.iconSize.AutoSize = false;
             this.iconSize.BackColor = System.Drawing.Color.White;
             this.iconSize.LargeChange = 1;
-            this.iconSize.Location = new System.Drawing.Point(75, 101);
+            this.iconSize.Location = new System.Drawing.Point(75, 109);
             this.iconSize.Maximum = 20;
             this.iconSize.Name = "iconSize";
-            this.iconSize.Size = new System.Drawing.Size(227, 25);
+            this.iconSize.Size = new System.Drawing.Size(318, 27);
             this.iconSize.TabIndex = 14;
             this.iconSize.Value = 1;
             this.iconSize.Scroll += new System.EventHandler(this.iconSize_Scroll);
@@ -1265,9 +1269,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 56);
+            this.label9.Location = new System.Drawing.Point(8, 61);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 12);
+            this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 13;
             this.label9.Text = "形状";
             // 
@@ -1275,9 +1279,9 @@
             // 
             this.cboIconShape.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboIconShape.FormattingEnabled = true;
-            this.cboIconShape.Location = new System.Drawing.Point(75, 54);
+            this.cboIconShape.Location = new System.Drawing.Point(75, 59);
             this.cboIconShape.Name = "cboIconShape";
-            this.cboIconShape.Size = new System.Drawing.Size(108, 20);
+            this.cboIconShape.Size = new System.Drawing.Size(108, 21);
             this.cboIconShape.TabIndex = 12;
             this.cboIconShape.SelectedIndexChanged += new System.EventHandler(this.cboIconShape_SelectedIndexChanged);
             // 
@@ -1291,7 +1295,7 @@
             this.tabLabel.Location = new System.Drawing.Point(4, 22);
             this.tabLabel.Name = "tabLabel";
             this.tabLabel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLabel.Size = new System.Drawing.Size(345, 238);
+            this.tabLabel.Size = new System.Drawing.Size(436, 260);
             this.tabLabel.TabIndex = 1;
             this.tabLabel.Text = "文字";
             this.tabLabel.UseVisualStyleBackColor = true;
@@ -1299,9 +1303,9 @@
             // chkTextShadow
             // 
             this.chkTextShadow.AutoSize = true;
-            this.chkTextShadow.Location = new System.Drawing.Point(142, 60);
+            this.chkTextShadow.Location = new System.Drawing.Point(142, 65);
             this.chkTextShadow.Name = "chkTextShadow";
-            this.chkTextShadow.Size = new System.Drawing.Size(72, 16);
+            this.chkTextShadow.Size = new System.Drawing.Size(74, 17);
             this.chkTextShadow.TabIndex = 32;
             this.chkTextShadow.Text = "字体阴影";
             this.chkTextShadow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1313,9 +1317,9 @@
             this.btnClearLabelFont.FlatAppearance.BorderSize = 0;
             this.btnClearLabelFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLabelFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearLabelFont.Location = new System.Drawing.Point(86, 56);
+            this.btnClearLabelFont.Location = new System.Drawing.Point(86, 61);
             this.btnClearLabelFont.Name = "btnClearLabelFont";
-            this.btnClearLabelFont.Size = new System.Drawing.Size(23, 21);
+            this.btnClearLabelFont.Size = new System.Drawing.Size(23, 23);
             this.btnClearLabelFont.TabIndex = 27;
             this.btnClearLabelFont.Text = "X";
             this.btnClearLabelFont.UseVisualStyleBackColor = true;
@@ -1326,9 +1330,9 @@
             this.btnClearLabelColor.FlatAppearance.BorderSize = 0;
             this.btnClearLabelColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLabelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearLabelColor.Location = new System.Drawing.Point(86, 10);
+            this.btnClearLabelColor.Location = new System.Drawing.Point(86, 11);
             this.btnClearLabelColor.Name = "btnClearLabelColor";
-            this.btnClearLabelColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearLabelColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearLabelColor.TabIndex = 26;
             this.btnClearLabelColor.Text = "X";
             this.btnClearLabelColor.UseVisualStyleBackColor = true;
@@ -1337,9 +1341,9 @@
             // btnFont
             // 
             this.btnFont.BackColor = System.Drawing.Color.Transparent;
-            this.btnFont.Location = new System.Drawing.Point(11, 56);
+            this.btnFont.Location = new System.Drawing.Point(11, 61);
             this.btnFont.Name = "btnFont";
-            this.btnFont.Size = new System.Drawing.Size(75, 21);
+            this.btnFont.Size = new System.Drawing.Size(75, 23);
             this.btnFont.TabIndex = 20;
             this.btnFont.Text = "字体";
             this.btnFont.UseVisualStyleBackColor = false;
@@ -1349,9 +1353,9 @@
             // 
             this.btnLabelColor.BackColor = System.Drawing.Color.Transparent;
             this.btnLabelColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLabelColor.Location = new System.Drawing.Point(11, 10);
+            this.btnLabelColor.Location = new System.Drawing.Point(11, 11);
             this.btnLabelColor.Name = "btnLabelColor";
-            this.btnLabelColor.Size = new System.Drawing.Size(75, 25);
+            this.btnLabelColor.Size = new System.Drawing.Size(75, 27);
             this.btnLabelColor.TabIndex = 16;
             this.btnLabelColor.Text = "颜色";
             this.btnLabelColor.UseVisualStyleBackColor = false;
@@ -1369,7 +1373,7 @@
             this.tabLine.Controls.Add(this.btnLineColor);
             this.tabLine.Location = new System.Drawing.Point(4, 22);
             this.tabLine.Name = "tabLine";
-            this.tabLine.Size = new System.Drawing.Size(345, 238);
+            this.tabLine.Size = new System.Drawing.Size(436, 260);
             this.tabLine.TabIndex = 2;
             this.tabLine.Text = "线";
             this.tabLine.UseVisualStyleBackColor = true;
@@ -1379,9 +1383,9 @@
             this.btnClearLineColor.FlatAppearance.BorderSize = 0;
             this.btnClearLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLineColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearLineColor.Location = new System.Drawing.Point(86, 10);
+            this.btnClearLineColor.Location = new System.Drawing.Point(86, 11);
             this.btnClearLineColor.Name = "btnClearLineColor";
-            this.btnClearLineColor.Size = new System.Drawing.Size(23, 21);
+            this.btnClearLineColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearLineColor.TabIndex = 28;
             this.btnClearLineColor.Text = "X";
             this.btnClearLineColor.UseVisualStyleBackColor = true;
@@ -1392,9 +1396,9 @@
             this.lblLineThicknessSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineThicknessSizeValue.AutoSize = true;
             this.lblLineThicknessSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineThicknessSizeValue.Location = new System.Drawing.Point(299, 102);
+            this.lblLineThicknessSizeValue.Location = new System.Drawing.Point(390, 111);
             this.lblLineThicknessSizeValue.Name = "lblLineThicknessSizeValue";
-            this.lblLineThicknessSizeValue.Size = new System.Drawing.Size(29, 12);
+            this.lblLineThicknessSizeValue.Size = new System.Drawing.Size(31, 13);
             this.lblLineThicknessSizeValue.TabIndex = 27;
             this.lblLineThicknessSizeValue.Text = "1000";
             this.lblLineThicknessSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1404,9 +1408,9 @@
             this.lblLineArrowSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineArrowSizeValue.AutoSize = true;
             this.lblLineArrowSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineArrowSizeValue.Location = new System.Drawing.Point(299, 56);
+            this.lblLineArrowSizeValue.Location = new System.Drawing.Point(390, 61);
             this.lblLineArrowSizeValue.Name = "lblLineArrowSizeValue";
-            this.lblLineArrowSizeValue.Size = new System.Drawing.Size(29, 12);
+            this.lblLineArrowSizeValue.Size = new System.Drawing.Size(31, 13);
             this.lblLineArrowSizeValue.TabIndex = 26;
             this.lblLineArrowSizeValue.Text = "1000";
             this.lblLineArrowSizeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1415,9 +1419,9 @@
             // 
             this.lblLineThickness.AutoSize = true;
             this.lblLineThickness.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineThickness.Location = new System.Drawing.Point(8, 102);
+            this.lblLineThickness.Location = new System.Drawing.Point(8, 111);
             this.lblLineThickness.Name = "lblLineThickness";
-            this.lblLineThickness.Size = new System.Drawing.Size(29, 12);
+            this.lblLineThickness.Size = new System.Drawing.Size(31, 13);
             this.lblLineThickness.TabIndex = 23;
             this.lblLineThickness.Text = "粗细";
             // 
@@ -1428,10 +1432,10 @@
             this.lineThicknessSize.AutoSize = false;
             this.lineThicknessSize.BackColor = System.Drawing.Color.White;
             this.lineThicknessSize.LargeChange = 1;
-            this.lineThicknessSize.Location = new System.Drawing.Point(73, 101);
+            this.lineThicknessSize.Location = new System.Drawing.Point(73, 109);
             this.lineThicknessSize.Maximum = 30;
             this.lineThicknessSize.Name = "lineThicknessSize";
-            this.lineThicknessSize.Size = new System.Drawing.Size(220, 25);
+            this.lineThicknessSize.Size = new System.Drawing.Size(311, 27);
             this.lineThicknessSize.TabIndex = 22;
             this.lineThicknessSize.Value = 1;
             this.lineThicknessSize.Scroll += new System.EventHandler(this.lineThicknessSize_Scroll);
@@ -1441,9 +1445,9 @@
             // 
             this.lblLineArrow.AutoSize = true;
             this.lblLineArrow.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineArrow.Location = new System.Drawing.Point(8, 56);
+            this.lblLineArrow.Location = new System.Drawing.Point(8, 61);
             this.lblLineArrow.Name = "lblLineArrow";
-            this.lblLineArrow.Size = new System.Drawing.Size(53, 12);
+            this.lblLineArrow.Size = new System.Drawing.Size(55, 13);
             this.lblLineArrow.TabIndex = 21;
             this.lblLineArrow.Text = "箭头大小";
             // 
@@ -1454,10 +1458,10 @@
             this.lineArrowSize.AutoSize = false;
             this.lineArrowSize.BackColor = System.Drawing.Color.White;
             this.lineArrowSize.LargeChange = 1;
-            this.lineArrowSize.Location = new System.Drawing.Point(73, 54);
+            this.lineArrowSize.Location = new System.Drawing.Point(73, 59);
             this.lineArrowSize.Maximum = 20;
             this.lineArrowSize.Name = "lineArrowSize";
-            this.lineArrowSize.Size = new System.Drawing.Size(220, 25);
+            this.lineArrowSize.Size = new System.Drawing.Size(311, 27);
             this.lineArrowSize.TabIndex = 20;
             this.lineArrowSize.Value = 1;
             this.lineArrowSize.Scroll += new System.EventHandler(this.lineArrowSize_Scroll);
@@ -1467,9 +1471,9 @@
             // 
             this.btnLineColor.BackColor = System.Drawing.Color.Transparent;
             this.btnLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLineColor.Location = new System.Drawing.Point(11, 10);
+            this.btnLineColor.Location = new System.Drawing.Point(11, 11);
             this.btnLineColor.Name = "btnLineColor";
-            this.btnLineColor.Size = new System.Drawing.Size(75, 25);
+            this.btnLineColor.Size = new System.Drawing.Size(75, 27);
             this.btnLineColor.TabIndex = 18;
             this.btnLineColor.Text = "颜色";
             this.btnLineColor.UseVisualStyleBackColor = false;
@@ -1478,9 +1482,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 9);
+            this.label8.Location = new System.Drawing.Point(6, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.Size = new System.Drawing.Size(79, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "选择绘制配置";
             // 
@@ -1492,7 +1496,7 @@
             this.cboRenderOption.FormattingEnabled = true;
             this.cboRenderOption.Location = new System.Drawing.Point(118, 6);
             this.cboRenderOption.Name = "cboRenderOption";
-            this.cboRenderOption.Size = new System.Drawing.Size(231, 20);
+            this.cboRenderOption.Size = new System.Drawing.Size(322, 21);
             this.cboRenderOption.TabIndex = 0;
             this.cboRenderOption.SelectedIndexChanged += new System.EventHandler(this.cboRenderOption_SelectedIndexChanged);
             // 
@@ -1501,7 +1505,7 @@
             this.tabPage6.Controls.Add(this.groupBox6);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(359, 298);
+            this.tabPage6.Size = new System.Drawing.Size(450, 325);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "掉落过滤";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1531,9 +1535,9 @@
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.chkItemLogItemsOnIdentify);
             this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Location = new System.Drawing.Point(11, 8);
+            this.groupBox6.Location = new System.Drawing.Point(11, 9);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(335, 282);
+            this.groupBox6.Size = new System.Drawing.Size(426, 306);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "掉落物";
@@ -1541,9 +1545,9 @@
             // chkItemLogVendorItems
             // 
             this.chkItemLogVendorItems.AutoSize = true;
-            this.chkItemLogVendorItems.Location = new System.Drawing.Point(11, 60);
+            this.chkItemLogVendorItems.Location = new System.Drawing.Point(11, 65);
             this.chkItemLogVendorItems.Name = "chkItemLogVendorItems";
-            this.chkItemLogVendorItems.Size = new System.Drawing.Size(114, 16);
+            this.chkItemLogVendorItems.Size = new System.Drawing.Size(120, 17);
             this.chkItemLogVendorItems.TabIndex = 40;
             this.chkItemLogVendorItems.Text = "过滤NPC卖的物品";
             this.chkItemLogVendorItems.UseVisualStyleBackColor = true;
@@ -1554,9 +1558,9 @@
             this.lblSoundVolumeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSoundVolumeValue.AutoSize = true;
             this.lblSoundVolumeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblSoundVolumeValue.Location = new System.Drawing.Point(292, 181);
+            this.lblSoundVolumeValue.Location = new System.Drawing.Point(383, 196);
             this.lblSoundVolumeValue.Name = "lblSoundVolumeValue";
-            this.lblSoundVolumeValue.Size = new System.Drawing.Size(23, 12);
+            this.lblSoundVolumeValue.Size = new System.Drawing.Size(25, 13);
             this.lblSoundVolumeValue.TabIndex = 29;
             this.lblSoundVolumeValue.Text = "100";
             this.lblSoundVolumeValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1566,9 +1570,9 @@
             this.lblItemDisplayForSecondsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblItemDisplayForSecondsValue.AutoSize = true;
             this.lblItemDisplayForSecondsValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblItemDisplayForSecondsValue.Location = new System.Drawing.Point(292, 210);
+            this.lblItemDisplayForSecondsValue.Location = new System.Drawing.Point(383, 228);
             this.lblItemDisplayForSecondsValue.Name = "lblItemDisplayForSecondsValue";
-            this.lblItemDisplayForSecondsValue.Size = new System.Drawing.Size(35, 12);
+            this.lblItemDisplayForSecondsValue.Size = new System.Drawing.Size(33, 13);
             this.lblItemDisplayForSecondsValue.TabIndex = 25;
             this.lblItemDisplayForSecondsValue.Text = "100 s";
             this.lblItemDisplayForSecondsValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1576,9 +1580,9 @@
             // chkLogTextShadow
             // 
             this.chkLogTextShadow.AutoSize = true;
-            this.chkLogTextShadow.Location = new System.Drawing.Point(127, 249);
+            this.chkLogTextShadow.Location = new System.Drawing.Point(127, 270);
             this.chkLogTextShadow.Name = "chkLogTextShadow";
-            this.chkLogTextShadow.Size = new System.Drawing.Size(72, 16);
+            this.chkLogTextShadow.Size = new System.Drawing.Size(74, 17);
             this.chkLogTextShadow.TabIndex = 31;
             this.chkLogTextShadow.Text = "字体阴影";
             this.chkLogTextShadow.UseVisualStyleBackColor = true;
@@ -1589,9 +1593,9 @@
             this.btnClearLogFont.FlatAppearance.BorderSize = 0;
             this.btnClearLogFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLogFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearLogFont.Location = new System.Drawing.Point(86, 247);
+            this.btnClearLogFont.Location = new System.Drawing.Point(86, 268);
             this.btnClearLogFont.Name = "btnClearLogFont";
-            this.btnClearLogFont.Size = new System.Drawing.Size(23, 21);
+            this.btnClearLogFont.Size = new System.Drawing.Size(23, 23);
             this.btnClearLogFont.TabIndex = 30;
             this.btnClearLogFont.Text = "X";
             this.btnClearLogFont.UseVisualStyleBackColor = true;
@@ -1604,11 +1608,11 @@
             this.itemDisplayForSeconds.AutoSize = false;
             this.itemDisplayForSeconds.BackColor = System.Drawing.Color.White;
             this.itemDisplayForSeconds.LargeChange = 1;
-            this.itemDisplayForSeconds.Location = new System.Drawing.Point(113, 204);
+            this.itemDisplayForSeconds.Location = new System.Drawing.Point(113, 221);
             this.itemDisplayForSeconds.Maximum = 24;
             this.itemDisplayForSeconds.Minimum = 1;
             this.itemDisplayForSeconds.Name = "itemDisplayForSeconds";
-            this.itemDisplayForSeconds.Size = new System.Drawing.Size(173, 25);
+            this.itemDisplayForSeconds.Size = new System.Drawing.Size(264, 27);
             this.itemDisplayForSeconds.SmallChange = 25;
             this.itemDisplayForSeconds.TabIndex = 11;
             this.itemDisplayForSeconds.Value = 1;
@@ -1618,9 +1622,9 @@
             // chkItemLogEnabled
             // 
             this.chkItemLogEnabled.AutoSize = true;
-            this.chkItemLogEnabled.Location = new System.Drawing.Point(11, 18);
+            this.chkItemLogEnabled.Location = new System.Drawing.Point(11, 20);
             this.chkItemLogEnabled.Name = "chkItemLogEnabled";
-            this.chkItemLogEnabled.Size = new System.Drawing.Size(48, 16);
+            this.chkItemLogEnabled.Size = new System.Drawing.Size(50, 17);
             this.chkItemLogEnabled.TabIndex = 0;
             this.chkItemLogEnabled.Text = "启用";
             this.chkItemLogEnabled.UseVisualStyleBackColor = true;
@@ -1629,18 +1633,18 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 84);
+            this.label16.Location = new System.Drawing.Point(8, 91);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.Size = new System.Drawing.Size(55, 13);
             this.label16.TabIndex = 1;
             this.label16.Text = "过滤文件";
             // 
             // btnLogFont
             // 
             this.btnLogFont.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogFont.Location = new System.Drawing.Point(11, 247);
+            this.btnLogFont.Location = new System.Drawing.Point(11, 268);
             this.btnLogFont.Name = "btnLogFont";
-            this.btnLogFont.Size = new System.Drawing.Size(75, 21);
+            this.btnLogFont.Size = new System.Drawing.Size(75, 23);
             this.btnLogFont.TabIndex = 22;
             this.btnLogFont.Text = "字体";
             this.btnLogFont.UseVisualStyleBackColor = false;
@@ -1649,9 +1653,9 @@
             // lblItemLogPosition
             // 
             this.lblItemLogPosition.AutoSize = true;
-            this.lblItemLogPosition.Location = new System.Drawing.Point(183, 21);
+            this.lblItemLogPosition.Location = new System.Drawing.Point(183, 23);
             this.lblItemLogPosition.Name = "lblItemLogPosition";
-            this.lblItemLogPosition.Size = new System.Drawing.Size(53, 12);
+            this.lblItemLogPosition.Size = new System.Drawing.Size(55, 13);
             this.lblItemLogPosition.TabIndex = 37;
             this.lblItemLogPosition.Text = "显示位置";
             // 
@@ -1663,10 +1667,10 @@
             this.soundVolume.BackColor = System.Drawing.Color.White;
             this.soundVolume.Cursor = System.Windows.Forms.Cursors.Default;
             this.soundVolume.LargeChange = 1;
-            this.soundVolume.Location = new System.Drawing.Point(113, 175);
+            this.soundVolume.Location = new System.Drawing.Point(113, 190);
             this.soundVolume.Maximum = 20;
             this.soundVolume.Name = "soundVolume";
-            this.soundVolume.Size = new System.Drawing.Size(173, 25);
+            this.soundVolume.Size = new System.Drawing.Size(264, 27);
             this.soundVolume.SmallChange = 25;
             this.soundVolume.TabIndex = 28;
             this.soundVolume.Scroll += new System.EventHandler(this.soundVolume_Scroll);
@@ -1675,9 +1679,9 @@
             // chkPlaySound
             // 
             this.chkPlaySound.AutoSize = true;
-            this.chkPlaySound.Location = new System.Drawing.Point(11, 117);
+            this.chkPlaySound.Location = new System.Drawing.Point(11, 127);
             this.chkPlaySound.Name = "chkPlaySound";
-            this.chkPlaySound.Size = new System.Drawing.Size(72, 16);
+            this.chkPlaySound.Size = new System.Drawing.Size(74, 17);
             this.chkPlaySound.TabIndex = 3;
             this.chkPlaySound.Text = "掉落声音";
             this.chkPlaySound.UseVisualStyleBackColor = true;
@@ -1686,27 +1690,27 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 181);
+            this.label10.Location = new System.Drawing.Point(8, 196);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 12);
+            this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "掉落音量";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(10, 141);
+            this.label17.Location = new System.Drawing.Point(10, 153);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 12);
+            this.label17.Size = new System.Drawing.Size(55, 13);
             this.label17.TabIndex = 4;
             this.label17.Text = "声音文件";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 210);
+            this.label18.Location = new System.Drawing.Point(6, 228);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(101, 12);
+            this.label18.Size = new System.Drawing.Size(103, 13);
             this.label18.TabIndex = 6;
             this.label18.Text = "掉落提示消失时间";
             // 
@@ -1714,9 +1718,9 @@
             // 
             this.txtSoundFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoundFile.Location = new System.Drawing.Point(85, 147);
+            this.txtSoundFile.Location = new System.Drawing.Point(85, 159);
             this.txtSoundFile.Name = "txtSoundFile";
-            this.txtSoundFile.Size = new System.Drawing.Size(240, 21);
+            this.txtSoundFile.Size = new System.Drawing.Size(331, 20);
             this.txtSoundFile.TabIndex = 5;
             this.txtSoundFile.TextChanged += new System.EventHandler(this.txtSoundFile_TextChanged);
             this.txtSoundFile.LostFocus += new System.EventHandler(this.txtSoundFile_LostFocus);
@@ -1727,9 +1731,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboItemLogPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboItemLogPosition.FormattingEnabled = true;
-            this.cboItemLogPosition.Location = new System.Drawing.Point(238, 16);
+            this.cboItemLogPosition.Location = new System.Drawing.Point(238, 17);
             this.cboItemLogPosition.Name = "cboItemLogPosition";
-            this.cboItemLogPosition.Size = new System.Drawing.Size(87, 20);
+            this.cboItemLogPosition.Size = new System.Drawing.Size(178, 21);
             this.cboItemLogPosition.TabIndex = 38;
             this.cboItemLogPosition.SelectedIndexChanged += new System.EventHandler(this.cboItemLogPosition_SelectedIndexChanged);
             // 
@@ -1737,9 +1741,9 @@
             // 
             this.txtFilterFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFilterFile.Location = new System.Drawing.Point(89, 78);
+            this.txtFilterFile.Location = new System.Drawing.Point(89, 84);
             this.txtFilterFile.Name = "txtFilterFile";
-            this.txtFilterFile.Size = new System.Drawing.Size(240, 21);
+            this.txtFilterFile.Size = new System.Drawing.Size(331, 20);
             this.txtFilterFile.TabIndex = 2;
             this.txtFilterFile.TextChanged += new System.EventHandler(this.txtFilterFile_TextChanged);
             // 
@@ -1748,7 +1752,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(82, 157);
+            this.label20.Location = new System.Drawing.Point(82, 170);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(115, 13);
             this.label20.TabIndex = 25;
@@ -1757,9 +1761,9 @@
             // chkItemLogItemsOnIdentify
             // 
             this.chkItemLogItemsOnIdentify.AutoSize = true;
-            this.chkItemLogItemsOnIdentify.Location = new System.Drawing.Point(11, 39);
+            this.chkItemLogItemsOnIdentify.Location = new System.Drawing.Point(11, 42);
             this.chkItemLogItemsOnIdentify.Name = "chkItemLogItemsOnIdentify";
-            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(132, 16);
+            this.chkItemLogItemsOnIdentify.Size = new System.Drawing.Size(134, 17);
             this.chkItemLogItemsOnIdentify.TabIndex = 39;
             this.chkItemLogItemsOnIdentify.Text = "过滤已经鉴定的物品";
             this.chkItemLogItemsOnIdentify.UseVisualStyleBackColor = true;
@@ -1770,7 +1774,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(82, 102);
+            this.label21.Location = new System.Drawing.Point(82, 111);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(97, 13);
             this.label21.TabIndex = 26;
@@ -1782,7 +1786,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(359, 298);
+            this.tabPage7.Size = new System.Drawing.Size(450, 325);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "快捷键";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1805,19 +1809,19 @@
             this.grpHotkeys.Controls.Add(this.label13);
             this.grpHotkeys.Controls.Add(this.label12);
             this.grpHotkeys.Controls.Add(this.label22);
-            this.grpHotkeys.Location = new System.Drawing.Point(11, 8);
+            this.grpHotkeys.Location = new System.Drawing.Point(11, 9);
             this.grpHotkeys.Name = "grpHotkeys";
-            this.grpHotkeys.Size = new System.Drawing.Size(335, 198);
+            this.grpHotkeys.Size = new System.Drawing.Size(426, 215);
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
             this.grpHotkeys.Text = "快捷键";
             // 
             // txtShareRoomKey
             // 
-            this.txtShareRoomKey.Location = new System.Drawing.Point(160, 169);
+            this.txtShareRoomKey.Location = new System.Drawing.Point(160, 183);
             this.txtShareRoomKey.MaxLength = 1;
             this.txtShareRoomKey.Name = "txtShareRoomKey";
-            this.txtShareRoomKey.Size = new System.Drawing.Size(94, 21);
+            this.txtShareRoomKey.Size = new System.Drawing.Size(94, 20);
             this.txtShareRoomKey.TabIndex = 21;
             this.txtShareRoomKey.TabStop = false;
             this.txtShareRoomKey.TextChanged += new System.EventHandler(this.textShareRoomKey_TextChanged);
@@ -1825,18 +1829,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 174);
+            this.label6.Location = new System.Drawing.Point(6, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 12);
+            this.label6.Size = new System.Drawing.Size(151, 13);
             this.label6.TabIndex = 20;
             this.label6.Text = "复制房间名和密码到剪贴板";
             // 
             // txtHideMapKey
             // 
-            this.txtHideMapKey.Location = new System.Drawing.Point(160, 43);
+            this.txtHideMapKey.Location = new System.Drawing.Point(160, 47);
             this.txtHideMapKey.MaxLength = 1;
             this.txtHideMapKey.Name = "txtHideMapKey";
-            this.txtHideMapKey.Size = new System.Drawing.Size(94, 21);
+            this.txtHideMapKey.Size = new System.Drawing.Size(94, 20);
             this.txtHideMapKey.TabIndex = 19;
             this.txtHideMapKey.TabStop = false;
             this.txtHideMapKey.TextChanged += new System.EventHandler(this.txtHideMapKey_TextChanged);
@@ -1844,58 +1848,58 @@
             // lblHideMapKey
             // 
             this.lblHideMapKey.AutoSize = true;
-            this.lblHideMapKey.Location = new System.Drawing.Point(6, 46);
+            this.lblHideMapKey.Location = new System.Drawing.Point(6, 50);
             this.lblHideMapKey.Name = "lblHideMapKey";
-            this.lblHideMapKey.Size = new System.Drawing.Size(53, 12);
+            this.lblHideMapKey.Size = new System.Drawing.Size(55, 13);
             this.lblHideMapKey.TabIndex = 18;
             this.lblHideMapKey.Text = "隐藏地图";
             // 
             // txtZoomOutKey
             // 
-            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 117);
+            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 127);
             this.txtZoomOutKey.MaxLength = 1;
             this.txtZoomOutKey.Name = "txtZoomOutKey";
-            this.txtZoomOutKey.Size = new System.Drawing.Size(94, 21);
+            this.txtZoomOutKey.Size = new System.Drawing.Size(94, 20);
             this.txtZoomOutKey.TabIndex = 15;
             this.txtZoomOutKey.TabStop = false;
             this.txtZoomOutKey.TextChanged += new System.EventHandler(this.txtZoomOutKey_TextChanged);
             // 
             // txtZoomInKey
             // 
-            this.txtZoomInKey.Location = new System.Drawing.Point(160, 91);
+            this.txtZoomInKey.Location = new System.Drawing.Point(160, 99);
             this.txtZoomInKey.MaxLength = 1;
             this.txtZoomInKey.Name = "txtZoomInKey";
-            this.txtZoomInKey.Size = new System.Drawing.Size(94, 21);
+            this.txtZoomInKey.Size = new System.Drawing.Size(94, 20);
             this.txtZoomInKey.TabIndex = 14;
             this.txtZoomInKey.TabStop = false;
             this.txtZoomInKey.TextChanged += new System.EventHandler(this.txtZoomInKey_TextChanged);
             // 
             // txtAreaLevelKey
             // 
-            this.txtAreaLevelKey.Location = new System.Drawing.Point(160, 67);
+            this.txtAreaLevelKey.Location = new System.Drawing.Point(160, 73);
             this.txtAreaLevelKey.MaxLength = 1;
             this.txtAreaLevelKey.Name = "txtAreaLevelKey";
-            this.txtAreaLevelKey.Size = new System.Drawing.Size(94, 21);
+            this.txtAreaLevelKey.Size = new System.Drawing.Size(94, 20);
             this.txtAreaLevelKey.TabIndex = 13;
             this.txtAreaLevelKey.TabStop = false;
             this.txtAreaLevelKey.TextChanged += new System.EventHandler(this.txtAreaLevelKey_TextChanged);
             // 
             // txtToggleMapKey
             // 
-            this.txtToggleMapKey.Location = new System.Drawing.Point(160, 19);
+            this.txtToggleMapKey.Location = new System.Drawing.Point(160, 21);
             this.txtToggleMapKey.MaxLength = 1;
             this.txtToggleMapKey.Name = "txtToggleMapKey";
-            this.txtToggleMapKey.Size = new System.Drawing.Size(94, 21);
+            this.txtToggleMapKey.Size = new System.Drawing.Size(94, 20);
             this.txtToggleMapKey.TabIndex = 12;
             this.txtToggleMapKey.TabStop = false;
             this.txtToggleMapKey.TextChanged += new System.EventHandler(this.txtToggleMapKey_TextChanged);
             // 
             // txtExportItemsKey
             // 
-            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 142);
+            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 154);
             this.txtExportItemsKey.MaxLength = 1;
             this.txtExportItemsKey.Name = "txtExportItemsKey";
-            this.txtExportItemsKey.Size = new System.Drawing.Size(94, 21);
+            this.txtExportItemsKey.Size = new System.Drawing.Size(94, 20);
             this.txtExportItemsKey.TabIndex = 16;
             this.txtExportItemsKey.TabStop = false;
             this.txtExportItemsKey.TextChanged += new System.EventHandler(this.txtExportItemsKey_TextChanged);
@@ -1903,45 +1907,45 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 120);
+            this.label15.Location = new System.Drawing.Point(6, 130);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.Size = new System.Drawing.Size(55, 13);
             this.label15.TabIndex = 11;
             this.label15.Text = "地图缩小";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 95);
+            this.label14.Location = new System.Drawing.Point(6, 103);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 10;
             this.label14.Text = "地图放大";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 70);
+            this.label13.Location = new System.Drawing.Point(6, 76);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 12);
+            this.label13.Size = new System.Drawing.Size(108, 13);
             this.label13.TabIndex = 9;
             this.label13.Text = "显示/隐藏地图等级";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 22);
+            this.label12.Location = new System.Drawing.Point(6, 24);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.Size = new System.Drawing.Size(55, 13);
             this.label12.TabIndex = 8;
             this.label12.Text = "显示地图";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 145);
+            this.label22.Location = new System.Drawing.Point(6, 157);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(77, 12);
+            this.label22.Size = new System.Drawing.Size(79, 13);
             this.label22.TabIndex = 17;
             this.label22.Text = "导出掉落信息";
             // 
@@ -1951,7 +1955,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(359, 298);
+            this.tabPage8.Size = new System.Drawing.Size(450, 325);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "DC追踪";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1971,9 +1975,9 @@
             this.groupBox9.Controls.Add(this.checkDCTrack);
             this.groupBox9.Controls.Add(this.checkLadder);
             this.groupBox9.Controls.Add(this.checkAsia);
-            this.groupBox9.Location = new System.Drawing.Point(12, 8);
+            this.groupBox9.Location = new System.Drawing.Point(12, 9);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(335, 282);
+            this.groupBox9.Size = new System.Drawing.Size(426, 306);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "追踪";
@@ -1981,9 +1985,9 @@
             // checkSound
             // 
             this.checkSound.AutoSize = true;
-            this.checkSound.Location = new System.Drawing.Point(11, 105);
+            this.checkSound.Location = new System.Drawing.Point(11, 114);
             this.checkSound.Name = "checkSound";
-            this.checkSound.Size = new System.Drawing.Size(72, 16);
+            this.checkSound.Size = new System.Drawing.Size(74, 17);
             this.checkSound.TabIndex = 47;
             this.checkSound.Text = "发出声音";
             this.checkSound.UseVisualStyleBackColor = true;
@@ -1992,9 +1996,9 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(89, 107);
+            this.label23.Location = new System.Drawing.Point(89, 116);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 12);
+            this.label23.Size = new System.Drawing.Size(76, 13);
             this.label23.TabIndex = 45;
             this.label23.Text = "声音提示级别";
             // 
@@ -2011,18 +2015,18 @@
             "4/6",
             "5/6",
             "6/6"});
-            this.comboBoxWarnLevel.Location = new System.Drawing.Point(172, 103);
+            this.comboBoxWarnLevel.Location = new System.Drawing.Point(172, 112);
             this.comboBoxWarnLevel.Name = "comboBoxWarnLevel";
-            this.comboBoxWarnLevel.Size = new System.Drawing.Size(87, 20);
+            this.comboBoxWarnLevel.Size = new System.Drawing.Size(248, 21);
             this.comboBoxWarnLevel.TabIndex = 46;
             this.comboBoxWarnLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxWarnLevel_SelectedIndexChanged);
             // 
             // checkHard
             // 
             this.checkHard.AutoSize = true;
-            this.checkHard.Location = new System.Drawing.Point(65, 83);
+            this.checkHard.Location = new System.Drawing.Point(65, 90);
             this.checkHard.Name = "checkHard";
-            this.checkHard.Size = new System.Drawing.Size(48, 16);
+            this.checkHard.Size = new System.Drawing.Size(50, 17);
             this.checkHard.TabIndex = 44;
             this.checkHard.Text = "专家";
             this.checkHard.UseVisualStyleBackColor = true;
@@ -2031,9 +2035,9 @@
             // checkNormal
             // 
             this.checkNormal.AutoSize = true;
-            this.checkNormal.Location = new System.Drawing.Point(11, 83);
+            this.checkNormal.Location = new System.Drawing.Point(11, 90);
             this.checkNormal.Name = "checkNormal";
-            this.checkNormal.Size = new System.Drawing.Size(48, 16);
+            this.checkNormal.Size = new System.Drawing.Size(50, 17);
             this.checkNormal.TabIndex = 43;
             this.checkNormal.Text = "普通";
             this.checkNormal.UseVisualStyleBackColor = true;
@@ -2042,9 +2046,9 @@
             // checkClassic
             // 
             this.checkClassic.AutoSize = true;
-            this.checkClassic.Location = new System.Drawing.Point(65, 61);
+            this.checkClassic.Location = new System.Drawing.Point(65, 66);
             this.checkClassic.Name = "checkClassic";
-            this.checkClassic.Size = new System.Drawing.Size(48, 16);
+            this.checkClassic.Size = new System.Drawing.Size(50, 17);
             this.checkClassic.TabIndex = 42;
             this.checkClassic.Text = "经典";
             this.checkClassic.UseVisualStyleBackColor = true;
@@ -2053,9 +2057,9 @@
             // checkEurope
             // 
             this.checkEurope.AutoSize = true;
-            this.checkEurope.Location = new System.Drawing.Point(119, 39);
+            this.checkEurope.Location = new System.Drawing.Point(119, 42);
             this.checkEurope.Name = "checkEurope";
-            this.checkEurope.Size = new System.Drawing.Size(48, 16);
+            this.checkEurope.Size = new System.Drawing.Size(50, 17);
             this.checkEurope.TabIndex = 41;
             this.checkEurope.Text = "欧服";
             this.checkEurope.UseVisualStyleBackColor = true;
@@ -2064,9 +2068,9 @@
             // checkAmerica
             // 
             this.checkAmerica.AutoSize = true;
-            this.checkAmerica.Location = new System.Drawing.Point(65, 39);
+            this.checkAmerica.Location = new System.Drawing.Point(65, 42);
             this.checkAmerica.Name = "checkAmerica";
-            this.checkAmerica.Size = new System.Drawing.Size(48, 16);
+            this.checkAmerica.Size = new System.Drawing.Size(50, 17);
             this.checkAmerica.TabIndex = 40;
             this.checkAmerica.Text = "美服";
             this.checkAmerica.UseVisualStyleBackColor = true;
@@ -2075,9 +2079,9 @@
             // checkDCTrack
             // 
             this.checkDCTrack.AutoSize = true;
-            this.checkDCTrack.Location = new System.Drawing.Point(11, 18);
+            this.checkDCTrack.Location = new System.Drawing.Point(11, 20);
             this.checkDCTrack.Name = "checkDCTrack";
-            this.checkDCTrack.Size = new System.Drawing.Size(48, 16);
+            this.checkDCTrack.Size = new System.Drawing.Size(50, 17);
             this.checkDCTrack.TabIndex = 0;
             this.checkDCTrack.Text = "启用";
             this.checkDCTrack.UseVisualStyleBackColor = true;
@@ -2086,9 +2090,9 @@
             // checkLadder
             // 
             this.checkLadder.AutoSize = true;
-            this.checkLadder.Location = new System.Drawing.Point(11, 61);
+            this.checkLadder.Location = new System.Drawing.Point(11, 66);
             this.checkLadder.Name = "checkLadder";
-            this.checkLadder.Size = new System.Drawing.Size(48, 16);
+            this.checkLadder.Size = new System.Drawing.Size(50, 17);
             this.checkLadder.TabIndex = 3;
             this.checkLadder.Text = "天梯";
             this.checkLadder.UseVisualStyleBackColor = true;
@@ -2097,9 +2101,9 @@
             // checkAsia
             // 
             this.checkAsia.AutoSize = true;
-            this.checkAsia.Location = new System.Drawing.Point(11, 39);
+            this.checkAsia.Location = new System.Drawing.Point(11, 42);
             this.checkAsia.Name = "checkAsia";
-            this.checkAsia.Size = new System.Drawing.Size(48, 16);
+            this.checkAsia.Size = new System.Drawing.Size(50, 17);
             this.checkAsia.TabIndex = 39;
             this.checkAsia.Text = "亚服";
             this.checkAsia.UseVisualStyleBackColor = true;
@@ -2112,7 +2116,7 @@
             this.tabPage4.Controls.Add(this.groupBox8);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(359, 298);
+            this.tabPage4.Size = new System.Drawing.Size(450, 325);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "窗口设置";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2124,9 +2128,9 @@
             this.groupBox2.Controls.Add(this.btnRemoveHidden);
             this.groupBox2.Controls.Add(this.btnAddHidden);
             this.groupBox2.Controls.Add(this.lstHidden);
-            this.groupBox2.Location = new System.Drawing.Point(11, 8);
+            this.groupBox2.Location = new System.Drawing.Point(11, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 92);
+            this.groupBox2.Size = new System.Drawing.Size(426, 100);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "隐藏地图场景";
@@ -2134,9 +2138,9 @@
             // btnRemoveHidden
             // 
             this.btnRemoveHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveHidden.Location = new System.Drawing.Point(362, 48);
+            this.btnRemoveHidden.Location = new System.Drawing.Point(453, 52);
             this.btnRemoveHidden.Name = "btnRemoveHidden";
-            this.btnRemoveHidden.Size = new System.Drawing.Size(20, 21);
+            this.btnRemoveHidden.Size = new System.Drawing.Size(20, 23);
             this.btnRemoveHidden.TabIndex = 2;
             this.btnRemoveHidden.Text = "-";
             this.btnRemoveHidden.UseVisualStyleBackColor = true;
@@ -2145,9 +2149,9 @@
             // btnAddHidden
             // 
             this.btnAddHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddHidden.Location = new System.Drawing.Point(362, 19);
+            this.btnAddHidden.Location = new System.Drawing.Point(453, 21);
             this.btnAddHidden.Name = "btnAddHidden";
-            this.btnAddHidden.Size = new System.Drawing.Size(20, 21);
+            this.btnAddHidden.Size = new System.Drawing.Size(20, 23);
             this.btnAddHidden.TabIndex = 1;
             this.btnAddHidden.Text = "+";
             this.btnAddHidden.UseVisualStyleBackColor = true;
@@ -2158,10 +2162,9 @@
             this.lstHidden.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstHidden.FormattingEnabled = true;
-            this.lstHidden.ItemHeight = 12;
-            this.lstHidden.Location = new System.Drawing.Point(10, 18);
+            this.lstHidden.Location = new System.Drawing.Point(10, 20);
             this.lstHidden.Name = "lstHidden";
-            this.lstHidden.Size = new System.Drawing.Size(293, 64);
+            this.lstHidden.Size = new System.Drawing.Size(384, 69);
             this.lstHidden.TabIndex = 0;
             // 
             // groupBoxAuthorizedWindowTitle
@@ -2172,9 +2175,9 @@
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.btnRemoveAuthorizedWindowTitle);
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.btnAddAuthorizedWindowTitle);
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.lstAuthorizedWindowTitle);
-            this.groupBoxAuthorizedWindowTitle.Location = new System.Drawing.Point(11, 106);
+            this.groupBoxAuthorizedWindowTitle.Location = new System.Drawing.Point(11, 115);
             this.groupBoxAuthorizedWindowTitle.Name = "groupBoxAuthorizedWindowTitle";
-            this.groupBoxAuthorizedWindowTitle.Size = new System.Drawing.Size(335, 114);
+            this.groupBoxAuthorizedWindowTitle.Size = new System.Drawing.Size(426, 124);
             this.groupBoxAuthorizedWindowTitle.TabIndex = 2;
             this.groupBoxAuthorizedWindowTitle.TabStop = false;
             this.groupBoxAuthorizedWindowTitle.Text = "可能的游戏窗口名";
@@ -2183,17 +2186,17 @@
             // 
             this.txtAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 87);
+            this.txtAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 94);
             this.txtAuthorizedWindowTitle.Name = "txtAuthorizedWindowTitle";
-            this.txtAuthorizedWindowTitle.Size = new System.Drawing.Size(293, 21);
+            this.txtAuthorizedWindowTitle.Size = new System.Drawing.Size(384, 20);
             this.txtAuthorizedWindowTitle.TabIndex = 3;
             // 
             // btnRemoveAuthorizedWindowTitle
             // 
             this.btnRemoveAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 38);
+            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(400, 41);
             this.btnRemoveAuthorizedWindowTitle.Name = "btnRemoveAuthorizedWindowTitle";
-            this.btnRemoveAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
+            this.btnRemoveAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 23);
             this.btnRemoveAuthorizedWindowTitle.TabIndex = 2;
             this.btnRemoveAuthorizedWindowTitle.Text = "-";
             this.btnRemoveAuthorizedWindowTitle.UseVisualStyleBackColor = true;
@@ -2202,9 +2205,9 @@
             // btnAddAuthorizedWindowTitle
             // 
             this.btnAddAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 86);
+            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(400, 93);
             this.btnAddAuthorizedWindowTitle.Name = "btnAddAuthorizedWindowTitle";
-            this.btnAddAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
+            this.btnAddAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 23);
             this.btnAddAuthorizedWindowTitle.TabIndex = 1;
             this.btnAddAuthorizedWindowTitle.Text = "+";
             this.btnAddAuthorizedWindowTitle.UseVisualStyleBackColor = true;
@@ -2215,10 +2218,9 @@
             this.lstAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstAuthorizedWindowTitle.FormattingEnabled = true;
-            this.lstAuthorizedWindowTitle.ItemHeight = 12;
-            this.lstAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 18);
+            this.lstAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 20);
             this.lstAuthorizedWindowTitle.Name = "lstAuthorizedWindowTitle";
-            this.lstAuthorizedWindowTitle.Size = new System.Drawing.Size(293, 64);
+            this.lstAuthorizedWindowTitle.Size = new System.Drawing.Size(384, 69);
             this.lstAuthorizedWindowTitle.TabIndex = 0;
             // 
             // groupBox8
@@ -2228,9 +2230,9 @@
             this.groupBox8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Controls.Add(this.chkDPIAware);
-            this.groupBox8.Location = new System.Drawing.Point(11, 226);
+            this.groupBox8.Location = new System.Drawing.Point(11, 245);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(335, 54);
+            this.groupBox8.Size = new System.Drawing.Size(426, 59);
             this.groupBox8.TabIndex = 29;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "高DPI设置";
@@ -2240,7 +2242,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(7, 33);
+            this.label3.Location = new System.Drawing.Point(7, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 28;
@@ -2249,19 +2251,28 @@
             // chkDPIAware
             // 
             this.chkDPIAware.AutoSize = true;
-            this.chkDPIAware.Location = new System.Drawing.Point(10, 18);
+            this.chkDPIAware.Location = new System.Drawing.Point(10, 20);
             this.chkDPIAware.Name = "chkDPIAware";
-            this.chkDPIAware.Size = new System.Drawing.Size(90, 16);
+            this.chkDPIAware.Size = new System.Drawing.Size(89, 17);
             this.chkDPIAware.TabIndex = 27;
             this.chkDPIAware.Text = "DPI自动识别";
             this.chkDPIAware.UseVisualStyleBackColor = true;
             this.chkDPIAware.CheckedChanged += new System.EventHandler(this.chkDPIAware_CheckedChanged);
             // 
+            // integrationTab
+            // 
+            this.integrationTab.Location = new System.Drawing.Point(4, 22);
+            this.integrationTab.Name = "integrationTab";
+            this.integrationTab.Size = new System.Drawing.Size(450, 325);
+            this.integrationTab.TabIndex = 8;
+            this.integrationTab.Text = "Integration";
+            this.integrationTab.UseVisualStyleBackColor = true;
+            // 
             // ConfigEditor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 345);
+            this.ClientSize = new System.Drawing.Size(480, 374);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2495,5 +2506,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBoxWarnLevel;
         private System.Windows.Forms.CheckBox checkSound;
+        private System.Windows.Forms.TabPage integrationTab;
     }
 }
