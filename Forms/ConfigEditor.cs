@@ -970,5 +970,15 @@ namespace MapAssist
         {
             MapAssistConfiguration.Loaded.DCTrack.Sound = checkSound.Checked;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://qm.qq.com/cgi-bin/qm/qr?k=HT2IypzWD0cePIJi8egR2AvL7TbZsQo4&jump_from=webapi");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1Sfn6V&appChannel=share&businessType=9&from=246610&biz=ka");
+        }
     }
 }

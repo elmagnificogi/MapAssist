@@ -589,6 +589,7 @@
     <Content Include="MAServer.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\community.png" />
     <EmbeddedResource Include="Resources\InventoryExportTemplate.html" />
   </ItemGroup>
   <ItemGroup>
