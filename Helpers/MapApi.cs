@@ -99,7 +99,7 @@ namespace MapAssist.Helpers
                 if (!attributes.HasFlag(FileAttributes.Directory))
                 {
                     var config1 = new ConfigEditor();
-                    MessageBox.Show("Provided D2 LoD path is not set to a directory." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
+                    MessageBox.Show("Diablo路径不正确" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
                     config1.ShowDialog();
                     return null;
                 }
@@ -112,7 +112,7 @@ namespace MapAssist.Helpers
 
                 var config = new ConfigEditor();
                 _log.Info("User provided D2 LoD path is invalid");
-                MessageBox.Show("Provided D2 LoD path is not the correct version." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
+                MessageBox.Show("Diablo版本不正确" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
                 config.ShowDialog();
                 return null;
             }
@@ -121,7 +121,7 @@ namespace MapAssist.Helpers
             if (installPath == "INVALID" || !IsValidD2LoDPath(installPath))
             {
                 _log.Info("Registry-provided D2 LoD path not found or invalid");
-                MessageBox.Show("Unable to automatically locate D2 LoD installation." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
+                MessageBox.Show("找不到Diablo安装路径" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
                 var config = new ConfigEditor();
                 config.ShowDialog();
                 return null;

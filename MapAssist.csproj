@@ -86,10 +86,18 @@
     <ApplicationIcon>Resources\Icon1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.NetFwTypeLib">
+      <HintPath>Helpers\Interop.NetFwTypeLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Nautilus">
+      <HintPath>Helpers\Nautilus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -136,6 +144,7 @@
     <Compile Include="Helpers\LootFilter.cs" />
     <Compile Include="Helpers\Pattern.cs" />
     <Compile Include="Helpers\ProcessContext.cs" />
+    <Compile Include="Helpers\IPBlock.cs" />
     <Compile Include="Helpers\Serializer.cs" />
     <Compile Include="Helpers\YamlConverters.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
@@ -246,6 +255,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\app.manifest" />
     <None Include="Resources\Icon1.ico" />
     <None Include="Resources\Icon2.ico" />
     <None Include="ItemFilter.yaml">

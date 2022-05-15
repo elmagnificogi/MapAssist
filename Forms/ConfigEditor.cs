@@ -980,5 +980,31 @@ namespace MapAssist
         {
             System.Diagnostics.Process.Start("https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1Sfn6V&appChannel=share&businessType=9&from=246610&biz=ka");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IPBlock.StopIPBlock();
+            label25.Text = "IP屏蔽未启动";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label25.Text = "IP屏蔽已生效";
+            if(checkedListBlockServer.CheckedItems.Count > 0)
+            {
+                var servers = "";
+                foreach (var item in checkedListBlockServer.CheckedItems)
+                {
+                    servers+=item.ToString();
+                }
+                Debug.WriteLine(servers);
+                IPBlock.StartIPBlock(servers);
+            }
+            else
+            {
+                MessageBox.Show("至少选择一个屏蔽服务器");
+            }
+
+        }
     }
 }

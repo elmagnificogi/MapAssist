@@ -47,7 +47,7 @@ namespace MapAssist
                     var rand = new Random();
                     var isGemActive = rand.NextDouble() < 0.05;
 
-                    MessageBox.Show("An instance of " + appName + " is already running." + (isGemActive ? " Better go catch it!" : ""), messageBoxTitle, MessageBoxButtons.OK);
+                    MessageBox.Show(appName + "已经打开了 " + (isGemActive ? " Better go catch it!" : ""), messageBoxTitle, MessageBoxButtons.OK);
                     return;
                 }
 
@@ -80,7 +80,7 @@ namespace MapAssist
                     {
                         if (!MapApi.StartPipedChild())
                         {
-                            MessageBox.Show($"{messageBoxTitle}: Unable to start d2mapapi pipe", messageBoxTitle, MessageBoxButtons.OK);
+                            MessageBox.Show($"{messageBoxTitle}: 无法启动d2mapapi", messageBoxTitle, MessageBoxButtons.OK);
                             return;
                         }
                     }
@@ -90,7 +90,7 @@ namespace MapAssist
                         _log.Fatal(e, "Unable to start d2mapapi pipe.");
 
                         var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
-                        MessageBox.Show(message, $"{messageBoxTitle}: Unable to start d2mapapi pipe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(message, $"{messageBoxTitle}: 无法启动d2mapapi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -132,7 +132,7 @@ namespace MapAssist
 
                     GameManager.OnGameAccessDenied += (_, __) =>
                     {
-                        var message = $"MapAssist could not read {GameManager.ProcessName} memory. Please reopen MapAssist as an administrator.";
+                        var message = $"MapAssist could not read {GameManager.ProcessName} memory. 请使用管理员权限启动程序";
                         MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                         Dispose();
                         Application.Exit();
@@ -193,7 +193,7 @@ namespace MapAssist
                 _log.Fatal(e, "Invalid yaml for configuration file");
 
                 var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: MapAssist configuration yaml parsing error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, $"{messageBoxTitle}: MapAssist configuration yaml 错误，请删除本地Config.yaml，重启", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {
@@ -218,7 +218,7 @@ namespace MapAssist
                 _log.Fatal("Invalid item log yaml file");
 
                 var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: Item filter yaml parsing error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, $"{messageBoxTitle}: Item filter yaml错误，请检查过滤文件", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {
