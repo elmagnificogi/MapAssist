@@ -30,7 +30,7 @@ namespace MapAssist.Types
                         dclist = dclist.Replace('\'', '\"');
                         var dcRaws = Serializer.JsonToObject<List<DCRaw>>(dclist);
                         diabloCloneProgress.Clear();
-                        if(dcRaws == null)
+                        if(dcRaws == null || dcRaws?.Count == 0)
                         {
                             dcRaws = new List<DCRaw>();
                             dcRaws.Add(new DCRaw("3", "1", "1", "0"));
