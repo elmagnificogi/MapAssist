@@ -101,7 +101,6 @@ namespace MapAssist.Helpers
                 // commits all changes.
                 service.UpdateRule(newRule);
 
-
             }
             catch
             {

@@ -989,7 +989,6 @@ namespace MapAssist
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label25.Text = "IP屏蔽已生效";
             if(checkedListBlockServer.CheckedItems.Count > 0)
             {
                 var servers = "";
@@ -998,7 +997,8 @@ namespace MapAssist
                     servers+=item.ToString();
                 }
                 Debug.WriteLine(servers);
-                IPBlock.StartIPBlock(servers);
+                if(IPBlock.StartIPBlock(servers))
+                    label25.Text = "IP屏蔽已生效";
             }
             else
             {
