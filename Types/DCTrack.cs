@@ -30,6 +30,23 @@ namespace MapAssist.Types
                         dclist = dclist.Replace('\'', '\"');
                         var dcRaws = Serializer.JsonToObject<List<DCRaw>>(dclist);
                         diabloCloneProgress.Clear();
+                        if(dcRaws == null)
+                        {
+                            dcRaws = new List<DCRaw>();
+                            dcRaws.Add(new DCRaw("3", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("3", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("3", "2", "2", "0"));
+                            dcRaws.Add(new DCRaw("3", "2", "2", "0"));
+                            dcRaws.Add(new DCRaw("2", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("2", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("2", "2", "2", "0"));
+                            dcRaws.Add(new DCRaw("2", "2", "2", "0"));
+                            dcRaws.Add(new DCRaw("1", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("1", "1", "1", "0"));
+                            dcRaws.Add(new DCRaw("1", "2", "2", "0"));
+                            dcRaws.Add(new DCRaw("1", "2", "2", "0"));
+                        }
+
                         foreach (DCRaw dcr in dcRaws)
                         {
                             string server;
@@ -255,7 +272,12 @@ namespace MapAssist.Types
 
         public override string ToString()
         {
-            return region+ladder+sc+"模式进度:"+progress.ToString()+"/6";
+            var ret = region + ladder + sc + "模式进度:" + progress.ToString() + "/6";
+            if(progress==0)
+            {
+                ret = "DC追踪网站又挂了，请关注群内消息";
+            }
+            return ret;
         }
     }
 
@@ -272,5 +294,13 @@ namespace MapAssist.Types
         public string hc;
         [DataMember]
         public string timestamped;
+
+        public DCRaw(string r, string s, string l, string pro)
+        {
+            region = r;
+            hc = s;
+            ladder = l;
+            progress = pro;
+        }
     }
 }
