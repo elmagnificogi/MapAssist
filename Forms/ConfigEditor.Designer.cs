@@ -207,6 +207,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chkDPIAware = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1068,6 +1069,7 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.label27);
             this.tabPage10.Controls.Add(this.checkedListBlockServer);
             this.tabPage10.Controls.Add(this.label25);
             this.tabPage10.Controls.Add(this.label24);
@@ -1104,7 +1106,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label25.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label25.Location = new System.Drawing.Point(10, 163);
+            this.label25.Location = new System.Drawing.Point(10, 156);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(195, 29);
             this.label25.TabIndex = 42;
@@ -1113,7 +1115,7 @@
             // label24
             // 
             this.label24.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label24.Location = new System.Drawing.Point(11, 261);
+            this.label24.Location = new System.Drawing.Point(11, 260);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(316, 32);
             this.label24.TabIndex = 41;
@@ -1122,7 +1124,7 @@
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(11, 214);
+            this.label19.Location = new System.Drawing.Point(11, 193);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(316, 32);
             this.label19.TabIndex = 40;
@@ -2411,6 +2413,16 @@
             this.chkDPIAware.UseVisualStyleBackColor = true;
             this.chkDPIAware.CheckedChanged += new System.EventHandler(this.chkDPIAware_CheckedChanged);
             // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label27.Location = new System.Drawing.Point(11, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(316, 32);
+            this.label27.TabIndex = 44;
+            this.label27.Text = "屏蔽以后无法进入到对应的服务器，可能会造成不能进入好友房间";
+            // 
             // ConfigEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2666,5 +2678,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.CheckedListBox checkedListBlockServer;
+        private System.Windows.Forms.Label label27;
     }
 }
