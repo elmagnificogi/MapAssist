@@ -18,6 +18,7 @@ namespace MapAssist.Settings
             Loaded = ConfigurationParser<MapAssistConfiguration>.ParseConfigurationMain(Properties.Resources.Config, $"./Config.yaml");
             Localization.LoadLocalizationFile();
             PointOfInterestHandler.UpdateLocalizationNames();
+            QualityLevels.LoadQualityLevelsFile();
         }
 
         public void Save()
@@ -339,6 +340,12 @@ public class ItemLogConfiguration
 
     [YamlMember(Alias = "PlaySoundOnDrop", ApplyNamingConventions = false)]
     public bool PlaySoundOnDrop { get; set; }
+
+    [YamlMember(Alias = "ShowDistanceToItem", ApplyNamingConventions = false)]
+    public bool ShowDistanceToItem { get; set; }
+
+    [YamlMember(Alias = "ShowDirectionToItem", ApplyNamingConventions = false)]
+    public bool ShowDirectionToItem { get; set; }
 
     [YamlMember(Alias = "SoundFile", ApplyNamingConventions = false)]
     public string SoundFile { get; set; }

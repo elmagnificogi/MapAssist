@@ -49,6 +49,8 @@ namespace MapAssist.Helpers
         public void SetArea(AreaData areaData, IReadOnlyList<PointOfInterest> pointsOfInterest)
         {
             _areaData = areaData;
+            if (_areaData == null) return;
+
             _areaData.CalcViewAreas(_rotateRadians);
 
             foreach (var adjacentArea in _areaData.AdjacentAreas.Values)
@@ -68,6 +70,8 @@ namespace MapAssist.Helpers
             _drawBounds = drawBounds;
             _frameCount += 1;
             (scaleWidth, scaleHeight) = GetScaleRatios();
+
+            if (_areaData == null) return;
 
             var renderWidth = MapAssistConfiguration.Loaded.RenderingConfiguration.Size * _areaData.ViewOutputRect.Width / _areaData.ViewOutputRect.Height;
             switch (MapAssistConfiguration.Loaded.RenderingConfiguration.Position)
@@ -952,7 +956,7 @@ namespace MapAssist.Helpers
             // Area
             if (MapAssistConfiguration.Loaded.GameInfo.ShowArea)
             {
-                var areaText = _areaData.Area.Name();
+                var areaText = _gameData.Area.Name();
                 DrawText(gfx, anchor, areaText, font, fontSize, textColor, textShadow, textAlign);
                 anchor.Y += lineHeight;
             }
@@ -975,7 +979,7 @@ namespace MapAssist.Helpers
             // Area Level
             if (MapAssistConfiguration.Loaded.GameInfo.ShowAreaLevel)
             {
-                var areaLevel = _areaData.Area.Level(_gameData.Difficulty);
+                var areaLevel = _gameData.Area.Level(_gameData.Difficulty);
                 if (areaLevel > 0)
                 {
                     var areaLevelText = "场景等级: " + areaLevel;
@@ -1016,7 +1020,7 @@ namespace MapAssist.Helpers
 
             if (errorLoadingAreaData)
             {
-                DrawText(gfx, anchor, "ERROR LOADING AREA!", font, (int)Math.Round(fontSize * 1.5), Color.Orange, textShadow, textAlign);
+                DrawText(gfx, anchor, "ERROR LOADING AREA!", font, fontSize * 1.5f, Color.Orange, textShadow, textAlign);
                 anchor.Y += lineHeight;
             }
 
@@ -1047,19 +1051,67 @@ namespace MapAssist.Helpers
                 var font = CreateFont(gfx, MapAssistConfiguration.Loaded.ItemLog.LabelFont, fontSize);
                 var position = anchor.Add(0, i * lineHeight);
                 var brush = CreateSolidBrush(gfx, item.Color, 1);
+                var stringSize = gfx.MeasureString(font, item.Text);
 
                 if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
                 {
-                    var stringSize = gfx.MeasureString(font, item.Text);
                     position = position.Subtract(stringSize.X, 0);
+                }
+
+                if (MapAssistConfiguration.Loaded.ItemLog.ShowDirectionToItem)
+                {
+                    position = position.Add(stringSize.Y, 0);
+                }
+
+                if (MapAssistConfiguration.Loaded.ItemLog.ShowDistanceToItem && item.Area == _gameData.Area && !item.UnitItem.IsInStore)
+                {
+                    var smallFont = CreateFont(gfx, MapAssistConfiguration.Loaded.ItemLog.LabelFont, fontSize * 0.7f);
+                    var rangePosition = position.Add(stringSize.X + 8, fontSize * 0.2f);
+
+                    var rangeText = item.UnitItem.IsDropped
+                        ? $"(距离: {Math.Round(_gameData.PlayerPosition.DistanceTo(item.UnitItem.Position))})"
+                        : "(拾取)";
+
+                    if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
+                    {
+                        var rangeTextSize = gfx.MeasureString(smallFont, rangeText);
+                        position = position.Subtract(rangeTextSize.X, 0);
+                        rangePosition = rangePosition.Subtract(rangeTextSize.X, 0);
+                    }
+
+                    if (textShadow)
+                    {
+                        gfx.DrawText(smallFont, shadowBrush, rangePosition.X + shadowOffset, rangePosition.Y + shadowOffset, rangeText);
+                    }
+                    gfx.DrawText(smallFont, brush, rangePosition, rangeText);
                 }
 
                 if (textShadow)
                 {
                     gfx.DrawText(font, shadowBrush, position.X + shadowOffset, position.Y + shadowOffset, item.Text);
                 }
-
                 gfx.DrawText(font, brush, position, item.Text);
+
+                if (MapAssistConfiguration.Loaded.ItemLog.ShowDirectionToItem && item.Area == _gameData.Area && item.UnitItem.IsDropped)
+                {
+                    var startPosition = Vector2.Transform(_gameData.PlayerPosition.ToVector(), areaTransformMatrix).ToPoint();
+                    var endPosition = Vector2.Transform(item.UnitItem.Position.ToVector(), areaTransformMatrix).ToPoint();
+
+                    var angle = endPosition.Subtract(startPosition).Angle();
+
+                    var arrowcenter = position.Add(-stringSize.Y / 2 - 5, stringSize.Y / 2);
+                    var arrowStartPosition = arrowcenter.Add(stringSize.Y / 2, 0).Rotate(angle + (float)Math.PI, arrowcenter);
+                    var arrowEndPosition = arrowcenter.Add(stringSize.Y / 2, 0).Rotate(angle, arrowcenter);
+
+                    var rendering = new PointOfInterestRendering()
+                    {
+                        LineColor = item.Color,
+                        LineThickness = 2,
+                        ArrowHeadSize = 8
+                    };
+
+                    DrawLine(gfx, rendering, arrowStartPosition, arrowEndPosition, transformForMap: false, renderIfShort: true, spacing: 0);
+                }
             }
         }
 
@@ -1149,6 +1201,8 @@ namespace MapAssist.Helpers
                 for (var i = 0; i < 4; i++)
                 {
                     var items = _gameData.PlayerUnit.BeltItems[i].Where(x => x != null).ToArray();
+
+                    if (items.Length == 0) continue;
 
                     var itemTypes = items.Select(x => x.Item.IsHealthPotion() ? 0 : x.Item.IsManaPotion() ? 1 : x.Item.IsRejuvPotion() ? 2 : 3).ToArray();
                     var color = itemTypes.Distinct().Count() == 1 && itemTypes[0] < colors.Length ? colors[itemTypes[0]] : Color.White;
@@ -1254,27 +1308,31 @@ namespace MapAssist.Helpers
             renderTarget.Transform = currentTransform;
         }
 
-        private void DrawLine(Graphics gfx, PointOfInterestRendering rendering, Point startPosition, Point endPosition)
+        private void DrawLine(Graphics gfx, PointOfInterestRendering rendering, Point startPosition, Point endPosition,
+            bool transformForMap = true, bool renderIfShort = false, int spacing = 5)
         {
             var renderTarget = gfx.GetRenderTarget();
             var currentTransform = renderTarget.Transform;
             renderTarget.Transform = Matrix3x2.Identity.ToDXMatrix();
 
-            startPosition = Vector2.Transform(startPosition.ToVector(), areaTransformMatrix).ToPoint();
-            endPosition = Vector2.Transform(endPosition.ToVector(), areaTransformMatrix).ToPoint();
+            if (transformForMap)
+            {
+                startPosition = Vector2.Transform(startPosition.ToVector(), areaTransformMatrix).ToPoint();
+                endPosition = Vector2.Transform(endPosition.ToVector(), areaTransformMatrix).ToPoint();
+            }
 
             var angle = endPosition.Subtract(startPosition).Angle();
             var length = endPosition.Rotate(-angle, startPosition).X - startPosition.X;
 
             var brush = CreateSolidBrush(gfx, rendering.LineColor);
 
-            startPosition = startPosition.Rotate(-angle, startPosition).Add(5 * scaleWidth, 0).Rotate(angle, startPosition); // Add 5 for a little extra spacing from the start point
+            startPosition = startPosition.Rotate(-angle, startPosition).Add(spacing * scaleWidth, 0).Rotate(angle, startPosition); // Add a little extra spacing from the start point
 
-            if (length > 60) // Don't render when line is too short
+            if (renderIfShort || length > 60)
             {
                 if (rendering.CanDrawArrowHead())
                 {
-                    endPosition = endPosition.Rotate(-angle, startPosition).Subtract(5 * scaleWidth, 0).Rotate(angle, startPosition); // Subtract 5 for a little extra spacing from the end point
+                    endPosition = endPosition.Rotate(-angle, startPosition).Subtract(spacing * scaleWidth, 0).Rotate(angle, startPosition); // Subtract a little extra spacing from the end point
 
                     var points = new Point[]
                     {

@@ -2,6 +2,12 @@
 
 
 
+## 视频
+
+<iframe src="//player.bilibili.com/player.html?aid=341498840&bvid=BV1BR4y1A7Uc&cid=715224439&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=640 height=480> </iframe>
+
+
+
 ## 下载
 
 ![image-20220430022530873](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202204300225954.png)
@@ -54,13 +60,30 @@
 
 
 
+#### DC追踪
+
 DC追踪功能，请根据需要自行选择
 
 ![image-20220508000508689](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205080005823.png)
 
 
 
+#### 服务器屏蔽
+
+![image-20220515160427376](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205151604459.png)
+
+由于亚服多日卡顿，不见好转，所以增加一个屏蔽功能，选择要屏蔽的服务器，然后应用即可。
+
+- 屏蔽以后无法进入到对应的服务器，可能会造成不能进入好友房间
+- 有任何问题，可以取消屏蔽，会解除所有屏蔽策略
+- 屏蔽需要管理员权限，并且需要Windows防火墙可以正常启动，策略组可修改
+
+
+
 暗黑2重置交流群：941746977，edit by elmagnifico
 
+暗黑2社区，请使用手机QQ扫码加入
 
+> https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1Sfn6V&appChannel=share&businessType=9&from=246610&biz=ka
 
+![community](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205151608035.png)

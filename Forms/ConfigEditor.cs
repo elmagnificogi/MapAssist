@@ -120,6 +120,8 @@ namespace MapAssist
             chkItemLogEnabled.Checked = MapAssistConfiguration.Loaded.ItemLog.Enabled;
             chkItemLogItemsOnIdentify.Checked = MapAssistConfiguration.Loaded.ItemLog.CheckItemOnIdentify;
             chkItemLogVendorItems.Checked = MapAssistConfiguration.Loaded.ItemLog.CheckVendorItems;
+            chkShowDistanceToItem.Checked = MapAssistConfiguration.Loaded.ItemLog.ShowDistanceToItem;
+            chkShowDirectionToItem.Checked = MapAssistConfiguration.Loaded.ItemLog.ShowDirectionToItem;
             chkPlaySound.Checked = MapAssistConfiguration.Loaded.ItemLog.PlaySoundOnDrop;
             txtFilterFile.Text = MapAssistConfiguration.Loaded.ItemLog.FilterFileName;
             txtSoundFile.Text = MapAssistConfiguration.Loaded.ItemLog.SoundFile;
@@ -690,6 +692,16 @@ namespace MapAssist
             MapAssistConfiguration.Loaded.ItemLog.CheckItemOnIdentify = chkItemLogItemsOnIdentify.Checked;
         }
 
+        private void chkShowDistanceToItem_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.ItemLog.ShowDistanceToItem = chkShowDistanceToItem.Checked;
+        }
+
+        private void chkShowDirectionToItem_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.ItemLog.ShowDirectionToItem = chkShowDirectionToItem.Checked;
+        }
+
         private void chkItemLogVendorItems_CheckedChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.ItemLog.CheckVendorItems = chkItemLogVendorItems.Checked;
@@ -980,6 +992,42 @@ namespace MapAssist
         private void checkSound_CheckedChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.DCTrack.Sound = checkSound.Checked;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://qm.qq.com/cgi-bin/qm/qr?k=HT2IypzWD0cePIJi8egR2AvL7TbZsQo4&jump_from=webapi");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1Sfn6V&appChannel=share&businessType=9&from=246610&biz=ka");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IPBlock.StopIPBlock();
+            label25.Text = "IP屏蔽未启动";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(checkedListBlockServer.CheckedItems.Count > 0)
+            {
+                var servers = "";
+                foreach (var item in checkedListBlockServer.CheckedItems)
+                {
+                    servers+=item.ToString();
+                }
+                Debug.WriteLine(servers);
+                if(IPBlock.StartIPBlock(servers))
+                    label25.Text = "IP屏蔽已生效";
+            }
+            else
+            {
+                MessageBox.Show("至少选择一个屏蔽服务器");
+            }
+
         }
     }
 }

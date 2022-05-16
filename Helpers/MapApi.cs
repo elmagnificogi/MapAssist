@@ -1,4 +1,4 @@
-﻿using MapAssist.Settings;
+using MapAssist.Settings;
 using MapAssist.Types;
 using Microsoft.Win32;
 using Newtonsoft.Json;
@@ -41,6 +41,7 @@ namespace MapAssist.Helpers
             {"1.13c", 0xea2f0e6e },
             {"1.13d", 0xb3d69c47 },
         };
+
         private static readonly Dictionary<string, uint> StormCRC32 = new Dictionary<string, uint> {
             {"1.11a", 0x9f06891d },
             {"1.11b", 0xb6390775 },
@@ -93,15 +94,15 @@ namespace MapAssist.Helpers
             var providedPath = MapAssistConfiguration.Loaded.D2LoDPath;
             if (!string.IsNullOrEmpty(providedPath))
             {
-                //Set attributes of directory used
-                var attributes = File.GetAttributes($@"{providedPath}");
-                //If this flag is found, path is a directory. Otherwise it is a file
-                if (!attributes.HasFlag(FileAttributes.Directory))
+                if (!File.GetAttributes($@"{providedPath}").HasFlag(FileAttributes.Directory))
                 {
+                    MessageBox.Show("Provided D2 LoD path is not set to a directory." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation.", "MapAssist");
+
                     var config1 = new ConfigEditor();
-                    MessageBox.Show("Provided D2 LoD path is not set to a directory." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
+                    MessageBox.Show("Diablo路径不正确" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
                     config1.ShowDialog();
-                    return null;
+
+                    providedPath = MapAssistConfiguration.Loaded.D2LoDPath;
                 }
 
                 if (IsValidD2LoDPath(providedPath))
@@ -110,21 +111,30 @@ namespace MapAssist.Helpers
                     return providedPath;
                 }
 
-                var config = new ConfigEditor();
                 _log.Info("User provided D2 LoD path is invalid");
-                MessageBox.Show("Provided D2 LoD path is not the correct version." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
-                config.ShowDialog();
-                return null;
+                MessageBox.Show("Diablo版本不正确", "MapAssist");
+                Environment.Exit(0);
             }
 
             var installPath = Registry.GetValue("HKEY_CURRENT_USER\\SOFTWARE\\Blizzard Entertainment\\Diablo II", "InstallPath", "INVALID") as string;
             if (installPath == "INVALID" || !IsValidD2LoDPath(installPath))
             {
                 _log.Info("Registry-provided D2 LoD path not found or invalid");
-                MessageBox.Show("Unable to automatically locate D2 LoD installation." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
+                MessageBox.Show("找不到Diablo安装路径" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation and restart MapAssist.");
                 var config = new ConfigEditor();
                 config.ShowDialog();
-                return null;
+
+                installPath = MapAssistConfiguration.Loaded.D2LoDPath;
+
+                if (!string.IsNullOrEmpty(installPath) && File.GetAttributes($@"{installPath}").HasFlag(FileAttributes.Directory) && IsValidD2LoDPath(installPath))
+                {
+                    _log.Info("User provided D2 LoD path is valid");
+                    return installPath;
+                }
+
+                _log.Info("User provided D2 LoD path is invalid");
+                MessageBox.Show("Provided path is either not a valid D2 LoD path or not the correct version.", "MapAssist");
+                Environment.Exit(0);
             }
 
             _log.Info("Registry-provided D2 LoD path is valid");
@@ -139,27 +149,36 @@ namespace MapAssist.Helpers
                 if (File.Exists(gamePath))
                 {
                     var fileChecksum = Files.Checksum.FileChecksum(gamePath);
-                    foreach(KeyValuePair<string, uint> kvp in GameCRC32)
+                    var versionInfo = FileVersionInfo.GetVersionInfo(gamePath);
+
+                    _log.Info($"Found Game.exe (CRC 0x{fileChecksum:X}, Version {versionInfo.FileVersion.Replace(", ", ".")})");
+
+                    foreach (KeyValuePair<string, uint> kvp in GameCRC32)
                     {
                         var allowedChecksum = kvp.Value;
                         if (fileChecksum == allowedChecksum)
                         {
-                            _log.Info("Valid D2 LoD version identified by Game.exe - v" + kvp.Key);
+                            _log.Info($"Valid D2 LoD version identified by Game.exe - v{kvp.Key}");
                             return true;
                         }
                     }
-                } else
+                }
+                else
                 {
                     gamePath = Path.Combine(path, "storm.dll");
                     if (File.Exists(gamePath))
                     {
                         var fileChecksum = Files.Checksum.FileChecksum(gamePath);
+                        var versionInfo = FileVersionInfo.GetVersionInfo(gamePath);
+
+                        _log.Info($"Found Storm.dll (CRC 0x{fileChecksum:X}, Version {versionInfo.FileVersion.Replace(", ", ".")})");
+
                         foreach (KeyValuePair<string, uint> kvp in StormCRC32)
                         {
                             var allowedChecksum = kvp.Value;
                             if (fileChecksum == allowedChecksum)
                             {
-                                _log.Info("Valid D2 LoD version identified by Storm.dll - v" + kvp.Key);
+                                _log.Info($"Valid D2 LoD version identified by Storm.dll - v{kvp.Key}");
                                 return true;
                             }
                         }
@@ -201,6 +220,10 @@ namespace MapAssist.Helpers
 
                     data = Combine(data, chunk.Take(dataReadLength).ToArray());
                 }
+
+                if (disposed) _log.Warn($"{_procName} has been disposed");
+                else if (_pipeClient.HasExited) _log.Warn($"{_procName} has exited unexpectedly");
+                else if (cts.IsCancellationRequested) _log.Warn($"{_procName} request has been cancelled");
 
                 var response = !disposed && !_pipeClient.HasExited && !cts.IsCancellationRequested ? data : null;
                 cts.Dispose();
@@ -336,7 +359,7 @@ namespace MapAssist.Helpers
             }
             else
             {
-                _log.Info($"areaData was null on {area}");
+                _log.Info($"Area data was null for {area}");
             }
 
             return areaData;
@@ -353,73 +376,89 @@ namespace MapAssist.Helpers
                         Area.MonasteryGate,
                         Area.OuterCloister,
                     };
+
                 case Area.TamoeHighland:
                     return new Area[] {
                         Area.OuterCloister,
                         Area.Barracks,
                     };
+
                 case Area.MonasteryGate:
                     return new Area[] {
                         Area.BlackMarsh,
                         Area.Barracks,
                     };
+
                 case Area.OuterCloister:
                     return new Area[] {
                         Area.BlackMarsh,
                         Area.TamoeHighland,
                         Area.Barracks, // Missing adjacent area
                     };
+
                 case Area.Barracks:
                     return new Area[] {
                         Area.TamoeHighland,
                         Area.MonasteryGate,
                         Area.OuterCloister, // Missing adjacent area
                     };
+
                 case Area.InnerCloister:
                     return new Area[] {
                         Area.Cathedral, // Missing adjacent area
                     };
+
                 case Area.Cathedral:
                     return new Area[] {
                         Area.InnerCloister, // Missing adjacent area
                     };
+
                 case Area.LutGholein:
                     return new Area[] {
                         Area.DryHills,
                     };
+
                 case Area.DryHills:
                     return new Area[] {
                         Area.LutGholein,
                         Area.LostCity,
                     };
+
                 case Area.RockyWaste:
                     return new Area[] {
                         Area.FarOasis,
                     };
+
                 case Area.LostCity:
                     return new Area[] {
                         Area.DryHills,
                     };
+
                 case Area.FarOasis:
                     return new Area[] {
                         Area.RockyWaste,
                     };
+
                 case Area.GreatMarsh:
                     return new Area[] {
                         Area.FlayerJungle,
                     };
+
                 case Area.FlayerJungle:
                     return new Area[] {
                         Area.GreatMarsh,
                     };
+
                 case Area.UpperKurast:
                     return new Area[] {
                         Area.Travincal,
                     };
+
                 case Area.Travincal:
                     return new Area[] {
                         Area.UpperKurast,
                     };
+
                 default:
                     return new Area[] { };
             }
@@ -436,21 +475,21 @@ namespace MapAssist.Helpers
             {
                 uint length = 0;
                 string json = null;
-                var retry = false;
+                var retriesLeft = 5;
 
                 do
                 {
-                    retry = false;
-
                     (length, json) = MapApiRequest(ToBytes(req)).Result;
 
                     if (json == null)
                     {
                         _log.Error($"Unable to load data for {area} from {_procName}, retrying after restarting {_procName}");
                         StartPipedChild();
-                        retry = true;
+                        retriesLeft--;
                     }
-                } while (retry);
+                } while (json == null && retriesLeft > 0);
+
+                if (json == null) return null;
 
                 var rawAreaData = JsonConvert.DeserializeObject<RawAreaData>(json);
                 return rawAreaData.ToInternal(area);
@@ -486,6 +525,7 @@ namespace MapAssist.Helpers
         }
 
         private static bool disposed = false;
+
         public static void Dispose()
         {
             if (!disposed)

@@ -82,15 +82,15 @@ namespace MapAssist.Integrations.ResurrectedTrade
             var version = typeof(Runner).Assembly.GetName().Version?.ToString();
             _contextMenuItems = new ToolStripItem[]
             {
-                new ToolStripMenuItem("Waiting for game...") { Enabled = false }, new ToolStripSeparator(),
-                new ToolStripMenuItem("View online", null, (sender, args) => OpenOverview()),
+                new ToolStripMenuItem("等待游戏...") { Enabled = false }, new ToolStripSeparator(),
+                new ToolStripMenuItem("在线查看", null, (sender, args) => OpenOverview()),
                 new ToolStripMenuItem(
-                    "Sync now", null, (sender, args) =>
+                    "同步中", null, (sender, args) =>
                     {
                         _nextExport = DateTime.Now;
                     }
                 ) { Visible = false },
-                new ToolStripMenuItem("Version")
+                new ToolStripMenuItem("版本")
                 {
                     DropDownItems =
                     {
@@ -108,7 +108,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                     }
                 },
                 new ToolStripMenuItem(
-                    "Pause", null, (sender, args) =>
+                    "暂停", null, (sender, args) =>
                     {
                         _paused = !_paused;
                         (sender as ToolStripMenuItem).Checked = _paused;
@@ -579,7 +579,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
         public Ptr WidgetStates { get; set; }
         public Ptr CharFlags { get; set; }
 
-        public string Name => "resurrected.trade";
+        public string Name => "仓库同步";
 
         public ToolStripItem[] ContextMenuItems => _contextMenuItems;
         public void Info(string message)

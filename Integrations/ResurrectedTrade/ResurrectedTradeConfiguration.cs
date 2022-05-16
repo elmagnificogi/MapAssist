@@ -2,6 +2,7 @@
 using ResurrectedTrade.AgentBase;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
@@ -17,6 +18,23 @@ namespace MapAssist.Integrations.ResurrectedTrade
             InitializeComponent();
             UpdateVisible();
             Username.Text = Utils.AgentRegistryKey.GetValue("USERNAME", "") as string;
+            Password.Text = Utils.AgentRegistryKey.GetValue("PASSWORD", "") as string;
+
+            //var check = Utils.AgentRegistryKey.GetValue("AUTOLOGIN", false);
+
+            //if (check == null || (bool)check == false)
+            //{
+            //    checkBoxAutoLogin.Checked = false;
+            //}
+            //else
+            //{
+            //    checkBoxAutoLogin.Checked = true;
+            //    // login now
+            //    var task = Task.Run(async () =>
+            //    {
+            //        var response = await _integration.Login(Username.Text, Password.Text);
+            //    });
+            //}
         }
 
         public void UpdateVisible()
@@ -32,7 +50,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
             ViewOnlineButton.Visible = loggedIn;
             if (loggedIn)
             {
-                StatusLabel.Text = $"Logged in as {_integration.Profile.UserId}. Version: {typeof(Runner).Assembly.GetName().Version?.ToString() ?? "Unknown"}";
+                StatusLabel.Text = $"用户： {_integration.Profile.UserId}. 版本: {typeof(Runner).Assembly.GetName().Version?.ToString() ?? "Unknown"}";
             }
             else
             {
@@ -54,21 +72,25 @@ namespace MapAssist.Integrations.ResurrectedTrade
             ChangeControlEnablement(false);
             var response = await _integration.Login(Username.Text, Password.Text);
             ChangeControlEnablement(true);
-            UpdateVisible();
+            
             if (!response.Success)
             {
                 if (response.Errors.Any(o => o.Code == "LoginFailed"))
                 {
-                    StatusLabel.Text = "Invalid username or password";
+                    StatusLabel.Text = "用户名或者密码错误";
                 }
                 else
                 {
                     StatusLabel.Text = string.Join(", ", response.Errors.Select(o => o.Description));
+                    
                 }
             }
             else
             {
+                // save password for next
+                Utils.AgentRegistryKey.SetValue("PASSWORD", Password.Text, RegistryValueKind.String);
                 Password.Text = "";
+                UpdateVisible();
             }
         }
 
@@ -109,6 +131,14 @@ namespace MapAssist.Integrations.ResurrectedTrade
         private void ViewOnlineButton_Click(object sender, EventArgs e)
         {
             _integration.OpenOverview();
+        }
+
+        private void checkBoxAutoLogin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxAutoLogin.Checked)
+                Utils.AgentRegistryKey.SetValue("AUTOLOGIN", 0, RegistryValueKind.Binary);
+            else
+                Utils.AgentRegistryKey.SetValue("AUTOLOGIN", 1, RegistryValueKind.Binary);
         }
     }
 }
