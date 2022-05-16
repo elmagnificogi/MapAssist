@@ -2,6 +2,12 @@
 
 
 
+## 视频
+
+<iframe src="//player.bilibili.com/player.html?aid=341498840&bvid=BV1BR4y1A7Uc&cid=715224439&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=640 height=480> </iframe>
+
+
+
 ## 下载
 
 ![image-20220430022530873](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202204300225954.png)
