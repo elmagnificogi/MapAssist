@@ -146,6 +146,7 @@
     <Compile Include="Helpers\ProcessContext.cs" />
     <Compile Include="Helpers\IPBlock.cs" />
     <Compile Include="Helpers\Serializer.cs" />
+    <Compile Include="Helpers\QualityLevels.cs" />
     <Compile Include="Helpers\YamlConverters.cs" />
     <Compile Include="Interfaces\IUpdatable.cs" />
     <Compile Include="Overlay.cs" />
@@ -276,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Localization.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\QualityLevels.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Salvation.png" />

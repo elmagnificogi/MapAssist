@@ -95,6 +95,7 @@
             this.checkLadder = new System.Windows.Forms.CheckBox();
             this.checkAsia = new System.Windows.Forms.CheckBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
             this.checkedListBlockServer = new System.Windows.Forms.CheckedListBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -124,6 +125,8 @@
             this.buffSize = new System.Windows.Forms.TrackBar();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.chkShowDirectionToItem = new System.Windows.Forms.CheckBox();
+            this.chkShowDistanceToItem = new System.Windows.Forms.CheckBox();
             this.chkItemLogVendorItems = new System.Windows.Forms.CheckBox();
             this.lblSoundVolumeValue = new System.Windows.Forms.Label();
             this.lblItemDisplayForSecondsValue = new System.Windows.Forms.Label();
@@ -207,7 +210,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chkDPIAware = new System.Windows.Forms.CheckBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label27 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -590,6 +592,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.chkMonsterHealthBar);
             this.groupBox1.Controls.Add(this.btnClearBorderColor);
@@ -1085,6 +1090,16 @@
             this.tabPage10.Text = "服务器屏蔽";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label27.Location = new System.Drawing.Point(11, 226);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(316, 32);
+            this.label27.TabIndex = 44;
+            this.label27.Text = "屏蔽以后无法进入到对应的服务器，可能会造成不能进入好友房间";
+            // 
             // checkedListBlockServer
             // 
             this.checkedListBlockServer.CheckOnClick = true;
@@ -1293,16 +1308,16 @@
             this.grpPresets.Size = new System.Drawing.Size(335, 47);
             this.grpPresets.TabIndex = 24;
             this.grpPresets.TabStop = false;
-            this.grpPresets.Text = "Presets";
+            this.grpPresets.Text = "预设";
             // 
             // lblMapLinesMode
             // 
             this.lblMapLinesMode.AutoSize = true;
             this.lblMapLinesMode.Location = new System.Drawing.Point(6, 22);
             this.lblMapLinesMode.Name = "lblMapLinesMode";
-            this.lblMapLinesMode.Size = new System.Drawing.Size(89, 12);
+            this.lblMapLinesMode.Size = new System.Drawing.Size(65, 12);
             this.lblMapLinesMode.TabIndex = 21;
-            this.lblMapLinesMode.Text = "Map Lines Mode";
+            this.lblMapLinesMode.Text = "地图线模式";
             this.lblMapLinesMode.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboMapLinesMode
@@ -1415,6 +1430,8 @@
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.chkShowDirectionToItem);
+            this.groupBox6.Controls.Add(this.chkShowDistanceToItem);
             this.groupBox6.Controls.Add(this.chkItemLogVendorItems);
             this.groupBox6.Controls.Add(this.lblSoundVolumeValue);
             this.groupBox6.Controls.Add(this.lblItemDisplayForSecondsValue);
@@ -1442,6 +1459,28 @@
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "掉落物";
+            // 
+            // chkShowDirectionToItem
+            // 
+            this.chkShowDirectionToItem.AutoSize = true;
+            this.chkShowDirectionToItem.Location = new System.Drawing.Point(185, 56);
+            this.chkShowDirectionToItem.Name = "chkShowDirectionToItem";
+            this.chkShowDirectionToItem.Size = new System.Drawing.Size(108, 16);
+            this.chkShowDirectionToItem.TabIndex = 0;
+            this.chkShowDirectionToItem.Text = "显示掉落物方向";
+            this.chkShowDirectionToItem.UseVisualStyleBackColor = true;
+            this.chkShowDirectionToItem.CheckedChanged += new System.EventHandler(this.chkShowDirectionToItem_CheckedChanged);
+            // 
+            // chkShowDistanceToItem
+            // 
+            this.chkShowDistanceToItem.AutoSize = true;
+            this.chkShowDistanceToItem.Location = new System.Drawing.Point(185, 39);
+            this.chkShowDistanceToItem.Name = "chkShowDistanceToItem";
+            this.chkShowDistanceToItem.Size = new System.Drawing.Size(108, 16);
+            this.chkShowDistanceToItem.TabIndex = 41;
+            this.chkShowDistanceToItem.Text = "显示掉落物距离";
+            this.chkShowDistanceToItem.UseVisualStyleBackColor = true;
+            this.chkShowDistanceToItem.CheckedChanged += new System.EventHandler(this.chkShowDistanceToItem_CheckedChanged);
             // 
             // chkItemLogVendorItems
             // 
@@ -1534,7 +1573,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 84);
+            this.label16.Location = new System.Drawing.Point(8, 93);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(53, 12);
             this.label16.TabIndex = 1;
@@ -1554,7 +1593,7 @@
             // lblItemLogPosition
             // 
             this.lblItemLogPosition.AutoSize = true;
-            this.lblItemLogPosition.Location = new System.Drawing.Point(183, 21);
+            this.lblItemLogPosition.Location = new System.Drawing.Point(183, 20);
             this.lblItemLogPosition.Name = "lblItemLogPosition";
             this.lblItemLogPosition.Size = new System.Drawing.Size(53, 12);
             this.lblItemLogPosition.TabIndex = 37;
@@ -1642,7 +1681,7 @@
             // 
             this.txtFilterFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFilterFile.Location = new System.Drawing.Point(89, 78);
+            this.txtFilterFile.Location = new System.Drawing.Point(89, 87);
             this.txtFilterFile.Name = "txtFilterFile";
             this.txtFilterFile.Size = new System.Drawing.Size(240, 21);
             this.txtFilterFile.TabIndex = 2;
@@ -1675,7 +1714,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(88, 103);
+            this.label21.Location = new System.Drawing.Point(88, 112);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(97, 13);
             this.label21.TabIndex = 26;
@@ -2347,7 +2386,7 @@
             // btnRemoveAuthorizedWindowTitle
             // 
             this.btnRemoveAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 38);
+            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(309, 20);
             this.btnRemoveAuthorizedWindowTitle.Name = "btnRemoveAuthorizedWindowTitle";
             this.btnRemoveAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveAuthorizedWindowTitle.TabIndex = 2;
@@ -2412,16 +2451,6 @@
             this.chkDPIAware.Text = "DPI自动识别";
             this.chkDPIAware.UseVisualStyleBackColor = true;
             this.chkDPIAware.CheckedChanged += new System.EventHandler(this.chkDPIAware_CheckedChanged);
-            // 
-            // label27
-            // 
-            this.label27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label27.Location = new System.Drawing.Point(11, 226);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(316, 32);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "屏蔽以后无法进入到对应的服务器，可能会造成不能进入好友房间";
             // 
             // ConfigEditor
             // 
@@ -2679,5 +2708,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.CheckedListBox checkedListBlockServer;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox chkShowDistanceToItem;
+        private System.Windows.Forms.CheckBox chkShowDirectionToItem;
     }
 }

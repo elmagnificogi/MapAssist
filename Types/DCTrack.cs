@@ -242,7 +242,9 @@ namespace MapAssist.Types
                     }
                     catch (Exception ex)
                     {
+                        show.Clear();
                         //Debug.WriteLine(ex);
+                        show.Add(new DC("错误", "错误", "错误",0));
                     }
                     
                     Thread.Sleep(5000);
@@ -275,7 +277,7 @@ namespace MapAssist.Types
             var ret = region + ladder + sc + "模式进度:" + progress.ToString() + "/6";
             if(progress==0)
             {
-                ret = "DC追踪网站又挂了，请关注群内消息";
+                ret = "DC追踪网站又挂了，请关注群或者频道内消息";
             }
             return ret;
         }

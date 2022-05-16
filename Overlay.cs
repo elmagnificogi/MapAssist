@@ -93,12 +93,17 @@ namespace MapAssist
                                     break;
                             }
 
-                            _compositor.Init(gfx, _gameData, _dcTrack, drawBounds);
+
+                            _compositor.Init(gfx, _gameData,_dcTrack, drawBounds);
 
                             if (!overlayHidden)
                             {
-                                _compositor.DrawGamemap(gfx);
-                                _compositor.DrawOverlay(gfx);
+                                if (!errorLoadingAreaData)
+                                {
+                                    _compositor.DrawGamemap(gfx);
+                                    _compositor.DrawOverlay(gfx);
+                                }
+
                                 _compositor.DrawBuffs(gfx);
                                 _compositor.DrawMonsterBar(gfx);
                             }

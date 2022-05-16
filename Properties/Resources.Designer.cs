@@ -171,7 +171,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap BladeShield {
             get {
@@ -908,8 +908,30 @@ namespace MapAssist.Properties {
             }
         }
         
+        
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TigerStrike {
+            get {
+                object obj = ResourceManager.GetObject("TigerStrike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] QualityLevels {
+            get {
+                object obj = ResourceManager.GetObject("QualityLevels", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Quickness {
             get {
@@ -1059,7 +1081,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Teleport {
             get {
@@ -1104,16 +1126,6 @@ namespace MapAssist.Properties {
         internal static System.Drawing.Bitmap ThunderStorm {
             get {
                 object obj = ResourceManager.GetObject("ThunderStorm", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap TigerStrike {
-            get {
-                object obj = ResourceManager.GetObject("TigerStrike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

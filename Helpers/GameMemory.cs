@@ -292,10 +292,10 @@ namespace MapAssist.Helpers
                     var checkVendorItem = Items.CheckVendorItem(item, _currentProcessId);
                     if (item.IsValidItem && !item.IsInSocket && (checkDroppedItem || checkVendorItem || checkInventoryItem))
                     {
-                        Items.LogItem(item, areaLevel, PlayerUnit.Level, _currentProcessId);
+                        Items.LogItem(item, levelId, areaLevel, PlayerUnit.Level, _currentProcessId);
                     }
 
-                    if (item.Item == Item.HoradricCube)
+                    if (item.Item == Item.HoradricCube && !item.IsDropped)
                     {
                         Items.ItemUnitIdsToSkip[_currentProcessId].Add(item.UnitId);
                     }
@@ -319,7 +319,7 @@ namespace MapAssist.Helpers
                 }).Where(x => x != null).ToArray();
 
                 // Set Cube Owner
-                if (_playerMapChanged[_currentProcessId])
+                if (_playerMapChanged[_currentProcessId] || _playerCubeOwnerID[_currentProcessId] == uint.MaxValue)
                 {
                     var cube = allItems.FirstOrDefault(x => x.Item == Item.HoradricCube);
                     if (cube != null)
@@ -330,7 +330,7 @@ namespace MapAssist.Helpers
 
                 // Belt items
                 var belt = allItems.FirstOrDefault(x => x.IsPlayerOwned && x.ItemModeMapped == ItemModeMapped.Player && x.ItemData.BodyLoc == BodyLoc.BELT);
-                var beltItems = allItems.Where(x => x.ItemModeMapped == ItemModeMapped.Belt).ToArray();
+                var beltItems = allItems.Where(x => _playerCubeOwnerID[_currentProcessId] != uint.MaxValue && x.ItemModeMapped == ItemModeMapped.Belt).ToArray();
 
                 var beltSize = belt == null ? 1 :
                     new Item[] { Item.Sash, Item.LightBelt }.Contains(belt.Item) ? 2 :
@@ -353,6 +353,14 @@ namespace MapAssist.Helpers
                 // Return data
                 _firstMemoryRead = false;
                 _errorThrown = false;
+
+                if (_currentProcessId != processContext.ProcessId)
+                {
+                    if (_errorThrown) return null;
+
+                    _errorThrown = true;
+                    throw new Exception("Process ID changed in the middle of the frame.");
+                }
 
                 return new GameData
                 {
