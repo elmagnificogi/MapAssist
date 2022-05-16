@@ -1070,7 +1070,7 @@ namespace MapAssist.Helpers
 
                     var rangeText = item.UnitItem.IsDropped
                         ? $"(距离: {Math.Round(_gameData.PlayerPosition.DistanceTo(item.UnitItem.Position))})"
-                        : "(拾取)";
+                        : "(已拾取)";
 
                     if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
                     {
