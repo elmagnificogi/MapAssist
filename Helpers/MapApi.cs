@@ -133,7 +133,7 @@ namespace MapAssist.Helpers
                 }
 
                 _log.Info("User provided D2 LoD path is invalid");
-                MessageBox.Show("Provided path is either not a valid D2 LoD path or not the correct version.", "MapAssist");
+                MessageBox.Show("Diablo安装路径不正确", "MapAssist");
                 Environment.Exit(0);
             }
 
