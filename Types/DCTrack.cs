@@ -26,60 +26,60 @@ namespace MapAssist.Types
                 {
                     try
                     {
-                        var dclist = HttpHelper.GetDC();
-                        dclist = dclist.Replace('\'', '\"');
-                        var dcRaws = Serializer.JsonToObject<List<DCRaw>>(dclist);
-                        diabloCloneProgress.Clear();
-                        if(dcRaws == null || dcRaws?.Count == 0)
-                        {
-                            dcRaws = new List<DCRaw>();
-                            dcRaws.Add(new DCRaw("3", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("3", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("3", "2", "2", "0"));
-                            dcRaws.Add(new DCRaw("3", "2", "2", "0"));
-                            dcRaws.Add(new DCRaw("2", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("2", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("2", "2", "2", "0"));
-                            dcRaws.Add(new DCRaw("2", "2", "2", "0"));
-                            dcRaws.Add(new DCRaw("1", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("1", "1", "1", "0"));
-                            dcRaws.Add(new DCRaw("1", "2", "2", "0"));
-                            dcRaws.Add(new DCRaw("1", "2", "2", "0"));
-                        }
-
-                        foreach (DCRaw dcr in dcRaws)
-                        {
-                            string server;
-                            string ladder;
-                            string sc;
-                            if (dcr.region.Equals("1"))
-                                server = "美服";
-                            else if (dcr.region.Equals("2"))
-                                server = "欧服";
-                            else if (dcr.region.Equals("3"))
-                                server = "亚服";
-                            else
-                                server = "错误";
-
-                            if (dcr.ladder.Equals("2"))
-                                ladder = "经典";
-                            else if (dcr.ladder.Equals("1"))
-                                ladder = "天梯";
-                            else
-                                ladder = "错误";
- 
-                            if (dcr.hc.Equals("2"))
-                                sc = "普通";
-                            else if (dcr.hc.Equals("1"))
-                                sc = "专家";
-                            else
-                                sc = "错误";
-                            var pro = int.Parse(dcr.progress);
-                            diabloCloneProgress.Add(new DC(server, sc, ladder, pro));
-                        }
-
                         if (MapAssistConfiguration.Loaded.DCTrack.Enabled)
                         {
+                            var dclist = HttpHelper.GetDC();
+                            dclist = dclist.Replace('\'', '\"');
+                            var dcRaws = Serializer.JsonToObject<List<DCRaw>>(dclist);
+                            diabloCloneProgress.Clear();
+                            if(dcRaws == null || dcRaws?.Count == 0)
+                            {
+                                dcRaws = new List<DCRaw>();
+                                dcRaws.Add(new DCRaw("3", "1", "1", "0"));
+                                dcRaws.Add(new DCRaw("3", "1", "2", "0"));
+                                dcRaws.Add(new DCRaw("3", "2", "1", "0"));
+                                dcRaws.Add(new DCRaw("3", "2", "2", "0"));
+                                dcRaws.Add(new DCRaw("2", "1", "1", "0"));
+                                dcRaws.Add(new DCRaw("2", "1", "2", "0"));
+                                dcRaws.Add(new DCRaw("2", "2", "1", "0"));
+                                dcRaws.Add(new DCRaw("2", "2", "2", "0"));
+                                dcRaws.Add(new DCRaw("1", "1", "1", "0"));
+                                dcRaws.Add(new DCRaw("1", "1", "2", "0"));
+                                dcRaws.Add(new DCRaw("1", "2", "1", "0"));
+                                dcRaws.Add(new DCRaw("1", "2", "2", "0"));
+                            }
+
+                            foreach (DCRaw dcr in dcRaws)
+                            {
+                                string server;
+                                string ladder;
+                                string sc;
+                                if (dcr.region.Equals("1"))
+                                    server = "美服";
+                                else if (dcr.region.Equals("2"))
+                                    server = "欧服";
+                                else if (dcr.region.Equals("3"))
+                                    server = "亚服";
+                                else
+                                    server = "错误";
+
+                                if (dcr.ladder.Equals("2"))
+                                    ladder = "经典";
+                                else if (dcr.ladder.Equals("1"))
+                                    ladder = "天梯";
+                                else
+                                    ladder = "错误";
+ 
+                                if (dcr.hc.Equals("2"))
+                                    sc = "普通";
+                                else if (dcr.hc.Equals("1"))
+                                    sc = "专家";
+                                else
+                                    sc = "错误";
+                                var pro = int.Parse(dcr.progress);
+                                diabloCloneProgress.Add(new DC(server, sc, ladder, pro));
+                            }
+
                             show.Clear();
                             var warningLevel = int.Parse("" + (MapAssistConfiguration.Loaded.DCTrack.WarningLevel.Trim())[0]);
 
@@ -236,8 +236,6 @@ namespace MapAssist.Types
                                 }
                                     
                             }
-                                
-
                         }
                     }
                     catch (Exception ex)
