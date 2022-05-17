@@ -134,6 +134,12 @@
     <Compile Include="Files\Font\ResourceFontFileEnumerator.cs" />
     <Compile Include="Files\Font\ResourceFontFileStream.cs" />
     <Compile Include="Files\Font\ResourceFontLoader.cs" />
+    <Compile Include="Forms\RoomRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoomRecords.Designer.cs">
+      <DependentUpon>RoomRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\AudioPlayer.cs" />
     <Compile Include="Helpers\GameDataReader.cs" />
     <Compile Include="Helpers\GameManager.cs" />
@@ -195,6 +201,7 @@
     <Compile Include="Types\Locale.cs" />
     <Compile Include="Types\Items.cs" />
     <Compile Include="Types\Missile.cs" />
+    <Compile Include="Types\RoomRecord.cs" />
     <Compile Include="Types\Roster.cs" />
     <Compile Include="Types\MapSeed.cs" />
     <Compile Include="Types\Session.cs" />
@@ -289,6 +296,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\ConfigEditor.resx">
       <DependentUpon>ConfigEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoomRecords.resx">
+      <DependentUpon>RoomRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Integrations\ResurrectedTrade\ResurrectedTradeConfiguration.resx">
       <DependentUpon>ResurrectedTradeConfiguration.cs</DependentUpon>

@@ -23,6 +23,7 @@ namespace MapAssist.Helpers
                 {
                     _log.Info($"Game changed to {gameData.Difficulty} with {gameData.MapSeed} seed");
                     _mapApi = new MapApi(gameData.Difficulty, gameData.MapSeed);
+                    Program.roomRecords.Add(new RoomRecord(gameData.PlayerName, gameData.Session.GameName, gameData.Session.GamePass));
                 }
 
                 if (gameData.HasMapChanged(_gameData) && gameData.Area != Area.None)

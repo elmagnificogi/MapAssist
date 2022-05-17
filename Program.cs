@@ -1,8 +1,10 @@
 using Gma.System.MouseKeyHook;
+using MapAssist.Forms;
 using MapAssist.Helpers;
 using MapAssist.Integrations;
 using MapAssist.Integrations.ResurrectedTrade;
 using MapAssist.Settings;
+using MapAssist.Types;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -23,6 +25,7 @@ namespace MapAssist
         private static Mutex mutex = null;
 
         private static ConfigEditor configEditor;
+        private static RoomRecords roomRecorder;
         private static NotifyIcon trayIcon;
         private static Overlay overlay;
         private static List<IIntegration> _integrations = new List<IIntegration>();
@@ -31,6 +34,7 @@ namespace MapAssist
         private static BackgroundWorker backWorkOverlay = new BackgroundWorker();
         private static IKeyboardMouseEvents globalHook = Hook.GlobalEvents();
         private static readonly Logger _log = LogManager.GetCurrentClassLogger();
+        public static List<RoomRecord> roomRecords = new List<RoomRecord>();
 
         /// <summary>
         /// The main entry point for the application.
@@ -137,8 +141,10 @@ namespace MapAssist
                         contextMenu.Items.Add(new ToolStripSeparator());
                     }
 
+                    var roomRecordsMenuItem = new ToolStripMenuItem("房间记录", null, ShowRoomRecords);
                     var restartMenuItem = new ToolStripMenuItem("重启地图", null, TrayRestart);
                     var exitMenuItem = new ToolStripMenuItem("退出", null, TrayExit);
+                    contextMenu.Items.Add(roomRecordsMenuItem);
                     contextMenu.Items.Add(restartMenuItem);
                     contextMenu.Items.Add(exitMenuItem);
 
@@ -309,6 +315,23 @@ namespace MapAssist
             else
             {
                 configEditor.ShowDialog();
+            }
+        }
+
+        private static void ShowRoomRecords(object sender, EventArgs e)
+        {
+            if (roomRecorder == null)
+            {
+                roomRecorder = new RoomRecords();
+            }
+
+            if (roomRecorder.Visible)
+            {
+                roomRecorder.Activate();
+            }
+            else
+            {
+                roomRecorder.ShowDialog();
             }
         }
 
