@@ -70,13 +70,47 @@ DC追踪功能，请根据需要自行选择
 
 #### 服务器屏蔽
 
-![image-20220515160427376](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205151604459.png)
+![img](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172332003.png)
 
-由于亚服多日卡顿，不见好转，所以增加一个屏蔽功能，选择要屏蔽的服务器，然后应用即可。
+由于亚服多日卡顿，不见好转，所以增加一个屏蔽功能，选择要屏蔽的服务器，然后应用即可。**建议只保留新加坡，其他全屏蔽**
 
 - 屏蔽以后无法进入到对应的服务器，可能会造成不能进入好友房间
 - 有任何问题，可以取消屏蔽，会解除所有屏蔽策略
 - 屏蔽需要管理员权限，并且需要Windows防火墙可以正常启动，策略组可修改
+
+
+
+#### 房间记录
+
+防止意外掉线，房间不见了，增加了房间记录功能，多开也能区分清楚
+
+![image-20220517232238264](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172322359.png)
+
+![image-20220517232251086](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172322122.png)
+
+
+
+#### 仓库同步
+
+首先登录下面网址，注册一个账号
+
+> https://resurrected.trade/overview
+
+仓库同步中输入刚才注册的账号和密码
+
+![image-20220517232405130](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172324173.png)
+
+只要在游戏内，就能自动同步你的仓库和物品到Web端，然后就可以出售了
+
+![image-20220517232525739](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172325921.png)
+
+![image-20220517232751978](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172327180.png)
+
+- 右上角切换成中文
+- 首次同步可能需要一点时间，数据量比较大
+- 功能还不完善，还在开发中，有问题欢迎提
+- 使用的人太少了，集市还太小了
+- Web的那个同步软件可以不用下载，用我的MapAssist就行
 
 
 

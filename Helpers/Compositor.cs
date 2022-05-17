@@ -1069,8 +1069,8 @@ namespace MapAssist.Helpers
                     var rangePosition = position.Add(stringSize.X + 8, fontSize * 0.2f);
 
                     var rangeText = item.UnitItem.IsDropped
-                        ? $"(距离: {Math.Round(_gameData.PlayerPosition.DistanceTo(item.UnitItem.Position))})"
-                        : "(已拾取)";
+                        ? $"({Math.Round(_gameData.PlayerPosition.DistanceTo(item.UnitItem.Position))})"
+                        : "(√)";
 
                     if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
                     {

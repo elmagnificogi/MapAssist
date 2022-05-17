@@ -75,6 +75,22 @@ namespace MapAssist.Helpers
             {
                 block_ip_ranges.Add("34.101.1.1 - 34.101.255.255");
             }
+
+            if (server.Contains("新加坡"))
+            {
+                block_ip_ranges.Add("34.126.1.1 - 34.126.255.255");
+                block_ip_ranges.Add("34.87.1.1 - 34.87.255.255");
+                block_ip_ranges.Add("35.185.1.1 - 35.185.255.255");
+                block_ip_ranges.Add("35.197.1.1 - 35.197.255.255");
+                block_ip_ranges.Add("35.198.1.1 - 35.198.255.255");
+                block_ip_ranges.Add("35.240.1.1 - 35.240.255.255");
+                block_ip_ranges.Add("35.247.1.1 - 35.247.255.255");
+            }
+
+            if (server.Contains("亚美服"))
+            {
+                block_ip_ranges.Add("158.115.1.1 - 158.115.255.255");
+            }
         }
 
         public static bool StartIPBlock(string server)
