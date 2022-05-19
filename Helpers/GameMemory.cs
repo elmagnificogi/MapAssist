@@ -42,6 +42,18 @@ namespace MapAssist.Helpers
             {
                 _currentProcessId = processContext.ProcessId;
 
+                foreach (IIntegration integration in Program.Integrations)
+                {
+                    try
+                    {
+                        integration.Run(processContext);
+                    }
+                    catch (Exception e)
+                    {
+                        _log.Error(e, $"Integration {integration.Name} failed");
+                    }
+                }
+
                 var menuData = processContext.Read<Structs.MenuData>(GameManager.MenuDataOffset);
                 var lastHoverData = processContext.Read<Structs.HoverData>(GameManager.LastHoverDataOffset);
                 var lastNpcInteracted = (Npc)processContext.Read<ushort>(GameManager.InteractedNpcOffset);
