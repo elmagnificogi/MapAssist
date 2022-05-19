@@ -292,6 +292,12 @@ public class HotkeyConfiguration
 
     [YamlMember(Alias = "ShareRoomKey", ApplyNamingConventions = false)]
     public string ShareRoomKey { get; set; }
+
+    [YamlMember(Alias = "AddRoomKey", ApplyNamingConventions = false)]
+    public string AddRoomKey { get; set; }
+
+    [YamlMember(Alias = "RoomTemplete", ApplyNamingConventions = false)]
+    public string RoomTemplete { get; set; }
 }
 
 public class GameInfoConfiguration

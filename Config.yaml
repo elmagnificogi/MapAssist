@@ -7,6 +7,8 @@ HotkeyConfiguration:
   ZoomOutKey: Num -
   ExportItemsKey: F9
   ShareRoomKey: F8
+  AddRoomKey: F11
+  RoomTemplete: 牛场[0]一起来快活啊
 HiddenAreas:
 - Forgotten Tower
 AuthorizedWindowTitles: []

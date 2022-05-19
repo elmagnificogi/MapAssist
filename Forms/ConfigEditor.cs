@@ -118,6 +118,7 @@ namespace MapAssist
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ExportItemsKey.ToString()).Monitor(txtExportItemsKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey.ToString()).Monitor(txtShareRoomKey);
             new Hotkey(MapAssistConfiguration.Loaded.HC.ESCKey.ToString()).Monitor(txtEscKey);
+            new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey.ToString()).Monitor(textAddRoomKey);
 
             cboItemLogPosition.SelectedIndex = cboItemLogPosition.FindStringExact(MapAssistConfiguration.Loaded.ItemLog.Position.ToString().ToProperCase());
             chkItemLogEnabled.Checked = MapAssistConfiguration.Loaded.ItemLog.Enabled;
@@ -220,6 +221,8 @@ namespace MapAssist
             watchLife.Checked = MapAssistConfiguration.Loaded.HC.WatchLifeEnabled;
             lifeLeft.Text = MapAssistConfiguration.Loaded.HC.WatchLifeLeft.ToString();
             txtEscKey.Text = MapAssistConfiguration.Loaded.HC.ESCKey;
+            textAddRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey;
+            roomNameTemplete.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -1244,6 +1247,16 @@ namespace MapAssist
             {
                 MapAssistConfiguration.Loaded.HC.WatchLifeLeft = 35;
             }
+        }
+
+        private void textAddRoomKey_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey = textAddRoomKey.Text;
+        }
+
+        private void roomNameTemplete_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete = roomNameTemplete.Text;
         }
     }
 }

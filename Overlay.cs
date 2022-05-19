@@ -144,10 +144,10 @@ namespace MapAssist
         }
 
         public void KeyDownHandler(object sender, KeyEventArgs args)
-        {
+        {   
+            var keys = new Hotkey(args.Modifiers, args.KeyCode);
             if (InGame() && GameManager.IsGameInForeground)
             {
-                var keys = new Hotkey(args.Modifiers, args.KeyCode);
 
                 if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ToggleKey))
                 {
@@ -201,6 +201,7 @@ namespace MapAssist
                     if (InGame())
                     {
                         Clipboard.SetText("我在房间:"+_gameData.Session.GameName+" 密码:"+_gameData.Session.GamePass);
+
                     }
                 }
 
@@ -214,6 +215,20 @@ namespace MapAssist
                     var height = windowRect.Bottom - windowRect.Top;
                     WindowsExternal.LeftMouseClick(windowRect.Left + width / 2, windowRect.Top + height / 20 * 9);
                 }
+            }
+            
+            // out of game
+            if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey))
+            {
+                var roomName = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
+                var head = roomName.Split('[')[0];
+                var tail = roomName.Split(']')[1];
+                var num = int.Parse(roomName.Split('[')[1].Split(']')[0]) +1;
+                roomName = head +num.ToString()+ tail;
+                var roomTemplete = head + "[" +num.ToString()+ "]" + tail;
+                MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete = roomTemplete;
+                Clipboard.SetText(roomName);
+                WindowsExternal.SendPasteKey(GameManager.MainWindowHandle);
             }
         }
 

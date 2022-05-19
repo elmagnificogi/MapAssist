@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigEditor));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -79,6 +80,10 @@
             this.integrationTabs = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.grpHotkeys = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.roomNameTemplete = new System.Windows.Forms.TextBox();
+            this.textAddRoomKey = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.txtShareRoomKey = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtHideMapKey = new System.Windows.Forms.TextBox();
@@ -229,10 +234,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.lifeLeft = new System.Windows.Forms.TextBox();
             this.watchLife = new System.Windows.Forms.CheckBox();
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.lifeLeft = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -876,6 +882,10 @@
             // 
             this.grpHotkeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpHotkeys.Controls.Add(this.label32);
+            this.grpHotkeys.Controls.Add(this.roomNameTemplete);
+            this.grpHotkeys.Controls.Add(this.textAddRoomKey);
+            this.grpHotkeys.Controls.Add(this.label31);
             this.grpHotkeys.Controls.Add(this.txtShareRoomKey);
             this.grpHotkeys.Controls.Add(this.label6);
             this.grpHotkeys.Controls.Add(this.txtHideMapKey);
@@ -892,10 +902,49 @@
             this.grpHotkeys.Controls.Add(this.label22);
             this.grpHotkeys.Location = new System.Drawing.Point(11, 8);
             this.grpHotkeys.Name = "grpHotkeys";
-            this.grpHotkeys.Size = new System.Drawing.Size(378, 198);
+            this.grpHotkeys.Size = new System.Drawing.Size(378, 239);
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
             this.grpHotkeys.Text = "快捷键";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(154, 219);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(209, 12);
+            this.label32.TabIndex = 25;
+            this.label32.Text = "自动增加[]中的数值，[]可以任意位置";
+            // 
+            // roomNameTemplete
+            // 
+            this.roomNameTemplete.Location = new System.Drawing.Point(264, 195);
+            this.roomNameTemplete.MaxLength = 20;
+            this.roomNameTemplete.Name = "roomNameTemplete";
+            this.roomNameTemplete.Size = new System.Drawing.Size(109, 21);
+            this.roomNameTemplete.TabIndex = 24;
+            this.roomNameTemplete.TabStop = false;
+            this.roomNameTemplete.Text = "牛场[0]，来快活啊";
+            this.roomNameTemplete.TextChanged += new System.EventHandler(this.roomNameTemplete_TextChanged);
+            // 
+            // textAddRoomKey
+            // 
+            this.textAddRoomKey.Location = new System.Drawing.Point(160, 195);
+            this.textAddRoomKey.MaxLength = 1;
+            this.textAddRoomKey.Name = "textAddRoomKey";
+            this.textAddRoomKey.Size = new System.Drawing.Size(94, 21);
+            this.textAddRoomKey.TabIndex = 23;
+            this.textAddRoomKey.TabStop = false;
+            this.textAddRoomKey.TextChanged += new System.EventHandler(this.textAddRoomKey_TextChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 200);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(77, 12);
+            this.label31.TabIndex = 22;
+            this.label31.Text = "房间名自动+1";
             // 
             // txtShareRoomKey
             // 
@@ -2712,6 +2761,16 @@
             this.tabPage11.Text = "HC";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
+            // lifeLeft
+            // 
+            this.lifeLeft.Location = new System.Drawing.Point(195, 18);
+            this.lifeLeft.MaxLength = 1;
+            this.lifeLeft.Name = "lifeLeft";
+            this.lifeLeft.Size = new System.Drawing.Size(94, 21);
+            this.lifeLeft.TabIndex = 25;
+            this.lifeLeft.TabStop = false;
+            this.lifeLeft.TextChanged += new System.EventHandler(this.lifeLeft_TextChanged);
+            // 
             // watchLife
             // 
             this.watchLife.AutoSize = true;
@@ -2742,15 +2801,10 @@
             this.label30.TabIndex = 22;
             this.label30.Text = "一键退出到选择人物";
             // 
-            // lifeLeft
+            // contextMenuStrip1
             // 
-            this.lifeLeft.Location = new System.Drawing.Point(195, 18);
-            this.lifeLeft.MaxLength = 1;
-            this.lifeLeft.Name = "lifeLeft";
-            this.lifeLeft.Size = new System.Drawing.Size(94, 21);
-            this.lifeLeft.TabIndex = 25;
-            this.lifeLeft.TabStop = false;
-            this.lifeLeft.TextChanged += new System.EventHandler(this.lifeLeft_TextChanged);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ConfigEditor
             // 
@@ -3035,5 +3089,10 @@
         private System.Windows.Forms.TextBox txtEscKey;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox lifeLeft;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox roomNameTemplete;
+        private System.Windows.Forms.TextBox textAddRoomKey;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

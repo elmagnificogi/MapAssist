@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace MapAssist.Helpers
 {
@@ -120,12 +121,36 @@ namespace MapAssist.Helpers
             mouse_event(MOUSEEVENTF_LEFTUP, xpos, ypos, 0, 0);
         }
         const uint WM_KEYDOWN = 0x0100;
+        const uint WM_KEYUP = 0x0101;
         const int VK_ESCAPE = 0x1B;
+        const int VK_LCONTROL = 162;
+        const int VK_V = 0x56;
+        const int VK_BACKSPACE = 2;
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool PostMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
 
         public static void SendEscapeKey(IntPtr hWnd) => PostMessage(hWnd, WM_KEYDOWN, VK_ESCAPE, 0);
+
+        [DllImport("User32.dll")]
+        public static extern void keybd_event(byte bVk, byte bScan, int dwFlags, int dwExtraInfo);
+
+        [DllImport("user32.dll")]
+        private static extern int SendMessage(int hWnd, int wMsg, uint wParam, uint lParam);
+
+        public static void SendPasteKey(IntPtr hWnd)
+        {
+        //    PostMessage(hWnd, WM_KEYDOWN, VK_BACKSPACE, 0);
+        //    Thread.Sleep(500);
+            keybd_event(VK_LCONTROL, 0, 0, 0); 
+            Thread.Sleep(100);  
+            PostMessage(hWnd, WM_KEYDOWN, VK_V, 0); 
+            Thread.Sleep(100);  
+            PostMessage(hWnd, WM_KEYUP, VK_V, 0);  
+            Thread.Sleep(100); 
+            keybd_event(VK_LCONTROL, 0, 0x02, 0);
+        }
+
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SetForegroundWindow(IntPtr hWnd);
 
