@@ -2766,7 +2766,7 @@
             this.lifeLeft.Location = new System.Drawing.Point(195, 18);
             this.lifeLeft.MaxLength = 1;
             this.lifeLeft.Name = "lifeLeft";
-            this.lifeLeft.Size = new System.Drawing.Size(94, 21);
+            this.lifeLeft.Size = new System.Drawing.Size(46, 21);
             this.lifeLeft.TabIndex = 25;
             this.lifeLeft.TabStop = false;
             this.lifeLeft.TextChanged += new System.EventHandler(this.lifeLeft_TextChanged);
@@ -2776,9 +2776,9 @@
             this.watchLife.AutoSize = true;
             this.watchLife.Location = new System.Drawing.Point(21, 21);
             this.watchLife.Name = "watchLife";
-            this.watchLife.Size = new System.Drawing.Size(168, 16);
+            this.watchLife.Size = new System.Drawing.Size(162, 16);
             this.watchLife.TabIndex = 24;
-            this.watchLife.Text = "血量监控，并一键关闭游戏";
+            this.watchLife.Text = "血量 % 监控，并一键退出";
             this.watchLife.UseVisualStyleBackColor = true;
             this.watchLife.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

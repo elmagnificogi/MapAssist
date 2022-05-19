@@ -125,7 +125,7 @@ namespace MapAssist.Helpers
         const int VK_ESCAPE = 0x1B;
         const int VK_LCONTROL = 162;
         const int VK_V = 0x56;
-        const int VK_BACKSPACE = 2;
+        const int VK_BACKSPACE = 8;
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool PostMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
@@ -140,8 +140,9 @@ namespace MapAssist.Helpers
 
         public static void SendPasteKey(IntPtr hWnd)
         {
-        //    PostMessage(hWnd, WM_KEYDOWN, VK_BACKSPACE, 0);
-        //    Thread.Sleep(500);
+            PostMessage(hWnd, WM_KEYDOWN, VK_BACKSPACE, 0);
+            Thread.Sleep(100);
+            PostMessage(hWnd, WM_KEYUP, VK_BACKSPACE, 0);
             keybd_event(VK_LCONTROL, 0, 0, 0); 
             Thread.Sleep(100);  
             PostMessage(hWnd, WM_KEYDOWN, VK_V, 0); 

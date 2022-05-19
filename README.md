@@ -131,6 +131,36 @@ DC追踪功能，请根据需要自行选择
 
 
 
+## HC功能
+
+快捷键退出到选择人物
+
+如果开启血量监控，会自动退出到选择人物
+
+![image-20220519160722762](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191607802.png)
+
+## 房间设置
+
+F8可以直接复制粘贴当前房间名和密码，在外面只需要`ctrl-v`粘贴就行了
+
+![image-20220519160733593](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191607647.png)
+
+房间名自动+1
+
+```
+牛场[0]一起来快活啊
+```
+
+按下快捷键以后会自动复制并粘贴以下内容，数字会随着按下次数增加
+
+```
+牛场1一起来快活啊
+```
+
+![image-20220519160944506](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191609558.png)
+
+
+
 
 
 暗黑2重置交流群：941746977，edit by elmagnifico
