@@ -1282,7 +1282,7 @@
             // chkShowDirectionToItem
             // 
             this.chkShowDirectionToItem.AutoSize = true;
-            this.chkShowDirectionToItem.Location = new System.Drawing.Point(185, 52);
+            this.chkShowDirectionToItem.Location = new System.Drawing.Point(185, 60);
             this.chkShowDirectionToItem.Name = "chkShowDirectionToItem";
             this.chkShowDirectionToItem.Size = new System.Drawing.Size(108, 16);
             this.chkShowDirectionToItem.TabIndex = 0;
@@ -1293,7 +1293,7 @@
             // chkShowDistanceToItem
             // 
             this.chkShowDistanceToItem.AutoSize = true;
-            this.chkShowDistanceToItem.Location = new System.Drawing.Point(185, 36);
+            this.chkShowDistanceToItem.Location = new System.Drawing.Point(185, 39);
             this.chkShowDistanceToItem.Name = "chkShowDistanceToItem";
             this.chkShowDistanceToItem.Size = new System.Drawing.Size(108, 16);
             this.chkShowDistanceToItem.TabIndex = 41;
@@ -1477,7 +1477,7 @@
             // 
             this.txtSoundFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSoundFile.Location = new System.Drawing.Point(89, 127);
+            this.txtSoundFile.Location = new System.Drawing.Point(89, 137);
             this.txtSoundFile.Name = "txtSoundFile";
             this.txtSoundFile.Size = new System.Drawing.Size(304, 21);
             this.txtSoundFile.TabIndex = 5;
@@ -1511,7 +1511,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(88, 146);
+            this.label20.Location = new System.Drawing.Point(88, 157);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(47, 13);
             this.label20.TabIndex = 25;

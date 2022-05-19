@@ -22,7 +22,7 @@ RenderingConfiguration:
   MonsterHealthBar: true
   ToggleViaInGameMap: false
   ToggleViaInGamePanels: true
-  StickToLastGameWindow: true
+  StickToLastGameWindow: false
   Size: 800
   ZoomLevel: 1
   BuffSize: 1
@@ -303,7 +303,7 @@ DCTrack:
   Ladder: true
   Classic: false
   Normal: true
-  Hard: true
+  Hard: false
   WarningLevel: 1/6
   Sound: false
 D2Path: ''
