@@ -228,6 +228,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.watchLife = new System.Windows.Forms.CheckBox();
+            this.txtEscKey = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lifeLeft = new System.Windows.Forms.TextBox();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -269,6 +274,7 @@
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -2685,11 +2691,66 @@
             this.tabControl1.Controls.Add(this.integrationTab);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(410, 350);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.lifeLeft);
+            this.tabPage11.Controls.Add(this.watchLife);
+            this.tabPage11.Controls.Add(this.txtEscKey);
+            this.tabPage11.Controls.Add(this.label30);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(402, 324);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "HC";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // watchLife
+            // 
+            this.watchLife.AutoSize = true;
+            this.watchLife.Location = new System.Drawing.Point(21, 21);
+            this.watchLife.Name = "watchLife";
+            this.watchLife.Size = new System.Drawing.Size(168, 16);
+            this.watchLife.TabIndex = 24;
+            this.watchLife.Text = "血量监控，并一键关闭游戏";
+            this.watchLife.UseVisualStyleBackColor = true;
+            this.watchLife.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // txtEscKey
+            // 
+            this.txtEscKey.Location = new System.Drawing.Point(147, 53);
+            this.txtEscKey.MaxLength = 1;
+            this.txtEscKey.Name = "txtEscKey";
+            this.txtEscKey.Size = new System.Drawing.Size(94, 21);
+            this.txtEscKey.TabIndex = 23;
+            this.txtEscKey.TabStop = false;
+            this.txtEscKey.TextChanged += new System.EventHandler(this.txtEscKey_TextChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(19, 57);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(113, 12);
+            this.label30.TabIndex = 22;
+            this.label30.Text = "一键退出到选择人物";
+            // 
+            // lifeLeft
+            // 
+            this.lifeLeft.Location = new System.Drawing.Point(195, 18);
+            this.lifeLeft.MaxLength = 1;
+            this.lifeLeft.Name = "lifeLeft";
+            this.lifeLeft.Size = new System.Drawing.Size(94, 21);
+            this.lifeLeft.TabIndex = 25;
+            this.lifeLeft.TabStop = false;
+            this.lifeLeft.TextChanged += new System.EventHandler(this.lifeLeft_TextChanged);
             // 
             // ConfigEditor
             // 
@@ -2763,6 +2824,8 @@
             this.tabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2967,5 +3030,10 @@
         private System.Windows.Forms.TextBox positionY;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.CheckBox watchLife;
+        private System.Windows.Forms.TextBox txtEscKey;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox lifeLeft;
     }
 }

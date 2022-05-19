@@ -308,3 +308,7 @@ DCTrack:
 D2Path: ''
 LanguageCode: zhCN
 DPIAware: false
+HC:
+  WatchLifeEnabled: False
+  WatchLifeLeft: 35
+  ESCKey: F10

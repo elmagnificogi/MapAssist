@@ -117,6 +117,7 @@ namespace MapAssist
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ZoomOutKey.ToString()).Monitor(txtZoomOutKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ExportItemsKey.ToString()).Monitor(txtExportItemsKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey.ToString()).Monitor(txtShareRoomKey);
+            new Hotkey(MapAssistConfiguration.Loaded.HC.ESCKey.ToString()).Monitor(txtEscKey);
 
             cboItemLogPosition.SelectedIndex = cboItemLogPosition.FindStringExact(MapAssistConfiguration.Loaded.ItemLog.Position.ToString().ToProperCase());
             chkItemLogEnabled.Checked = MapAssistConfiguration.Loaded.ItemLog.Enabled;
@@ -215,6 +216,10 @@ namespace MapAssist
                 integrationTab.Controls.Add(control);
                 integrationTabs.TabPages.Add(integrationTab);
             }
+
+            watchLife.Checked = MapAssistConfiguration.Loaded.HC.WatchLifeEnabled;
+            lifeLeft.Text = MapAssistConfiguration.Loaded.HC.WatchLifeLeft.ToString();
+            txtEscKey.Text = MapAssistConfiguration.Loaded.HC.ESCKey;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -1216,6 +1221,28 @@ namespace MapAssist
             catch
             {
                 MapAssistConfiguration.Loaded.RenderingConfiguration.PositionY = 0;
+            }
+        }
+
+        private void txtEscKey_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HC.ESCKey = txtEscKey.Text;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HC.WatchLifeEnabled = watchLife.Checked;
+        }
+
+        private void lifeLeft_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MapAssistConfiguration.Loaded.HC.WatchLifeLeft = int.Parse(lifeLeft.Text);
+            }
+            catch 
+            {
+                MapAssistConfiguration.Loaded.HC.WatchLifeLeft = 35;
             }
         }
     }

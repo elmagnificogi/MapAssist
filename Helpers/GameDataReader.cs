@@ -11,6 +11,7 @@ namespace MapAssist.Helpers
         private AreaData _areaData;
         private List<PointOfInterest> _pointsOfInterest;
         private MapApi _mapApi;
+        private Watch watchLife = new Watch();
 
         public (GameData, AreaData, List<PointOfInterest>, bool) Get()
         {
@@ -43,6 +44,8 @@ namespace MapAssist.Helpers
 
                     changed = true;
                 }
+
+                watchLife.Check(gameData);
             }
 
             _gameData = gameData;

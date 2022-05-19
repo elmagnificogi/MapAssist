@@ -61,6 +61,9 @@ namespace MapAssist.Settings
 
         [YamlMember(Alias = "DCTrack", ApplyNamingConventions = false)]
         public DCTrackConfiguration DCTrack { get; set; }
+
+        [YamlMember(Alias = "HC", ApplyNamingConventions = false)]
+        public HCConfiguration HC { get; set; }
     }
 
     public class MapColorConfiguration
@@ -421,4 +424,16 @@ public class DCTrackConfiguration
 
     [YamlMember(Alias = "Sound", ApplyNamingConventions = false)]
     public bool Sound { get; set; }
+}
+
+public class HCConfiguration
+{
+    [YamlMember(Alias = "WatchLifeEnabled", ApplyNamingConventions = false)]
+    public bool WatchLifeEnabled { get; set; }
+
+    [YamlMember(Alias = "WatchLifeLeft", ApplyNamingConventions = false)]
+    public int WatchLifeLeft { get; set; }
+
+    [YamlMember(Alias = "ESCKey", ApplyNamingConventions = false)]
+    public string ESCKey { get; set; }
 }
