@@ -287,7 +287,6 @@ GameInfo:
   ShowArea: true
   ShowDifficulty: false
   ShowAreaLevel: true
-  ShowDifficulty: true
   ShowOverlayFPS: false
   ShowGameTimer: false
   ShowAreaTimer: true
