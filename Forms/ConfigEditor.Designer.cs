@@ -1096,7 +1096,7 @@
             this.btnSuperiorColor.Name = "btnSuperiorColor";
             this.btnSuperiorColor.Size = new System.Drawing.Size(56, 23);
             this.btnSuperiorColor.TabIndex = 54;
-            this.btnSuperiorColor.Text = "Superior";
+            this.btnSuperiorColor.Text = "特等";
             this.btnSuperiorColor.UseVisualStyleBackColor = true;
             this.btnSuperiorColor.Click += new System.EventHandler(this.btnSuperiorColor_Click);
             // 
@@ -1120,7 +1120,7 @@
             this.btnUniqueColor.Name = "btnUniqueColor";
             this.btnUniqueColor.Size = new System.Drawing.Size(56, 23);
             this.btnUniqueColor.TabIndex = 52;
-            this.btnUniqueColor.Text = "Unique";
+            this.btnUniqueColor.Text = "暗金";
             this.btnUniqueColor.UseVisualStyleBackColor = true;
             this.btnUniqueColor.Click += new System.EventHandler(this.btnUniqueColor_Click);
             // 
@@ -1144,7 +1144,7 @@
             this.btnSetColor.Name = "btnSetColor";
             this.btnSetColor.Size = new System.Drawing.Size(56, 23);
             this.btnSetColor.TabIndex = 50;
-            this.btnSetColor.Text = "Set";
+            this.btnSetColor.Text = "套装";
             this.btnSetColor.UseVisualStyleBackColor = true;
             this.btnSetColor.Click += new System.EventHandler(this.btnSetColor_Click);
             // 
@@ -1168,7 +1168,7 @@
             this.btnCraftedColor.Name = "btnCraftedColor";
             this.btnCraftedColor.Size = new System.Drawing.Size(56, 23);
             this.btnCraftedColor.TabIndex = 48;
-            this.btnCraftedColor.Text = "Crafted";
+            this.btnCraftedColor.Text = "手工";
             this.btnCraftedColor.UseVisualStyleBackColor = true;
             this.btnCraftedColor.Click += new System.EventHandler(this.btnCraftedColor_Click);
             // 
@@ -1192,7 +1192,7 @@
             this.btnRareColor.Name = "btnRareColor";
             this.btnRareColor.Size = new System.Drawing.Size(56, 23);
             this.btnRareColor.TabIndex = 46;
-            this.btnRareColor.Text = "Rare";
+            this.btnRareColor.Text = "金装";
             this.btnRareColor.UseVisualStyleBackColor = true;
             this.btnRareColor.Click += new System.EventHandler(this.btnRareColor_Click);
             // 
@@ -1216,7 +1216,7 @@
             this.btnMagicColor.Name = "btnMagicColor";
             this.btnMagicColor.Size = new System.Drawing.Size(56, 23);
             this.btnMagicColor.TabIndex = 44;
-            this.btnMagicColor.Text = "Magic";
+            this.btnMagicColor.Text = "蓝装";
             this.btnMagicColor.UseVisualStyleBackColor = true;
             this.btnMagicColor.Click += new System.EventHandler(this.btnMagicColor_Click);
             // 
