@@ -80,6 +80,9 @@ namespace MapAssist.Integrations.ResurrectedTrade
             _ctx = ctx;
             _trayIcon = trayIcon;
             var version = typeof(Runner).Assembly.GetName().Version?.ToString();
+
+            var sync = Utils.AgentRegistryKey.GetValue("SYNC", false);
+
             _contextMenuItems = new ToolStripItem[]
             {
                 new ToolStripMenuItem("等待游戏...") { Enabled = false }, new ToolStripSeparator(),
@@ -111,10 +114,17 @@ namespace MapAssist.Integrations.ResurrectedTrade
                     "暂停", null, (sender, args) =>
                     {
                         _paused = !_paused;
+                        if( _paused)
+                            Utils.AgentRegistryKey.SetValue("SYNC", 0, RegistryValueKind.DWord);
+                        else
+                            Utils.AgentRegistryKey.SetValue("SYNC", 1, RegistryValueKind.DWord);
                         (sender as ToolStripMenuItem).Checked = _paused;
                     }
                 ),
             };
+
+            var a = (ToolStripMenuItem)_contextMenuItems[_contextMenuItems.Length - 1];
+            a.Checked = !Convert.ToBoolean(sync);
 
             _cookieContainer = Utils.LoadCookieContainer();
             var handler = new HttpClientHandler
@@ -256,6 +266,14 @@ namespace MapAssist.Integrations.ResurrectedTrade
             {
                 while (true)
                 {
+
+                    if (_paused)
+                    {
+                        Thread.Sleep(1000);
+                        continue;
+                    }
+                        
+
                     try
                     {
                         Logger.Info("Trying to acquire single instance mutex");
@@ -275,6 +293,12 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
                 while (!_backgroundWorker.CancellationPending)
                 {
+                    if (_paused)
+                    {
+                        Thread.Sleep(1000);
+                        continue;
+                    }
+
                     if (Profile == null)
                     {
                         await WaitForProfile();
@@ -389,6 +413,11 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
             while (Profile == null && !_backgroundWorker.CancellationPending)
             {
+                if (_paused)
+                {
+                    Thread.Sleep(1000);
+                    continue;
+                }
                 var newState = await TryFetchProfile();
                 if (newState == State.Ok && Profile != null)
                 {
