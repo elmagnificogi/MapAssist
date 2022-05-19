@@ -78,6 +78,8 @@ namespace MapAssist
             chkToggleViaPanels.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.ToggleViaInGamePanels;
             chkStickToLastGameWindow.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.StickToLastGameWindow;
             cboPosition.SelectedIndex = cboPosition.FindStringExact(MapAssistConfiguration.Loaded.RenderingConfiguration.Position.ToString().ToProperCase());
+            positionX.Text = MapAssistConfiguration.Loaded.RenderingConfiguration.PositionX.ToString();
+            positionY.Text = MapAssistConfiguration.Loaded.RenderingConfiguration.PositionY.ToString();
 
             buffSize.Value = (int)Math.Round(MapAssistConfiguration.Loaded.RenderingConfiguration.BuffSize * 10d);
             lblBuffSizeValue.Text = MapAssistConfiguration.Loaded.RenderingConfiguration.BuffSize.ToString();
@@ -1190,6 +1192,31 @@ namespace MapAssist
                 MessageBox.Show("至少选择一个屏蔽服务器");
             }
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MapAssistConfiguration.Loaded.RenderingConfiguration.PositionX = int.Parse(positionX.Text);
+            }
+            catch
+            {
+                MapAssistConfiguration.Loaded.RenderingConfiguration.PositionX = 0;
+            }
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MapAssistConfiguration.Loaded.RenderingConfiguration.PositionY = int.Parse(positionY.Text);
+            }
+            catch
+            {
+                MapAssistConfiguration.Loaded.RenderingConfiguration.PositionY = 0;
+            }
         }
     }
 }

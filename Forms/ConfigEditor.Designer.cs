@@ -224,6 +224,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.positionX = new System.Windows.Forms.TextBox();
+            this.positionY = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -625,7 +629,7 @@
             this.tabLabel.Location = new System.Drawing.Point(4, 22);
             this.tabLabel.Name = "tabLabel";
             this.tabLabel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLabel.Size = new System.Drawing.Size(340, 246);
+            this.tabLabel.Size = new System.Drawing.Size(398, 272);
             this.tabLabel.TabIndex = 1;
             this.tabLabel.Text = "文字";
             this.tabLabel.UseVisualStyleBackColor = true;
@@ -703,7 +707,7 @@
             this.tabLine.Controls.Add(this.btnLineColor);
             this.tabLine.Location = new System.Drawing.Point(4, 22);
             this.tabLine.Name = "tabLine";
-            this.tabLine.Size = new System.Drawing.Size(340, 246);
+            this.tabLine.Size = new System.Drawing.Size(398, 272);
             this.tabLine.TabIndex = 2;
             this.tabLine.Text = "线";
             this.tabLine.UseVisualStyleBackColor = true;
@@ -726,7 +730,7 @@
             this.lblLineThicknessSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineThicknessSizeValue.AutoSize = true;
             this.lblLineThicknessSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineThicknessSizeValue.Location = new System.Drawing.Point(294, 94);
+            this.lblLineThicknessSizeValue.Location = new System.Drawing.Point(352, 94);
             this.lblLineThicknessSizeValue.Name = "lblLineThicknessSizeValue";
             this.lblLineThicknessSizeValue.Size = new System.Drawing.Size(29, 12);
             this.lblLineThicknessSizeValue.TabIndex = 27;
@@ -738,7 +742,7 @@
             this.lblLineArrowSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLineArrowSizeValue.AutoSize = true;
             this.lblLineArrowSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblLineArrowSizeValue.Location = new System.Drawing.Point(294, 52);
+            this.lblLineArrowSizeValue.Location = new System.Drawing.Point(352, 52);
             this.lblLineArrowSizeValue.Name = "lblLineArrowSizeValue";
             this.lblLineArrowSizeValue.Size = new System.Drawing.Size(29, 12);
             this.lblLineArrowSizeValue.TabIndex = 26;
@@ -765,7 +769,7 @@
             this.lineThicknessSize.Location = new System.Drawing.Point(73, 93);
             this.lineThicknessSize.Maximum = 30;
             this.lineThicknessSize.Name = "lineThicknessSize";
-            this.lineThicknessSize.Size = new System.Drawing.Size(215, 23);
+            this.lineThicknessSize.Size = new System.Drawing.Size(273, 23);
             this.lineThicknessSize.TabIndex = 22;
             this.lineThicknessSize.Value = 1;
             this.lineThicknessSize.Scroll += new System.EventHandler(this.lineThicknessSize_Scroll);
@@ -791,7 +795,7 @@
             this.lineArrowSize.Location = new System.Drawing.Point(73, 50);
             this.lineArrowSize.Maximum = 20;
             this.lineArrowSize.Name = "lineArrowSize";
-            this.lineArrowSize.Size = new System.Drawing.Size(215, 23);
+            this.lineArrowSize.Size = new System.Drawing.Size(273, 23);
             this.lineArrowSize.TabIndex = 20;
             this.lineArrowSize.Value = 1;
             this.lineArrowSize.Scroll += new System.EventHandler(this.lineArrowSize_Scroll);
@@ -2003,6 +2007,10 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.positionX);
+            this.groupBox1.Controls.Add(this.positionY);
+            this.groupBox1.Controls.Add(this.label29);
+            this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.chkMonsterHealthBar);
             this.groupBox1.Controls.Add(this.btnClearBorderColor);
@@ -2128,7 +2136,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 144);
+            this.label2.Location = new System.Drawing.Point(202, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 7;
@@ -2141,7 +2149,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.FormattingEnabled = true;
-            this.cboPosition.Location = new System.Drawing.Point(222, 139);
+            this.cboPosition.Location = new System.Drawing.Point(263, 155);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(99, 20);
             this.cboPosition.TabIndex = 6;
@@ -2647,6 +2655,42 @@
             this.tabControl1.Size = new System.Drawing.Size(410, 350);
             this.tabControl1.TabIndex = 0;
             // 
+            // positionX
+            // 
+            this.positionX.Location = new System.Drawing.Point(263, 181);
+            this.positionX.Name = "positionX";
+            this.positionX.Size = new System.Drawing.Size(100, 21);
+            this.positionX.TabIndex = 28;
+            this.positionX.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // positionY
+            // 
+            this.positionY.Location = new System.Drawing.Point(263, 208);
+            this.positionY.Name = "positionY";
+            this.positionY.Size = new System.Drawing.Size(100, 21);
+            this.positionY.TabIndex = 29;
+            this.positionY.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Location = new System.Drawing.Point(202, 187);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 12);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "地图x偏移:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Location = new System.Drawing.Point(202, 212);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 12);
+            this.label29.TabIndex = 31;
+            this.label29.Text = "地图y偏移:";
+            // 
             // ConfigEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2919,5 +2963,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TextBox positionX;
+        private System.Windows.Forms.TextBox positionY;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
     }
 }

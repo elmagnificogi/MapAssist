@@ -259,6 +259,12 @@ public class RenderingConfiguration
 
     [YamlMember(Alias = "LinesMode", ApplyNamingConventions = false)]
     public MapLinesMode LinesMode { get; set; }
+
+    [YamlMember(Alias = "PositionX", ApplyNamingConventions = false)]
+    public int PositionX { get; set; }
+
+    [YamlMember(Alias = "PositionY", ApplyNamingConventions = false)]
+    public int PositionY { get; set; }
 }
 
 public class HotkeyConfiguration

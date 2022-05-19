@@ -81,18 +81,23 @@ namespace MapAssist
 
                             var size = MapAssistConfiguration.Loaded.RenderingConfiguration.Size;
 
+                            var x_offset = MapAssistConfiguration.Loaded.RenderingConfiguration.PositionX;
+                            var y_offset = MapAssistConfiguration.Loaded.RenderingConfiguration.PositionY;
                             var drawBounds = new Rectangle(0, 0, gfx.Width, gfx.Height * 0.78f);
                             switch (MapAssistConfiguration.Loaded.RenderingConfiguration.Position)
                             {
                                 case MapPosition.TopLeft:
                                     drawBounds = new Rectangle(PlayerIconWidth() + 40, PlayerIconWidth() + 100, 0, PlayerIconWidth() + 100 + size);
+                                    drawBounds.Left += x_offset;
+                                    drawBounds.Top += y_offset;
                                     break;
 
                                 case MapPosition.TopRight:
                                     drawBounds = new Rectangle(0, 100, gfx.Width, 100 + size);
+                                    drawBounds.Right += x_offset;
+                                    drawBounds.Top += y_offset;
                                     break;
                             }
-
 
                             _compositor.Init(gfx, _gameData,_dcTrack, drawBounds);
 
