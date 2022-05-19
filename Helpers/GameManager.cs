@@ -28,7 +28,6 @@ namespace MapAssist.Helpers
         private static IntPtr _UnitHashTableOffset;
         private static IntPtr _ExpansionCheckOffset;
         private static IntPtr _GameNameOffset;
-        private static IntPtr _MenuPanelOpenOffset;
         private static IntPtr _MenuDataOffset;
         private static IntPtr _MapSeedOffset;
         private static IntPtr _RosterDataOffset;
@@ -72,27 +71,45 @@ namespace MapAssist.Helpers
             Process process;
             try // The process can end before this block is done, hence wrap it in a try catch
             {
-                process = Process.GetProcessById(_foregroundProcessId); // If closing another non-foreground window, Process.GetProcessById can fail
-
-                // Skip process by window title
-                if (MapAssistConfiguration.Loaded.AuthorizedWindowTitles.Length != 0 && !MapAssistConfiguration.Loaded.AuthorizedWindowTitles.Any(process.MainWindowTitle.Contains))
+                try
                 {
-                    _log.Info($"Skipping window because of title (handle: {hwnd})");
-                    return;
+                    process = Process.GetProcessById(_foregroundProcessId); // If closing another non-foreground window, Process.GetProcessById can fail
+
+                    // Skip process by window title
+                    if (MapAssistConfiguration.Loaded.AuthorizedWindowTitles.Length != 0 && !MapAssistConfiguration.Loaded.AuthorizedWindowTitles.Any(process.MainWindowTitle.Contains))
+                    {
+                        _log.Info($"Skipping window because of title (handle: {hwnd})");
+                        return;
+                    }
+
+                    if (process.ProcessName != ProcessName) // Not a valid game process
+                    {
+                        _log.Info($"Active window changed to a non-game window (handle: {hwnd})");
+                        ClearLastGameProcess();
+                        return;
+                    }
+
+                    if (process.HasExited) // Game window has exited
+                    {
+                        _log.Info($"Game window has exited (handle: {hwnd})");
+                        ClearLastGameProcess();
+                        return;
+                    }
+
+                    using (var _ = new ProcessContext(process)) { } // Read memory test to see if game is running as an admin
                 }
-
-                if (process.ProcessName != ProcessName) // Not a valid game process
+                catch (Win32Exception ex)
                 {
-                    _log.Info($"Active window changed to a non-game window (handle: {hwnd})");
-                    ClearLastGameProcess();
-                    return;
-                }
-
-                if (process.HasExited) // Game window has exited
-                {
-                    _log.Info($"Game window has exited (handle: {hwnd})");
-                    ClearLastGameProcess();
-                    return;
+                    if (ex.Message == "Access is denied")
+                    {
+                        _log.Info($"Active window changed a game window that requires admin rights (handle: {hwnd})");
+                        OnGameAccessDenied(null, null);
+                        return;
+                    }
+                    else
+                    {
+                        throw ex;
+                    }
                 }
             }
             catch
@@ -105,27 +122,9 @@ namespace MapAssist.Helpers
             // is a new game process
             _log.Info($"Active window changed to a game window (handle: {hwnd})");
 
-            try
-            {
-                using (var _ = new ProcessContext(process)) { } // Read memory test to see if game is running as an admin
-            }
-            catch (Win32Exception ex)
-            {
-                if (ex.Message == "Access is denied")
-                {
-                    OnGameAccessDenied(null, null);
-                    return;
-                }
-                else
-                {
-                    throw ex;
-                }
-            }
-
             _UnitHashTableOffset = IntPtr.Zero;
             _ExpansionCheckOffset = IntPtr.Zero;
             _GameNameOffset = IntPtr.Zero;
-            _MenuPanelOpenOffset = IntPtr.Zero;
             _MenuDataOffset = IntPtr.Zero;
             _MapSeedOffset = IntPtr.Zero;
             _RosterDataOffset = IntPtr.Zero;
@@ -223,21 +222,6 @@ namespace MapAssist.Helpers
             }
         }
 
-        public static IntPtr MenuOpenOffset
-        {
-            get
-            {
-                if (_MenuPanelOpenOffset != IntPtr.Zero)
-                {
-                    return _MenuPanelOpenOffset;
-                }
-
-                PopulateMissingOffsets();
-
-                return _MenuPanelOpenOffset;
-            }
-        }
-
         public static IntPtr MenuDataOffset
         {
             get
@@ -315,7 +299,7 @@ namespace MapAssist.Helpers
 
         private static void PopulateMissingOffsets()
         {
-            // The fact we are here means we are missing some offset, 
+            // The fact we are here means we are missing some offset,
             // which means we will need the buffer.
             using (var processContext = GetProcessContext())
             {
@@ -324,55 +308,49 @@ namespace MapAssist.Helpers
                 if (_UnitHashTableOffset == IntPtr.Zero)
                 {
                     _UnitHashTableOffset = processContext.GetUnitHashtableOffset(buffer);
-                    _log.Info($"Found offset {nameof(_UnitHashTableOffset)} 0x{_UnitHashTableOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_UnitHashTableOffset)} 0x{_UnitHashTableOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_ExpansionCheckOffset == IntPtr.Zero)
                 {
                     _ExpansionCheckOffset = processContext.GetExpansionOffset(buffer);
-                    _log.Info($"Found offset {nameof(_ExpansionCheckOffset)} 0x{_ExpansionCheckOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_ExpansionCheckOffset)} 0x{_ExpansionCheckOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_GameNameOffset == IntPtr.Zero)
                 {
                     _GameNameOffset = processContext.GetGameNameOffset(buffer);
-                    _log.Info($"Found offset {nameof(_GameNameOffset)} 0x{_GameNameOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
-                }
-
-                if (_MenuPanelOpenOffset == IntPtr.Zero)
-                {
-                    _MenuPanelOpenOffset = processContext.GetMenuOpenOffset(buffer);
-                    _log.Info($"Found offset {nameof(_MenuPanelOpenOffset)} 0x{_MenuPanelOpenOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_GameNameOffset)} 0x{_GameNameOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_MenuDataOffset == IntPtr.Zero)
                 {
                     _MenuDataOffset = processContext.GetMenuDataOffset(buffer);
-                    _log.Info($"Found offset {nameof(_MenuDataOffset)} 0x{_MenuDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_MenuDataOffset)} 0x{_MenuDataOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_MapSeedOffset == IntPtr.Zero)
                 {
                     _MapSeedOffset = processContext.GetMapSeedOffset(buffer);
-                    _log.Info($"Found offset {nameof(_MapSeedOffset)} 0x{_MapSeedOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_MapSeedOffset)} 0x{_MapSeedOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_RosterDataOffset == IntPtr.Zero)
                 {
                     _RosterDataOffset = processContext.GetRosterDataOffset(buffer);
-                    _log.Info($"Found offset {nameof(_RosterDataOffset)} 0x{_RosterDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_RosterDataOffset)} 0x{_RosterDataOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_LastHoverDataOffset == IntPtr.Zero)
                 {
                     _LastHoverDataOffset = processContext.GetLastHoverObjectOffset(buffer);
-                    _log.Info($"Found offset {nameof(_LastHoverDataOffset)} 0x{_LastHoverDataOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_LastHoverDataOffset)} 0x{_LastHoverDataOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 if (_InteractedNpcOffset == IntPtr.Zero)
                 {
                     _InteractedNpcOffset = processContext.GetInteractedNpcOffset(buffer);
-                    _log.Info($"Found offset {nameof(_InteractedNpcOffset)} 0x{_InteractedNpcOffset.ToInt64()-processContext.BaseAddr.ToInt64():X}");
+                    _log.Info($"Found offset {nameof(_InteractedNpcOffset)} 0x{_InteractedNpcOffset.ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
                 foreach (IIntegration integration in Program.Integrations)
@@ -388,7 +366,6 @@ namespace MapAssist.Helpers
                 }
             }
         }
-
 
         public static void Dispose()
         {

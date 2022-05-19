@@ -914,7 +914,7 @@ namespace MapAssist.Helpers
                     DrawGraphicsEventArgs e, bool errorLoadingAreaData)
         {
             var isTopLeft = MapAssistConfiguration.Loaded.GameInfo.Position == GameInfoPosition.TopLeft;
-            if ((_gameData.MenuPanelOpen & (isTopLeft ? 0x2 : 0x1)) > 0)
+            if (isTopLeft ? _gameData.MenuOpen.IsLeftMenuOpen() : _gameData.MenuOpen.IsRightMenuOpen())
             {
                 return anchor;
             }
@@ -1030,7 +1030,7 @@ namespace MapAssist.Helpers
         public void DrawItemLog(Graphics gfx, Point anchor)
         {
             var isTopLeft = MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopLeft;
-            if ((_gameData.MenuPanelOpen & (isTopLeft ? 0x2 : 0x1)) > 0)
+            if (isTopLeft ? _gameData.MenuOpen.IsLeftMenuOpen() : _gameData.MenuOpen.IsRightMenuOpen())
             {
                 return;
             }
@@ -1043,14 +1043,14 @@ namespace MapAssist.Helpers
             var shadowOffset = fontSize * 0.0625f; // 1/16th
 
             // Item Log
-            var itemsToShow = _gameData.ItemLog.Where(item => item != null && !item.ItemLogExpired && item.Color != Color.Empty).ToArray();
+            var itemsToShow = _gameData.ItemLog.Where(item => item != null && !item.ItemLogExpired && item.UnitItem.ItemBaseColor != Color.Empty).ToArray();
             for (var i = 0; i < itemsToShow.Length; i++)
             {
                 var item = itemsToShow[i];
 
                 var font = CreateFont(gfx, MapAssistConfiguration.Loaded.ItemLog.LabelFont, fontSize);
                 var position = anchor.Add(0, i * lineHeight);
-                var brush = CreateSolidBrush(gfx, item.Color, 1);
+                var brush = CreateSolidBrush(gfx, item.UnitItem.ItemBaseColor, 1);
                 var stringSize = gfx.MeasureString(font, item.Text);
 
                 if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
@@ -1105,7 +1105,7 @@ namespace MapAssist.Helpers
 
                     var rendering = new PointOfInterestRendering()
                     {
-                        LineColor = item.Color,
+                        LineColor = item.UnitItem.ItemBaseColor,
                         LineThickness = 2,
                         ArrowHeadSize = 8
                     };

@@ -95,6 +95,18 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnClearSuperiorColor = new System.Windows.Forms.Button();
+            this.btnSuperiorColor = new System.Windows.Forms.Button();
+            this.btnClearUniqueColor = new System.Windows.Forms.Button();
+            this.btnUniqueColor = new System.Windows.Forms.Button();
+            this.btnClearSetColor = new System.Windows.Forms.Button();
+            this.btnSetColor = new System.Windows.Forms.Button();
+            this.btnClearCraftedColor = new System.Windows.Forms.Button();
+            this.btnCraftedColor = new System.Windows.Forms.Button();
+            this.btnClearRareColor = new System.Windows.Forms.Button();
+            this.btnRareColor = new System.Windows.Forms.Button();
+            this.btnClearMagicColor = new System.Windows.Forms.Button();
+            this.btnMagicColor = new System.Windows.Forms.Button();
             this.chkShowDirectionToItem = new System.Windows.Forms.CheckBox();
             this.chkShowDistanceToItem = new System.Windows.Forms.CheckBox();
             this.chkItemLogVendorItems = new System.Windows.Forms.CheckBox();
@@ -262,7 +274,7 @@
             this.tabPage4.Controls.Add(this.groupBox8);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(344, 298);
+            this.tabPage4.Size = new System.Drawing.Size(402, 324);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "窗口设置";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -276,7 +288,7 @@
             this.groupBox2.Controls.Add(this.lstHidden);
             this.groupBox2.Location = new System.Drawing.Point(11, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(320, 92);
+            this.groupBox2.Size = new System.Drawing.Size(378, 92);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "隐藏地图场景";
@@ -284,7 +296,7 @@
             // btnRemoveHidden
             // 
             this.btnRemoveHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveHidden.Location = new System.Drawing.Point(347, 48);
+            this.btnRemoveHidden.Location = new System.Drawing.Point(405, 48);
             this.btnRemoveHidden.Name = "btnRemoveHidden";
             this.btnRemoveHidden.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveHidden.TabIndex = 2;
@@ -295,7 +307,7 @@
             // btnAddHidden
             // 
             this.btnAddHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddHidden.Location = new System.Drawing.Point(347, 19);
+            this.btnAddHidden.Location = new System.Drawing.Point(405, 19);
             this.btnAddHidden.Name = "btnAddHidden";
             this.btnAddHidden.Size = new System.Drawing.Size(20, 21);
             this.btnAddHidden.TabIndex = 1;
@@ -311,7 +323,7 @@
             this.lstHidden.ItemHeight = 12;
             this.lstHidden.Location = new System.Drawing.Point(10, 18);
             this.lstHidden.Name = "lstHidden";
-            this.lstHidden.Size = new System.Drawing.Size(278, 64);
+            this.lstHidden.Size = new System.Drawing.Size(336, 64);
             this.lstHidden.TabIndex = 0;
             // 
             // groupBoxAuthorizedWindowTitle
@@ -324,7 +336,7 @@
             this.groupBoxAuthorizedWindowTitle.Controls.Add(this.lstAuthorizedWindowTitle);
             this.groupBoxAuthorizedWindowTitle.Location = new System.Drawing.Point(11, 106);
             this.groupBoxAuthorizedWindowTitle.Name = "groupBoxAuthorizedWindowTitle";
-            this.groupBoxAuthorizedWindowTitle.Size = new System.Drawing.Size(320, 114);
+            this.groupBoxAuthorizedWindowTitle.Size = new System.Drawing.Size(378, 114);
             this.groupBoxAuthorizedWindowTitle.TabIndex = 2;
             this.groupBoxAuthorizedWindowTitle.TabStop = false;
             this.groupBoxAuthorizedWindowTitle.Text = "可能的游戏窗口名";
@@ -335,13 +347,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 87);
             this.txtAuthorizedWindowTitle.Name = "txtAuthorizedWindowTitle";
-            this.txtAuthorizedWindowTitle.Size = new System.Drawing.Size(278, 21);
+            this.txtAuthorizedWindowTitle.Size = new System.Drawing.Size(336, 21);
             this.txtAuthorizedWindowTitle.TabIndex = 3;
             // 
             // btnRemoveAuthorizedWindowTitle
             // 
             this.btnRemoveAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(294, 20);
+            this.btnRemoveAuthorizedWindowTitle.Location = new System.Drawing.Point(352, 20);
             this.btnRemoveAuthorizedWindowTitle.Name = "btnRemoveAuthorizedWindowTitle";
             this.btnRemoveAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveAuthorizedWindowTitle.TabIndex = 2;
@@ -352,7 +364,7 @@
             // btnAddAuthorizedWindowTitle
             // 
             this.btnAddAuthorizedWindowTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(294, 86);
+            this.btnAddAuthorizedWindowTitle.Location = new System.Drawing.Point(352, 86);
             this.btnAddAuthorizedWindowTitle.Name = "btnAddAuthorizedWindowTitle";
             this.btnAddAuthorizedWindowTitle.Size = new System.Drawing.Size(20, 21);
             this.btnAddAuthorizedWindowTitle.TabIndex = 1;
@@ -368,7 +380,7 @@
             this.lstAuthorizedWindowTitle.ItemHeight = 12;
             this.lstAuthorizedWindowTitle.Location = new System.Drawing.Point(10, 18);
             this.lstAuthorizedWindowTitle.Name = "lstAuthorizedWindowTitle";
-            this.lstAuthorizedWindowTitle.Size = new System.Drawing.Size(278, 64);
+            this.lstAuthorizedWindowTitle.Size = new System.Drawing.Size(336, 64);
             this.lstAuthorizedWindowTitle.TabIndex = 0;
             // 
             // groupBox8
@@ -380,7 +392,7 @@
             this.groupBox8.Controls.Add(this.chkDPIAware);
             this.groupBox8.Location = new System.Drawing.Point(11, 226);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(320, 54);
+            this.groupBox8.Size = new System.Drawing.Size(378, 54);
             this.groupBox8.TabIndex = 29;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "高DPI设置";
@@ -415,7 +427,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(344, 298);
+            this.tabPage2.Size = new System.Drawing.Size(402, 324);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "绘制";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -431,7 +443,7 @@
             this.tabDrawing.Location = new System.Drawing.Point(-4, 28);
             this.tabDrawing.Name = "tabDrawing";
             this.tabDrawing.SelectedIndex = 0;
-            this.tabDrawing.Size = new System.Drawing.Size(348, 272);
+            this.tabDrawing.Size = new System.Drawing.Size(406, 298);
             this.tabDrawing.TabIndex = 10;
             this.tabDrawing.Visible = false;
             this.tabDrawing.SelectedIndexChanged += new System.EventHandler(this.tabDrawing_SelectedIndexChanged);
@@ -453,7 +465,7 @@
             this.tabIcon.Location = new System.Drawing.Point(4, 22);
             this.tabIcon.Name = "tabIcon";
             this.tabIcon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIcon.Size = new System.Drawing.Size(340, 246);
+            this.tabIcon.Size = new System.Drawing.Size(398, 272);
             this.tabIcon.TabIndex = 0;
             this.tabIcon.Text = "图标";
             this.tabIcon.UseVisualStyleBackColor = true;
@@ -513,7 +525,7 @@
             this.lblIconThicknessValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconThicknessValue.AutoSize = true;
             this.lblIconThicknessValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconThicknessValue.Location = new System.Drawing.Point(303, 138);
+            this.lblIconThicknessValue.Location = new System.Drawing.Point(361, 138);
             this.lblIconThicknessValue.Name = "lblIconThicknessValue";
             this.lblIconThicknessValue.Size = new System.Drawing.Size(29, 12);
             this.lblIconThicknessValue.TabIndex = 24;
@@ -525,7 +537,7 @@
             this.lblIconSizeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIconSizeValue.AutoSize = true;
             this.lblIconSizeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblIconSizeValue.Location = new System.Drawing.Point(303, 94);
+            this.lblIconSizeValue.Location = new System.Drawing.Point(361, 94);
             this.lblIconSizeValue.Name = "lblIconSizeValue";
             this.lblIconSizeValue.Size = new System.Drawing.Size(29, 12);
             this.lblIconSizeValue.TabIndex = 23;
@@ -552,7 +564,7 @@
             this.iconThickness.Location = new System.Drawing.Point(75, 136);
             this.iconThickness.Maximum = 20;
             this.iconThickness.Name = "iconThickness";
-            this.iconThickness.Size = new System.Drawing.Size(222, 23);
+            this.iconThickness.Size = new System.Drawing.Size(280, 23);
             this.iconThickness.TabIndex = 16;
             this.iconThickness.Value = 1;
             this.iconThickness.Scroll += new System.EventHandler(this.iconThickness_Scroll);
@@ -578,7 +590,7 @@
             this.iconSize.Location = new System.Drawing.Point(75, 93);
             this.iconSize.Maximum = 20;
             this.iconSize.Name = "iconSize";
-            this.iconSize.Size = new System.Drawing.Size(222, 23);
+            this.iconSize.Size = new System.Drawing.Size(280, 23);
             this.iconSize.TabIndex = 14;
             this.iconSize.Value = 1;
             this.iconSize.Scroll += new System.EventHandler(this.iconSize_Scroll);
@@ -814,7 +826,7 @@
             this.cboRenderOption.FormattingEnabled = true;
             this.cboRenderOption.Location = new System.Drawing.Point(118, 6);
             this.cboRenderOption.Name = "cboRenderOption";
-            this.cboRenderOption.Size = new System.Drawing.Size(125, 20);
+            this.cboRenderOption.Size = new System.Drawing.Size(183, 20);
             this.cboRenderOption.TabIndex = 0;
             this.cboRenderOption.SelectedIndexChanged += new System.EventHandler(this.cboRenderOption_SelectedIndexChanged);
             // 
@@ -823,7 +835,7 @@
             this.integrationTab.Controls.Add(this.integrationTabs);
             this.integrationTab.Location = new System.Drawing.Point(4, 22);
             this.integrationTab.Name = "integrationTab";
-            this.integrationTab.Size = new System.Drawing.Size(344, 298);
+            this.integrationTab.Size = new System.Drawing.Size(402, 324);
             this.integrationTab.TabIndex = 8;
             this.integrationTab.Text = "仓库同步";
             this.integrationTab.UseVisualStyleBackColor = true;
@@ -836,7 +848,7 @@
             this.integrationTabs.Location = new System.Drawing.Point(3, 3);
             this.integrationTabs.Name = "integrationTabs";
             this.integrationTabs.SelectedIndex = 0;
-            this.integrationTabs.Size = new System.Drawing.Size(338, 294);
+            this.integrationTabs.Size = new System.Drawing.Size(396, 320);
             this.integrationTabs.TabIndex = 0;
             // 
             // tabPage7
@@ -845,7 +857,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(344, 298);
+            this.tabPage7.Size = new System.Drawing.Size(402, 324);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "快捷键";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -870,7 +882,7 @@
             this.grpHotkeys.Controls.Add(this.label22);
             this.grpHotkeys.Location = new System.Drawing.Point(11, 8);
             this.grpHotkeys.Name = "grpHotkeys";
-            this.grpHotkeys.Size = new System.Drawing.Size(320, 198);
+            this.grpHotkeys.Size = new System.Drawing.Size(378, 198);
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
             this.grpHotkeys.Text = "快捷键";
@@ -1013,7 +1025,7 @@
             this.tabPage6.Controls.Add(this.groupBox6);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(344, 298);
+            this.tabPage6.Size = new System.Drawing.Size(402, 324);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "掉落过滤";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1022,6 +1034,18 @@
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.btnClearSuperiorColor);
+            this.groupBox6.Controls.Add(this.btnSuperiorColor);
+            this.groupBox6.Controls.Add(this.btnClearUniqueColor);
+            this.groupBox6.Controls.Add(this.btnUniqueColor);
+            this.groupBox6.Controls.Add(this.btnClearSetColor);
+            this.groupBox6.Controls.Add(this.btnSetColor);
+            this.groupBox6.Controls.Add(this.btnClearCraftedColor);
+            this.groupBox6.Controls.Add(this.btnCraftedColor);
+            this.groupBox6.Controls.Add(this.btnClearRareColor);
+            this.groupBox6.Controls.Add(this.btnRareColor);
+            this.groupBox6.Controls.Add(this.btnClearMagicColor);
+            this.groupBox6.Controls.Add(this.btnMagicColor);
             this.groupBox6.Controls.Add(this.chkShowDirectionToItem);
             this.groupBox6.Controls.Add(this.chkShowDistanceToItem);
             this.groupBox6.Controls.Add(this.chkItemLogVendorItems);
@@ -1045,12 +1069,156 @@
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.chkItemLogItemsOnIdentify);
             this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Location = new System.Drawing.Point(12, 8);
+            this.groupBox6.Location = new System.Drawing.Point(0, 8);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(320, 282);
+            this.groupBox6.Size = new System.Drawing.Size(399, 309);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "掉落物";
+            // 
+            // btnClearSuperiorColor
+            // 
+            this.btnClearSuperiorColor.FlatAppearance.BorderSize = 0;
+            this.btnClearSuperiorColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSuperiorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearSuperiorColor.Location = new System.Drawing.Point(186, 247);
+            this.btnClearSuperiorColor.Name = "btnClearSuperiorColor";
+            this.btnClearSuperiorColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearSuperiorColor.TabIndex = 53;
+            this.btnClearSuperiorColor.Text = "X";
+            this.btnClearSuperiorColor.UseVisualStyleBackColor = true;
+            this.btnClearSuperiorColor.Click += new System.EventHandler(this.btnClearSuperiorColor_Click);
+            // 
+            // btnSuperiorColor
+            // 
+            this.btnSuperiorColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuperiorColor.Location = new System.Drawing.Point(129, 247);
+            this.btnSuperiorColor.Name = "btnSuperiorColor";
+            this.btnSuperiorColor.Size = new System.Drawing.Size(56, 23);
+            this.btnSuperiorColor.TabIndex = 54;
+            this.btnSuperiorColor.Text = "Superior";
+            this.btnSuperiorColor.UseVisualStyleBackColor = true;
+            this.btnSuperiorColor.Click += new System.EventHandler(this.btnSuperiorColor_Click);
+            // 
+            // btnClearUniqueColor
+            // 
+            this.btnClearUniqueColor.FlatAppearance.BorderSize = 0;
+            this.btnClearUniqueColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearUniqueColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearUniqueColor.Location = new System.Drawing.Point(272, 280);
+            this.btnClearUniqueColor.Name = "btnClearUniqueColor";
+            this.btnClearUniqueColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearUniqueColor.TabIndex = 51;
+            this.btnClearUniqueColor.Text = "X";
+            this.btnClearUniqueColor.UseVisualStyleBackColor = true;
+            this.btnClearUniqueColor.Click += new System.EventHandler(this.btnClearUniqueColor_Click);
+            // 
+            // btnUniqueColor
+            // 
+            this.btnUniqueColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUniqueColor.Location = new System.Drawing.Point(215, 280);
+            this.btnUniqueColor.Name = "btnUniqueColor";
+            this.btnUniqueColor.Size = new System.Drawing.Size(56, 23);
+            this.btnUniqueColor.TabIndex = 52;
+            this.btnUniqueColor.Text = "Unique";
+            this.btnUniqueColor.UseVisualStyleBackColor = true;
+            this.btnUniqueColor.Click += new System.EventHandler(this.btnUniqueColor_Click);
+            // 
+            // btnClearSetColor
+            // 
+            this.btnClearSetColor.FlatAppearance.BorderSize = 0;
+            this.btnClearSetColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearSetColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearSetColor.Location = new System.Drawing.Point(186, 280);
+            this.btnClearSetColor.Name = "btnClearSetColor";
+            this.btnClearSetColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearSetColor.TabIndex = 49;
+            this.btnClearSetColor.Text = "X";
+            this.btnClearSetColor.UseVisualStyleBackColor = true;
+            this.btnClearSetColor.Click += new System.EventHandler(this.btnClearSetColor_Click);
+            // 
+            // btnSetColor
+            // 
+            this.btnSetColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetColor.Location = new System.Drawing.Point(129, 280);
+            this.btnSetColor.Name = "btnSetColor";
+            this.btnSetColor.Size = new System.Drawing.Size(56, 23);
+            this.btnSetColor.TabIndex = 50;
+            this.btnSetColor.Text = "Set";
+            this.btnSetColor.UseVisualStyleBackColor = true;
+            this.btnSetColor.Click += new System.EventHandler(this.btnSetColor_Click);
+            // 
+            // btnClearCraftedColor
+            // 
+            this.btnClearCraftedColor.FlatAppearance.BorderSize = 0;
+            this.btnClearCraftedColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearCraftedColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearCraftedColor.Location = new System.Drawing.Point(358, 280);
+            this.btnClearCraftedColor.Name = "btnClearCraftedColor";
+            this.btnClearCraftedColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearCraftedColor.TabIndex = 47;
+            this.btnClearCraftedColor.Text = "X";
+            this.btnClearCraftedColor.UseVisualStyleBackColor = true;
+            this.btnClearCraftedColor.Click += new System.EventHandler(this.btnClearCraftedColor_Click);
+            // 
+            // btnCraftedColor
+            // 
+            this.btnCraftedColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCraftedColor.Location = new System.Drawing.Point(301, 280);
+            this.btnCraftedColor.Name = "btnCraftedColor";
+            this.btnCraftedColor.Size = new System.Drawing.Size(56, 23);
+            this.btnCraftedColor.TabIndex = 48;
+            this.btnCraftedColor.Text = "Crafted";
+            this.btnCraftedColor.UseVisualStyleBackColor = true;
+            this.btnCraftedColor.Click += new System.EventHandler(this.btnCraftedColor_Click);
+            // 
+            // btnClearRareColor
+            // 
+            this.btnClearRareColor.FlatAppearance.BorderSize = 0;
+            this.btnClearRareColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearRareColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearRareColor.Location = new System.Drawing.Point(358, 247);
+            this.btnClearRareColor.Name = "btnClearRareColor";
+            this.btnClearRareColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearRareColor.TabIndex = 45;
+            this.btnClearRareColor.Text = "X";
+            this.btnClearRareColor.UseVisualStyleBackColor = true;
+            this.btnClearRareColor.Click += new System.EventHandler(this.btnClearRareColor_Click);
+            // 
+            // btnRareColor
+            // 
+            this.btnRareColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRareColor.Location = new System.Drawing.Point(301, 247);
+            this.btnRareColor.Name = "btnRareColor";
+            this.btnRareColor.Size = new System.Drawing.Size(56, 23);
+            this.btnRareColor.TabIndex = 46;
+            this.btnRareColor.Text = "Rare";
+            this.btnRareColor.UseVisualStyleBackColor = true;
+            this.btnRareColor.Click += new System.EventHandler(this.btnRareColor_Click);
+            // 
+            // btnClearMagicColor
+            // 
+            this.btnClearMagicColor.FlatAppearance.BorderSize = 0;
+            this.btnClearMagicColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearMagicColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.btnClearMagicColor.Location = new System.Drawing.Point(272, 247);
+            this.btnClearMagicColor.Name = "btnClearMagicColor";
+            this.btnClearMagicColor.Size = new System.Drawing.Size(23, 23);
+            this.btnClearMagicColor.TabIndex = 43;
+            this.btnClearMagicColor.Text = "X";
+            this.btnClearMagicColor.UseVisualStyleBackColor = true;
+            this.btnClearMagicColor.Click += new System.EventHandler(this.btnClearMagicColor_Click);
+            // 
+            // btnMagicColor
+            // 
+            this.btnMagicColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMagicColor.Location = new System.Drawing.Point(215, 247);
+            this.btnMagicColor.Name = "btnMagicColor";
+            this.btnMagicColor.Size = new System.Drawing.Size(56, 23);
+            this.btnMagicColor.TabIndex = 44;
+            this.btnMagicColor.Text = "Magic";
+            this.btnMagicColor.UseVisualStyleBackColor = true;
+            this.btnMagicColor.Click += new System.EventHandler(this.btnMagicColor_Click);
             // 
             // chkShowDirectionToItem
             // 
@@ -1090,7 +1258,7 @@
             this.lblSoundVolumeValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSoundVolumeValue.AutoSize = true;
             this.lblSoundVolumeValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblSoundVolumeValue.Location = new System.Drawing.Point(277, 181);
+            this.lblSoundVolumeValue.Location = new System.Drawing.Point(356, 181);
             this.lblSoundVolumeValue.Name = "lblSoundVolumeValue";
             this.lblSoundVolumeValue.Size = new System.Drawing.Size(23, 12);
             this.lblSoundVolumeValue.TabIndex = 29;
@@ -1102,7 +1270,7 @@
             this.lblItemDisplayForSecondsValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblItemDisplayForSecondsValue.AutoSize = true;
             this.lblItemDisplayForSecondsValue.BackColor = System.Drawing.Color.Transparent;
-            this.lblItemDisplayForSecondsValue.Location = new System.Drawing.Point(277, 210);
+            this.lblItemDisplayForSecondsValue.Location = new System.Drawing.Point(356, 210);
             this.lblItemDisplayForSecondsValue.Name = "lblItemDisplayForSecondsValue";
             this.lblItemDisplayForSecondsValue.Size = new System.Drawing.Size(35, 12);
             this.lblItemDisplayForSecondsValue.TabIndex = 25;
@@ -1112,7 +1280,7 @@
             // chkLogTextShadow
             // 
             this.chkLogTextShadow.AutoSize = true;
-            this.chkLogTextShadow.Location = new System.Drawing.Point(127, 249);
+            this.chkLogTextShadow.Location = new System.Drawing.Point(41, 280);
             this.chkLogTextShadow.Name = "chkLogTextShadow";
             this.chkLogTextShadow.Size = new System.Drawing.Size(72, 16);
             this.chkLogTextShadow.TabIndex = 31;
@@ -1125,7 +1293,7 @@
             this.btnClearLogFont.FlatAppearance.BorderSize = 0;
             this.btnClearLogFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLogFont.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearLogFont.Location = new System.Drawing.Point(86, 247);
+            this.btnClearLogFont.Location = new System.Drawing.Point(12, 278);
             this.btnClearLogFont.Name = "btnClearLogFont";
             this.btnClearLogFont.Size = new System.Drawing.Size(23, 21);
             this.btnClearLogFont.TabIndex = 30;
@@ -1144,7 +1312,7 @@
             this.itemDisplayForSeconds.Maximum = 24;
             this.itemDisplayForSeconds.Minimum = 1;
             this.itemDisplayForSeconds.Name = "itemDisplayForSeconds";
-            this.itemDisplayForSeconds.Size = new System.Drawing.Size(158, 25);
+            this.itemDisplayForSeconds.Size = new System.Drawing.Size(237, 25);
             this.itemDisplayForSeconds.SmallChange = 25;
             this.itemDisplayForSeconds.TabIndex = 11;
             this.itemDisplayForSeconds.Value = 1;
@@ -1202,7 +1370,7 @@
             this.soundVolume.Location = new System.Drawing.Point(113, 175);
             this.soundVolume.Maximum = 20;
             this.soundVolume.Name = "soundVolume";
-            this.soundVolume.Size = new System.Drawing.Size(158, 25);
+            this.soundVolume.Size = new System.Drawing.Size(237, 25);
             this.soundVolume.SmallChange = 25;
             this.soundVolume.TabIndex = 28;
             this.soundVolume.Scroll += new System.EventHandler(this.soundVolume_Scroll);
@@ -1252,7 +1420,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoundFile.Location = new System.Drawing.Point(89, 127);
             this.txtSoundFile.Name = "txtSoundFile";
-            this.txtSoundFile.Size = new System.Drawing.Size(225, 21);
+            this.txtSoundFile.Size = new System.Drawing.Size(304, 21);
             this.txtSoundFile.TabIndex = 5;
             this.txtSoundFile.TextChanged += new System.EventHandler(this.txtSoundFile_TextChanged);
             this.txtSoundFile.LostFocus += new System.EventHandler(this.txtSoundFile_LostFocus);
@@ -1265,7 +1433,7 @@
             this.cboItemLogPosition.FormattingEnabled = true;
             this.cboItemLogPosition.Location = new System.Drawing.Point(238, 16);
             this.cboItemLogPosition.Name = "cboItemLogPosition";
-            this.cboItemLogPosition.Size = new System.Drawing.Size(72, 20);
+            this.cboItemLogPosition.Size = new System.Drawing.Size(151, 20);
             this.cboItemLogPosition.TabIndex = 38;
             this.cboItemLogPosition.SelectedIndexChanged += new System.EventHandler(this.cboItemLogPosition_SelectedIndexChanged);
             // 
@@ -1275,7 +1443,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFilterFile.Location = new System.Drawing.Point(89, 80);
             this.txtFilterFile.Name = "txtFilterFile";
-            this.txtFilterFile.Size = new System.Drawing.Size(225, 21);
+            this.txtFilterFile.Size = new System.Drawing.Size(304, 21);
             this.txtFilterFile.TabIndex = 2;
             this.txtFilterFile.TextChanged += new System.EventHandler(this.txtFilterFile_TextChanged);
             // 
@@ -1320,7 +1488,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(344, 298);
+            this.tabPage3.Size = new System.Drawing.Size(402, 324);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "状态栏";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1339,7 +1507,7 @@
             this.groupBox7.Controls.Add(this.chkLife);
             this.groupBox7.Location = new System.Drawing.Point(11, 132);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(320, 83);
+            this.groupBox7.Size = new System.Drawing.Size(385, 83);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "玩家状态信息";
@@ -1441,7 +1609,7 @@
             this.grpPresets.Controls.Add(this.cboMapLinesMode);
             this.grpPresets.Location = new System.Drawing.Point(11, 243);
             this.grpPresets.Name = "grpPresets";
-            this.grpPresets.Size = new System.Drawing.Size(320, 47);
+            this.grpPresets.Size = new System.Drawing.Size(385, 47);
             this.grpPresets.TabIndex = 24;
             this.grpPresets.TabStop = false;
             this.grpPresets.Text = "预设";
@@ -1479,7 +1647,7 @@
             this.groupBox3.Controls.Add(this.buffSize);
             this.groupBox3.Location = new System.Drawing.Point(11, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(320, 99);
+            this.groupBox3.Size = new System.Drawing.Size(385, 99);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buffs";
@@ -1565,7 +1733,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(344, 298);
+            this.tabPage10.Size = new System.Drawing.Size(402, 324);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "服务器屏蔽";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -1664,7 +1832,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(344, 298);
+            this.tabPage8.Size = new System.Drawing.Size(402, 324);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "DC追踪";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1686,7 +1854,7 @@
             this.groupBox9.Controls.Add(this.checkAsia);
             this.groupBox9.Location = new System.Drawing.Point(3, 7);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(335, 291);
+            this.groupBox9.Size = new System.Drawing.Size(393, 291);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "追踪";
@@ -1726,7 +1894,7 @@
             "6/6"});
             this.comboBoxWarnLevel.Location = new System.Drawing.Point(172, 95);
             this.comboBoxWarnLevel.Name = "comboBoxWarnLevel";
-            this.comboBoxWarnLevel.Size = new System.Drawing.Size(87, 20);
+            this.comboBoxWarnLevel.Size = new System.Drawing.Size(145, 20);
             this.comboBoxWarnLevel.TabIndex = 46;
             this.comboBoxWarnLevel.SelectedIndexChanged += new System.EventHandler(this.comboBoxWarnLevel_SelectedIndexChanged);
             // 
@@ -1825,7 +1993,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(344, 298);
+            this.tabPage1.Size = new System.Drawing.Size(402, 324);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "地图";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1859,12 +2027,12 @@
             this.groupBox1.Controls.Add(this.chkToggleViaMap);
             this.groupBox1.Controls.Add(this.lblIconOpacity);
             this.groupBox1.Controls.Add(this.chkToggleViaPanels);
-            this.groupBox1.Location = new System.Drawing.Point(11, 8);
+            this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 282);
+            this.groupBox1.Size = new System.Drawing.Size(385, 310);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Rendering";
+            this.groupBox1.Text = "渲染";
             // 
             // label4
             // 
@@ -2159,7 +2327,7 @@
             this.tabPage5.Controls.Add(this.grpGameInfo);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(344, 298);
+            this.tabPage5.Size = new System.Drawing.Size(402, 324);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "主要";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2174,7 +2342,7 @@
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Location = new System.Drawing.Point(11, 236);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(320, 54);
+            this.groupBox5.Size = new System.Drawing.Size(375, 54);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "地图显示语言";
@@ -2208,7 +2376,7 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(11, 159);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(320, 64);
+            this.groupBox4.Size = new System.Drawing.Size(375, 64);
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Diablo目录";
@@ -2265,7 +2433,7 @@
             this.grpGameInfo.Controls.Add(this.chkShowGameName);
             this.grpGameInfo.Location = new System.Drawing.Point(11, 8);
             this.grpGameInfo.Name = "grpGameInfo";
-            this.grpGameInfo.Size = new System.Drawing.Size(320, 133);
+            this.grpGameInfo.Size = new System.Drawing.Size(375, 133);
             this.grpGameInfo.TabIndex = 23;
             this.grpGameInfo.TabStop = false;
             this.grpGameInfo.Text = "游戏信息显示";
@@ -2421,7 +2589,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(344, 298);
+            this.tabPage9.Size = new System.Drawing.Size(402, 324);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "交流";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2430,7 +2598,7 @@
             // 
             this.pictureBox1.Image = global::MapAssist.Properties.Resources.community;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(91, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -2441,7 +2609,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 13);
+            this.label7.Location = new System.Drawing.Point(37, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(305, 12);
             this.label7.TabIndex = 2;
@@ -2449,7 +2617,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(63, 245);
+            this.button2.Location = new System.Drawing.Point(84, 258);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 22);
             this.button2.TabIndex = 1;
@@ -2476,14 +2644,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(352, 324);
+            this.tabControl1.Size = new System.Drawing.Size(410, 350);
             this.tabControl1.TabIndex = 0;
             // 
             // ConfigEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 345);
+            this.ClientSize = new System.Drawing.Size(432, 371);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2732,6 +2900,18 @@
         private System.Windows.Forms.Button btnGameInfoFont;
         private System.Windows.Forms.CheckBox chkShowAreaTimer;
         private System.Windows.Forms.CheckBox chkShowGameTimer;
+        private System.Windows.Forms.Button btnClearMagicColor;
+        private System.Windows.Forms.Button btnMagicColor;
+        private System.Windows.Forms.Button btnClearRareColor;
+        private System.Windows.Forms.Button btnRareColor;
+        private System.Windows.Forms.Button btnClearUniqueColor;
+        private System.Windows.Forms.Button btnUniqueColor;
+        private System.Windows.Forms.Button btnClearSetColor;
+        private System.Windows.Forms.Button btnSetColor;
+        private System.Windows.Forms.Button btnClearCraftedColor;
+        private System.Windows.Forms.Button btnCraftedColor;
+        private System.Windows.Forms.Button btnClearSuperiorColor;
+        private System.Windows.Forms.Button btnSuperiorColor;
         private System.Windows.Forms.CheckBox chkShowArea;
         private System.Windows.Forms.CheckBox chkShowGameName;
         private System.Windows.Forms.TabPage tabPage9;

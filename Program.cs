@@ -166,8 +166,8 @@ namespace MapAssist
                     GameManager.OnGameAccessDenied += (_, __) =>
                     {
                         var message = $"MapAssist could not read {GameManager.ProcessName} memory. 请使用管理员权限启动程序";
-                        MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                         Dispose();
+                        MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                         Application.Exit();
                         Environment.Exit(0);
                     };

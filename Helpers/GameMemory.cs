@@ -42,19 +42,6 @@ namespace MapAssist.Helpers
             {
                 _currentProcessId = processContext.ProcessId;
 
-                foreach (IIntegration integration in Program.Integrations)
-                {
-                    try
-                    {
-                        integration.Run(processContext);
-                    }
-                    catch (Exception e)
-                    {
-                        _log.Error(e, $"Integration {integration.Name} failed");
-                    }
-                }
-
-                var menuOpen = processContext.Read<byte>(GameManager.MenuOpenOffset);
                 var menuData = processContext.Read<Structs.MenuData>(GameManager.MenuDataOffset);
                 var lastHoverData = processContext.Read<Structs.HoverData>(GameManager.LastHoverDataOffset);
                 var lastNpcInteracted = (Npc)processContext.Read<ushort>(GameManager.InteractedNpcOffset);
@@ -355,7 +342,7 @@ namespace MapAssist.Helpers
                 var allUnits = ((UnitAny[])playerList.Values.ToArray()).Concat(monsterList).Concat(mercList).Concat(rawObjectUnits).Concat(rawItemUnits);
 
                 var hoveredUnits = allUnits.Where(x => x.IsHovered).ToArray();
-                if (hoveredUnits.Length > 0 && hoveredUnits[0].UnitId != lastHoverData.UnitId) hoveredUnits[0].IsHovered = false;
+                if (hoveredUnits.Length > 0) hoveredUnits[0].IsHovered = false;
 
                 if (lastHoverData.IsHovered)
                 {
@@ -396,7 +383,6 @@ namespace MapAssist.Helpers
                     Session = _sessions[_currentProcessId],
                     Roster = rosterData,
                     MenuOpen = menuData,
-                    MenuPanelOpen = menuOpen,
                     LastNpcInteracted = lastNpcInteracted,
                     ProcessId = _currentProcessId
                 };

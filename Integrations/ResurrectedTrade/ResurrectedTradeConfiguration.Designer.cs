@@ -47,14 +47,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StatusLabel.Location = new System.Drawing.Point(3, 10);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(331, 47);
+            this.StatusLabel.Size = new System.Drawing.Size(389, 73);
             this.StatusLabel.TabIndex = 0;
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(9, 66);
+            this.UsernameLabel.Location = new System.Drawing.Point(12, 66);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(41, 12);
             this.UsernameLabel.TabIndex = 1;
@@ -64,9 +64,9 @@
             // 
             this.Username.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Username.Location = new System.Drawing.Point(51, 63);
+            this.Username.Location = new System.Drawing.Point(54, 63);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(188, 21);
+            this.Username.Size = new System.Drawing.Size(246, 21);
             this.Username.TabIndex = 0;
             this.Username.TextChanged += new System.EventHandler(this.Inputs_TextChanged);
             this.Username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Inputs_KeyPress);
@@ -75,7 +75,7 @@
             // 
             this.LoginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginButton.Enabled = false;
-            this.LoginButton.Location = new System.Drawing.Point(245, 62);
+            this.LoginButton.Location = new System.Drawing.Point(306, 62);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 21);
             this.LoginButton.TabIndex = 2;
@@ -86,7 +86,7 @@
             // RegisterButton
             // 
             this.RegisterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RegisterButton.Location = new System.Drawing.Point(245, 87);
+            this.RegisterButton.Location = new System.Drawing.Point(306, 87);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(75, 21);
             this.RegisterButton.TabIndex = 3;
@@ -98,9 +98,9 @@
             // 
             this.Password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Password.Location = new System.Drawing.Point(51, 88);
+            this.Password.Location = new System.Drawing.Point(54, 88);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(188, 21);
+            this.Password.Size = new System.Drawing.Size(246, 21);
             this.Password.TabIndex = 1;
             this.Password.UseSystemPasswordChar = true;
             this.Password.TextChanged += new System.EventHandler(this.Inputs_TextChanged);
@@ -109,7 +109,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(9, 90);
+            this.PasswordLabel.Location = new System.Drawing.Point(12, 90);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(29, 12);
             this.PasswordLabel.TabIndex = 5;
@@ -118,7 +118,7 @@
             // LogoutButton
             // 
             this.LogoutButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LogoutButton.Location = new System.Drawing.Point(64, 115);
+            this.LogoutButton.Location = new System.Drawing.Point(96, 128);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(75, 21);
             this.LogoutButton.TabIndex = 4;
@@ -130,7 +130,7 @@
             // ViewOnlineButton
             // 
             this.ViewOnlineButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ViewOnlineButton.Location = new System.Drawing.Point(142, 115);
+            this.ViewOnlineButton.Location = new System.Drawing.Point(174, 128);
             this.ViewOnlineButton.Name = "ViewOnlineButton";
             this.ViewOnlineButton.Size = new System.Drawing.Size(75, 21);
             this.ViewOnlineButton.TabIndex = 6;
@@ -142,7 +142,7 @@
             // checkBoxAutoLogin
             // 
             this.checkBoxAutoLogin.AutoSize = true;
-            this.checkBoxAutoLogin.Location = new System.Drawing.Point(265, 120);
+            this.checkBoxAutoLogin.Location = new System.Drawing.Point(268, 120);
             this.checkBoxAutoLogin.Name = "checkBoxAutoLogin";
             this.checkBoxAutoLogin.Size = new System.Drawing.Size(72, 16);
             this.checkBoxAutoLogin.TabIndex = 7;
@@ -167,7 +167,7 @@
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.StatusLabel);
             this.Name = "ResurrectedTradeConfiguration";
-            this.Size = new System.Drawing.Size(338, 294);
+            this.Size = new System.Drawing.Size(396, 320);
             this.ResumeLayout(false);
             this.PerformLayout();
 
