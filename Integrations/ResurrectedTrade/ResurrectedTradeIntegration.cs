@@ -111,7 +111,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                     }
                 },
                 new ToolStripMenuItem(
-                    "暂停", null, (sender, args) =>
+                    "停止同步", null, (sender, args) =>
                     {
                         _paused = !_paused;
                         if( _paused)

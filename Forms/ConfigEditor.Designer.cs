@@ -174,6 +174,10 @@
             this.checkAsia = new System.Windows.Forms.CheckBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.positionX = new System.Windows.Forms.TextBox();
+            this.positionY = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.chkMonsterHealthBar = new System.Windows.Forms.CheckBox();
             this.btnClearBorderColor = new System.Windows.Forms.Button();
@@ -224,10 +228,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.positionX = new System.Windows.Forms.TextBox();
-            this.positionY = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -2042,6 +2042,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "渲染";
             // 
+            // positionX
+            // 
+            this.positionX.Location = new System.Drawing.Point(263, 181);
+            this.positionX.Name = "positionX";
+            this.positionX.Size = new System.Drawing.Size(100, 21);
+            this.positionX.TabIndex = 28;
+            this.positionX.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // positionY
+            // 
+            this.positionY.Location = new System.Drawing.Point(263, 208);
+            this.positionY.Name = "positionY";
+            this.positionY.Size = new System.Drawing.Size(100, 21);
+            this.positionY.TabIndex = 29;
+            this.positionY.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Location = new System.Drawing.Point(202, 212);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 12);
+            this.label29.TabIndex = 31;
+            this.label29.Text = "地图y偏移:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Location = new System.Drawing.Point(202, 187);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 12);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "地图x偏移:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -2642,10 +2678,10 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.integrationTab);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
@@ -2654,42 +2690,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(410, 350);
             this.tabControl1.TabIndex = 0;
-            // 
-            // positionX
-            // 
-            this.positionX.Location = new System.Drawing.Point(263, 181);
-            this.positionX.Name = "positionX";
-            this.positionX.Size = new System.Drawing.Size(100, 21);
-            this.positionX.TabIndex = 28;
-            this.positionX.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // positionY
-            // 
-            this.positionY.Location = new System.Drawing.Point(263, 208);
-            this.positionY.Name = "positionY";
-            this.positionY.Size = new System.Drawing.Size(100, 21);
-            this.positionY.TabIndex = 29;
-            this.positionY.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Location = new System.Drawing.Point(202, 187);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(65, 12);
-            this.label28.TabIndex = 30;
-            this.label28.Text = "地图x偏移:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Location = new System.Drawing.Point(202, 212);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(65, 12);
-            this.label29.TabIndex = 31;
-            this.label29.Text = "地图y偏移:";
             // 
             // ConfigEditor
             // 

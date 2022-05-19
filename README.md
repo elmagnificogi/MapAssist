@@ -60,6 +60,17 @@ https://www.bilibili.com/video/BV1BR4y1A7Uc?share_source=copy_web
 
 
 
+#### 地图偏移
+
+通过修改x和y调整地图偏移
+
+- Center模式下无法调整
+- 无法把地图移出窗口
+
+![image-20220519123238802](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191232838.png)
+
+
+
 #### DC追踪
 
 DC追踪功能，请根据需要自行选择
@@ -100,6 +111,8 @@ DC追踪功能，请根据需要自行选择
 
 ![image-20220517232405130](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172324173.png)
 
+- 只需要登录一次就行了
+
 只要在游戏内，就能自动同步你的仓库和物品到Web端，然后就可以出售了
 
 ![image-20220517232525739](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205172325921.png)
@@ -111,6 +124,12 @@ DC追踪功能，请根据需要自行选择
 - 功能还不完善，还在开发中，有问题欢迎提
 - 使用的人太少了，集市还太小了
 - Web的那个同步软件可以不用下载，用我的MapAssist就行
+
+不使用此功能，请关闭，否则会有额外CPU占用
+
+![image-20220519123522946](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191235982.png)
+
+
 
 
 
