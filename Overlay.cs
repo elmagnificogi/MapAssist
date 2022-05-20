@@ -216,7 +216,12 @@ namespace MapAssist
                     WindowsExternal.LeftMouseClick(windowRect.Left + width / 2, windowRect.Top + height / 20 * 9);
                 }
             }
-            
+
+            if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey))
+            {
+                    Clipboard.SetText(_gameData.Session.GameName);
+            }
+
             // out of game
             if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey))
             {

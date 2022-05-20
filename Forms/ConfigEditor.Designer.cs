@@ -2787,7 +2787,7 @@
             // lifeLeft
             // 
             this.lifeLeft.Location = new System.Drawing.Point(195, 18);
-            this.lifeLeft.MaxLength = 1;
+            this.lifeLeft.MaxLength = 2;
             this.lifeLeft.Name = "lifeLeft";
             this.lifeLeft.Size = new System.Drawing.Size(46, 21);
             this.lifeLeft.TabIndex = 25;
