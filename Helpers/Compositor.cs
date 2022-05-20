@@ -933,7 +933,11 @@ namespace MapAssist.Helpers
             // Game Name
             if (MapAssistConfiguration.Loaded.GameInfo.ShowGameName && _gameData.Session.GameName.Length > 0)
             {
-                var gameNameText = "房间名: " + _gameData.Session.GameName+" ("+ MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey+ "复制)";
+                var tail = "";
+                if (MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey != "" && MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey != null)
+                    tail = "(" + MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey + "复制)";
+
+                var gameNameText = "房间名: " + _gameData.Session.GameName+tail;
                 DrawText(gfx, anchor, gameNameText, font, fontSize, textColor, true, textAlign);
                 anchor.Y += lineHeight;
 
