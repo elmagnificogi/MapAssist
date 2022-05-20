@@ -9,6 +9,7 @@ HotkeyConfiguration:
   ShareRoomKey: F8
   AddRoomKey: F11
   RoomTemplete: 牛场[0]一起来快活啊
+  CopyRoomKey: F12
 HiddenAreas:
 - Forgotten Tower
 AuthorizedWindowTitles: []

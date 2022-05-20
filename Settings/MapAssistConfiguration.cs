@@ -298,6 +298,9 @@ public class HotkeyConfiguration
 
     [YamlMember(Alias = "RoomTemplete", ApplyNamingConventions = false)]
     public string RoomTemplete { get; set; }
+
+    [YamlMember(Alias = "CopyRoomKey", ApplyNamingConventions = false)]
+    public string CopyRoomKey { get; set; }
 }
 
 public class GameInfoConfiguration

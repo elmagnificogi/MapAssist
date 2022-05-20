@@ -118,7 +118,8 @@ namespace MapAssist
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ExportItemsKey.ToString()).Monitor(txtExportItemsKey);
             new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey.ToString()).Monitor(txtShareRoomKey);
             new Hotkey(MapAssistConfiguration.Loaded.HC.ESCKey.ToString()).Monitor(txtEscKey);
-            new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey.ToString()).Monitor(textAddRoomKey);
+            new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey.ToString()).Monitor(txtAddRoomKey);
+            new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey.ToString()).Monitor(txtCopyRoomKey);
 
             cboItemLogPosition.SelectedIndex = cboItemLogPosition.FindStringExact(MapAssistConfiguration.Loaded.ItemLog.Position.ToString().ToProperCase());
             chkItemLogEnabled.Checked = MapAssistConfiguration.Loaded.ItemLog.Enabled;
@@ -221,8 +222,9 @@ namespace MapAssist
             watchLife.Checked = MapAssistConfiguration.Loaded.HC.WatchLifeEnabled;
             lifeLeft.Text = MapAssistConfiguration.Loaded.HC.WatchLifeLeft.ToString();
             txtEscKey.Text = MapAssistConfiguration.Loaded.HC.ESCKey;
-            textAddRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey;
+            txtAddRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey;
             roomNameTemplete.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
+            txtCopyRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -1249,14 +1251,19 @@ namespace MapAssist
             }
         }
 
-        private void textAddRoomKey_TextChanged(object sender, EventArgs e)
-        {
-            MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey = textAddRoomKey.Text;
-        }
-
         private void roomNameTemplete_TextChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete = roomNameTemplete.Text;
+        }
+
+        private void txtAddRoomKey_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey = txtAddRoomKey.Text;
+        }
+
+        private void txtCopyRoomKey_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey = txtCopyRoomKey.Text;
         }
     }
 }

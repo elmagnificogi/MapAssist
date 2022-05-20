@@ -80,9 +80,11 @@
             this.integrationTabs = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.grpHotkeys = new System.Windows.Forms.GroupBox();
+            this.txtCopyRoomKey = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.roomNameTemplete = new System.Windows.Forms.TextBox();
-            this.textAddRoomKey = new System.Windows.Forms.TextBox();
+            this.txtAddRoomKey = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtShareRoomKey = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -882,9 +884,11 @@
             // 
             this.grpHotkeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpHotkeys.Controls.Add(this.txtCopyRoomKey);
+            this.grpHotkeys.Controls.Add(this.label33);
             this.grpHotkeys.Controls.Add(this.label32);
             this.grpHotkeys.Controls.Add(this.roomNameTemplete);
-            this.grpHotkeys.Controls.Add(this.textAddRoomKey);
+            this.grpHotkeys.Controls.Add(this.txtAddRoomKey);
             this.grpHotkeys.Controls.Add(this.label31);
             this.grpHotkeys.Controls.Add(this.txtShareRoomKey);
             this.grpHotkeys.Controls.Add(this.label6);
@@ -900,12 +904,31 @@
             this.grpHotkeys.Controls.Add(this.label13);
             this.grpHotkeys.Controls.Add(this.label12);
             this.grpHotkeys.Controls.Add(this.label22);
-            this.grpHotkeys.Location = new System.Drawing.Point(11, 8);
+            this.grpHotkeys.Location = new System.Drawing.Point(3, 8);
             this.grpHotkeys.Name = "grpHotkeys";
-            this.grpHotkeys.Size = new System.Drawing.Size(378, 239);
+            this.grpHotkeys.Size = new System.Drawing.Size(396, 313);
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
             this.grpHotkeys.Text = "快捷键";
+            // 
+            // txtCopyRoomKey
+            // 
+            this.txtCopyRoomKey.Location = new System.Drawing.Point(160, 239);
+            this.txtCopyRoomKey.MaxLength = 1;
+            this.txtCopyRoomKey.Name = "txtCopyRoomKey";
+            this.txtCopyRoomKey.Size = new System.Drawing.Size(94, 21);
+            this.txtCopyRoomKey.TabIndex = 27;
+            this.txtCopyRoomKey.TabStop = false;
+            this.txtCopyRoomKey.TextChanged += new System.EventHandler(this.txtCopyRoomKey_TextChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 244);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(77, 12);
+            this.label33.TabIndex = 26;
+            this.label33.Text = "仅复制房间名";
             // 
             // label32
             // 
@@ -921,21 +944,21 @@
             this.roomNameTemplete.Location = new System.Drawing.Point(264, 195);
             this.roomNameTemplete.MaxLength = 20;
             this.roomNameTemplete.Name = "roomNameTemplete";
-            this.roomNameTemplete.Size = new System.Drawing.Size(109, 21);
+            this.roomNameTemplete.Size = new System.Drawing.Size(126, 21);
             this.roomNameTemplete.TabIndex = 24;
             this.roomNameTemplete.TabStop = false;
             this.roomNameTemplete.Text = "牛场[0]，来快活啊";
             this.roomNameTemplete.TextChanged += new System.EventHandler(this.roomNameTemplete_TextChanged);
             // 
-            // textAddRoomKey
+            // txtAddRoomKey
             // 
-            this.textAddRoomKey.Location = new System.Drawing.Point(160, 195);
-            this.textAddRoomKey.MaxLength = 1;
-            this.textAddRoomKey.Name = "textAddRoomKey";
-            this.textAddRoomKey.Size = new System.Drawing.Size(94, 21);
-            this.textAddRoomKey.TabIndex = 23;
-            this.textAddRoomKey.TabStop = false;
-            this.textAddRoomKey.TextChanged += new System.EventHandler(this.textAddRoomKey_TextChanged);
+            this.txtAddRoomKey.Location = new System.Drawing.Point(160, 195);
+            this.txtAddRoomKey.MaxLength = 1;
+            this.txtAddRoomKey.Name = "txtAddRoomKey";
+            this.txtAddRoomKey.Size = new System.Drawing.Size(94, 21);
+            this.txtAddRoomKey.TabIndex = 23;
+            this.txtAddRoomKey.TabStop = false;
+            this.txtAddRoomKey.TextChanged += new System.EventHandler(this.txtAddRoomKey_TextChanged);
             // 
             // label31
             // 
@@ -3091,8 +3114,10 @@
         private System.Windows.Forms.TextBox lifeLeft;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox roomNameTemplete;
-        private System.Windows.Forms.TextBox textAddRoomKey;
+        private System.Windows.Forms.TextBox txtAddRoomKey;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox txtCopyRoomKey;
+        private System.Windows.Forms.Label label33;
     }
 }
