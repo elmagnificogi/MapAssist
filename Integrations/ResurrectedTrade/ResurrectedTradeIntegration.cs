@@ -266,7 +266,6 @@ namespace MapAssist.Integrations.ResurrectedTrade
             {
                 while (true)
                 {
-
                     if (_paused)
                     {
                         Thread.Sleep(1000);
@@ -501,7 +500,12 @@ namespace MapAssist.Integrations.ResurrectedTrade
             if (!_initialized || Profile == null || !_runner.IsInitialized() ||
                 (_nextExportPid == context.ProcessId && _nextExport > DateTime.Now)) return;
             var export = _runner.GetExport(context.Handle, context.BaseAddr);
-            if (export == null) return;
+            if (export == null)
+            {
+                _nextExportPid = context.ProcessId;
+                _nextExport = DateTime.Now + TimeSpan.FromSeconds(1);
+                return;
+            };
             // Prevent posting more exports until the loop submitting the exports have adjusted the time.
             _nextExport = DateTime.MaxValue;
             // Update the last process id.
