@@ -206,6 +206,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
         public void Initialize(byte[] buffer, ProcessContext context)
         {
             if (_initialized) return;
+            if (_paused) return;
 
             UnitHashTable = (Ptr)GameManager.UnitHashTableOffset - context.BaseAddr;
             SessionData = FindAndResolvePattern(buffer, context, SessionDataPattern);
@@ -497,6 +498,9 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
         public void Run(ProcessContext context)
         {
+            if (_paused)
+                return;
+
             if (!_initialized || Profile == null || !_runner.IsInitialized() ||
                 (_nextExportPid == context.ProcessId && _nextExport > DateTime.Now)) return;
             var export = _runner.GetExport(context.Handle, context.BaseAddr);
