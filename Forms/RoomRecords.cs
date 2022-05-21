@@ -122,7 +122,7 @@ namespace MapAssist.Forms
                     {
                         ListViewSubItem slv = lv.GetSubItemAt(e.X, e.Y);
                         if (slv != null)
-                            Clipboard.SetDataObject(slv.Text);
+                            Clipboard.SetText(slv.Text);
                     }
                 }
             }
