@@ -238,7 +238,7 @@ namespace MapAssist.Types
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         show.Clear();
                         //Debug.WriteLine(ex);

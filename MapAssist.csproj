@@ -646,6 +646,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)Config.yaml" "$(TargetDir)" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Config.yaml" "$(TargetDir)" /Y
+xcopy "$(ProjectDir)MA_Filter.exe" "$(TargetDir)" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>
