@@ -24,6 +24,9 @@ namespace MapAssist.Types
 
         public void Check(GameData g)
         {
+            if (g == null)
+                return;
+
             if (!MapAssistConfiguration.Loaded.HC.WatchLifeEnabled)
                 return;
 
@@ -32,7 +35,10 @@ namespace MapAssist.Types
             LifeLeft = MapAssistConfiguration.Loaded.HC.WatchLifeLeft;
             try
             {
-                var curlife = g?.PlayerUnit?.LifePercentage;
+                var curlife = g.PlayerUnit?.LifePercentage;
+                var inTown = AreaExtensions.IsTown(g.Area);
+                if (inTown)
+                    return;
                 if (curlife != null)
                     if (curlife < LifeLeft  && last_life != (int)curlife)
                     {

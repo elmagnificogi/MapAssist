@@ -89,7 +89,7 @@ namespace MapAssist.Types
             }
             else if (item.IsIdentifiedForLog)
             {
-                itemPrefix += "[Identified] ";
+                itemPrefix += "[ÒÑ¼ø¶¨] ";
             }
 
             if (rule == null) return itemPrefix + itemBaseName;
