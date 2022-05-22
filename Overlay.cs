@@ -231,9 +231,16 @@ namespace MapAssist
                 var num = int.Parse(roomName.Split('[')[1].Split(']')[0]) +1;
                 roomName = head +num.ToString()+ tail;
                 var roomTemplete = head + "[" +num.ToString()+ "]" + tail;
-                MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete = roomTemplete;
-                Clipboard.SetText(roomName);
-                WindowsExternal.SendPasteKey(GameManager.MainWindowHandle);
+                try
+                {
+                    Clipboard.SetText(roomName);
+                    WindowsExternal.SendPasteKey(GameManager.MainWindowHandle);
+                    MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete = roomTemplete;
+                }
+                catch
+                {
+                    _log.Error("copy and paste failed");
+                }
             }
         }
 
