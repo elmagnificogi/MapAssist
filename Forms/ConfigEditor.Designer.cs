@@ -314,7 +314,7 @@
             // btnRemoveHidden
             // 
             this.btnRemoveHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveHidden.Location = new System.Drawing.Point(405, 48);
+            this.btnRemoveHidden.Location = new System.Drawing.Point(352, 56);
             this.btnRemoveHidden.Name = "btnRemoveHidden";
             this.btnRemoveHidden.Size = new System.Drawing.Size(20, 21);
             this.btnRemoveHidden.TabIndex = 2;
@@ -325,7 +325,7 @@
             // btnAddHidden
             // 
             this.btnAddHidden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddHidden.Location = new System.Drawing.Point(405, 19);
+            this.btnAddHidden.Location = new System.Drawing.Point(352, 24);
             this.btnAddHidden.Name = "btnAddHidden";
             this.btnAddHidden.Size = new System.Drawing.Size(20, 21);
             this.btnAddHidden.TabIndex = 1;

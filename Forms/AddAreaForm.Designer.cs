@@ -37,28 +37,29 @@ namespace MapAssist
             // lstAreas
             // 
             this.lstAreas.FormattingEnabled = true;
-            this.lstAreas.Location = new System.Drawing.Point(12, 14);
+            this.lstAreas.ItemHeight = 12;
+            this.lstAreas.Location = new System.Drawing.Point(12, 13);
             this.lstAreas.Name = "lstAreas";
-            this.lstAreas.Size = new System.Drawing.Size(287, 173);
+            this.lstAreas.Size = new System.Drawing.Size(287, 160);
             this.lstAreas.TabIndex = 0;
             this.lstAreas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstAreas_MouseDoubleClick);
             // 
             // btnAddArea
             // 
-            this.btnAddArea.Location = new System.Drawing.Point(12, 193);
+            this.btnAddArea.Location = new System.Drawing.Point(12, 178);
             this.btnAddArea.Name = "btnAddArea";
-            this.btnAddArea.Size = new System.Drawing.Size(287, 23);
+            this.btnAddArea.Size = new System.Drawing.Size(287, 21);
             this.btnAddArea.TabIndex = 1;
-            this.btnAddArea.Text = "Add Area";
+            this.btnAddArea.Text = "添加场景";
             this.btnAddArea.UseVisualStyleBackColor = true;
             this.btnAddArea.Click += new System.EventHandler(this.btnAddArea_Click);
             // 
             // AddAreaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(311, 224);
+            this.ClientSize = new System.Drawing.Size(311, 207);
             this.Controls.Add(this.btnAddArea);
             this.Controls.Add(this.lstAreas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

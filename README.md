@@ -60,6 +60,18 @@ https://www.bilibili.com/video/BV1BR4y1A7Uc?share_source=copy_web
 
 
 
+#### 掉落声音
+
+修改掉落声音
+
+![image-20220522162732168](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221627263.png)
+
+声音文件放在同目录下就行了
+
+![image-20220522162814230](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221628263.png)
+
+
+
 #### 地图偏移
 
 通过修改x和y调整地图偏移
