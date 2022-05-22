@@ -177,6 +177,18 @@ F12仅复制当前房间名
 
 
 
+## 物品过滤
+
+![image-20220522170044735](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221700766.png)
+
+![image-20220522170217797](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221702843.png)
+
+点击后自动打开我的过滤器，导入同目录下的`ItemFilter.yaml`就可以进行修改了
+
+![image-20220522170203980](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221702010.png)
+
+具体使用细节请看同目录下的`MA_Filter使用指南.pdf`
+
 
 
 暗黑2重置交流群：941746977，edit by elmagnifico
