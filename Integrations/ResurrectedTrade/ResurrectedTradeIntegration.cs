@@ -47,7 +47,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
         );
 
         private static readonly ResolvablePattern WidgetStatesPattern =
-            new ResolvablePattern("48 8B 0D ? ? ? ? 48 C7 C7", 3);
+            new ResolvablePattern("48 8B 0D ? ? ? ? 4C 8D 44 24 ? 48 03 C2", 3);
 
         private static readonly ResolvablePattern CharFlagsPattern = new ResolvablePattern("48 8B 2D ? ? ? ? 8B FE", 3);
 
