@@ -455,6 +455,12 @@ public class HCConfiguration
     [YamlMember(Alias = "WatchLifeLeft", ApplyNamingConventions = false)]
     public int WatchLifeLeft { get; set; }
 
+    [YamlMember(Alias = "WatchMaNaEnabled", ApplyNamingConventions = false)]
+    public bool WatchMaNaEnabled { get; set; }
+
+    [YamlMember(Alias = "WatchManaLeft", ApplyNamingConventions = false)]
+    public int WatchManaLeft { get; set; }
+
     [YamlMember(Alias = "ESCKey", ApplyNamingConventions = false)]
     public string ESCKey { get; set; }
 }

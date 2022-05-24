@@ -240,6 +240,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.manaLeft = new System.Windows.Forms.TextBox();
+            this.watchMana = new System.Windows.Forms.CheckBox();
             this.lifeLeft = new System.Windows.Forms.TextBox();
             this.watchLife = new System.Windows.Forms.CheckBox();
             this.txtEscKey = new System.Windows.Forms.TextBox();
@@ -2824,6 +2826,8 @@
             // 
             // tabPage11
             // 
+            this.tabPage11.Controls.Add(this.manaLeft);
+            this.tabPage11.Controls.Add(this.watchMana);
             this.tabPage11.Controls.Add(this.lifeLeft);
             this.tabPage11.Controls.Add(this.watchLife);
             this.tabPage11.Controls.Add(this.txtEscKey);
@@ -2835,6 +2839,27 @@
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "HC";
             this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // manaLeft
+            // 
+            this.manaLeft.Location = new System.Drawing.Point(195, 47);
+            this.manaLeft.MaxLength = 2;
+            this.manaLeft.Name = "manaLeft";
+            this.manaLeft.Size = new System.Drawing.Size(46, 21);
+            this.manaLeft.TabIndex = 27;
+            this.manaLeft.TabStop = false;
+            this.manaLeft.TextChanged += new System.EventHandler(this.manaLeft_TextChanged);
+            // 
+            // watchMana
+            // 
+            this.watchMana.AutoSize = true;
+            this.watchMana.Location = new System.Drawing.Point(21, 50);
+            this.watchMana.Name = "watchMana";
+            this.watchMana.Size = new System.Drawing.Size(162, 16);
+            this.watchMana.TabIndex = 26;
+            this.watchMana.Text = "蓝量 % 监控，并一键退出";
+            this.watchMana.UseVisualStyleBackColor = true;
+            this.watchMana.CheckedChanged += new System.EventHandler(this.watchMana_CheckedChanged);
             // 
             // lifeLeft
             // 
@@ -2855,11 +2880,11 @@
             this.watchLife.TabIndex = 24;
             this.watchLife.Text = "血量 % 监控，并一键退出";
             this.watchLife.UseVisualStyleBackColor = true;
-            this.watchLife.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.watchLife.CheckedChanged += new System.EventHandler(this.watchLife_CheckedChanged);
             // 
             // txtEscKey
             // 
-            this.txtEscKey.Location = new System.Drawing.Point(147, 53);
+            this.txtEscKey.Location = new System.Drawing.Point(147, 82);
             this.txtEscKey.MaxLength = 1;
             this.txtEscKey.Name = "txtEscKey";
             this.txtEscKey.Size = new System.Drawing.Size(94, 21);
@@ -2870,7 +2895,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(19, 57);
+            this.label30.Location = new System.Drawing.Point(19, 86);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(113, 12);
             this.label30.TabIndex = 22;
@@ -3175,5 +3200,7 @@
         private System.Windows.Forms.CheckBox chkDebuffs;
         private System.Windows.Forms.CheckBox chkPassives;
         private System.Windows.Forms.CheckBox chkAuras;
+        private System.Windows.Forms.TextBox manaLeft;
+        private System.Windows.Forms.CheckBox watchMana;
     }
 }

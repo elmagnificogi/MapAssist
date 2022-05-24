@@ -225,6 +225,8 @@ namespace MapAssist
 
             watchLife.Checked = MapAssistConfiguration.Loaded.HC.WatchLifeEnabled;
             lifeLeft.Text = MapAssistConfiguration.Loaded.HC.WatchLifeLeft.ToString();
+            watchMana.Checked = MapAssistConfiguration.Loaded.HC.WatchMaNaEnabled;
+            manaLeft.Text = MapAssistConfiguration.Loaded.HC.WatchManaLeft.ToString();
             txtEscKey.Text = MapAssistConfiguration.Loaded.HC.ESCKey;
             txtAddRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey;
             roomNameTemplete.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
@@ -1288,6 +1290,33 @@ namespace MapAssist
         private void txtCopyRoomKey_TextChanged(object sender, EventArgs e)
         {
             MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey = txtCopyRoomKey.Text;
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HC.WatchMaNaEnabled = watchLife.Checked;
+        }
+
+        private void watchLife_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HC.WatchLifeEnabled = watchLife.Checked;
+        }
+
+        private void watchMana_CheckedChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.HC.WatchMaNaEnabled = watchMana.Checked;
+        }
+
+        private void manaLeft_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MapAssistConfiguration.Loaded.HC.WatchManaLeft = int.Parse(manaLeft.Text);
+            }
+            catch
+            {
+                MapAssistConfiguration.Loaded.HC.WatchManaLeft = 35;
+            }
         }
     }
 }
