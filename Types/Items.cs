@@ -9,6 +9,8 @@ namespace MapAssist.Types
 {
     public static class Items
     {
+        private static readonly NLog.Logger _log = NLog.LogManager.GetCurrentClassLogger();
+
         public static Dictionary<int, HashSet<string>> ItemUnitHashesSeen = new Dictionary<int, HashSet<string>>();
         public static Dictionary<int, HashSet<uint>> ItemUnitIdsSeen = new Dictionary<int, HashSet<uint>>();
         public static Dictionary<int, HashSet<uint>> ItemUnitIdsToSkip = new Dictionary<int, HashSet<uint>>();
@@ -30,13 +32,18 @@ namespace MapAssist.Types
                 ItemUnitHashesSeen[processId].Add(item.HashString);
             }
 
-            if (item.IsPlayerOwned && item.IsIdentified)
+            ItemUnitIdsSeen[processId].Add(item.UnitId);
+
+            if (item.IsAnyPlayerHolding && item.IsIdentified)
             {
                 InventoryItemUnitIdsToSkip[processId].Add(item.UnitId);
                 ItemUnitIdsToSkip[processId].Add(item.UnitId);
-            }
 
-            ItemUnitIdsSeen[processId].Add(item.UnitId);
+                if (!item.IsPlayerOwned)
+                {
+                    return;
+                }
+            }
 
             var (logItem, rule) = LootFilter.Filter(item, areaLevel, playerLevel);
             if (!logItem) return;
@@ -48,18 +55,22 @@ namespace MapAssist.Types
 
             item.IsIdentifiedForLog = item.IsIdentified;
 
-            ItemLog[processId].Add(new ItemLogEntry()
+            var newLogEntry = new ItemLogEntry()
             {
                 ItemHashString = item.HashString,
                 UnitItem = item,
                 Rule = rule,
                 Area = area
-            });
+            };
+
+            ItemLog[processId].Add(newLogEntry);
+
+            _log.Info($"Added item to log: {newLogEntry.Text}");
         }
 
         public static bool CheckInventoryItem(UnitItem item, int processId) =>
             MapAssistConfiguration.Loaded.ItemLog.CheckItemOnIdentify &&
-            item.IsIdentified && item.IsPlayerOwned && !item.IsInSocket &&
+            item.IsIdentified && item.IsPlayerOwned && item.IsInInventory &&
             !InventoryItemUnitIdsToSkip[processId].Contains(item.UnitId);
 
         public static bool CheckDroppedItem(UnitItem item, int processId) =>
@@ -471,7 +482,9 @@ namespace MapAssist.Types
 
         public static int GetItemStat(UnitItem item, Stats.Stat stat)
         {
-            return item.Stats.TryGetValue(stat, out var statValue) ? statValue : 0;
+            return item.Stats.TryGetValue(stat, out var statValue) ? statValue :
+                item.StatsAdded != null && item.StatsAdded.TryGetValue(stat, out var statAddedValue) ? statAddedValue :
+                item.StaffMods != null && item.StaffMods.TryGetValue(stat, out var staffModValue) ? staffModValue : 0;
         }
 
         public static int GetItemStatShifted(UnitItem item, Stats.Stat stat)

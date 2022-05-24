@@ -14,7 +14,7 @@ HiddenAreas:
 - Forgotten Tower
 AuthorizedWindowTitles: []
 RenderingConfiguration:
-  Opacity: 0.5
+  Opacity: 0.3
   IconOpacity: 0.9
   OverlayMode: true
   Position: Center
@@ -27,6 +27,10 @@ RenderingConfiguration:
   Size: 800
   ZoomLevel: 1
   BuffSize: 1
+  ShowBuffBarBuffs: true
+  ShowBuffBarAuras: true
+  ShowBuffBarPassives: true
+  ShowBuffBarDebuffs: true
   BuffAlertLowRes: true
   BuffPosition: Bottom
   ShowLife: false

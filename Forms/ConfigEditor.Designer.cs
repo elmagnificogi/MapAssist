@@ -157,6 +157,10 @@
             this.lblBuffSize = new System.Windows.Forms.Label();
             this.cboBuffPosition = new System.Windows.Forms.ComboBox();
             this.buffSize = new System.Windows.Forms.TrackBar();
+            this.chkDebuffs = new System.Windows.Forms.CheckBox();
+            this.chkPassives = new System.Windows.Forms.CheckBox();
+            this.chkAuras = new System.Windows.Forms.CheckBox();
+            this.chkBuffs = new System.Windows.Forms.CheckBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label27 = new System.Windows.Forms.Label();
             this.checkedListBlockServer = new System.Windows.Forms.CheckedListBox();
@@ -1163,7 +1167,7 @@
             this.btnClearSuperiorColor.FlatAppearance.BorderSize = 0;
             this.btnClearSuperiorColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSuperiorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearSuperiorColor.Location = new System.Drawing.Point(186, 247);
+            this.btnClearSuperiorColor.Location = new System.Drawing.Point(188, 238);
             this.btnClearSuperiorColor.Name = "btnClearSuperiorColor";
             this.btnClearSuperiorColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearSuperiorColor.TabIndex = 53;
@@ -1174,11 +1178,11 @@
             // btnSuperiorColor
             // 
             this.btnSuperiorColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuperiorColor.Location = new System.Drawing.Point(129, 247);
+            this.btnSuperiorColor.Location = new System.Drawing.Point(131, 238);
             this.btnSuperiorColor.Name = "btnSuperiorColor";
             this.btnSuperiorColor.Size = new System.Drawing.Size(56, 23);
             this.btnSuperiorColor.TabIndex = 54;
-            this.btnSuperiorColor.Text = "特等";
+            this.btnSuperiorColor.Text = "Superior";
             this.btnSuperiorColor.UseVisualStyleBackColor = true;
             this.btnSuperiorColor.Click += new System.EventHandler(this.btnSuperiorColor_Click);
             // 
@@ -1187,7 +1191,7 @@
             this.btnClearUniqueColor.FlatAppearance.BorderSize = 0;
             this.btnClearUniqueColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearUniqueColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearUniqueColor.Location = new System.Drawing.Point(272, 280);
+            this.btnClearUniqueColor.Location = new System.Drawing.Point(274, 271);
             this.btnClearUniqueColor.Name = "btnClearUniqueColor";
             this.btnClearUniqueColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearUniqueColor.TabIndex = 51;
@@ -1198,11 +1202,11 @@
             // btnUniqueColor
             // 
             this.btnUniqueColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUniqueColor.Location = new System.Drawing.Point(215, 280);
+            this.btnUniqueColor.Location = new System.Drawing.Point(217, 271);
             this.btnUniqueColor.Name = "btnUniqueColor";
             this.btnUniqueColor.Size = new System.Drawing.Size(56, 23);
             this.btnUniqueColor.TabIndex = 52;
-            this.btnUniqueColor.Text = "暗金";
+            this.btnUniqueColor.Text = "Unique";
             this.btnUniqueColor.UseVisualStyleBackColor = true;
             this.btnUniqueColor.Click += new System.EventHandler(this.btnUniqueColor_Click);
             // 
@@ -1211,7 +1215,7 @@
             this.btnClearSetColor.FlatAppearance.BorderSize = 0;
             this.btnClearSetColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearSetColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearSetColor.Location = new System.Drawing.Point(186, 280);
+            this.btnClearSetColor.Location = new System.Drawing.Point(188, 271);
             this.btnClearSetColor.Name = "btnClearSetColor";
             this.btnClearSetColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearSetColor.TabIndex = 49;
@@ -1222,11 +1226,11 @@
             // btnSetColor
             // 
             this.btnSetColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetColor.Location = new System.Drawing.Point(129, 280);
+            this.btnSetColor.Location = new System.Drawing.Point(131, 271);
             this.btnSetColor.Name = "btnSetColor";
             this.btnSetColor.Size = new System.Drawing.Size(56, 23);
             this.btnSetColor.TabIndex = 50;
-            this.btnSetColor.Text = "套装";
+            this.btnSetColor.Text = "Set";
             this.btnSetColor.UseVisualStyleBackColor = true;
             this.btnSetColor.Click += new System.EventHandler(this.btnSetColor_Click);
             // 
@@ -1235,7 +1239,7 @@
             this.btnClearCraftedColor.FlatAppearance.BorderSize = 0;
             this.btnClearCraftedColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearCraftedColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearCraftedColor.Location = new System.Drawing.Point(358, 280);
+            this.btnClearCraftedColor.Location = new System.Drawing.Point(360, 271);
             this.btnClearCraftedColor.Name = "btnClearCraftedColor";
             this.btnClearCraftedColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearCraftedColor.TabIndex = 47;
@@ -1246,11 +1250,11 @@
             // btnCraftedColor
             // 
             this.btnCraftedColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCraftedColor.Location = new System.Drawing.Point(301, 280);
+            this.btnCraftedColor.Location = new System.Drawing.Point(303, 271);
             this.btnCraftedColor.Name = "btnCraftedColor";
             this.btnCraftedColor.Size = new System.Drawing.Size(56, 23);
             this.btnCraftedColor.TabIndex = 48;
-            this.btnCraftedColor.Text = "手工";
+            this.btnCraftedColor.Text = "Crafted";
             this.btnCraftedColor.UseVisualStyleBackColor = true;
             this.btnCraftedColor.Click += new System.EventHandler(this.btnCraftedColor_Click);
             // 
@@ -1259,7 +1263,7 @@
             this.btnClearRareColor.FlatAppearance.BorderSize = 0;
             this.btnClearRareColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearRareColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearRareColor.Location = new System.Drawing.Point(358, 247);
+            this.btnClearRareColor.Location = new System.Drawing.Point(360, 238);
             this.btnClearRareColor.Name = "btnClearRareColor";
             this.btnClearRareColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearRareColor.TabIndex = 45;
@@ -1270,11 +1274,11 @@
             // btnRareColor
             // 
             this.btnRareColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRareColor.Location = new System.Drawing.Point(301, 247);
+            this.btnRareColor.Location = new System.Drawing.Point(303, 238);
             this.btnRareColor.Name = "btnRareColor";
             this.btnRareColor.Size = new System.Drawing.Size(56, 23);
             this.btnRareColor.TabIndex = 46;
-            this.btnRareColor.Text = "金装";
+            this.btnRareColor.Text = "Rare";
             this.btnRareColor.UseVisualStyleBackColor = true;
             this.btnRareColor.Click += new System.EventHandler(this.btnRareColor_Click);
             // 
@@ -1283,7 +1287,7 @@
             this.btnClearMagicColor.FlatAppearance.BorderSize = 0;
             this.btnClearMagicColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearMagicColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearMagicColor.Location = new System.Drawing.Point(272, 247);
+            this.btnClearMagicColor.Location = new System.Drawing.Point(274, 238);
             this.btnClearMagicColor.Name = "btnClearMagicColor";
             this.btnClearMagicColor.Size = new System.Drawing.Size(23, 23);
             this.btnClearMagicColor.TabIndex = 43;
@@ -1294,11 +1298,11 @@
             // btnMagicColor
             // 
             this.btnMagicColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMagicColor.Location = new System.Drawing.Point(215, 247);
+            this.btnMagicColor.Location = new System.Drawing.Point(217, 238);
             this.btnMagicColor.Name = "btnMagicColor";
             this.btnMagicColor.Size = new System.Drawing.Size(56, 23);
             this.btnMagicColor.TabIndex = 44;
-            this.btnMagicColor.Text = "蓝装";
+            this.btnMagicColor.Text = "Magic";
             this.btnMagicColor.UseVisualStyleBackColor = true;
             this.btnMagicColor.Click += new System.EventHandler(this.btnMagicColor_Click);
             // 
@@ -1727,9 +1731,13 @@
             this.groupBox3.Controls.Add(this.lblBuffSize);
             this.groupBox3.Controls.Add(this.cboBuffPosition);
             this.groupBox3.Controls.Add(this.buffSize);
+            this.groupBox3.Controls.Add(this.chkDebuffs);
+            this.groupBox3.Controls.Add(this.chkPassives);
+            this.groupBox3.Controls.Add(this.chkAuras);
+            this.groupBox3.Controls.Add(this.chkBuffs);
             this.groupBox3.Location = new System.Drawing.Point(11, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(385, 99);
+            this.groupBox3.Size = new System.Drawing.Size(385, 107);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Buffs";
@@ -1737,7 +1745,7 @@
             // chkAlertLowerRes
             // 
             this.chkAlertLowerRes.AutoSize = true;
-            this.chkAlertLowerRes.Location = new System.Drawing.Point(9, 72);
+            this.chkAlertLowerRes.Location = new System.Drawing.Point(249, 82);
             this.chkAlertLowerRes.Name = "chkAlertLowerRes";
             this.chkAlertLowerRes.Size = new System.Drawing.Size(96, 16);
             this.chkAlertLowerRes.TabIndex = 23;
@@ -1801,6 +1809,50 @@
             this.buffSize.TabIndex = 15;
             this.buffSize.Scroll += new System.EventHandler(this.buffSize_Scroll);
             this.buffSize.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.IgnoreMouseWheel);
+            // 
+            // chkDebuffs
+            // 
+            this.chkDebuffs.AutoSize = true;
+            this.chkDebuffs.Location = new System.Drawing.Point(171, 82);
+            this.chkDebuffs.Name = "chkDebuffs";
+            this.chkDebuffs.Size = new System.Drawing.Size(72, 16);
+            this.chkDebuffs.TabIndex = 29;
+            this.chkDebuffs.Text = "异常状态";
+            this.chkDebuffs.UseVisualStyleBackColor = true;
+            this.chkDebuffs.CheckedChanged += new System.EventHandler(this.chkDebuffs_CheckedChanged);
+            // 
+            // chkPassives
+            // 
+            this.chkPassives.AutoSize = true;
+            this.chkPassives.Location = new System.Drawing.Point(117, 82);
+            this.chkPassives.Name = "chkPassives";
+            this.chkPassives.Size = new System.Drawing.Size(48, 16);
+            this.chkPassives.TabIndex = 28;
+            this.chkPassives.Text = "被动";
+            this.chkPassives.UseVisualStyleBackColor = true;
+            this.chkPassives.CheckedChanged += new System.EventHandler(this.chkPassives_CheckedChanged);
+            // 
+            // chkAuras
+            // 
+            this.chkAuras.AutoSize = true;
+            this.chkAuras.Location = new System.Drawing.Point(67, 82);
+            this.chkAuras.Name = "chkAuras";
+            this.chkAuras.Size = new System.Drawing.Size(48, 16);
+            this.chkAuras.TabIndex = 27;
+            this.chkAuras.Text = "光环";
+            this.chkAuras.UseVisualStyleBackColor = true;
+            this.chkAuras.CheckedChanged += new System.EventHandler(this.chkAuras_CheckedChanged);
+            // 
+            // chkBuffs
+            // 
+            this.chkBuffs.AutoSize = true;
+            this.chkBuffs.Location = new System.Drawing.Point(11, 82);
+            this.chkBuffs.Name = "chkBuffs";
+            this.chkBuffs.Size = new System.Drawing.Size(48, 16);
+            this.chkBuffs.TabIndex = 26;
+            this.chkBuffs.Text = "增益";
+            this.chkBuffs.UseVisualStyleBackColor = true;
+            this.chkBuffs.CheckedChanged += new System.EventHandler(this.chkBuffs_CheckedChanged);
             // 
             // tabPage10
             // 
@@ -3119,5 +3171,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtCopyRoomKey;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.CheckBox chkBuffs;
+        private System.Windows.Forms.CheckBox chkDebuffs;
+        private System.Windows.Forms.CheckBox chkPassives;
+        private System.Windows.Forms.CheckBox chkAuras;
     }
 }

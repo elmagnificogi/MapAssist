@@ -41,6 +41,7 @@ namespace MapAssist.Helpers
             using (processContext)
             {
                 _currentProcessId = processContext.ProcessId;
+                var currentWindowHandle = GameManager.MainWindowHandle;
 
                 foreach (IIntegration integration in Program.Integrations)
                 {
@@ -58,6 +59,7 @@ namespace MapAssist.Helpers
                 var lastHoverData = processContext.Read<Structs.HoverData>(GameManager.LastHoverDataOffset);
                 var lastNpcInteracted = (Npc)processContext.Read<ushort>(GameManager.InteractedNpcOffset);
                 var rosterData = new Roster(GameManager.RosterDataOffset);
+                var pets = new Pets(GameManager.PetsOffset);
 
                 if (!menuData.InGame)
                 {
@@ -223,7 +225,19 @@ namespace MapAssist.Helpers
                     .Where(x => x != null && x.UnitId < uint.MaxValue).ToArray();
 
                 var monsterList = rawMonsterUnits.Where(x => x.UnitType == UnitType.Monster && x.IsMonster).ToArray();
-                var mercList = rawMonsterUnits.Where(x => x.UnitType == UnitType.Monster && x.IsMerc).ToArray();
+
+                foreach (var petEntry in pets.List.Where(x => x.IsMerc).ToArray())
+                {
+                    var merc = rawMonsterUnits.FirstOrDefault(x => x.UnitId == petEntry.UnitId);
+
+                    if (merc != null)
+                    {
+                        petEntry.IsPlayerOwned = playerUnit.UnitId == petEntry.OwnerId;
+                        merc.PetEntry = petEntry;
+                    }
+                }
+
+                var mercList = rawMonsterUnits.Where(x => x.IsMerc).ToArray();
 
                 // Objects
                 var rawObjectUnits = GetUnits<UnitObject>(UnitType.Object, true);
@@ -366,12 +380,12 @@ namespace MapAssist.Helpers
                 _firstMemoryRead = false;
                 _errorThrown = false;
 
-                if (_currentProcessId != processContext.ProcessId)
+                if (currentWindowHandle != GameManager.MainWindowHandle)
                 {
                     if (_errorThrown) return null;
 
                     _errorThrown = true;
-                    throw new Exception("Process ID changed in the middle of the frame.");
+                    throw new Exception("Window handle changed in the middle of the frame");
                 }
 
                 return new GameData
@@ -380,7 +394,7 @@ namespace MapAssist.Helpers
                     MapSeed = mapSeed,
                     Area = levelId,
                     Difficulty = gameDifficulty,
-                    MainWindowHandle = GameManager.MainWindowHandle,
+                    MainWindowHandle = currentWindowHandle,
                     PlayerName = playerUnit.Name,
                     PlayerUnit = playerUnit,
                     Players = playerList,

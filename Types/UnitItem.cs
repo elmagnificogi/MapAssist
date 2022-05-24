@@ -11,7 +11,7 @@ namespace MapAssist.Types
     public class UnitItem : UnitAny
     {
         public ItemData ItemData { get; private set; }
-        public new bool IsPlayerOwned { get; set; } = false;
+        public bool IsPlayerOwned { get; set; } = false;
         public Npc VendorOwner { get; set; } = Npc.Invalid;
         public Item Item => (Item)TxtFileNo;
         public ItemMode ItemMode => (ItemMode)Struct.Mode;
@@ -55,6 +55,8 @@ namespace MapAssist.Types
         public bool IsRuneWord => (ItemData.ItemFlags & ItemFlags.IFLAG_RUNEWORD) == ItemFlags.IFLAG_RUNEWORD;
 
         public bool IsDropped => ItemModeMapped == ItemModeMapped.Ground;
+
+        public bool IsInInventory => ItemModeMapped == ItemModeMapped.Inventory;
 
         public bool IsInStore => ItemModeMapped == ItemModeMapped.Vendor;
 

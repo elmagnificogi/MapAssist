@@ -3,7 +3,6 @@ using MapAssist.Settings;
 using MapAssist.Types;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MapAssist.Helpers
 {
@@ -23,7 +22,6 @@ namespace MapAssist.Helpers
             [Area.RockyWaste] = Area.DryHills,
             [Area.DryHills] = Area.FarOasis,
             [Area.FarOasis] = Area.LostCity,
-            [Area.SpiderForest] = Area.GreatMarsh,
             [Area.FlayerJungle] = Area.LowerKurast,
             [Area.KurastBazaar] = Area.UpperKurast,
             [Area.UpperKurast] = Area.KurastCauseway,
@@ -41,7 +39,7 @@ namespace MapAssist.Helpers
             [Area.LostCity] = Area.ValleyOfSnakes,
             [Area.SpiderForest] = Area.SpiderCavern,
             [Area.FlayerJungle] = Area.FlayerDungeonLevel1,
-            [Area.KurastBazaar] = Area.RuinedTemple,
+            [Area.KurastBazaar] = Area.SewersLevel1Act3,
             [Area.CrystallinePassage] = Area.FrozenRiver,
         };
 
@@ -171,25 +169,6 @@ namespace MapAssist.Helpers
 
         public static List<PointOfInterest> Get(MapApi mapApi, AreaData areaData, GameData gameData)
         {
-            var pointsOfInterest = GetArea(mapApi, areaData, gameData);
-
-            if (AreaExtensions.RequiresStitching(areaData.Area))
-            {
-                foreach (var adjacentArea in areaData.AdjacentAreas.Values.ToList())
-                {
-                    if (AreaExtensions.RequiresStitching(adjacentArea.Area))
-                    {
-                        var adjacentPoi = GetArea(mapApi, adjacentArea, gameData).Where(a => !pointsOfInterest.Any(b => a.Position.Subtract(b.Position).Length() < 5)).ToList(); // Prevent poi in an adjacent area from overlapping with poi in the current area
-                        pointsOfInterest.AddRange(adjacentPoi);
-                    }
-                }
-            }
-
-            return pointsOfInterest;
-        }
-
-        public static List<PointOfInterest> GetArea(MapApi mapApi, AreaData areaData, GameData gameData)
-        {
             var pointsOfInterest = new List<PointOfInterest>();
             var areaRenderDecided = new List<Area>();
 
@@ -209,14 +188,15 @@ namespace MapAssist.Helpers
                         Area.TalRashasTomb5, Area.TalRashasTomb6, Area.TalRashasTomb7
                     };
                     var realTomb = Area.None;
-                    Parallel.ForEach(tombs, tombArea =>
+                    foreach (var tombArea in tombs)
                     {
                         AreaData tombData = mapApi.GetMapData(tombArea);
                         if (tombData.Objects.ContainsKey(GameObject.HoradricOrifice))
                         {
                             realTomb = tombArea;
+                            break;
                         }
-                    });
+                    }
 
                     if (realTomb != Area.None && areaData.AdjacentLevels[realTomb].Exits.Any())
                     {
@@ -316,6 +296,51 @@ namespace MapAssist.Helpers
                     });
                     areaRenderDecided.Add(Area.InnerCloister);
                 }
+                else if (areaData.Area == Area.SpiderForest)
+                {
+                    if (areaData.AdjacentLevels.TryGetValue(Area.FlayerJungle, out var flayerJungleLevel))
+                    {
+                        pointsOfInterest.Add(new PointOfInterest
+                        {
+                            Area = areaData.Area,
+                            NextArea = Area.FlayerJungle,
+                            Label = Area.FlayerJungle.MapLabel(gameData.Difficulty),
+                            Position = flayerJungleLevel.Exits[0],
+                            RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.NextArea,
+                            Type = PoiType.NextArea
+                        });
+                        areaRenderDecided.Add(Area.FlayerJungle);
+                    }
+                    else if (areaData.AdjacentLevels.TryGetValue(Area.GreatMarsh, out var greatMarshLevel))
+                    {
+                        pointsOfInterest.Add(new PointOfInterest
+                        {
+                            Area = areaData.Area,
+                            NextArea = Area.GreatMarsh,
+                            Label = Area.GreatMarsh.MapLabel(gameData.Difficulty),
+                            Position = greatMarshLevel.Exits[0],
+                            RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.NextArea,
+                            Type = PoiType.NextArea
+                        });
+                        areaRenderDecided.Add(Area.GreatMarsh);
+                    }
+                }
+                else if (areaData.Area == Area.GreatMarsh)
+                {
+                    if (areaData.AdjacentLevels.TryGetValue(Area.FlayerJungle, out var flayerJungleLevel))
+                    {
+                        pointsOfInterest.Add(new PointOfInterest
+                        {
+                            Area = areaData.Area,
+                            NextArea = Area.FlayerJungle,
+                            Label = Area.FlayerJungle.MapLabel(gameData.Difficulty),
+                            Position = flayerJungleLevel.Exits[0],
+                            RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.NextArea,
+                            Type = PoiType.NextArea
+                        });
+                        areaRenderDecided.Add(Area.FlayerJungle);
+                    }
+                }
                 else if (AreaPreferredNextArea.TryGetValue(areaData.Area, out var nextArea))
                 {
                     var nextLevel = areaData.AdjacentLevels[nextArea];
@@ -393,7 +418,7 @@ namespace MapAssist.Helpers
                 else if (areaData.Area == Area.Barracks)
                 {
                     var outerCloisterArea = mapApi.GetMapData(Area.OuterCloister);
-                    var barracksAreaData = GetArea(mapApi, outerCloisterArea, gameData);
+                    var barracksAreaData = Get(mapApi, outerCloisterArea, gameData);
                     var barracks = barracksAreaData.FirstOrDefault(poi => poi.Type == PoiType.NextArea);
 
                     pointsOfInterest.Add(new PointOfInterest
@@ -527,7 +552,7 @@ namespace MapAssist.Helpers
                         pointsOfInterest.Add(new PointOfInterest
                         {
                             Area = areaData.Area,
-                            Label = obj.ToString(),
+                            Label = "",
                             Position = point,
                             RenderingSettings = MapAssistConfiguration.Loaded.MapConfiguration.Shrine,
                             Type = PoiType.Shrine
@@ -596,7 +621,7 @@ namespace MapAssist.Helpers
                     break;
             }
 
-            return pointsOfInterest;
+            return pointsOfInterest.Where(poi => poi.Area == areaData.Area).ToList();
         }
     }
 }

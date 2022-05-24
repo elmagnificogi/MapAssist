@@ -6,8 +6,6 @@ using MapAssist.Structs;
 using MapAssist.Types;
 using System;
 using System.Windows.Forms;
-
-//using WK.Libraries.HotkeyListenerNS;
 using Graphics = GameOverlay.Drawing.Graphics;
 
 namespace MapAssist
@@ -23,6 +21,7 @@ namespace MapAssist
         private Compositor _compositor = new Compositor();
         private bool _show = true;
         private static readonly object _lock = new object();
+        private bool frameDone = true;
 
 
         public Overlay()
@@ -46,23 +45,26 @@ namespace MapAssist
         {
             if (disposed) return;
 
+            if (!frameDone) return;
+            frameDone = false;
+
             var gfx = e.Graphics;
 
             try
             {
                 lock (_lock)
                 {
-                    var (gameData, areaData, pointsOfInterest, changed) = _gameDataReader.Get();
+                    var (gameData, areaData, changed) = _gameDataReader.Get();
                     _gameData = gameData;
 
                     if (changed)
                     {
-                        _compositor.SetArea(areaData, pointsOfInterest);
+                        _compositor.SetArea(areaData);
                     }
 
                     gfx.ClearScene();
 
-                    if (_compositor != null && InGame() && _compositor != null && _gameData != null)
+                    if (_compositor != null && _gameData != null && InGame())
                     {
                         UpdateLocation();
 
@@ -130,6 +132,8 @@ namespace MapAssist
             {
                 _log.Error(ex);
             }
+
+            frameDone = true;
         }
 
         public void Run()
@@ -146,7 +150,7 @@ namespace MapAssist
         public void KeyDownHandler(object sender, KeyEventArgs args)
         {   
             var keys = new Hotkey(args.Modifiers, args.KeyCode);
-            if (InGame() && GameManager.IsGameInForeground)
+            if (InGame() && GameManager.IsGameInForeground && !_gameData.MenuOpen.Chat)
             {
 
                 if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.ToggleKey))

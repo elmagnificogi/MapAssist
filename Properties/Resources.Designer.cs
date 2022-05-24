@@ -191,7 +191,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Blaze {
             get {
@@ -270,7 +270,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Cleansing {
             get {
@@ -310,7 +310,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Cold {
             get {
@@ -570,7 +570,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Frenzy {
             get {
@@ -730,7 +730,7 @@ namespace MapAssist.Properties {
         ///        .footer {
         ///            font-size: 0.7rem;
         ///            text-align: center;
-        ///            [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///            [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string InventoryExportTemplate {
             get {
@@ -869,7 +869,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Pierce {
             get {
@@ -907,18 +907,6 @@ namespace MapAssist.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TigerStrike {
-            get {
-                object obj = ResourceManager.GetObject("TigerStrike", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
@@ -1081,6 +1069,19 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Superunique	Name	Class	hcIdx	MonSound	Mod1	Mod2	Mod3	MinGrp	MaxGrp	AutoPos	Stacks	Replaceable	Utrans	Utrans(N)	Utrans(H)	TC	TC(N)	TC(H)	*eol
+        ///Bishibosh	Bishibosh	fallenshaman1	0		8	9	0	2	2	1	0		11	11	11	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+        ///Bonebreak	Bonebreak	skeleton1	1		5	8	0	5	5	1	0		5	5	5	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+        ///Coldcrow	Coldcrow	cr_archer1	2		18	0	0	4	4	1	0		18	18	18	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
+        ///Rakanishu	Rakanishu	fallen2	3		17	6	0	8 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SuperUniques {
+            get {
+                return ResourceManager.GetString("SuperUniques", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Teleport {
@@ -1132,6 +1133,16 @@ namespace MapAssist.Properties {
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap TigerStrike {
+            get {
+                object obj = ResourceManager.GetObject("TigerStrike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Valkyrie {
             get {
