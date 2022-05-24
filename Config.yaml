@@ -5,7 +5,7 @@ HotkeyConfiguration:
   AreaLevelKey: '['
   ZoomInKey: Num +
   ZoomOutKey: Num -
-  ExportItemsKey: F9
+  ExportItemsKey: ''
   ShareRoomKey: F8
   AddRoomKey: F11
   RoomTemplete: 牛场[0]一起来快活啊
@@ -317,4 +317,6 @@ DPIAware: false
 HC:
   WatchLifeEnabled: False
   WatchLifeLeft: 35
+  WatchManaEnabled: False
+  WatchManaLeft: 35
   ESCKey: F10

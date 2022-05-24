@@ -60,7 +60,7 @@ namespace MapAssist.Types
 
         private void CheckMana()
         {
-            if (!MapAssistConfiguration.Loaded.HC.WatchMaNaEnabled)
+            if (!MapAssistConfiguration.Loaded.HC.WatchManaEnabled)
                 return;
 
             var ManaLeft = MapAssistConfiguration.Loaded.HC.WatchManaLeft;

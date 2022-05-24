@@ -455,8 +455,8 @@ public class HCConfiguration
     [YamlMember(Alias = "WatchLifeLeft", ApplyNamingConventions = false)]
     public int WatchLifeLeft { get; set; }
 
-    [YamlMember(Alias = "WatchMaNaEnabled", ApplyNamingConventions = false)]
-    public bool WatchMaNaEnabled { get; set; }
+    [YamlMember(Alias = "WatchManaEnabled", ApplyNamingConventions = false)]
+    public bool WatchManaEnabled { get; set; }
 
     [YamlMember(Alias = "WatchManaLeft", ApplyNamingConventions = false)]
     public int WatchManaLeft { get; set; }
