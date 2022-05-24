@@ -919,7 +919,7 @@
             // 
             // txtCopyRoomKey
             // 
-            this.txtCopyRoomKey.Location = new System.Drawing.Point(160, 239);
+            this.txtCopyRoomKey.Location = new System.Drawing.Point(160, 144);
             this.txtCopyRoomKey.MaxLength = 1;
             this.txtCopyRoomKey.Name = "txtCopyRoomKey";
             this.txtCopyRoomKey.Size = new System.Drawing.Size(94, 21);
@@ -930,7 +930,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 244);
+            this.label33.Location = new System.Drawing.Point(6, 147);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(77, 12);
             this.label33.TabIndex = 26;
@@ -958,7 +958,7 @@
             // 
             // txtAddRoomKey
             // 
-            this.txtAddRoomKey.Location = new System.Drawing.Point(160, 195);
+            this.txtAddRoomKey.Location = new System.Drawing.Point(160, 194);
             this.txtAddRoomKey.MaxLength = 1;
             this.txtAddRoomKey.Name = "txtAddRoomKey";
             this.txtAddRoomKey.Size = new System.Drawing.Size(94, 21);
@@ -969,7 +969,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 200);
+            this.label31.Location = new System.Drawing.Point(6, 197);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(77, 12);
             this.label31.TabIndex = 22;
@@ -988,7 +988,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 174);
+            this.label6.Location = new System.Drawing.Point(6, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 12);
             this.label6.TabIndex = 20;
@@ -996,7 +996,7 @@
             // 
             // txtHideMapKey
             // 
-            this.txtHideMapKey.Location = new System.Drawing.Point(160, 43);
+            this.txtHideMapKey.Location = new System.Drawing.Point(160, 44);
             this.txtHideMapKey.MaxLength = 1;
             this.txtHideMapKey.Name = "txtHideMapKey";
             this.txtHideMapKey.Size = new System.Drawing.Size(94, 21);
@@ -1007,7 +1007,7 @@
             // lblHideMapKey
             // 
             this.lblHideMapKey.AutoSize = true;
-            this.lblHideMapKey.Location = new System.Drawing.Point(6, 46);
+            this.lblHideMapKey.Location = new System.Drawing.Point(6, 47);
             this.lblHideMapKey.Name = "lblHideMapKey";
             this.lblHideMapKey.Size = new System.Drawing.Size(53, 12);
             this.lblHideMapKey.TabIndex = 18;
@@ -1015,7 +1015,7 @@
             // 
             // txtZoomOutKey
             // 
-            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 117);
+            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 119);
             this.txtZoomOutKey.MaxLength = 1;
             this.txtZoomOutKey.Name = "txtZoomOutKey";
             this.txtZoomOutKey.Size = new System.Drawing.Size(94, 21);
@@ -1025,7 +1025,7 @@
             // 
             // txtZoomInKey
             // 
-            this.txtZoomInKey.Location = new System.Drawing.Point(160, 91);
+            this.txtZoomInKey.Location = new System.Drawing.Point(160, 94);
             this.txtZoomInKey.MaxLength = 1;
             this.txtZoomInKey.Name = "txtZoomInKey";
             this.txtZoomInKey.Size = new System.Drawing.Size(94, 21);
@@ -1035,7 +1035,7 @@
             // 
             // txtAreaLevelKey
             // 
-            this.txtAreaLevelKey.Location = new System.Drawing.Point(160, 67);
+            this.txtAreaLevelKey.Location = new System.Drawing.Point(160, 69);
             this.txtAreaLevelKey.MaxLength = 1;
             this.txtAreaLevelKey.Name = "txtAreaLevelKey";
             this.txtAreaLevelKey.Size = new System.Drawing.Size(94, 21);
@@ -1055,18 +1055,19 @@
             // 
             // txtExportItemsKey
             // 
-            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 142);
+            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 243);
             this.txtExportItemsKey.MaxLength = 1;
             this.txtExportItemsKey.Name = "txtExportItemsKey";
             this.txtExportItemsKey.Size = new System.Drawing.Size(94, 21);
             this.txtExportItemsKey.TabIndex = 16;
             this.txtExportItemsKey.TabStop = false;
+            this.txtExportItemsKey.Visible = false;
             this.txtExportItemsKey.TextChanged += new System.EventHandler(this.txtExportItemsKey_TextChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 120);
+            this.label15.Location = new System.Drawing.Point(6, 122);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 12);
             this.label15.TabIndex = 11;
@@ -1075,7 +1076,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 95);
+            this.label14.Location = new System.Drawing.Point(6, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 10;
@@ -1084,7 +1085,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 70);
+            this.label13.Location = new System.Drawing.Point(6, 72);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 12);
             this.label13.TabIndex = 9;
@@ -1102,11 +1103,12 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 145);
+            this.label22.Location = new System.Drawing.Point(3, 246);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(77, 12);
             this.label22.TabIndex = 17;
             this.label22.Text = "导出掉落信息";
+            this.label22.Visible = false;
             // 
             // tabPage6
             // 
