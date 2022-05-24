@@ -149,7 +149,9 @@ DC追踪功能，请根据需要自行选择
 
 如果开启血量监控，会自动退出到选择人物
 
-![image-20220519160722762](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191607802.png)
+![image-20220524210126089](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205242101175.png)
+
+同理蓝量
 
 #### 快捷键设置
 
