@@ -247,6 +247,9 @@
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtFPS = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -2141,6 +2144,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label35);
+            this.groupBox1.Controls.Add(this.txtFPS);
+            this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.positionX);
             this.groupBox1.Controls.Add(this.positionY);
             this.groupBox1.Controls.Add(this.label29);
@@ -2238,7 +2244,7 @@
             this.btnClearBorderColor.FlatAppearance.BorderSize = 0;
             this.btnClearBorderColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearBorderColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearBorderColor.Location = new System.Drawing.Point(232, 252);
+            this.btnClearBorderColor.Location = new System.Drawing.Point(218, 252);
             this.btnClearBorderColor.Name = "btnClearBorderColor";
             this.btnClearBorderColor.Size = new System.Drawing.Size(23, 21);
             this.btnClearBorderColor.TabIndex = 23;
@@ -2251,7 +2257,7 @@
             this.btnClearWalkableColor.FlatAppearance.BorderSize = 0;
             this.btnClearWalkableColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearWalkableColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.btnClearWalkableColor.Location = new System.Drawing.Point(102, 252);
+            this.btnClearWalkableColor.Location = new System.Drawing.Point(100, 252);
             this.btnClearWalkableColor.Name = "btnClearWalkableColor";
             this.btnClearWalkableColor.Size = new System.Drawing.Size(23, 21);
             this.btnClearWalkableColor.TabIndex = 22;
@@ -2273,7 +2279,7 @@
             // btnBorderColor
             // 
             this.btnBorderColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorderColor.Location = new System.Drawing.Point(140, 251);
+            this.btnBorderColor.Location = new System.Drawing.Point(126, 251);
             this.btnBorderColor.Name = "btnBorderColor";
             this.btnBorderColor.Size = new System.Drawing.Size(91, 22);
             this.btnBorderColor.TabIndex = 23;
@@ -2909,6 +2915,36 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // txtFPS
+            // 
+            this.txtFPS.Location = new System.Drawing.Point(339, 252);
+            this.txtFPS.Name = "txtFPS";
+            this.txtFPS.Size = new System.Drawing.Size(33, 21);
+            this.txtFPS.TabIndex = 32;
+            this.txtFPS.Text = "24";
+            this.txtFPS.TextChanged += new System.EventHandler(this.txtFPS_TextChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Location = new System.Drawing.Point(250, 256);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(83, 12);
+            this.label34.TabIndex = 33;
+            this.label34.Text = "地图刷新频率:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label35.Location = new System.Drawing.Point(266, 278);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(97, 13);
+            this.label35.TabIndex = 34;
+            this.label35.Text = "设置后需要重启地图";
+            // 
             // ConfigEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3205,5 +3241,8 @@
         private System.Windows.Forms.CheckBox chkAuras;
         private System.Windows.Forms.TextBox manaLeft;
         private System.Windows.Forms.CheckBox watchMana;
+        private System.Windows.Forms.TextBox txtFPS;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
     }
 }

@@ -42,6 +42,7 @@ RenderingConfiguration:
   ShowPotionBelt: true
   ShowResistances: false
   LinesMode: All
+  FPS: 24
 MapConfiguration:
   SuperUniqueMonster:
     IconOutlineColor: Yellow

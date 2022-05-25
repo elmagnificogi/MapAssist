@@ -280,6 +280,9 @@ public class RenderingConfiguration
 
     [YamlMember(Alias = "PositionY", ApplyNamingConventions = false)]
     public int PositionY { get; set; }
+
+    [YamlMember(Alias = "FPS", ApplyNamingConventions = false)]
+    public int FPS { get; set; }
 }
 
 public class HotkeyConfiguration

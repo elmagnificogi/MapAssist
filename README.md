@@ -179,6 +179,14 @@ F12仅复制当前房间名
 
 
 
+## CPU占用过高
+
+![image-20220525212725241](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205252127336.png)
+
+建议适当调节地图刷新频率，过高会导致CPU占用高得离谱
+
+
+
 ## 物品过滤
 
 ![image-20220522170044735](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221700766.png)

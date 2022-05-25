@@ -231,6 +231,8 @@ namespace MapAssist
             txtAddRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.AddRoomKey;
             roomNameTemplete.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
             txtCopyRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey;
+
+            txtFPS.Text = MapAssistConfiguration.Loaded.RenderingConfiguration.FPS.ToString();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -1317,6 +1319,16 @@ namespace MapAssist
             {
                 MapAssistConfiguration.Loaded.HC.WatchManaLeft = 35;
             }
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.RenderingConfiguration.FPS = int.Parse(manaLeft.Text);
+        }
+
+        private void txtFPS_TextChanged(object sender, EventArgs e)
+        {
+            MapAssistConfiguration.Loaded.RenderingConfiguration.FPS = int.Parse(txtFPS.Text);
         }
     }
 }

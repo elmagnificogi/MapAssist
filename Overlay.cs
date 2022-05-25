@@ -35,7 +35,7 @@ namespace MapAssist
             gfx.PerPrimitiveAntiAliasing = true;
             gfx.TextAntiAliasing = true;
 
-            _window = new GraphicsWindow(0, 0, 1, 1, gfx) { FPS = 60, IsVisible = true };
+            _window = new GraphicsWindow(0, 0, 1, 1, gfx) { FPS = MapAssistConfiguration.Loaded.RenderingConfiguration.FPS, IsVisible = true };
 
             _window.DrawGraphics += _window_DrawGraphics;
             _window.DestroyGraphics += _window_DestroyGraphics;
