@@ -62,7 +62,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
         private Runner _runner;
         private bool _firstRun;
         private bool _debugLog;
-        private bool _paused;
+        private bool _paused = true;
         private string _lastBattleTag;
         private string _lastCharacter;
         private DateTime _nextExport = DateTime.MaxValue;
@@ -125,6 +125,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
             var a = (ToolStripMenuItem)_contextMenuItems[_contextMenuItems.Length - 1];
             a.Checked = !Convert.ToBoolean(sync);
+            _paused = !Convert.ToBoolean(sync);
 
             _cookieContainer = Utils.LoadCookieContainer();
             var handler = new HttpClientHandler
@@ -372,6 +373,11 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
         private async Task<State> TryFetchProfile()
         {
+            if (_paused)
+            {
+                Thread.Sleep(1000);
+                return State.Unauthenticated;
+            }
             if (Utils.HasValidCookie(_cookieContainer))
             {
                 try

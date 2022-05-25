@@ -137,7 +137,7 @@ DC追踪功能，请根据需要自行选择
 - 使用的人太少了，集市还太小了
 - Web的那个同步软件可以不用下载，用我的MapAssist就行
 
-不使用此功能，请关闭，否则会有额外CPU占用
+**不使用此功能，请关闭，否则会有额外CPU占用**
 
 ![image-20220519123522946](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205191235982.png)
 

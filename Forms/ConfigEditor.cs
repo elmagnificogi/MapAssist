@@ -1196,7 +1196,7 @@ namespace MapAssist
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://qm.qq.com/cgi-bin/qm/qr?k=HT2IypzWD0cePIJi8egR2AvL7TbZsQo4&jump_from=webapi");
+            System.Diagnostics.Process.Start(Application.StartupPath + "\\" + "地图使用指南.pdf");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
