@@ -19,22 +19,6 @@ namespace MapAssist.Integrations.ResurrectedTrade
             UpdateVisible();
             Username.Text = Utils.AgentRegistryKey.GetValue("USERNAME", "") as string;
             Password.Text = Utils.AgentRegistryKey.GetValue("PASSWORD", "") as string;
-
-            //var check = Utils.AgentRegistryKey.GetValue("AUTOLOGIN", false);
-
-            //if (check == null || (bool)check == false)
-            //{
-            //    checkBoxAutoLogin.Checked = false;
-            //}
-            //else
-            //{
-            //    checkBoxAutoLogin.Checked = true;
-            //    // login now
-            //    var task = Task.Run(async () =>
-            //    {
-            //        var response = await _integration.Login(Username.Text, Password.Text);
-            //    });
-            //}
         }
 
         public void UpdateVisible()
@@ -90,6 +74,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                 // save password for next
                 Utils.AgentRegistryKey.SetValue("PASSWORD", Password.Text, RegistryValueKind.String);
                 Password.Text = "";
+                
                 UpdateVisible();
             }
         }

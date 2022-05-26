@@ -74,6 +74,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
         private readonly NotifyIcon _trayIcon;
         private readonly ToolStripItem[] _contextMenuItems;
         private readonly ResurrectedTradeConfiguration _config;
+        private readonly ToolStripMenuItem _syncMenuItem;
 
         public ResurrectedTradeIntegration(SynchronizationContext ctx, NotifyIcon trayIcon)
         {
@@ -82,6 +83,19 @@ namespace MapAssist.Integrations.ResurrectedTrade
             var version = typeof(Runner).Assembly.GetName().Version?.ToString();
 
             var sync = Utils.AgentRegistryKey.GetValue("SYNC", false);
+            _syncMenuItem = new ToolStripMenuItem(
+                    "停止同步", null, (sender, args) =>
+                    {
+                        _paused = !_paused;
+                        if (_paused)
+                            Utils.AgentRegistryKey.SetValue("SYNC", 0, RegistryValueKind.DWord);
+                        else
+                            Utils.AgentRegistryKey.SetValue("SYNC", 1, RegistryValueKind.DWord);
+                        (sender as ToolStripMenuItem).Checked = _paused;
+                    }
+                );
+            _syncMenuItem.Checked = !Convert.ToBoolean(sync);
+            _paused = !Convert.ToBoolean(sync);
 
             _contextMenuItems = new ToolStripItem[]
             {
@@ -110,22 +124,8 @@ namespace MapAssist.Integrations.ResurrectedTrade
                         ),
                     }
                 },
-                new ToolStripMenuItem(
-                    "停止同步", null, (sender, args) =>
-                    {
-                        _paused = !_paused;
-                        if( _paused)
-                            Utils.AgentRegistryKey.SetValue("SYNC", 0, RegistryValueKind.DWord);
-                        else
-                            Utils.AgentRegistryKey.SetValue("SYNC", 1, RegistryValueKind.DWord);
-                        (sender as ToolStripMenuItem).Checked = _paused;
-                    }
-                ),
+                _syncMenuItem,
             };
-
-            var a = (ToolStripMenuItem)_contextMenuItems[_contextMenuItems.Length - 1];
-            a.Checked = !Convert.ToBoolean(sync);
-            _paused = !Convert.ToBoolean(sync);
 
             _cookieContainer = Utils.LoadCookieContainer();
             var handler = new HttpClientHandler
@@ -538,6 +538,10 @@ namespace MapAssist.Integrations.ResurrectedTrade
                 {
                     Utils.SaveCookieContainer(_cookieContainer);
                     Logger.Info("Successfully logegd in");
+                    _paused = false;
+                    _syncMenuItem.Checked = false;
+                    Utils.AgentRegistryKey.SetValue("SYNC", 1, RegistryValueKind.DWord);
+
                     var state = await TryFetchProfile();
                     if (state != State.Ok)
                     {
