@@ -73,8 +73,8 @@ jobs:
       - name: Update releases branch
         run: |
           git fetch origin
-          git config user.name 'ItzRabbs'
-          git config user.email '1294559+ItzRabbs@users.noreply.github.com'
+          git config user.name 'elmagnifico'
+          git config user.email 'elmagnifico@users.noreply.github.com'
           git reset --hard
           git clean -fd
           git checkout releases
