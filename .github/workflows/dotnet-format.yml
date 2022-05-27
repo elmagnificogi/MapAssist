@@ -25,7 +25,9 @@ jobs:
         run: dotnet tool install -g dotnet-format
 
       - name: Run dotnet format
-        run: dotnet format ${{env.SOLUTION_FILE_PATH}}
+        run: dotnet format
+        with:
+          workspace: "MapAssist.sln"
 
       - name: Commit files
         # 下面将使用机器人的账号，你可以替换为你自己的账号
