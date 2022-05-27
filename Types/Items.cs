@@ -1,4 +1,4 @@
-using MapAssist.Helpers;
+ï»¿using MapAssist.Helpers;
 using MapAssist.Settings;
 using System;
 using System.Collections.Generic;
@@ -107,7 +107,7 @@ namespace MapAssist.Types
             }
             else if (item.IsIdentifiedForLog)
             {
-                itemPrefix += "[ÒÑ¼ø¶¨] ";
+                itemPrefix += "[å·²é‰´å®š] ";
             }
 
             if (rule == null)

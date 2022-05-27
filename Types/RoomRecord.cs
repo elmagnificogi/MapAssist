@@ -1,8 +1,8 @@
 ﻿using MapAssist.Helpers;
 using MapAssist.Interfaces;
 using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MapAssist.Types
 {
@@ -13,7 +13,7 @@ namespace MapAssist.Types
         public string RoomPassword;
         public DateTime time;
 
-        public RoomRecord(string cname,string rname,string rpass)
+        public RoomRecord(string cname, string rname, string rpass)
         {
             CharacterName = cname;
             RoomName = rname;

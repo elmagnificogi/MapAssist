@@ -1,4 +1,4 @@
-using AutoUpdaterDotNET;
+ï»¿using AutoUpdaterDotNET;
 using Gma.System.MouseKeyHook;
 using MapAssist.Forms;
 using MapAssist.Helpers;
@@ -56,7 +56,7 @@ namespace MapAssist
                     var rand = new Random();
                     var isGemActive = rand.NextDouble() < 0.05;
 
-                    MessageBox.Show(appName + "ÒÑ¾­´ò¿ªÁË " + (isGemActive ? " Better go catch it!" : ""), messageBoxTitle, MessageBoxButtons.OK);
+                    MessageBox.Show(appName + "å·²ç»æ‰“å¼€äº† " + (isGemActive ? " Better go catch it!" : ""), messageBoxTitle, MessageBoxButtons.OK);
                     return;
                 }
 
@@ -101,7 +101,7 @@ namespace MapAssist
                     {
                         if (!MapApi.StartPipedChild())
                         {
-                            MessageBox.Show($"{messageBoxTitle}: ÎŞ·¨Æô¶¯d2mapapi", messageBoxTitle, MessageBoxButtons.OK);
+                            MessageBox.Show($"{messageBoxTitle}: æ— æ³•å¯åŠ¨d2mapapi", messageBoxTitle, MessageBoxButtons.OK);
                             return;
                         }
                     }
@@ -111,7 +111,7 @@ namespace MapAssist
                         _log.Fatal(e, "Unable to start d2mapapi pipe.");
 
                         var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
-                        MessageBox.Show(message, $"{messageBoxTitle}: ÎŞ·¨Æô¶¯d2mapapi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(message, $"{messageBoxTitle}: æ— æ³•å¯åŠ¨d2mapapi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -129,8 +129,8 @@ namespace MapAssist
                     );
 
                     var contextMenu = new ContextMenuStrip();
-                    var configMenuItem = new ToolStripMenuItem("ÉèÖÃ", null, ShowConfigEditor);
-                    var lootFilterMenuItem = new ToolStripMenuItem("ÎïÆ·¹ıÂË", null, LootFilter);
+                    var configMenuItem = new ToolStripMenuItem("è®¾ç½®", null, ShowConfigEditor);
+                    var lootFilterMenuItem = new ToolStripMenuItem("ç‰©å“è¿‡æ»¤", null, LootFilter);
                     contextMenu.Items.Add(configMenuItem);
                     contextMenu.Items.Add(lootFilterMenuItem);
                     contextMenu.Items.Add(new ToolStripSeparator());
@@ -152,9 +152,9 @@ namespace MapAssist
                         contextMenu.Items.Add(new ToolStripSeparator());
                     }
 
-                    var roomRecordsMenuItem = new ToolStripMenuItem("·¿¼ä¼ÇÂ¼", null, ShowRoomRecords);
-                    var restartMenuItem = new ToolStripMenuItem("ÖØÆôµØÍ¼", null, TrayRestart);
-                    var exitMenuItem = new ToolStripMenuItem("ÍË³ö", null, TrayExit);
+                    var roomRecordsMenuItem = new ToolStripMenuItem("æˆ¿é—´è®°å½•", null, ShowRoomRecords);
+                    var restartMenuItem = new ToolStripMenuItem("é‡å¯åœ°å›¾", null, TrayRestart);
+                    var exitMenuItem = new ToolStripMenuItem("é€€å‡º", null, TrayExit);
                     contextMenu.Items.Add(roomRecordsMenuItem);
                     contextMenu.Items.Add(restartMenuItem);
                     contextMenu.Items.Add(exitMenuItem);
@@ -176,7 +176,7 @@ namespace MapAssist
 
                     GameManager.OnGameAccessDenied += (_, __) =>
                     {
-                        var message = $"MapAssist could not read {GameManager.ProcessName} memory. ÇëÊ¹ÓÃ¹ÜÀíÔ±È¨ÏŞÆô¶¯³ÌĞò";
+                        var message = $"MapAssist could not read {GameManager.ProcessName} memory. è¯·ä½¿ç”¨ç®¡ç†å‘˜æƒé™å¯åŠ¨ç¨‹åº";
                         Dispose();
                         MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                         Application.Exit();
@@ -237,7 +237,7 @@ namespace MapAssist
                 _log.Fatal(e, "Invalid yaml for configuration file");
 
                 var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: MapAssist configuration yaml ´íÎó£¬ÇëÉ¾³ı±¾µØConfig.yaml£¬ÖØÆô", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, $"{messageBoxTitle}: MapAssist configuration yaml é”™è¯¯ï¼Œè¯·åˆ é™¤æœ¬åœ°Config.yamlï¼Œé‡å¯", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {
@@ -262,7 +262,7 @@ namespace MapAssist
                 _log.Fatal("Invalid item log yaml file");
 
                 var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: Item filter yaml´íÎó£¬Çë¼ì²é¹ıÂËÎÄ¼ş", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(message, $"{messageBoxTitle}: Item filter yamlé”™è¯¯ï¼Œè¯·æ£€æŸ¥è¿‡æ»¤æ–‡ä»¶", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using GameOverlay.Drawing;
+﻿using GameOverlay.Drawing;
 using MapAssist.Types;
+using System;
+using System.Runtime.InteropServices;
 
 namespace MapAssist.Structs
 {

@@ -111,7 +111,7 @@ namespace MapAssist.Types
                     .ToDictionary(k => k.gameObject, v => v.positions)
             };
         }
-    
+
         private int[][] GetCollisionGid(int padding = 0)
         {
             var mapRows = new int[crop.y1 - crop.y0][];

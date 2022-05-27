@@ -1214,15 +1214,15 @@ namespace MapAssist
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(checkedListBlockServer.CheckedItems.Count > 0)
+            if (checkedListBlockServer.CheckedItems.Count > 0)
             {
                 var servers = "";
                 foreach (var item in checkedListBlockServer.CheckedItems)
                 {
-                    servers+=item.ToString();
+                    servers += item.ToString();
                 }
                 Debug.WriteLine(servers);
-                if(IPBlock.StartIPBlock(servers))
+                if (IPBlock.StartIPBlock(servers))
                     label25.Text = "IP屏蔽已生效";
             }
             else
@@ -1242,7 +1242,7 @@ namespace MapAssist
             {
                 MapAssistConfiguration.Loaded.RenderingConfiguration.PositionX = 0;
             }
-            
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -1273,7 +1273,7 @@ namespace MapAssist
             {
                 MapAssistConfiguration.Loaded.HC.WatchLifeLeft = int.Parse(lifeLeft.Text);
             }
-            catch 
+            catch
             {
                 MapAssistConfiguration.Loaded.HC.WatchLifeLeft = 35;
             }

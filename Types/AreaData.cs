@@ -86,13 +86,13 @@ namespace MapAssist.Types
                 ViewOutputRect = points.Select(point => point.Subtract(ViewInputRect.Left + ViewInputRect.Width / 2, ViewInputRect.Top + ViewInputRect.Height / 2).Rotate(angleRadians)).ToArray().ToRectangle(1);
             }
         }
-    
+
         public bool IncludesPoint(Point point)
         {
             var adjPoint = point.Subtract(Origin);
-            return adjPoint.X > 0 && 
-                adjPoint.Y > 0 && 
-                adjPoint.X < ViewInputRect.Width - MapPadding * 2 && 
+            return adjPoint.X > 0 &&
+                adjPoint.Y > 0 &&
+                adjPoint.X < ViewInputRect.Width - MapPadding * 2 &&
                 adjPoint.Y < ViewInputRect.Height - MapPadding * 2;
         }
     }

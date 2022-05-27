@@ -1,6 +1,6 @@
-﻿using System;
-using MapAssist.Helpers;
+﻿using MapAssist.Helpers;
 using MapAssist.Interfaces;
+using System;
 
 namespace MapAssist.Types
 {

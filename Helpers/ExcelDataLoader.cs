@@ -10,7 +10,7 @@ namespace MapAssist.Helpers
         public static List<Dictionary<string, string>> Parse(string text)
         {
             var items = new List<Dictionary<string, string>>();
-            
+
             var lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Split('\t').ToArray()).ToArray();
             var headers = lines[0].Select(x => Regex.Replace(x, @"\s+", "")).ToArray();
 

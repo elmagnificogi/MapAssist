@@ -1,7 +1,7 @@
-﻿using System.Text;
-using System;
-using System.IO;
+﻿using System;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
 
 namespace MapAssist.Files
 {
