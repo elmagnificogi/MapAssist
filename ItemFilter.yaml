@@ -1,5 +1,5 @@
 Caduceus:
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -73,7 +73,7 @@ Caduceus:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -147,9 +147,9 @@ Caduceus:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
-  Qualities: 
+  Qualities: []
   Sockets: 
   Ethereal: 
   Defense: 
@@ -216,7 +216,7 @@ Caduceus:
   Min Quality Level: 
   Max Quality Level: 
 WarScepter:
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -290,7 +290,7 @@ WarScepter:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -11621,7 +11621,7 @@ GiantAxe:
   Min Quality Level: 
   Max Quality Level: 
 Cleaver:
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - RARE
@@ -30177,7 +30177,7 @@ TotemicMask:
   Min Quality Level: 
   Max Quality Level: 
 ScissorsSuwayyah:
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - RARE
@@ -30246,7 +30246,7 @@ ScissorsSuwayyah:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -30319,7 +30319,7 @@ ScissorsSuwayyah:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -30392,7 +30392,7 @@ ScissorsSuwayyah:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -30465,7 +30465,7 @@ ScissorsSuwayyah:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -46174,7 +46174,7 @@ GloriousAxe:
   Min Quality Level: 
   Max Quality Level: 
 DivineScepter:
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -46248,7 +46248,7 @@ DivineScepter:
   Max Player Level: 
   Min Quality Level: 
   Max Quality Level: 
-- Tiers: 
+- Tiers: []
   PlaySoundOnDrop: true
   Qualities:
   - NORMAL
@@ -46293,6 +46293,85 @@ DivineScepter:
   Class Skill Tree: {}
   Skills:
     BlessedHammer: 3
+  Skill Charges: {}
+  Faster Block Rate: 
+  Deadly Strike: 
+  Crushing Blow: 
+  Open Wounds: 
+  Cannot Be Frozen: 
+  Slain Monsters Rest In Peace: 
+  Prevent Monster Heal: 
+  Absorb Cold Percent: 
+  Absorb Fire Percent: 
+  Absorb Lightning Percent: 
+  Max Cold Resist: 
+  Max Lightning Resist: 
+  Max Fire Resist: 
+  Max Poison Resist: 
+  Enemy Fire Resist: 
+  Enemy Lightning Resist: 
+  Enemy Cold Resist: 
+  Enemy Poison Resist: 
+  Max Life Percent: 
+  Max Mana Percent: 
+  Damage Taken Goes To Mana: 
+  Enhanced Damage: 
+  Min Area Level: 
+  Max Area Level: 
+  Min Player Level: 
+  Max Player Level: 
+  Min Quality Level: 
+  Max Quality Level: 
+ClassStaves:
+- Tiers:
+  - Normal
+  - Exceptional
+  - Elite
+  PlaySoundOnDrop: true
+  Qualities:
+  - INFERIOR
+  - NORMAL
+  - SUPERIOR
+  Sockets:
+  - 0
+  - 4
+  Ethereal: 
+  Defense: 
+  Strength: 
+  Dexterity: 
+  Vitality: 
+  Energy: 
+  All Attributes: 
+  Max Life: 
+  Max Mana: 
+  Attack Rating: 
+  Min Damage: 
+  Max Damage: 
+  Damage Reduced: 
+  Life Steal: 
+  Mana Steal: 
+  Cold Skill Damage: 
+  Lightning Skill Damage: 
+  Fire Skill Damage: 
+  Poison Skill Damage: 
+  Increased Attack Speed: 
+  Faster Run Walk: 
+  Faster Hit Recovery: 
+  Faster Cast Rate: 
+  Magic Find: 
+  Gold Find: 
+  Cold Resist: 
+  Lightning Resist: 
+  Fire Resist: 
+  Poison Resist: 
+  Sum Resist: 
+  All Resist: 
+  All Skills: 
+  Class Skills: {}
+  Class Skill Tree: {}
+  Skills:
+    ChillingArmor: 1
+    EnergyShield: 3
   Skill Charges: {}
   Faster Block Rate: 
   Deadly Strike: 
