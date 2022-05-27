@@ -143,12 +143,12 @@ namespace MapAssist.Helpers
             PostMessage(hWnd, WM_KEYDOWN, VK_BACKSPACE, 0);
             Thread.Sleep(100);
             PostMessage(hWnd, WM_KEYUP, VK_BACKSPACE, 0);
-            keybd_event(VK_LCONTROL, 0, 0, 0); 
-            Thread.Sleep(100);  
-            PostMessage(hWnd, WM_KEYDOWN, VK_V, 0); 
-            Thread.Sleep(100);  
-            PostMessage(hWnd, WM_KEYUP, VK_V, 0);  
-            Thread.Sleep(100); 
+            keybd_event(VK_LCONTROL, 0, 0, 0);
+            Thread.Sleep(100);
+            PostMessage(hWnd, WM_KEYDOWN, VK_V, 0);
+            Thread.Sleep(100);
+            PostMessage(hWnd, WM_KEYUP, VK_V, 0);
+            Thread.Sleep(100);
             keybd_event(VK_LCONTROL, 0, 0x02, 0);
         }
 

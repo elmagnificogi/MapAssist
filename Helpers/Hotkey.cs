@@ -55,7 +55,7 @@ namespace MapAssist.Helpers
             {
                 control.Text = e.Modifiers.ToString().Replace(", ", " + ").Replace("Control", "Ctrl");
             }
-            else if(e.Modifiers == Keys.None)
+            else if (e.Modifiers == Keys.None)
             {
                 control.Text = FormatKey(e.KeyCode);
             }
@@ -65,7 +65,7 @@ namespace MapAssist.Helpers
 
                 control.Text = e.Modifiers.ToString().Replace(", ", " + ").Replace("Control", "Ctrl") + " + " + FormatKey(e.KeyCode);
             }
-  
+
             e.Handled = true;
         }
 
@@ -157,7 +157,7 @@ namespace MapAssist.Helpers
         };
 
         private static Dictionary<string, Keys> keyLookup = textLookup.ToDictionary(x => x.Value, x => x.Key);
-                
+
         public static bool operator ==(Hotkey a, Hotkey b)
         {
             if (a is null)

@@ -101,7 +101,7 @@ namespace MapAssist
                                     break;
                             }
 
-                            _compositor.Init(gfx, _gameData,_dcTrack, drawBounds);
+                            _compositor.Init(gfx, _gameData, _dcTrack, drawBounds);
 
                             if (!overlayHidden)
                             {
@@ -148,7 +148,7 @@ namespace MapAssist
         }
 
         public void KeyDownHandler(object sender, KeyEventArgs args)
-        {   
+        {
             var keys = new Hotkey(args.Modifiers, args.KeyCode);
             if (InGame() && GameManager.IsGameInForeground && !_gameData.MenuOpen.Chat)
             {
@@ -204,7 +204,7 @@ namespace MapAssist
                 {
                     if (InGame())
                     {
-                        Clipboard.SetText("我在房间:"+_gameData.Session.GameName+" 密码:"+_gameData.Session.GamePass);
+                        Clipboard.SetText("我在房间:" + _gameData.Session.GameName + " 密码:" + _gameData.Session.GamePass);
 
                     }
                 }
@@ -223,7 +223,7 @@ namespace MapAssist
 
             if (keys == new Hotkey(MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey))
             {
-                    Clipboard.SetText(_gameData.Session.GameName);
+                Clipboard.SetText(_gameData.Session.GameName);
             }
 
             // out of game
@@ -232,9 +232,9 @@ namespace MapAssist
                 var roomName = MapAssistConfiguration.Loaded.HotkeyConfiguration.RoomTemplete;
                 var head = roomName.Split('[')[0];
                 var tail = roomName.Split(']')[1];
-                var num = int.Parse(roomName.Split('[')[1].Split(']')[0]) +1;
-                roomName = head +num.ToString()+ tail;
-                var roomTemplete = head + "[" +num.ToString()+ "]" + tail;
+                var num = int.Parse(roomName.Split('[')[1].Split(']')[0]) + 1;
+                roomName = head + num.ToString() + tail;
+                var roomTemplete = head + "[" + num.ToString() + "]" + tail;
                 try
                 {
                     Clipboard.SetText(roomName);

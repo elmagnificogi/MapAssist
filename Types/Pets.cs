@@ -10,7 +10,7 @@ namespace MapAssist.Types
     {
         public IntPtr PtrUnit { get; set; }
         public Pet Struct { get; set; }
-    
+
         public uint UnitId => Struct.UnitId;
         public uint OwnerId => Struct.OwnerId;
         public bool IsMerc => new List<Npc> { Npc.Rogue2, Npc.Guard, Npc.IronWolf, Npc.Act5Hireling1Hand, Npc.Act5Hireling2Hand }.Contains(Struct.TxtFileNo);

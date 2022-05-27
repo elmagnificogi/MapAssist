@@ -130,7 +130,8 @@ namespace MapAssist.Integrations.ResurrectedTrade
             _cookieContainer = Utils.LoadCookieContainer();
             var handler = new HttpClientHandler
             {
-                UseCookies = true, CookieContainer = _cookieContainer
+                UseCookies = true,
+                CookieContainer = _cookieContainer
             };
             var client = new HttpClient(new GrpcWebHandler(handler));
             client.DefaultRequestHeaders.UserAgent.Add(
@@ -273,7 +274,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                         Thread.Sleep(1000);
                         continue;
                     }
-                        
+
 
                     try
                     {

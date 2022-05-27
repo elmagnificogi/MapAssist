@@ -64,7 +64,7 @@ namespace MapAssist.Forms
                     }
                 }
 
-                for (var i = num-1; i >= 0; i--)
+                for (var i = num - 1; i >= 0; i--)
                 {
                     RoomRecord room = Program.roomRecords[i];
                     listView1.Items[num - 1 - i].SubItems[0].Text = room.CharacterName;
@@ -101,8 +101,8 @@ namespace MapAssist.Forms
             listView1.GridLines = true;
             listView1.FullRowSelect = true;
             listView1.MultiSelect = false;
-            listView1.View = View.Details;  
-            listView1.HoverSelection = false;  
+            listView1.View = View.Details;
+            listView1.HoverSelection = false;
             listView1.Columns.Add(c1);
             listView1.Columns.Add(c2);
             listView1.Columns.Add(c3);

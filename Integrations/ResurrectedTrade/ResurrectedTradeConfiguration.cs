@@ -56,7 +56,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
             ChangeControlEnablement(false);
             var response = await _integration.Login(Username.Text, Password.Text);
             ChangeControlEnablement(true);
-            
+
             if (!response.Success)
             {
                 if (response.Errors.Any(o => o.Code == "LoginFailed"))
@@ -66,7 +66,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                 else
                 {
                     StatusLabel.Text = string.Join(", ", response.Errors.Select(o => o.Description));
-                    
+
                 }
             }
             else
@@ -74,7 +74,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
                 // save password for next
                 Utils.AgentRegistryKey.SetValue("PASSWORD", Password.Text, RegistryValueKind.String);
                 Password.Text = "";
-                
+
                 UpdateVisible();
             }
         }

@@ -49,7 +49,7 @@ namespace MapAssist.Helpers
         /// <returns>对象</returns>
         public static T JsonToObject<T>(string json) where T : class
         {
-            if(json == null || json=="")
+            if (json == null || json == "")
                 return null;
             var formatter = new DataContractJsonSerializer(typeof(T));
             using (var stream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)))

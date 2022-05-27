@@ -1,5 +1,5 @@
-﻿using System;
-using SharpDX.DirectWrite;
+﻿using SharpDX.DirectWrite;
+using System;
 
 namespace MapAssist.Files.Font
 {

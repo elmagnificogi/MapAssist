@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MapAssist.Types;
+using System;
 using System.Runtime.InteropServices;
-using MapAssist.Types;
 
 namespace MapAssist.Structs
 {

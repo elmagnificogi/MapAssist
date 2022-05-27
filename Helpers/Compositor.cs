@@ -60,7 +60,7 @@ namespace MapAssist.Helpers
             gamemaps = new HashSet<(Bitmap, Point)>();
         }
 
-        public void Init(Graphics gfx, GameData gameData,DCTrack dcTrack, Rectangle drawBounds)
+        public void Init(Graphics gfx, GameData gameData, DCTrack dcTrack, Rectangle drawBounds)
         {
             _dcTrack = dcTrack;
             _gameData = gameData;
@@ -936,10 +936,10 @@ namespace MapAssist.Helpers
             if (MapAssistConfiguration.Loaded.GameInfo.ShowGameName && _gameData.Session.GameName.Length > 0)
             {
                 var tail = "";
-                if (MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey != "None" )
+                if (MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey != "None")
                     tail = "(" + MapAssistConfiguration.Loaded.HotkeyConfiguration.ShareRoomKey + "复制)";
 
-                var gameNameText = "房间名: " + _gameData.Session.GameName+tail;
+                var gameNameText = "房间名: " + _gameData.Session.GameName + tail;
                 DrawText(gfx, anchor, gameNameText, font, fontSize, textColor, true, textAlign);
                 anchor.Y += lineHeight;
 
@@ -1020,7 +1020,7 @@ namespace MapAssist.Helpers
                     DrawText(gfx, anchor, fpsText, font, fontSize, textColor, textShadow, textAlign);
                     anchor.Y += lineHeight;
                 }
-               
+
                 anchor.Y += lineHeight;
             }
 
