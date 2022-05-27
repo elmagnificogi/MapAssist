@@ -1,3 +1,4 @@
+using AutoUpdaterDotNET;
 using Gma.System.MouseKeyHook;
 using MapAssist.Forms;
 using MapAssist.Helpers;
@@ -19,9 +20,12 @@ namespace MapAssist
     internal static class Program
     {
         private static readonly string githubSha = "GITHUB_SHA";
-        private static readonly string githubRunNumber = "GITHUB_RUN_NUMBER";
+        private static readonly string githubRepo = @"GITHUB_REPO";
+        private static readonly string githubReleaseTag = "GITHUB_RELEASE_TAG";
+        private static readonly bool isPrecompiled = githubSha.Length == 40;
+
         private static readonly string appName = "MapAssist";
-        private static string messageBoxTitle = $"{appName} v1.0.0";
+        private static string messageBoxTitle = $"{appName} v{typeof(Program).Assembly.GetName().Version}";
         private static Mutex mutex = null;
 
         private static ConfigEditor configEditor;
@@ -44,11 +48,6 @@ namespace MapAssist
         {
             try
             {
-                if (githubSha.Length == 40)
-                {
-                    messageBoxTitle += $".{githubRunNumber}";
-                }
-
                 bool createdNew;
                 mutex = new Mutex(true, appName, out createdNew);
 
@@ -61,17 +60,29 @@ namespace MapAssist
                     return;
                 }
 
-                var configurationOk = LoadLoggingConfiguration() && LoadMainConfiguration() && LoadLootLogConfiguration();
+                var logConfigurationOk = LoadLoggingConfiguration();
+                if (isPrecompiled)
+                {
+                    _log.Info($"Running from commit {githubSha} on the {githubReleaseTag} release");
+
+                    AutoUpdater.OpenDownloadPage = true;
+                    AutoUpdater.ApplicationExitEvent += AutoUpdaterExit;
+
+                    var xmlUrl = $"https://raw.githubusercontent.com/{githubRepo}/releases/{githubReleaseTag}.xml";
+                    AutoUpdater.Start(xmlUrl);
+                }
+                else
+                {
+                    _log.Info($"Running a self-compiled build");
+                }
+
+
+                var configurationOk = logConfigurationOk && LoadMainConfiguration() && LoadLootLogConfiguration();
                 if (configurationOk)
                 {
                     if (System.IO.Directory.Exists("./Diablo"))
                     {
                         MapAssistConfiguration.Loaded.D2LoDPath = "./Diablo";
-                    }
-
-                    if (githubSha.Length == 40)
-                    {
-                        _log.Info($"Running from commit {githubSha}");
                     }
 
                     if (MapAssistConfiguration.Loaded.DPIAware)
@@ -159,7 +170,7 @@ namespace MapAssist
                         }
                     };
 
-                    backWorkOverlay.DoWork += RunOverlay;
+                    backWorkOverlay.DoWork += new DoWorkEventHandler(RunOverlay);
                     backWorkOverlay.WorkerSupportsCancellation = true;
                     backWorkOverlay.RunWorkerAsync();
 
@@ -185,10 +196,6 @@ namespace MapAssist
 
         public static void RunOverlay(object sender, DoWorkEventArgs e)
         {
-            if (Thread.CurrentThread.Name == null)
-            {
-                Thread.CurrentThread.Name = "Overlay Thread";
-            }
             using (overlay = new Overlay())
             {
                 overlay.Run();
@@ -384,6 +391,13 @@ namespace MapAssist
         private static void TrayExit(object sender, EventArgs e)
         {
             _log.Info("Exiting from tray icon");
+            Dispose();
+
+            Application.Exit();
+        }
+        private static void AutoUpdaterExit()
+        {
+            _log.Info("Exiting from outdated version");
             Dispose();
 
             Application.Exit();

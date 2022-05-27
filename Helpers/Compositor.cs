@@ -301,9 +301,14 @@ namespace MapAssist.Helpers
                     continue;
                 }
 
+                if (gameObject.IsArmorWeapRack && MapAssistConfiguration.Loaded.MapConfiguration.ArmorWeapRack.CanDrawIcon())
+                {
+                    drawPoiIcons.Add((MapAssistConfiguration.Loaded.MapConfiguration.ArmorWeapRack, gameObject.Position));
+                }
+
                 if (gameObject.IsChest)
                 {
-                    if ((gameObject.ObjectData.InteractType & ((byte)Chest.InteractFlags.Trap)) != ((byte)Chest.InteractFlags.None))
+                    if ((gameObject.ObjectData.InteractType & (byte)Chest.InteractFlags.Trap) == (byte)Chest.InteractFlags.Trap)
                     {
                         if (MapAssistConfiguration.Loaded.MapConfiguration.TrappedChest.CanDrawIcon())
                         {
@@ -311,7 +316,7 @@ namespace MapAssist.Helpers
                         }
                     }
 
-                    if ((gameObject.ObjectData.InteractType & ((byte)Chest.InteractFlags.Locked)) != ((byte)Chest.InteractFlags.None))
+                    if ((gameObject.ObjectData.InteractType & (byte)Chest.InteractFlags.Locked) == (byte)Chest.InteractFlags.Locked)
                     {
                         if (MapAssistConfiguration.Loaded.MapConfiguration.LockedChest.CanDrawIcon())
                         {
@@ -743,16 +748,9 @@ namespace MapAssist.Helpers
                 if (resImg != null)
                 {
                     Color buffColor = States.StateColor(state);
-                    if (state == State.STATE_CONVICTION)
+                    if (state == State.STATE_CONVICTION && _gameData.PlayerUnit.Skills.RightSkillId != Skill.Conviction && !_gameData.PlayerUnit.IsActiveInfinity)
                     {
-                        if (_gameData.PlayerUnit.Skills.RightSkillId == Skill.Conviction) // add check later for if infinity is equipped
-                        {
-                            buffColor = States.BuffColor;
-                        }
-                        else
-                        {
-                            buffColor = States.DebuffColor;
-                        }
+                        buffColor = States.DebuffColor;
                     }
 
                     if (buffsByColor.ContainsKey(buffColor))
@@ -1045,6 +1043,7 @@ namespace MapAssist.Helpers
 
             // Setup
             var fontSize = gfx.ScaleFontSize((float)MapAssistConfiguration.Loaded.ItemLog.LabelFontSize);
+            var font = CreateFont(gfx, MapAssistConfiguration.Loaded.ItemLog.LabelFont, fontSize);
             var lineHeight = gfx.LineHeight(fontSize);
             var textShadow = MapAssistConfiguration.Loaded.ItemLog.LabelTextShadow;
             var shadowBrush = CreateSolidBrush(gfx, Color.Black, 0.6f);
@@ -1055,11 +1054,10 @@ namespace MapAssist.Helpers
             for (var i = 0; i < itemsToShow.Length; i++)
             {
                 var item = itemsToShow[i];
-
-                var font = CreateFont(gfx, MapAssistConfiguration.Loaded.ItemLog.LabelFont, fontSize);
+                var itemText = item.Text;
                 var position = anchor.Add(0, i * lineHeight);
                 var brush = CreateSolidBrush(gfx, item.UnitItem.ItemBaseColor, 1);
-                var stringSize = gfx.MeasureString(font, item.Text);
+                var stringSize = gfx.MeasureString(font, itemText);
 
                 if (MapAssistConfiguration.Loaded.ItemLog.Position == GameInfoPosition.TopRight)
                 {
@@ -1096,9 +1094,9 @@ namespace MapAssist.Helpers
 
                 if (textShadow)
                 {
-                    gfx.DrawText(font, shadowBrush, position.X + shadowOffset, position.Y + shadowOffset, item.Text);
+                    gfx.DrawText(font, shadowBrush, position.X + shadowOffset, position.Y + shadowOffset, itemText);
                 }
-                gfx.DrawText(font, brush, position, item.Text);
+                gfx.DrawText(font, brush, position, itemText);
 
                 if (MapAssistConfiguration.Loaded.ItemLog.ShowDirectionToItem && item.Area == _gameData.Area && item.UnitItem.IsDropped)
                 {

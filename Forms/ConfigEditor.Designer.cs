@@ -185,6 +185,9 @@
             this.checkAsia = new System.Windows.Forms.CheckBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtFPS = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.positionX = new System.Windows.Forms.TextBox();
             this.positionY = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -247,9 +250,6 @@
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtFPS = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -1316,10 +1316,10 @@
             // chkShowDirectionToItem
             // 
             this.chkShowDirectionToItem.AutoSize = true;
-            this.chkShowDirectionToItem.Location = new System.Drawing.Point(185, 60);
+            this.chkShowDirectionToItem.Location = new System.Drawing.Point(185, 58);
             this.chkShowDirectionToItem.Name = "chkShowDirectionToItem";
             this.chkShowDirectionToItem.Size = new System.Drawing.Size(108, 16);
-            this.chkShowDirectionToItem.TabIndex = 0;
+            this.chkShowDirectionToItem.TabIndex = 42;
             this.chkShowDirectionToItem.Text = "显示掉落物方向";
             this.chkShowDirectionToItem.UseVisualStyleBackColor = true;
             this.chkShowDirectionToItem.CheckedChanged += new System.EventHandler(this.chkShowDirectionToItem_CheckedChanged);
@@ -2182,6 +2182,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "渲染";
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label35.Location = new System.Drawing.Point(266, 278);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(97, 13);
+            this.label35.TabIndex = 34;
+            this.label35.Text = "设置后需要重启地图";
+            // 
+            // txtFPS
+            // 
+            this.txtFPS.Location = new System.Drawing.Point(339, 252);
+            this.txtFPS.Name = "txtFPS";
+            this.txtFPS.Size = new System.Drawing.Size(33, 21);
+            this.txtFPS.TabIndex = 32;
+            this.txtFPS.Text = "24";
+            this.txtFPS.TextChanged += new System.EventHandler(this.txtFPS_TextChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Location = new System.Drawing.Point(250, 256);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(83, 12);
+            this.label34.TabIndex = 33;
+            this.label34.Text = "地图刷新频率:";
+            // 
             // positionX
             // 
             this.positionX.Location = new System.Drawing.Point(263, 181);
@@ -2914,36 +2944,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // txtFPS
-            // 
-            this.txtFPS.Location = new System.Drawing.Point(339, 252);
-            this.txtFPS.Name = "txtFPS";
-            this.txtFPS.Size = new System.Drawing.Size(33, 21);
-            this.txtFPS.TabIndex = 32;
-            this.txtFPS.Text = "24";
-            this.txtFPS.TextChanged += new System.EventHandler(this.txtFPS_TextChanged);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Location = new System.Drawing.Point(250, 256);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(83, 12);
-            this.label34.TabIndex = 33;
-            this.label34.Text = "地图刷新频率:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label35.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label35.Location = new System.Drawing.Point(266, 278);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(97, 13);
-            this.label35.TabIndex = 34;
-            this.label35.Text = "设置后需要重启地图";
             // 
             // ConfigEditor
             // 

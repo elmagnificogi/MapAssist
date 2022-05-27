@@ -103,7 +103,7 @@ namespace MapAssist.Helpers
                     else
                     {
                         _log.Info("User provided D2 LoD path not found or invalid");
-                        var diabloResult = MessageBox.Show("Diablo路径不正确" + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation.", "MapAssist", MessageBoxButtons.OKCancel);
+                        var diabloResult = MessageBox.Show("Provided D2 LoD path is not valid." + Environment.NewLine + Environment.NewLine + "Please provide a path to a D2 LoD 1.13c installation.", "MapAssist", MessageBoxButtons.OKCancel);
 
                         if (diabloResult == DialogResult.Cancel)
                         {
@@ -458,7 +458,7 @@ namespace MapAssist.Helpers
         private AreaData GetMapDataInternal(Area area)
         {
             _log.Info($"Requesting map data for {area} ({_gameData.MapSeed} seed, {_gameData.Difficulty} difficulty)");
-            
+
             var req = new Req();
             req.seed = _gameData.MapSeed;
             req.difficulty = (uint)_gameData.Difficulty;
@@ -491,7 +491,7 @@ namespace MapAssist.Helpers
 
                 areaData.PointsOfInterest = PointOfInterestHandler.Get(this, areaData, _gameData);
                 _log.Info($"Found {areaData.PointsOfInterest.Count} points of interest in {areaData.Area}");
-                
+
                 return areaData;
             }
         }

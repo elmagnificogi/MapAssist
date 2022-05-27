@@ -257,8 +257,20 @@ namespace MapAssist.Helpers
                 var serverMissileList = rawServerMissileUnits.Where(x => x != null && x.UnitType == UnitType.Missile && x.UnitId < uint.MaxValue).ToArray();
                 var missileList = clientMissileList.Concat(serverMissileList).ToArray();
 
-                // Items
+                // Set Cube Owner
                 var allItems = GetUnits<UnitItem>(UnitType.Item, true).Where(x => x.UnitId < uint.MaxValue).ToArray();
+                if (_playerMapChanged[_currentProcessId] || _playerCubeOwnerID[_currentProcessId] == uint.MaxValue)
+                {
+                    var cube = allItems.FirstOrDefault(x => x.Item == Item.HoradricCube);
+
+                    if (cube != null)
+                    {
+                        cube.Update();
+                        _playerCubeOwnerID[_currentProcessId] = cube.ItemData.dwOwnerID;
+                    }
+                }
+
+                // Items
                 var rawItemUnits = new List<UnitItem>();
                 foreach (var item in allItems)
                 {
@@ -344,15 +356,8 @@ namespace MapAssist.Helpers
                     return item.UnitItem;
                 }).Where(x => x != null).ToArray();
 
-                // Set Cube Owner
-                if (_playerMapChanged[_currentProcessId] || _playerCubeOwnerID[_currentProcessId] == uint.MaxValue)
-                {
-                    var cube = allItems.FirstOrDefault(x => x.Item == Item.HoradricCube);
-                    if (cube != null)
-                    {
-                        _playerCubeOwnerID[_currentProcessId] = cube.ItemData.dwOwnerID;
-                    }
-                }
+                // Player wearing items
+                playerUnit.WearingItems = allItems.Where(x => x.IsPlayerOwned && x.ItemModeMapped == ItemModeMapped.Player).ToArray();
 
                 // Belt items
                 var belt = allItems.FirstOrDefault(x => x.IsPlayerOwned && x.ItemModeMapped == ItemModeMapped.Player && x.ItemData.BodyLoc == BodyLoc.BELT);
@@ -474,6 +479,7 @@ namespace MapAssist.Helpers
                 Items.InventoryItemUnitIdsToSkip.Add(_currentProcessId, new HashSet<uint>());
                 Items.ItemVendors.Add(_currentProcessId, new Dictionary<uint, Npc>());
                 Items.ItemLog.Add(_currentProcessId, new List<ItemLogEntry>());
+                Items.ItemDisplayNames.Add(_currentProcessId, new Dictionary<uint, string>());
             }
             else
             {
@@ -483,6 +489,7 @@ namespace MapAssist.Helpers
                 Items.InventoryItemUnitIdsToSkip[_currentProcessId].Clear();
                 Items.ItemVendors[_currentProcessId].Clear();
                 Items.ItemLog[_currentProcessId].Clear();
+                Items.ItemDisplayNames[_currentProcessId].Clear();
             }
 
             if (!Corpses.ContainsKey(_currentProcessId))
