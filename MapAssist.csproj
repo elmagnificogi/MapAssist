@@ -283,7 +283,7 @@
       <Version>4.7.12</Version>
     </PackageReference>
     <PackageReference Include="ResurrectedTrade.AgentBase">
-      <Version>1.0.19</Version>
+      <Version>1.0.26</Version>
     </PackageReference>
     <PackageReference Include="System.Buffers">
       <Version>4.5.1</Version>
