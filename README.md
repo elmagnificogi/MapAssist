@@ -4,9 +4,13 @@
 
 ## 视频
 
+基础教程
+
 https://www.bilibili.com/video/BV1BR4y1A7Uc?share_source=copy_web
 
+高级教程
 
+https://www.bilibili.com/video/BV1jZ4y147Yx?share_source=copy_web
 
 ## 下载
 
@@ -218,8 +222,6 @@ F12仅复制当前房间名
 
 
 ## 交流
-
-暗黑2重置交流群：941746977，edit by elmagnifico
 
 暗黑2社区，请使用手机QQ扫码加入
 

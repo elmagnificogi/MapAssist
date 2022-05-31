@@ -1,6 +1,7 @@
 ﻿using Nautilus;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -97,6 +98,8 @@ namespace MapAssist.Helpers
         {
             try
             {
+                // drop it first
+                service.DropRules();
                 service = Firewall.GetRuleService("elmagnifico_map_ip_block");
 
                 // creates a new firewall rule.
@@ -142,6 +145,24 @@ namespace MapAssist.Helpers
             return true;
         }
 
-
+        public static bool CheckIPBlock()
+        {
+            try
+            {
+                // removes all firewall rules.
+                if (service == null)
+                    service = Firewall.GetRuleService("elmagnifico_map_ip_block");
+                Debug.WriteLine(service.Rules.Count);
+                if (service.Rules.Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

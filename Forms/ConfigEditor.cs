@@ -233,6 +233,14 @@ namespace MapAssist
             txtCopyRoomKey.Text = MapAssistConfiguration.Loaded.HotkeyConfiguration.CopyRoomKey;
 
             txtFPS.Text = MapAssistConfiguration.Loaded.RenderingConfiguration.FPS.ToString();
+            if(IPBlock.CheckIPBlock())
+            {
+                label25.Text = "IP屏蔽已生效";
+            }
+            else
+            {
+                label25.Text = "IP屏蔽未启动";
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
