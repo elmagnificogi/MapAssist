@@ -212,7 +212,7 @@ namespace MapAssist.Integrations.ResurrectedTrade
 
             UnitHashTable = (Ptr)GameManager.UnitHashTableOffset - context.BaseAddr;
             SessionData = FindAndResolvePattern(buffer, context, SessionDataPattern);
-            Pets = FindAndResolvePattern(buffer, context, PetListPattern);
+            Pets = (Ptr)GameManager.PetsOffset - context.BaseAddr;
             UIState = (Ptr)GameManager.MenuDataOffset - context.BaseAddr;
             IsOnlineGame = FindAndResolvePattern(buffer, context, IsOnlineGamePattern);
             WidgetStates = FindAndResolvePattern(buffer, context, WidgetStatesPattern);
