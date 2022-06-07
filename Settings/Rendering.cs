@@ -22,9 +22,12 @@ namespace MapAssist.Settings
         [YamlMember(Alias = "IconThickness", ApplyNamingConventions = false)]
         public float IconThickness { get; set; }
 
+        [YamlMember(Alias = "IconOpacity", ApplyNamingConventions = false)]
+        public float IconOpacity { get; set; } = 1;
+
         public bool CanDrawIcon()
         {
-            return IconSize > 0 && (IconColor != Color.Transparent || IconOutlineColor != Color.Transparent);
+            return IconSize > 0 && IconOpacity > 0 && ((IconColor != Color.Transparent && IconColor != Color.Empty) || (IconOutlineColor != Color.Transparent && IconOutlineColor != Color.Empty));
         }
 
         public object Clone()
@@ -58,7 +61,7 @@ namespace MapAssist.Settings
 
         public bool CanDrawLine()
         {
-            return LineColor != Color.Transparent && LineThickness > 0;
+            return LineColor.A > 0 && LineThickness > 0;
         }
 
         public bool CanDrawArrowHead()
@@ -68,8 +71,32 @@ namespace MapAssist.Settings
 
         public bool CanDrawLabel()
         {
-            return LabelColor != Color.Transparent && !string.IsNullOrWhiteSpace(LabelFont) &&
-                LabelFontSize > 0;
+            return LabelColor.A > 0 && !string.IsNullOrWhiteSpace(LabelFont) && LabelFontSize > 0;
+        }
+
+        public void ToggleLine()
+        {
+            if (LineThickness != 0)
+            {
+                LineThickness = 0;
+                return;
+            }
+
+            LineThickness = 2;
+
+            if (ArrowHeadSize == 0)
+            {
+                ArrowHeadSize = 15;
+            }
+
+            if (LineColor.A == 0)
+            {
+                LineColor = IconColor.A > 0
+                    ? IconColor
+                    : IconOutlineColor.A > 0
+                        ? IconOutlineColor
+                        : Color.Red;
+            }
         }
     }
 
@@ -116,6 +143,9 @@ namespace MapAssist.Settings
         Portal,
         Dress,
         Kite,
+        Stick,
+        Leg,
+        Pentagram
     }
 
     public enum TextAlign

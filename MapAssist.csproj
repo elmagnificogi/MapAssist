@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
@@ -300,7 +301,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Config.yaml" />
-    <None Include="Resources\Ching.wav" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\ConfigEditor.resx">
@@ -376,7 +376,7 @@
     <None Include="Resources\Valkyrie.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\VenomClaws.png" />
+    <None Include="Resources\Venom.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vigor.png" />
@@ -625,7 +625,7 @@
     <None Include="Resources\DefenseCurse.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cold.png" />
+    <None Include="Resources\Frozen.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TigerStrike.png" />
@@ -649,12 +649,22 @@
     <Content Include="MAServer.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\community.png" />
+    <Content Include="Resources\Banner.png" />
+    <Content Include="Sounds\Ching.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Pop.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\Surprise.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Resources\InventoryExportTemplate.html" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="PostBuildMacros">
     <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">

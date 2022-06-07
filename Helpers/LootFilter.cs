@@ -34,6 +34,8 @@ namespace MapAssist.Helpers
                 if (item.IsIdentified && rule.TargetsUnidItem()) continue;
                 if (item.IsAnyPlayerHolding) continue;
 
+                if (item.IsInStore && !rule.CheckVendor) continue;
+
                 // Requirement check functions
                 var requirementsFunctions = new Dictionary<string, Func<bool>>()
                 {

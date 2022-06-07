@@ -2,7 +2,7 @@
 HotkeyConfiguration:
   ToggleKey: '|'
   HideMapKey: ''
-  AreaLevelKey: '['
+  MapPositionsKey: ''
   ZoomInKey: Num +
   ZoomOutKey: Num -
   ExportItemsKey: ''
@@ -10,6 +10,7 @@ HotkeyConfiguration:
   AddRoomKey: F11
   RoomTemplete: 牛场[0]一起来快活啊
   CopyRoomKey: F12
+  ToggleConfigKey: ''
 HiddenAreas:
 - Forgotten Tower
 AuthorizedWindowTitles: []
@@ -158,6 +159,16 @@ MapConfiguration:
     IconShape: Cross
     IconSize: 6
     IconThickness: 1
+  MySummons:
+    IconOutlineColor: 77, 120, 124
+    IconShape: Cross
+    IconSize: 6
+    IconThickness: 0
+  OtherSummons:
+    IconOutlineColor: 81, 167, 60
+    IconShape: Cross
+    IconSize: 6
+    IconThickness: 0
   Corpse:
     IconOutlineColor: Magenta
     IconShape: Cross
@@ -170,12 +181,39 @@ MapConfiguration:
     LabelFontSize: 14
     LabelFont: Formal 436
     LabelTextShadow: true
-  Portal:
+  MyPortal:
     IconOutlineColor: Yellow
     IconShape: Portal
     IconSize: 3
     IconThickness: 2
     LabelColor: Yellow
+    LabelFontSize: 14
+    LabelFont: Formal 436
+    LabelTextShadow: true
+  PartyPortal:
+    IconOutlineColor: Yellow
+    IconShape: Portal
+    IconSize: 3
+    IconThickness: 2
+    LabelColor: Yellow
+    LabelFontSize: 14
+    LabelFont: Formal 436
+    LabelTextShadow: true
+  NonPartyPortal:
+    IconOutlineColor: Orange
+    IconShape: Portal
+    IconSize: 3
+    IconThickness: 2
+    LabelColor: Orange
+    LabelFontSize: 14
+    LabelFont: Formal 436
+    LabelTextShadow: true
+  GamePortal:
+    IconOutlineColor: 225, 30, 30
+    IconShape: Portal
+    IconSize: 3
+    IconThickness: 2
+    LabelColor: 225, 30, 30
     LabelFontSize: 14
     LabelFont: Formal 436
     LabelTextShadow: true
@@ -275,7 +313,7 @@ ItemLog:
   PlaySoundOnDrop: true
   ShowDistanceToItem: true
   ShowDirectionToItem: true
-  SoundFile: ''
+  SoundFile: 'Ching.wav'
   SoundVolume: 100
   DisplayForSeconds: 45
   LabelFont: Exocet Blizzard Mixed Caps
@@ -295,7 +333,6 @@ GameInfo:
   ShowArea: true
   ShowDifficulty: false
   ShowAreaLevel: true
-  ShowDifficulty: true
   ShowOverlayFPS: false
   ShowGameTimer: false
   ShowAreaTimer: true

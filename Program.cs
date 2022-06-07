@@ -7,13 +7,16 @@ using MapAssist.Integrations.ResurrectedTrade;
 using MapAssist.Settings;
 using MapAssist.Types;
 using NLog;
+using NLog.Config;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
+using YamlDotNet.Core;
 
 namespace MapAssist
 {
@@ -22,7 +25,7 @@ namespace MapAssist
         private static readonly string githubSha = "GITHUB_SHA";
         private static readonly string githubRepo = @"GITHUB_REPO";
         private static readonly string githubReleaseTag = "GITHUB_RELEASE_TAG";
-        private static readonly bool isPrecompiled = githubSha.Length == 40;
+        public static readonly bool isPrecompiled = githubSha.Length == 40;
 
         private static readonly string appName = "MapAssist";
         private static string messageBoxTitle = $"{appName} v{typeof(Program).Assembly.GetName().Version}";
@@ -60,42 +63,39 @@ namespace MapAssist
                     return;
                 }
 
-                var logConfigurationOk = LoadLoggingConfiguration();
+                LoadLoggingConfiguration();
                 if (isPrecompiled)
                 {
-                    _log.Info($"Running from commit {githubSha} on the {githubReleaseTag} release");
+                    _log.Info($"Running from commit {githubSha} ({githubRepo} repo, {githubReleaseTag} release)");
 
-                    AutoUpdater.OpenDownloadPage = true;
-                    AutoUpdater.ApplicationExitEvent += AutoUpdaterExit;
-
-                    var xmlUrl = $"https://raw.githubusercontent.com/{githubRepo}/releases/{githubReleaseTag}.xml";
-                    AutoUpdater.Start(xmlUrl);
+                    CheckForUpdates();
                 }
                 else
                 {
                     _log.Info($"Running a self-compiled build");
                 }
 
+                LoadMainConfiguration();
+                LoadLootLogConfiguration();
 
-                var configurationOk = logConfigurationOk && LoadMainConfiguration() && LoadLootLogConfiguration();
-                if (configurationOk)
+                if (MapAssistConfiguration.Loaded.DPIAware)
                 {
-                    if (System.IO.Directory.Exists("./Diablo"))
-                    {
-                        MapAssistConfiguration.Loaded.D2LoDPath = "./Diablo";
-                    }
+                    SetProcessDPIAware();
+                }
 
-                    if (MapAssistConfiguration.Loaded.DPIAware)
-                    {
-                        SetProcessDPIAware();
-                    }
 
-                    Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-                    Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
-                    AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+                if (System.IO.Directory.Exists("./Diablo"))
+                {
+                    MapAssistConfiguration.Loaded.D2LoDPath = "./Diablo";
+                }
 
-                    Application.EnableVisualStyles();
-                    Application.SetCompatibleTextRenderingDefault(false);
+
+                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+                Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
 
                     try
                     {
@@ -170,9 +170,18 @@ namespace MapAssist
                         }
                     };
 
-                    backWorkOverlay.DoWork += new DoWorkEventHandler(RunOverlay);
-                    backWorkOverlay.WorkerSupportsCancellation = true;
-                    backWorkOverlay.RunWorkerAsync();
+                globalHook.MouseMove += (sender, args) =>
+                {
+                    if (overlay != null)
+                    {
+                        overlay.MouseMoveHandler(sender, args);
+                    }
+                };
+
+                configEditor = new ConfigEditor();
+                backWorkOverlay.DoWork += new DoWorkEventHandler(RunOverlay);
+                backWorkOverlay.WorkerSupportsCancellation = true;
+                backWorkOverlay.RunWorkerAsync();
 
                     GameManager.OnGameAccessDenied += (_, __) =>
                     {
@@ -183,10 +192,9 @@ namespace MapAssist
                         Environment.Exit(0);
                     };
 
-                    GameManager.MonitorForegroundWindow();
+                GameManager.MonitorForegroundWindow();
 
-                    Application.Run();
-                }
+                Application.Run();
             }
             catch (Exception e)
             {
@@ -194,9 +202,38 @@ namespace MapAssist
             }
         }
 
+        private static void CheckForUpdates()
+        {
+            var xmlUrl = $"https://raw.githubusercontent.com/{githubRepo}/releases/{githubReleaseTag}.xml";
+
+            void AutoUpdater_CheckForUpdateEvent(UpdateInfoEventArgs args)
+            {
+                if (args.Error == null && args.IsUpdateAvailable && args.Mandatory.Value && args.InstalledVersion < new System.Version(args.Mandatory.MinimumVersion))
+                {
+                    if (Thread.CurrentThread.GetApartmentState().Equals(ApartmentState.STA))
+                    {
+                        AutoUpdater.ShowUpdateForm(args);
+                    }
+                    else
+                    {
+                        var thread = new Thread(new ThreadStart(delegate { AutoUpdater.ShowUpdateForm(args); }));
+                        thread.CurrentCulture = thread.CurrentUICulture = CultureInfo.CurrentCulture;
+                        thread.SetApartmentState(ApartmentState.STA);
+                        thread.Start();
+                        thread.Join();
+                    }
+                }
+            }
+
+            AutoUpdater.OpenDownloadPage = true;
+            AutoUpdater.CheckForUpdateEvent += AutoUpdater_CheckForUpdateEvent;
+            AutoUpdater.ApplicationExitEvent += AutoUpdaterExit;
+            AutoUpdater.Start(xmlUrl);
+        }
+
         public static void RunOverlay(object sender, DoWorkEventArgs e)
         {
-            using (overlay = new Overlay())
+            using (overlay = new Overlay(configEditor))
             {
                 overlay.Run();
             }
@@ -204,9 +241,19 @@ namespace MapAssist
 
         private static void ProcessException(Exception e)
         {
+            var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
+
+            if (e.GetType() == typeof(YamlException) && e.InnerException != null)
+            {
+                _log.Fatal(e.InnerException);
+
+                message = e.Message + Environment.NewLine + Environment.NewLine +
+                    e.InnerException.Message + Environment.NewLine + Environment.NewLine +
+                    e.InnerException.StackTrace;
+            }
+
             _log.Fatal(e);
 
-            var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
             MessageBox.Show(message, $"{messageBoxTitle}: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             Application.Exit();
@@ -222,99 +269,45 @@ namespace MapAssist
             ProcessException(e.Exception);
         }
 
-        private static bool LoadMainConfiguration()
+        private static void LoadMainConfiguration()
         {
-            var configurationOk = false;
-            try
-            {
-                MapAssistConfiguration.Load();
-                MapAssistConfiguration.Loaded.RenderingConfiguration.InitialSize = MapAssistConfiguration.Loaded.RenderingConfiguration.Size;
-                configurationOk = true;
-            }
-            catch (YamlDotNet.Core.YamlException e)
-            {
-                _log.Fatal(e);
-                _log.Fatal(e, "Invalid yaml for configuration file");
-
-                var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: MapAssist configuration yaml 错误，请删除本地Config.yaml，重启", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception e)
-            {
-                _log.Fatal(e, "Unknown error loading main configuration");
-                MessageBox.Show(e.Message, $"{messageBoxTitle}: General error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return configurationOk;
+            MapAssistConfiguration.Load();
+            MapAssistConfiguration.Loaded.RenderingConfiguration.InitialSize = MapAssistConfiguration.Loaded.RenderingConfiguration.Size;
         }
 
-        private static bool LoadLootLogConfiguration()
+        private static void LoadLootLogConfiguration()
         {
-            var configurationOk = false;
-            try
-            {
-                LootLogConfiguration.Load();
-                configurationOk = true;
-            }
-            catch (YamlDotNet.Core.YamlException e)
-            {
-                _log.Fatal(e);
-                _log.Fatal("Invalid item log yaml file");
-
-                var message = e.InnerException != null ? e.InnerException.Message : e.Message;
-                MessageBox.Show(message, $"{messageBoxTitle}: Item filter yaml错误，请检查过滤文件", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception e)
-            {
-                _log.Fatal(e, $"Unable to initialize Loot Log configuration");
-                MessageBox.Show(e.Message, $"{messageBoxTitle}: General error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return configurationOk;
+            LootLogConfiguration.Load();
         }
 
-        private static bool LoadLoggingConfiguration()
+        private static void LoadLoggingConfiguration()
         {
-            var configurationOk = false;
+            ConfigurationItemFactory.Default.LayoutRenderers.RegisterDefinition("InvariantCulture", typeof(InvariantCultureLayoutRendererWrapper));
+            var config = new LoggingConfiguration();
 
-            try
+            var logfile = new NLog.Targets.FileTarget("logfile")
             {
-                var config = new NLog.Config.LoggingConfiguration();
+                FileName = "logs\\log.txt",
+                CreateDirs = true,
+                ArchiveNumbering = NLog.Targets.ArchiveNumberingMode.DateAndSequence,
+                ArchiveOldFileOnStartup = true,
+                MaxArchiveFiles = 5,
+                Encoding = System.Text.Encoding.UTF8,
+                // Default layout with forcing invariant culture for messages, especially for stacktrace
+                Layout = NLog.Layouts.Layout.FromString("${longdate}|${level:uppercase=true}|${logger}|${InvariantCulture:${message:withexception=true}}")
+            };
+            var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
 
-                var logfile = new NLog.Targets.FileTarget("logfile")
-                {
-                    FileName = "logs\\log.txt",
-                    CreateDirs = true,
-                    ArchiveNumbering = NLog.Targets.ArchiveNumberingMode.DateAndSequence,
-                    ArchiveOldFileOnStartup = true,
-                    MaxArchiveFiles = 5
-                };
-                var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+            // Rules for mapping loggers to targets
+            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logconsole);
+            config.AddRule(LogLevel.Info, LogLevel.Fatal, logfile);
 
-                // Rules for mapping loggers to targets
-                config.AddRule(LogLevel.Debug, LogLevel.Fatal, logconsole);
-                config.AddRule(LogLevel.Info, LogLevel.Fatal, logfile);
-
-                // Apply config
-                LogManager.Configuration = config;
-
-                configurationOk = true;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, $"{messageBoxTitle}: General error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return configurationOk;
+            // Apply config
+            LogManager.Configuration = config;
         }
 
         private static void ShowConfigEditor(object sender, EventArgs e)
         {
-            if (configEditor == null)
-            {
-                configEditor = new ConfigEditor();
-            }
-
             if (configEditor.Visible)
             {
                 configEditor.Activate();
@@ -351,6 +344,9 @@ namespace MapAssist
         private static void Dispose()
         {
             _log.Info("Disposing");
+
+            AudioPlayer.Dispose();
+            _log.Info("Disposed sound files");
 
             overlay.Dispose();
             _log.Info("Disposed Overlay");

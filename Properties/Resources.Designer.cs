@@ -113,6 +113,16 @@ namespace MapAssist.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Banner {
+            get {
+                object obj = ResourceManager.GetObject("Banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Barbs {
             get {
                 object obj = ResourceManager.GetObject("Barbs", resourceCulture);
@@ -581,6 +591,16 @@ namespace MapAssist.Properties {
         
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Frozen {
+            get {
+                object obj = ResourceManager.GetObject("Frozen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap FrozenArmor {
             get {
@@ -1154,9 +1174,9 @@ namespace MapAssist.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap VenomClaws {
+        internal static System.Drawing.Bitmap Venom {
             get {
-                object obj = ResourceManager.GetObject("VenomClaws", resourceCulture);
+                object obj = ResourceManager.GetObject("Venom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

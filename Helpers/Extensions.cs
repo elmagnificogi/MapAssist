@@ -26,6 +26,7 @@ namespace MapAssist.Helpers
 
         // Math
         public static Point Subtract(this Point point, float offset) => point.Subtract(offset, offset);
+
         public static Point Subtract(this Point point, Point offset) => point.Subtract(offset.X, offset.Y);
 
         public static Point Subtract(this Point point, float x, float y)
@@ -34,6 +35,7 @@ namespace MapAssist.Helpers
         }
 
         public static Point Add(this Point point, Point offset) => point.Add(offset.X, offset.Y);
+
         public static Point Add(this Point point, float x, float y)
         {
             return new Point(point.X + x, point.Y + y);
@@ -50,6 +52,8 @@ namespace MapAssist.Helpers
 
         public static Point Rotate(this Point point, float angleRadians, Point centerPoint)
         {
+            if (angleRadians == 0) return point;
+
             return new Point(
               (float)(centerPoint.X + Math.Cos(angleRadians) * (point.X - centerPoint.X) - Math.Sin(angleRadians) * (point.Y - centerPoint.Y)),
               (float)(centerPoint.Y + Math.Sin(angleRadians) * (point.X - centerPoint.X) + Math.Cos(angleRadians) * (point.Y - centerPoint.Y))
@@ -97,6 +101,11 @@ namespace MapAssist.Helpers
             var maxY = points.Max(point => point.Y);
 
             return new Rectangle(minX - padding, minY - padding, maxX + padding, maxY + padding);
+        }
+
+        public static bool IncludesPoint(this Rectangle rect, Point point)
+        {
+            return point.X >= rect.Left && point.X <= rect.Right && point.Y >= rect.Top && point.Y <= rect.Bottom;
         }
 
         public static SystemColor SetOpacity(this SystemColor color, float opacity)
