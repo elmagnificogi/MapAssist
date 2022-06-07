@@ -158,7 +158,7 @@ namespace MapAssist.Helpers
             //Log.Print(offsetAddressToInt.ToString("X8"));
 
             // final seed address
-            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0x8);
+            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0x4);
             //resultRelativeAddress = IntPtr.Subtract(new IntPtr((long)resultRelativeAddress), 0x840);
             //offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
             //_log.Info(offsetAddressToInt.ToString("X8"));

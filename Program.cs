@@ -30,6 +30,7 @@ namespace MapAssist
         private static readonly string appName = "MapAssist";
         private static string messageBoxTitle = $"{appName} v{typeof(Program).Assembly.GetName().Version}";
         private static Mutex mutex = null;
+        public static int map_index_fix = -1;
 
         private static ConfigEditor configEditor;
         private static RoomRecords roomRecorder;
@@ -131,8 +132,10 @@ namespace MapAssist
                     var contextMenu = new ContextMenuStrip();
                     var configMenuItem = new ToolStripMenuItem("设置", null, ShowConfigEditor);
                     var lootFilterMenuItem = new ToolStripMenuItem("物品过滤", null, LootFilter);
+                    var mapfix = new ToolStripMenuItem("地图修复-临时", null, Mapfix);
                     contextMenu.Items.Add(configMenuItem);
                     contextMenu.Items.Add(lootFilterMenuItem);
+                    contextMenu.Items.Add(mapfix);
                     contextMenu.Items.Add(new ToolStripSeparator());
                     var integrationAdded = false;
 
@@ -339,6 +342,13 @@ namespace MapAssist
         {
             var _path = AppDomain.CurrentDomain.BaseDirectory;
             Process.Start(_path + "\\MA_Filter.exe");
+        }
+
+        private static void Mapfix(object sender, EventArgs e)
+        {
+            map_index_fix++;
+            if(map_index_fix>=4)
+                map_index_fix=-1;
         }
 
         private static void Dispose()
