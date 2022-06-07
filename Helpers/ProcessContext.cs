@@ -112,7 +112,59 @@ namespace MapAssist.Helpers
 
             var offsetAddressToInt = BitConverter.ToInt32(offsetBuffer, 0);
             var delta = patternAddress.ToInt64() - _baseAddr.ToInt64();
+            //return GetMapSeedOffset1();
             return IntPtr.Add(_baseAddr, (int)(delta + 0xEA + offsetAddressToInt));
+        }
+
+        public IntPtr GetMapSeedOffset1(byte[] buffer)
+        {
+            var offsetBuffer = new byte[8];
+            var resultRelativeAddress = IntPtr.Add(_baseAddr, 0x02404398);
+            if (!WindowsExternal.ReadProcessMemory(_handle, resultRelativeAddress, offsetBuffer, sizeof(long), out _))
+            {
+                _log.Info("We failed to read the process memory");
+                return IntPtr.Zero;
+            }
+
+            var offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
+            //Log.Print(offsetAddressToInt.ToString("X8"));
+
+            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0x360);
+            if (!WindowsExternal.ReadProcessMemory(_handle, resultRelativeAddress, offsetBuffer, sizeof(long), out _))
+            {
+                _log.Info("We failed to read the process memory");
+                return IntPtr.Zero;
+            }
+            offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
+            //Log.Print(offsetAddressToInt.ToString("X8"));
+
+            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0);
+            if (!WindowsExternal.ReadProcessMemory(_handle, resultRelativeAddress, offsetBuffer, sizeof(long), out _))
+            {
+                _log.Info("We failed to read the process memory");
+                return IntPtr.Zero;
+            }
+            offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
+            //Log.Print(offsetAddressToInt.ToString("X8"));
+
+
+            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0x8);
+            if (!WindowsExternal.ReadProcessMemory(_handle, resultRelativeAddress, offsetBuffer, sizeof(long), out _))
+            {
+                _log.Info("We failed to read the process memory");
+                return IntPtr.Zero;
+            }
+            offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
+            //Log.Print(offsetAddressToInt.ToString("X8"));
+
+            // final seed address
+            resultRelativeAddress = IntPtr.Add(new IntPtr(offsetAddressToInt), 0x8);
+            //resultRelativeAddress = IntPtr.Subtract(new IntPtr((long)resultRelativeAddress), 0x840);
+            //offsetAddressToInt = BitConverter.ToInt64(offsetBuffer, 0);
+            //_log.Info(offsetAddressToInt.ToString("X8"));
+
+            return resultRelativeAddress;
+            //return IntPtr.Add(_baseAddr, (int)(delta + 0 + offsetAddressToInt));
         }
 
         public IntPtr GetRosterDataOffset(byte[] buffer)

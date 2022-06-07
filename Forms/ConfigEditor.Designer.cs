@@ -48,6 +48,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabDrawing = new System.Windows.Forms.TabControl();
             this.tabIcon = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.iconOpacity = new System.Windows.Forms.TrackBar();
             this.lblIconOpacityValue = new System.Windows.Forms.Label();
             this.btnIconColor = new System.Windows.Forms.Button();
@@ -258,7 +259,6 @@
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label6 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -524,6 +524,16 @@
             this.tabIcon.TabIndex = 0;
             this.tabIcon.Text = "图标";
             this.tabIcon.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(8, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "透明度";
             // 
             // iconOpacity
             // 
@@ -3056,16 +3066,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(8, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "透明度";
             // 
             // ConfigEditor
             // 

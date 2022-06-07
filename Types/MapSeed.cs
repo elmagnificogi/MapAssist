@@ -22,9 +22,9 @@ namespace MapAssist.Types
                 try
                 {
                     var pMapSeedData = processContext.Read<IntPtr>(_pMapSeed);
-                    var mapSeedData = processContext.Read<Structs.MapSeed>(pMapSeedData);
+                    var mapSeedData = processContext.Read<Structs.MapSeed>(_pMapSeed);
 
-                    Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed1 : mapSeedData.mapSeed2; // Use this if check offset is 0x110
+                    Seed = mapSeedData.mapSeed1 ; // Use this if check offset is 0x110
                     //Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed2 : mapSeedData.mapSeed1; // Use this if check offset is 0x124
                     //Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed1 : mapSeedData.mapSeed2; // Use this if check offset is 0x830
                 }

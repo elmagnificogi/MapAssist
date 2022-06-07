@@ -350,6 +350,7 @@ namespace MapAssist.Helpers
         private AreaData GetMapDataInternal(Area area)
         {
             _log.Info($"Requesting map data for {area} ({_gameData.MapSeed} seed, {_gameData.Difficulty} difficulty)");
+            //_gameData.MapSeed = 824568655;
 
             var req = new Req();
             req.seed = _gameData.MapSeed;

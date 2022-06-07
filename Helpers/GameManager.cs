@@ -356,7 +356,7 @@ namespace MapAssist.Helpers
 
                 if (_MapSeedOffset[pid] == IntPtr.Zero)
                 {
-                    _MapSeedOffset[pid] = processContext.GetMapSeedOffset(buffer);
+                    _MapSeedOffset[pid] = processContext.GetMapSeedOffset1(buffer);
                     _log.Info($"Found offset {nameof(_MapSeedOffset)} 0x{_MapSeedOffset[pid].ToInt64() - processContext.BaseAddr.ToInt64():X}");
                 }
 
