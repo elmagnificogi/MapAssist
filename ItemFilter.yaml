@@ -14,6 +14,8 @@ Caduceus:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -88,6 +90,8 @@ Caduceus:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -157,6 +161,8 @@ Caduceus:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -231,6 +237,8 @@ WarScepter:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -305,6 +313,8 @@ WarScepter:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -383,6 +393,8 @@ ClassWands:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -460,6 +472,8 @@ ClassWands:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -531,6 +545,8 @@ UnearthedWand:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -602,6 +618,8 @@ TowerShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -675,6 +693,8 @@ Monarch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -744,6 +764,8 @@ Monarch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -813,6 +835,8 @@ Monarch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -883,6 +907,8 @@ Monarch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -953,6 +979,8 @@ Monarch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 30
   Max Mana: 
@@ -1024,6 +1052,8 @@ DragonShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1095,6 +1125,8 @@ Aegis:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1165,6 +1197,8 @@ LeatherGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1235,6 +1269,8 @@ LeatherGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1305,6 +1341,8 @@ HeavyGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1375,6 +1413,8 @@ HeavyGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1445,6 +1485,8 @@ ChainGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1515,6 +1557,8 @@ ChainGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1584,6 +1628,8 @@ ChainGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1654,6 +1700,8 @@ LightGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1724,6 +1772,8 @@ LightGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1793,6 +1843,8 @@ LightGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1863,6 +1915,8 @@ Gauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -1933,6 +1987,8 @@ Gauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2003,6 +2059,8 @@ DemonhideGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2073,6 +2131,8 @@ DemonhideGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2143,6 +2203,8 @@ SharkskinGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2213,6 +2275,8 @@ SharkskinGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2283,6 +2347,8 @@ HeavyBracers:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2353,6 +2419,8 @@ HeavyBracers:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2423,6 +2491,8 @@ BattleGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2493,6 +2563,8 @@ BattleGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2563,6 +2635,8 @@ WarGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2633,6 +2707,8 @@ WarGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2703,6 +2779,8 @@ BrambleMitts:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2775,6 +2853,8 @@ BrambleMitts:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2845,6 +2925,8 @@ VampireboneGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2917,6 +2999,8 @@ VampireboneGloves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -2987,6 +3071,8 @@ Vambraces:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3058,6 +3144,8 @@ Vambraces:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3128,6 +3216,8 @@ CrusaderGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3198,6 +3288,8 @@ CrusaderGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3268,6 +3360,8 @@ OgreGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3338,6 +3432,8 @@ OgreGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3407,6 +3503,8 @@ OgreGauntlets:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3477,6 +3575,8 @@ Quhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3547,6 +3647,8 @@ WristSpike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3617,6 +3719,8 @@ Fascia:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3687,6 +3791,8 @@ HandScythe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3757,6 +3863,8 @@ GreaterClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3827,6 +3935,8 @@ GreaterTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3899,6 +4009,8 @@ GreaterTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -3972,6 +4084,8 @@ GreaterTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4045,6 +4159,8 @@ GreaterTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4118,6 +4234,8 @@ GreaterTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4189,6 +4307,8 @@ ScissorsQuhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4261,6 +4381,8 @@ ScissorsQuhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4334,6 +4456,8 @@ ScissorsQuhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4407,6 +4531,8 @@ ScissorsQuhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4480,6 +4606,8 @@ ScissorsQuhab:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4551,6 +4679,8 @@ Suwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4623,6 +4753,8 @@ Suwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4696,6 +4828,8 @@ Suwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4769,6 +4903,8 @@ Suwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4842,6 +4978,8 @@ Suwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4913,6 +5051,8 @@ WristSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -4985,6 +5125,8 @@ WristSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5058,6 +5200,8 @@ WristSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5131,6 +5275,8 @@ WristSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5204,6 +5350,8 @@ WristSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5275,6 +5423,8 @@ WarFist:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5345,6 +5495,8 @@ BattleCestus:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5415,6 +5567,8 @@ FeralClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5487,6 +5641,8 @@ FeralClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5560,6 +5716,8 @@ FeralClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5633,6 +5791,8 @@ FeralClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5706,6 +5866,8 @@ FeralClaws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5777,6 +5939,8 @@ RunicTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5849,6 +6013,8 @@ RunicTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5922,6 +6088,8 @@ RunicTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -5995,6 +6163,8 @@ RunicTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6068,6 +6238,8 @@ RunicTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6140,6 +6312,8 @@ GothicPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -6210,6 +6384,8 @@ GothicPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6281,6 +6457,8 @@ FullPlateMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -6351,6 +6529,8 @@ FullPlateMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6422,6 +6602,8 @@ AncientArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6492,6 +6674,8 @@ AncientArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -6563,6 +6747,8 @@ OrnatePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6633,6 +6819,8 @@ OrnatePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -6704,6 +6892,8 @@ ChaosArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6774,6 +6964,8 @@ ChaosArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6844,6 +7036,8 @@ ChaosArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -6915,6 +7109,8 @@ EmbossedPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -6985,6 +7181,8 @@ EmbossedPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -7057,6 +7255,8 @@ MagePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7126,6 +7326,8 @@ MagePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7196,6 +7398,8 @@ MagePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 60
   Max Mana: 
@@ -7269,6 +7473,8 @@ DuskShroud:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7338,6 +7544,8 @@ DuskShroud:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7407,6 +7615,8 @@ DuskShroud:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7477,6 +7687,8 @@ DuskShroud:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7547,6 +7759,8 @@ DuskShroud:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -7620,6 +7834,8 @@ Wyrmhide:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7689,6 +7905,8 @@ Wyrmhide:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7759,6 +7977,8 @@ Wyrmhide:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7829,6 +8049,8 @@ Wyrmhide:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -7902,6 +8124,8 @@ ScarabHusk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -7971,6 +8195,8 @@ ScarabHusk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8041,6 +8267,8 @@ ScarabHusk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8111,6 +8339,8 @@ ScarabHusk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -8184,6 +8414,8 @@ WireFleece:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8253,6 +8485,8 @@ WireFleece:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8322,6 +8556,8 @@ WireFleece:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8392,6 +8628,8 @@ WireFleece:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8462,6 +8700,8 @@ WireFleece:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -8533,6 +8773,8 @@ DiamondMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8603,6 +8845,8 @@ DiamondMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -8674,6 +8918,8 @@ LoricatedMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8744,6 +8990,8 @@ LoricatedMail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -8815,6 +9063,8 @@ Boneweave:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -8885,6 +9135,8 @@ Boneweave:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -8958,6 +9210,8 @@ GreatHauberk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9027,6 +9281,8 @@ GreatHauberk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9097,6 +9353,8 @@ GreatHauberk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9167,6 +9425,8 @@ GreatHauberk:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -9239,6 +9499,8 @@ BalrogSkin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9308,6 +9570,8 @@ BalrogSkin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9378,6 +9642,8 @@ BalrogSkin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9448,6 +9714,8 @@ BalrogSkin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -9520,6 +9788,8 @@ HellforgePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9590,6 +9860,8 @@ HellforgePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9660,6 +9932,8 @@ HellforgePlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -9732,6 +10006,8 @@ KrakenShell:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9802,6 +10078,8 @@ KrakenShell:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -9872,6 +10150,8 @@ KrakenShell:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -9944,6 +10224,8 @@ LacqueredPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10013,6 +10295,8 @@ LacqueredPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10083,6 +10367,8 @@ LacqueredPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10153,6 +10439,8 @@ LacqueredPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -10225,6 +10513,8 @@ ShadowPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10295,6 +10585,8 @@ ShadowPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10365,6 +10657,8 @@ ShadowPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -10438,6 +10732,8 @@ SacredArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10508,6 +10804,8 @@ SacredArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10580,6 +10878,8 @@ SacredArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10650,6 +10950,8 @@ SacredArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10720,6 +11022,8 @@ SacredArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -10793,6 +11097,8 @@ ArchonPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10862,6 +11168,8 @@ ArchonPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -10932,6 +11240,8 @@ ArchonPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 90
   Max Mana: 
@@ -11002,6 +11312,8 @@ ArchonPlate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11072,6 +11384,8 @@ ArchonPlate:
   Dexterity: 13
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11142,6 +11456,8 @@ Axe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11212,6 +11528,8 @@ WarAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11282,6 +11600,8 @@ LargeAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11352,6 +11672,8 @@ BroadAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11422,6 +11744,8 @@ BattleAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11492,6 +11816,8 @@ GreatAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11562,6 +11888,8 @@ GiantAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11632,6 +11960,8 @@ Cleaver:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11702,6 +12032,8 @@ Naga:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11772,6 +12104,8 @@ MilitaryAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11842,6 +12176,8 @@ BeardedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11912,6 +12248,8 @@ Tabar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -11982,6 +12320,8 @@ GothicAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12052,6 +12392,8 @@ AncientAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12122,6 +12464,8 @@ SmallCrescent:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12194,6 +12538,8 @@ SmallCrescent:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12264,6 +12610,8 @@ BerserkerAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12334,6 +12682,8 @@ BerserkerAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12407,6 +12757,8 @@ BerserkerAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12476,6 +12828,8 @@ BerserkerAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12546,6 +12900,8 @@ FeralAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12616,6 +12972,8 @@ SilverEdgedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12687,6 +13045,8 @@ SilverEdgedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12757,6 +13117,8 @@ Decapitator:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12827,6 +13189,8 @@ ChampionAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12898,6 +13262,8 @@ ChampionAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -12969,6 +13335,8 @@ Scourge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13038,6 +13406,8 @@ Scourge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13107,6 +13477,8 @@ Scourge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13177,6 +13549,8 @@ Flail:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13247,6 +13621,8 @@ Knout:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13317,6 +13693,8 @@ Scimitar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13387,6 +13765,8 @@ Sabre:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13457,6 +13837,8 @@ Falchion:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13527,6 +13909,8 @@ CrystalSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13597,6 +13981,8 @@ BroadSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13667,6 +14053,8 @@ LongSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13737,6 +14125,8 @@ WarSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13807,6 +14197,8 @@ TwoHandedSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13877,6 +14269,8 @@ Claymore:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -13947,6 +14341,8 @@ GiantSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14017,6 +14413,8 @@ BastardSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14087,6 +14485,8 @@ Flamberge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14157,6 +14557,8 @@ GreatSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14227,6 +14629,8 @@ Cutlass:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14297,6 +14701,8 @@ Shamshir:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14367,6 +14773,8 @@ Tulwar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14436,6 +14844,8 @@ Tulwar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14506,6 +14916,8 @@ DimensionalBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14575,6 +14987,8 @@ DimensionalBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14645,6 +15059,8 @@ BattleSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14714,6 +15130,8 @@ BattleSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14784,6 +15202,8 @@ RuneSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14854,6 +15274,8 @@ AncientSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14924,6 +15346,8 @@ Espandon:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -14994,6 +15418,8 @@ DacianFalx:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15064,6 +15490,8 @@ TuskSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15134,6 +15562,8 @@ GothicSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15204,6 +15634,8 @@ Zweihander:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15274,6 +15706,8 @@ Zweihander:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15344,6 +15778,8 @@ ExecutionerSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15414,6 +15850,8 @@ Falcata:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15484,6 +15922,8 @@ Ataghan:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15554,6 +15994,8 @@ ElegantBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15624,6 +16066,8 @@ HydraEdge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15694,6 +16138,8 @@ PhaseBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15764,6 +16210,8 @@ PhaseBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15833,6 +16281,8 @@ PhaseBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15903,6 +16353,8 @@ ConquestSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -15974,6 +16426,8 @@ ConquestSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16045,6 +16499,8 @@ ConquestSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16115,6 +16571,8 @@ CrypticSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16186,6 +16644,8 @@ CrypticSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16257,6 +16717,8 @@ CrypticSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16327,6 +16789,8 @@ MythicalSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16399,6 +16863,8 @@ MythicalSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16469,6 +16935,8 @@ LegendSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16539,6 +17007,8 @@ HighlandBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16609,6 +17079,8 @@ BalrogBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16679,6 +17151,8 @@ ChampionSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16749,6 +17223,8 @@ ColossusSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16820,6 +17296,8 @@ ColossusSword:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16890,6 +17368,8 @@ ColossusBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -16960,6 +17440,8 @@ ColossusBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17033,6 +17515,8 @@ ColossusBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17102,6 +17586,8 @@ ColossusBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17172,6 +17658,8 @@ ThrowingKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17242,6 +17730,8 @@ BalancedKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17312,6 +17802,8 @@ BattleDart:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17382,6 +17874,8 @@ WarDart:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17452,6 +17946,8 @@ FlyingKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17521,6 +18017,8 @@ FlyingKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17591,6 +18089,8 @@ WingedKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17660,6 +18160,8 @@ WingedKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17730,6 +18232,8 @@ ThrowingAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17800,6 +18304,8 @@ BalancedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17870,6 +18376,8 @@ Francisca:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -17940,6 +18448,8 @@ Hurlbat:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18010,6 +18520,8 @@ FlyingAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18080,6 +18592,8 @@ WingedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18149,6 +18663,8 @@ WingedAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18219,6 +18735,8 @@ Spear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18289,6 +18807,8 @@ Trident:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18359,6 +18879,8 @@ Brandistock:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18429,6 +18951,8 @@ Spetum:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18499,6 +19023,8 @@ Pike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18569,6 +19095,8 @@ WarSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18639,6 +19167,8 @@ Fuscina:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18709,6 +19239,8 @@ WarFork:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18779,6 +19311,8 @@ Yari:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18848,6 +19382,8 @@ Yari:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18918,6 +19454,8 @@ Lance:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -18988,6 +19526,8 @@ HyperionSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19057,6 +19597,8 @@ HyperionSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19127,6 +19669,8 @@ StygianPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19199,6 +19743,8 @@ StygianPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19269,6 +19815,8 @@ Mancatcher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19339,6 +19887,8 @@ Mancatcher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19409,6 +19959,8 @@ GhostSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19482,6 +20034,8 @@ GhostSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19552,6 +20106,8 @@ WarPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19622,6 +20178,8 @@ WarPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19695,6 +20253,8 @@ WarPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19765,6 +20325,8 @@ MartelDeFer:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19835,6 +20397,8 @@ WarClub:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19905,6 +20469,8 @@ BattleHammer:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -19975,6 +20541,8 @@ GreatMaul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20045,6 +20613,8 @@ Maul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20115,6 +20685,8 @@ WarHammer:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20185,6 +20757,8 @@ LegendaryMallet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20255,6 +20829,8 @@ OgreMaul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20325,6 +20901,8 @@ ThunderMaul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20395,6 +20973,8 @@ ThunderMaul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20464,6 +21044,8 @@ ThunderMaul:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20534,6 +21116,8 @@ Bardiche:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20604,6 +21188,8 @@ Voulge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20674,6 +21260,8 @@ Scythe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20744,6 +21332,8 @@ Poleaxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20814,6 +21404,8 @@ Halberd:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20884,6 +21476,8 @@ WarScythe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -20954,6 +21548,8 @@ LochaberAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21024,6 +21620,8 @@ Bill:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21094,6 +21692,8 @@ BattleScythe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21164,6 +21764,8 @@ Partizan:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21234,6 +21836,8 @@ BecDeCorbin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21304,6 +21908,8 @@ GrimScythe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21374,6 +21980,8 @@ OgreAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21444,6 +22052,8 @@ ColossusVoulge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21516,6 +22126,8 @@ ColossusVoulge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21586,6 +22198,8 @@ Thresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21659,6 +22273,8 @@ Thresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21729,6 +22345,8 @@ Thresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21799,6 +22417,8 @@ CrypticAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21872,6 +22492,8 @@ CrypticAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -21942,6 +22564,8 @@ CrypticAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22012,6 +22636,8 @@ GreatPoleaxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22086,6 +22712,8 @@ GreatPoleaxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22156,6 +22784,8 @@ GiantThresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22230,6 +22860,8 @@ GiantThresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22300,6 +22932,8 @@ GiantThresher:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22370,6 +23004,8 @@ WarStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22442,6 +23078,8 @@ WarStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22515,6 +23153,8 @@ WarStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22588,6 +23228,8 @@ WarStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22659,6 +23301,8 @@ RuneStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22731,6 +23375,8 @@ RuneStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22804,6 +23450,8 @@ RuneStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22877,6 +23525,8 @@ RuneStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -22948,6 +23598,8 @@ ArchonStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23018,6 +23670,8 @@ ArchonStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23090,6 +23744,8 @@ ArchonStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23163,6 +23819,8 @@ ArchonStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23236,6 +23894,8 @@ ArchonStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23307,6 +23967,8 @@ LongBattleBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23377,6 +24039,8 @@ LongWarBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23447,6 +24111,8 @@ LargeSiegeBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23517,6 +24183,8 @@ GothicBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23587,6 +24255,8 @@ ShadowBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23659,6 +24329,8 @@ ShadowBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23729,6 +24401,8 @@ CrusaderBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23799,6 +24473,8 @@ WardBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23869,6 +24545,8 @@ HydraBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -23939,6 +24617,8 @@ HydraBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24011,6 +24691,8 @@ Corona:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24081,6 +24763,8 @@ Corona:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24153,6 +24837,8 @@ DemonHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24223,6 +24909,8 @@ DemonHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24295,6 +24983,8 @@ BoneVisage:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24365,6 +25055,8 @@ BoneVisage:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24437,6 +25129,8 @@ TrollNest:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24506,6 +25200,8 @@ TrollNest:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24576,6 +25272,8 @@ Armet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24645,6 +25343,8 @@ Armet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24715,6 +25415,8 @@ ClassBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24785,6 +25487,8 @@ HeavyBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24855,6 +25559,8 @@ ChainBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24925,6 +25631,8 @@ LightPlatedBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -24995,6 +25703,8 @@ Greaves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25065,6 +25775,8 @@ DemonhideBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25135,6 +25847,8 @@ SharkskinBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25204,6 +25918,8 @@ SharkskinBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25274,6 +25990,8 @@ MeshBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25343,6 +26061,8 @@ MeshBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25413,6 +26133,8 @@ BattleBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25482,6 +26204,8 @@ BattleBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25552,6 +26276,8 @@ WarBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25621,6 +26347,8 @@ WarBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25691,6 +26419,8 @@ WyrmhideBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25761,6 +26491,8 @@ ScarabshellBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25830,6 +26562,8 @@ ScarabshellBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25900,6 +26634,8 @@ BoneweaveBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -25969,6 +26705,8 @@ BoneweaveBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26039,6 +26777,8 @@ MirroredBoots:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26109,6 +26849,8 @@ MyrmidonGreaves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26178,6 +26920,8 @@ MyrmidonGreaves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26249,6 +26993,8 @@ Circlet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26320,6 +27066,8 @@ Coronet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26392,6 +27140,8 @@ Tiara:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26465,6 +27215,8 @@ Diadem:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26536,6 +27288,8 @@ Diadem:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26606,6 +27360,8 @@ Katar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26676,6 +27432,8 @@ WristBlade:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26746,6 +27504,8 @@ HatchetHands:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26816,6 +27576,8 @@ Cestus:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26886,6 +27648,8 @@ Claws:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -26956,6 +27720,8 @@ BladeTalons:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27026,6 +27792,8 @@ ScissorsKatar:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27097,6 +27865,8 @@ EagleOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27168,6 +27938,8 @@ SacredGlobe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27239,6 +28011,8 @@ SmokedSphere:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27310,6 +28084,8 @@ ClaspedOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27381,6 +28157,8 @@ JaredsStone:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27452,6 +28230,8 @@ GlowingOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27523,6 +28303,8 @@ CrystallineGlobe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27594,6 +28376,8 @@ CloudySphere:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27665,6 +28449,8 @@ SparklingBall:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27736,6 +28522,8 @@ SwirlingCrystal:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27805,6 +28593,8 @@ SwirlingCrystal:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27876,6 +28666,8 @@ HeavenlyStone:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -27947,6 +28739,8 @@ EldritchOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28016,6 +28810,8 @@ EldritchOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28087,6 +28883,8 @@ DemonHeart:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28158,6 +28956,8 @@ VortexOrb:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28229,6 +29029,8 @@ DimensionalShard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28298,6 +29100,8 @@ DimensionalShard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28368,6 +29172,8 @@ StagBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28438,6 +29244,8 @@ ReflexBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28508,6 +29316,8 @@ AshwoodBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28578,6 +29388,8 @@ CeremonialBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28648,6 +29460,8 @@ MatriarchalBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28720,6 +29534,8 @@ MatriarchalBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28790,6 +29606,8 @@ GrandMatronBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28862,6 +29680,8 @@ GrandMatronBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -28932,6 +29752,8 @@ MaidenSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29002,6 +29824,8 @@ MaidenPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29072,6 +29896,8 @@ CeremonialSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29142,6 +29968,8 @@ CeremonialPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29212,6 +30040,8 @@ MatriarchalSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29282,6 +30112,8 @@ MatriarchalSpear:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29352,6 +30184,8 @@ MatriarchalPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29423,6 +30257,8 @@ MatriarchalPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29493,6 +30329,8 @@ MatriarchalPike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29563,6 +30401,8 @@ MaidenJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29632,6 +30472,8 @@ MaidenJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29702,6 +30544,8 @@ CeremonialJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29771,6 +30615,8 @@ CeremonialJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29840,6 +30686,8 @@ CeremonialJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29910,6 +30758,8 @@ MatriarchalJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -29979,6 +30829,8 @@ MatriarchalJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30048,6 +30900,8 @@ MatriarchalJavelin:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30118,6 +30972,8 @@ TotemicMask:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30188,6 +31044,8 @@ ScissorsSuwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30260,6 +31118,8 @@ ScissorsSuwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30333,6 +31193,8 @@ ScissorsSuwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30406,6 +31268,8 @@ ScissorsSuwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30479,6 +31343,8 @@ ScissorsSuwayyah:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30551,6 +31417,8 @@ JawboneCap:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30623,6 +31491,8 @@ JawboneCap:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30695,6 +31565,8 @@ FangedHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30767,6 +31639,8 @@ FangedHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30839,6 +31713,8 @@ HornedHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30911,6 +31787,8 @@ HornedHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -30983,6 +31861,8 @@ AssaultHelmet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31055,6 +31935,8 @@ AssaultHelmet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31127,6 +32009,8 @@ AvengerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31197,6 +32081,8 @@ AvengerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31269,6 +32155,8 @@ AvengerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31341,6 +32229,8 @@ JawboneVisor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31413,6 +32303,8 @@ JawboneVisor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31485,6 +32377,8 @@ LionHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31557,6 +32451,8 @@ LionHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31629,6 +32525,8 @@ RageMask:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31701,6 +32599,8 @@ RageMask:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31773,6 +32673,8 @@ SavageHelmet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31845,6 +32747,8 @@ SavageHelmet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31917,6 +32821,8 @@ SlayerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -31986,6 +32892,8 @@ SlayerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32058,6 +32966,8 @@ SlayerGuard:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32130,6 +33040,8 @@ CarnageHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32202,6 +33114,8 @@ CarnageHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32274,6 +33188,8 @@ FuryVisor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32343,6 +33259,8 @@ FuryVisor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32415,6 +33333,8 @@ FuryVisor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32487,6 +33407,8 @@ DestroyerHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32559,6 +33481,8 @@ DestroyerHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32631,6 +33555,8 @@ ConquerorCrown:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32703,6 +33629,8 @@ ConquerorCrown:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32775,6 +33703,8 @@ GuardianCrown:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32847,6 +33777,8 @@ GuardianCrown:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32918,6 +33850,8 @@ SacredTarge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -32991,6 +33925,8 @@ SacredTarge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33063,6 +33999,8 @@ SacredTarge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33135,6 +34073,8 @@ SacredTarge:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33205,6 +34145,8 @@ SacredRondache:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33278,6 +34220,8 @@ SacredRondache:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33350,6 +34294,8 @@ SacredRondache:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33420,6 +34366,8 @@ KurastShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33493,6 +34441,8 @@ KurastShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33565,6 +34515,8 @@ KurastShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33635,6 +34587,8 @@ ZakarumShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33708,6 +34662,8 @@ ZakarumShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33780,6 +34736,8 @@ ZakarumShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33851,6 +34809,8 @@ VortexShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33920,6 +34880,8 @@ VortexShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -33993,6 +34955,8 @@ VortexShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34065,6 +35029,8 @@ VortexShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34137,6 +35103,8 @@ VortexShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34210,6 +35178,8 @@ SuccubusSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34282,6 +35252,8 @@ SuccubusSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34355,6 +35327,8 @@ SuccubusSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34428,6 +35402,8 @@ SuccubusSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34502,6 +35478,8 @@ SuccubusSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34577,6 +35555,8 @@ PreservedHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34650,6 +35630,8 @@ PreservedHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34723,6 +35705,8 @@ PreservedHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34797,6 +35781,8 @@ PreservedHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34869,6 +35855,8 @@ PreservedHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -34942,6 +35930,8 @@ ZombieHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35015,6 +36005,8 @@ ZombieHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35088,6 +36080,8 @@ ZombieHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35162,6 +36156,8 @@ ZombieHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35234,6 +36230,8 @@ ZombieHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35307,6 +36305,8 @@ UnravellerHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35380,6 +36380,8 @@ UnravellerHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35453,6 +36455,8 @@ UnravellerHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35527,6 +36531,8 @@ UnravellerHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35599,6 +36605,8 @@ UnravellerHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35672,6 +36680,8 @@ GargoyleHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35745,6 +36755,8 @@ GargoyleHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35818,6 +36830,8 @@ GargoyleHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35892,6 +36906,8 @@ GargoyleHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -35965,6 +36981,8 @@ GargoyleHead:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36038,6 +37056,8 @@ DemonHeadShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36111,6 +37131,8 @@ DemonHeadShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36184,6 +37206,8 @@ DemonHeadShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36258,6 +37282,8 @@ DemonHeadShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36331,6 +37357,8 @@ DemonHeadShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36404,6 +37432,8 @@ MummifiedTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36477,6 +37507,8 @@ MummifiedTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36550,6 +37582,8 @@ MummifiedTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36624,6 +37658,8 @@ MummifiedTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36697,6 +37733,8 @@ MummifiedTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36770,6 +37808,8 @@ FetishTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36843,6 +37883,8 @@ FetishTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36916,6 +37958,8 @@ FetishTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -36990,6 +38034,8 @@ FetishTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37063,6 +38109,8 @@ FetishTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37136,6 +38184,8 @@ SextonTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37209,6 +38259,8 @@ SextonTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37282,6 +38334,8 @@ SextonTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37356,6 +38410,8 @@ SextonTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37429,6 +38485,8 @@ SextonTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37502,6 +38560,8 @@ CantorTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37575,6 +38635,8 @@ CantorTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37648,6 +38710,8 @@ CantorTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37722,6 +38786,8 @@ CantorTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37795,6 +38861,8 @@ CantorTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37868,6 +38936,8 @@ HierophantTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -37941,6 +39011,8 @@ HierophantTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38014,6 +39086,8 @@ HierophantTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38088,6 +39162,8 @@ HierophantTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38161,6 +39237,8 @@ HierophantTrophy:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38234,6 +39312,8 @@ MinionSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38306,6 +39386,8 @@ MinionSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38379,6 +39461,8 @@ MinionSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38452,6 +39536,8 @@ MinionSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38526,6 +39612,8 @@ MinionSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38601,6 +39689,8 @@ HellspawnSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38673,6 +39763,8 @@ HellspawnSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38746,6 +39838,8 @@ HellspawnSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38819,6 +39913,8 @@ HellspawnSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38893,6 +39989,8 @@ HellspawnSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -38968,6 +40066,8 @@ OverseerSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39040,6 +40140,8 @@ OverseerSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39113,6 +40215,8 @@ OverseerSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39186,6 +40290,8 @@ OverseerSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39260,6 +40366,8 @@ OverseerSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39335,6 +40443,8 @@ BloodlordSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39407,6 +40517,8 @@ BloodlordSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39480,6 +40592,8 @@ BloodlordSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39553,6 +40667,8 @@ BloodlordSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39627,6 +40743,8 @@ BloodlordSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39700,6 +40818,8 @@ Ring:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39770,6 +40890,8 @@ SurRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39840,6 +40962,8 @@ JahRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39910,6 +41034,8 @@ BerRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -39980,6 +41106,8 @@ LoRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40050,6 +41178,8 @@ OhmRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40120,6 +41250,8 @@ VexRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40190,6 +41322,8 @@ GulRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40260,6 +41394,8 @@ IstRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40330,6 +41466,8 @@ MalRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40400,6 +41538,8 @@ UmRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40470,6 +41610,8 @@ PulRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40540,6 +41682,8 @@ LemRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40610,6 +41754,8 @@ SolRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40680,6 +41826,8 @@ ThulRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40750,6 +41898,8 @@ RalRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40822,6 +41972,8 @@ Jewel:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40892,6 +42044,8 @@ PerfectTopaz:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -40962,6 +42116,8 @@ PerfectSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41032,6 +42188,8 @@ PerfectSapphire:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41102,6 +42260,8 @@ PerfectRuby:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41172,6 +42332,8 @@ PerfectEmerald:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41242,6 +42404,8 @@ PerfectDiamond:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41312,6 +42476,8 @@ PerfectAmethyst:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41382,6 +42548,8 @@ FlawlessTopaz:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41452,6 +42620,8 @@ FlawlessSkull:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41522,6 +42692,8 @@ FlawlessSapphire:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41592,6 +42764,8 @@ FlawlessRuby:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41662,6 +42836,8 @@ FlawlessEmerald:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41732,6 +42908,8 @@ FlawlessDiamond:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41802,6 +42980,8 @@ FlawlessAmethyst:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41873,6 +43053,8 @@ GrandCharm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -41944,6 +43126,8 @@ LargeCharm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42015,6 +43199,8 @@ SmallCharm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42087,6 +43273,8 @@ Amulet:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42157,6 +43345,8 @@ FesteringEssenceOfDestruction:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42226,6 +43416,8 @@ KeyOfTerror:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42295,6 +43487,8 @@ KeyOfHate:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42364,6 +43558,8 @@ KeyOfDestruction:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42435,6 +43631,8 @@ BoneKnife:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42506,6 +43704,8 @@ LegendSpike:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42576,6 +43776,8 @@ ZodRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42646,6 +43848,8 @@ WingedHarpoon:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42717,6 +43921,8 @@ ElderStaff:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42788,6 +43994,8 @@ Shillelagh:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42859,6 +44067,8 @@ Shako:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -42930,6 +44140,8 @@ SpiredHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43001,6 +44213,8 @@ GiantConch:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43072,6 +44286,8 @@ WingedHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43142,6 +44358,8 @@ BoneHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43213,6 +44431,8 @@ SerpentskinArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43284,6 +44504,8 @@ MeshArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43354,6 +44576,8 @@ Cuirass:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43424,6 +44648,8 @@ TemplarCoat:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43494,6 +44720,8 @@ SpiderwebSash:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43564,6 +44792,8 @@ SharkskinBelt:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43634,6 +44864,8 @@ WarBelt:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43704,6 +44936,8 @@ MeshBelt:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43774,6 +45008,8 @@ GildedShield:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43844,6 +45080,8 @@ EttinAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43914,6 +45152,8 @@ Dagger:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -43984,6 +45224,8 @@ GrandCrown:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44054,6 +45296,8 @@ GrimHelm:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44124,6 +45368,8 @@ RussetArmor:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44194,6 +45440,8 @@ DemonhideSash:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44264,6 +45512,8 @@ MithrilCoil:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44334,6 +45584,8 @@ TrollBelt:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44404,6 +45656,8 @@ CedarBow:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44478,6 +45732,8 @@ ClassScepters:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: false
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44550,6 +45806,8 @@ ClassScepters:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44623,6 +45881,8 @@ ClassScepters:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44696,6 +45956,8 @@ ClassAssassinKatars:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44768,6 +46030,8 @@ ClassAssassinKatars:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44840,6 +46104,8 @@ ChamRune:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44913,6 +46179,8 @@ ClassAxes:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -44987,6 +46255,8 @@ ClassClubs:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45061,6 +46331,8 @@ ClassMaces:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45135,6 +46407,8 @@ ClassSwords:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45209,6 +46483,8 @@ ClassDaggers:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45283,6 +46559,8 @@ ClassThrowingKnifes:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45357,6 +46635,8 @@ ClassThrowingAxes:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45431,6 +46711,8 @@ ClassJavelins:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45504,6 +46786,8 @@ ClassJavelins:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45577,6 +46861,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45654,6 +46940,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45732,6 +47020,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45810,6 +47100,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45888,6 +47180,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -45966,6 +47260,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -46044,6 +47340,8 @@ ClassDruidHelms:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -46115,6 +47413,8 @@ GloriousAxe:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -46189,6 +47489,8 @@ DivineScepter:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -46263,6 +47565,8 @@ DivineScepter:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
@@ -46341,6 +47645,8 @@ ClassStaves:
   Dexterity: 
   Vitality: 
   Energy: 
+  SoundFile: 
+  CheckVendor: true
   All Attributes: 
   Max Life: 
   Max Mana: 
