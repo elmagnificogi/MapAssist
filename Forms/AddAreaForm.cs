@@ -24,7 +24,8 @@ namespace MapAssist
         {
             var areas = new Dictionary<Area, string>();
 
-            foreach (var area in Enum.GetValues(typeof(Area)).Cast<Area>()){
+            foreach (var area in Enum.GetValues(typeof(Area)).Cast<Area>())
+            {
                 if (area != Area.None && area.IsValid() && !MapAssistConfiguration.Loaded.HiddenAreas.Contains(area))
                 {
                     areas.Add(area, area.Name());
