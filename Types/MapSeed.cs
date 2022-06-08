@@ -1,36 +1,47 @@
-﻿using MapAssist.Helpers;
-using MapAssist.Interfaces;
-using System;
+﻿using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace MapAssist.Types
 {
-    public class MapSeed : IUpdatable<MapSeed>
+    public class MapSeed
     {
-        private readonly IntPtr _pMapSeed;
-        public uint Seed { get; private set; }
+        private BackgroundWorker BackgroundCalculator;
+        private ulong GameSeedXor { get; set; } = 0;
 
-        public MapSeed(IntPtr pMapSeed)
-        {
-            _pMapSeed = pMapSeed;
-            Update();
-        }
+        public bool IsReady => BackgroundCalculator != null && GameSeedXor != 0;
 
-        public MapSeed Update()
+        public uint Get(UnitPlayer player)
         {
-            using (var processContext = GameManager.GetProcessContext())
+            if (GameSeedXor != 0)
             {
-                try
-                {
-                    var pMapSeedData = processContext.Read<IntPtr>(_pMapSeed);
-                    var mapSeedData = processContext.Read<Structs.MapSeed>(pMapSeedData);
-
-                    Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed1 : mapSeedData.mapSeed2; // Use this if check offset is 0x110
-                    //Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed2 : mapSeedData.mapSeed1; // Use this if check offset is 0x124
-                    //Seed = mapSeedData.check > 0 ? mapSeedData.mapSeed1 : mapSeedData.mapSeed2; // Use this if check offset is 0x830
-                }
-                catch (Exception) { }
+                return (uint)(player.InitSeedHash ^ GameSeedXor);
             }
-            return this;
+            else if (BackgroundCalculator == null)
+            {
+                var InitSeedHash = player.InitSeedHash;
+                var EndSeedHash = player.EndSeedHash;
+
+                BackgroundCalculator = new BackgroundWorker();
+
+                BackgroundCalculator.DoWork += (sender, args) =>
+                {
+                    Parallel.For(0, uint.MaxValue, (trySeed, state) =>
+                    {
+                        if ((((uint)trySeed * 0x6AC690C5 + 666) & 0xFFFFFFFF) == EndSeedHash)
+                        {
+                            GameSeedXor = InitSeedHash ^ (uint)trySeed;
+
+                            state.Stop();
+                        }
+                    });
+
+                    BackgroundCalculator.Dispose();
+                };
+
+                BackgroundCalculator.RunWorkerAsync();
+            }
+
+            return 0;
         }
     }
 }

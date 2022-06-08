@@ -13,6 +13,8 @@ namespace MapAssist.Types
         public Act Act { get; private set; }
         public Skills Skills { get; private set; }
         public RosterEntry RosterEntry { get; private set; }
+        public ulong InitSeedHash { get; private set; }
+        public ulong EndSeedHash { get; private set; }
 
         public UnitPlayer(IntPtr ptrUnit) : base(ptrUnit)
         {
@@ -29,6 +31,8 @@ namespace MapAssist.Types
                     //Inventory = processContext.Read<Inventory>(Struct.ptrInventory);
                     Skills = new Skills(Struct.pSkills);
                     StateList = GetStateList();
+                    InitSeedHash = Act.InitSeedHash;
+                    EndSeedHash = Act.EndSeedHash;
                 }
 
                 return this;
