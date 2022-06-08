@@ -254,7 +254,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -690,6 +690,7 @@
     PostBuildMacros;
     </PostBuildEventDependsOn>
     <PostBuildEvent>echo f|echo f|xcopy "$(SolutionDir)地图使用指南.pdf" "$(TargetDir)地图使用指南.pdf" /Y /k
+echo f|echo f|xcopy "$(SolutionDir)MA_Filter使用指南.pdf" "$(TargetDir)MA_Filter使用指南.pdf" /Y /k
 xcopy "$(ProjectDir)Config.yaml" "$(TargetDir)" /Y
 echo Assembly Version: @(VersionNumber)
 xcopy "$(ProjectDir)MA_Filter.exe" "$(TargetDir)" /Y
