@@ -20,7 +20,15 @@ namespace MapAssist.Helpers
             {
                 if (gameData.HasGameChanged(_gameData))
                 {
-                    _log.Info($"Game changed to {gameData.Difficulty} with {gameData.MapSeed} seed");
+                    if (gameData.MapSeed == 0 && !gameData.MapSeedReady)
+                    {
+                        _log.Info($"Brute forcing first map seed");
+                    }
+                    else
+                    {
+                        _log.Info($"Game changed to {gameData.Difficulty} with {gameData.MapSeed} seed");
+                    }
+
                     _mapApi = new MapApi(gameData);
                 }
 
