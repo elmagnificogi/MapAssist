@@ -426,7 +426,8 @@ namespace MapAssist.Helpers
                 emitter.Emit(new Scalar(null, node.IconThickness.ToString()));
             }
 
-            if (node.IconOpacity < 1) { 
+            if (node.IconOpacity < 1)
+            {
                 emitter.Emit(new Scalar(null, "IconOpacity"));
                 emitter.Emit(new Scalar(null, node.IconOpacity.ToString()));
             }

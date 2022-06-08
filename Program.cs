@@ -97,78 +97,78 @@ namespace MapAssist
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
 
-                    try
+                try
+                {
+                    if (!MapApi.StartPipedChild())
                     {
-                        if (!MapApi.StartPipedChild())
-                        {
-                            MessageBox.Show($"{messageBoxTitle}: 无法启动d2mapapi", messageBoxTitle, MessageBoxButtons.OK);
-                            return;
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        _log.Fatal(e);
-                        _log.Fatal(e, "Unable to start d2mapapi pipe.");
-
-                        var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
-                        MessageBox.Show(message, $"{messageBoxTitle}: 无法启动d2mapapi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"{messageBoxTitle}: 无法启动d2mapapi", messageBoxTitle, MessageBoxButtons.OK);
                         return;
                     }
+                }
+                catch (Exception e)
+                {
+                    _log.Fatal(e);
+                    _log.Fatal(e, "Unable to start d2mapapi pipe.");
 
-                    trayIcon = new NotifyIcon
+                    var message = e.Message + Environment.NewLine + Environment.NewLine + e.StackTrace;
+                    MessageBox.Show(message, $"{messageBoxTitle}: 无法启动d2mapapi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                trayIcon = new NotifyIcon
+                {
+                    Icon = Properties.Resources.Icon1,
+                    Text = appName,
+                    Visible = true
+                };
+
+                var uiThreadContext = new WindowsFormsSynchronizationContext();
+
+                _integrations.Add(
+                    new ResurrectedTradeIntegration(uiThreadContext, trayIcon)
+                );
+
+                var contextMenu = new ContextMenuStrip();
+                var configMenuItem = new ToolStripMenuItem("设置", null, ShowConfigEditor);
+                var lootFilterMenuItem = new ToolStripMenuItem("物品过滤", null, LootFilter);
+                contextMenu.Items.Add(configMenuItem);
+                contextMenu.Items.Add(lootFilterMenuItem);
+                contextMenu.Items.Add(new ToolStripSeparator());
+                var integrationAdded = false;
+
+                foreach (IIntegration integration in Integrations)
+                {
+                    var integrationMenus = integration.ContextMenuItems;
+                    if (integrationMenus != null && integrationMenus.Length > 0)
                     {
-                        Icon = Properties.Resources.Icon1,
-                        Text = appName,
-                        Visible = true
-                    };
+                        integrationAdded = true;
+                        var integrationMenu = new ToolStripMenuItem(integration.Name, null, integrationMenus);
+                        contextMenu.Items.Add(integrationMenu);
+                    }
+                }
 
-                    var uiThreadContext = new WindowsFormsSynchronizationContext();
-
-                    _integrations.Add(
-                        new ResurrectedTradeIntegration(uiThreadContext, trayIcon)
-                    );
-
-                    var contextMenu = new ContextMenuStrip();
-                    var configMenuItem = new ToolStripMenuItem("设置", null, ShowConfigEditor);
-                    var lootFilterMenuItem = new ToolStripMenuItem("物品过滤", null, LootFilter);
-                    contextMenu.Items.Add(configMenuItem);
-                    contextMenu.Items.Add(lootFilterMenuItem);
+                if (integrationAdded)
+                {
                     contextMenu.Items.Add(new ToolStripSeparator());
-                    var integrationAdded = false;
+                }
 
-                    foreach (IIntegration integration in Integrations)
+                var roomRecordsMenuItem = new ToolStripMenuItem("房间记录", null, ShowRoomRecords);
+                var restartMenuItem = new ToolStripMenuItem("重启地图", null, TrayRestart);
+                var exitMenuItem = new ToolStripMenuItem("退出", null, TrayExit);
+                contextMenu.Items.Add(roomRecordsMenuItem);
+                contextMenu.Items.Add(restartMenuItem);
+                contextMenu.Items.Add(exitMenuItem);
+
+                trayIcon.ContextMenuStrip = contextMenu;
+                trayIcon.DoubleClick += ShowConfigEditor;
+
+                globalHook.KeyDown += (sender, args) =>
+                {
+                    if (overlay != null)
                     {
-                        var integrationMenus = integration.ContextMenuItems;
-                        if (integrationMenus != null && integrationMenus.Length > 0)
-                        {
-                            integrationAdded = true;
-                            var integrationMenu = new ToolStripMenuItem(integration.Name, null, integrationMenus);
-                            contextMenu.Items.Add(integrationMenu);
-                        }
+                        overlay.KeyDownHandler(sender, args);
                     }
-
-                    if (integrationAdded)
-                    {
-                        contextMenu.Items.Add(new ToolStripSeparator());
-                    }
-
-                    var roomRecordsMenuItem = new ToolStripMenuItem("房间记录", null, ShowRoomRecords);
-                    var restartMenuItem = new ToolStripMenuItem("重启地图", null, TrayRestart);
-                    var exitMenuItem = new ToolStripMenuItem("退出", null, TrayExit);
-                    contextMenu.Items.Add(roomRecordsMenuItem);
-                    contextMenu.Items.Add(restartMenuItem);
-                    contextMenu.Items.Add(exitMenuItem);
-
-                    trayIcon.ContextMenuStrip = contextMenu;
-                    trayIcon.DoubleClick += ShowConfigEditor;
-
-                    globalHook.KeyDown += (sender, args) =>
-                    {
-                        if (overlay != null)
-                        {
-                            overlay.KeyDownHandler(sender, args);
-                        }
-                    };
+                };
 
                 //globalHook.MouseMove += (sender, args) =>
                 //{
@@ -183,14 +183,14 @@ namespace MapAssist
                 backWorkOverlay.WorkerSupportsCancellation = true;
                 backWorkOverlay.RunWorkerAsync();
 
-                    GameManager.OnGameAccessDenied += (_, __) =>
-                    {
-                        var message = $"MapAssist could not read {GameManager.ProcessName} memory. 请使用管理员权限启动程序";
-                        Dispose();
-                        MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-                        Application.Exit();
-                        Environment.Exit(0);
-                    };
+                GameManager.OnGameAccessDenied += (_, __) =>
+                {
+                    var message = $"MapAssist could not read {GameManager.ProcessName} memory. 请使用管理员权限启动程序";
+                    Dispose();
+                    MessageBox.Show(message, $"{messageBoxTitle}: Error opening handle to {GameManager.ProcessName}", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                    Application.Exit();
+                    Environment.Exit(0);
+                };
 
                 GameManager.MonitorForegroundWindow();
 
