@@ -24,6 +24,9 @@ namespace MapAssist.Helpers
                     if (gameData.MapSeed == 0 && !gameData.MapSeedReady)
                     {
                         _log.Info($"Brute forcing first map seed");
+
+                        changed = true;
+                        _areaData = null;
                     }
                     else
                     {

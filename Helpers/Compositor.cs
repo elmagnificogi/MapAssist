@@ -1047,7 +1047,13 @@ namespace MapAssist.Helpers
                 }
                 anchor.Y += lineHeight;
             }
-            if (_gameData.MapSeedReady && errorLoadingAreaData)
+
+            if (!_gameData.MapSeedReady)
+            {
+                DrawText(gfx, anchor, "Finding map seed...", font, fontSize * 1.3f, Color.Orange, textShadow, textAlign);
+                anchor.Y += lineHeight;
+            }
+            else if (errorLoadingAreaData)
             {
                 DrawText(gfx, anchor, "ERROR LOADING AREA!", font, fontSize * 1.5f, Color.Orange, textShadow, textAlign);
                 anchor.Y += lineHeight;
@@ -1073,7 +1079,7 @@ namespace MapAssist.Helpers
             var shadowOffset = fontSize * 0.0625f; // 1/16th
 
             // Item Log
-            var itemsToShow = _gameData.ItemLog.Where(item => item != null && !item.ItemLogExpired && item.UnitItem.ItemBaseColor != Color.Empty).ToArray();
+            var itemsToShow = _gameData.ItemLog.Where(item => item != null && !item.ItemLogExpired && item.UnitItem.ItemBaseColor != Color.Empty && (item.Rule?.ShowInLog ?? true)).ToArray();
             for (var i = 0; i < itemsToShow.Length; i++)
             {
                 var item = itemsToShow[i];

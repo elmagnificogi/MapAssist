@@ -101,6 +101,13 @@ namespace MapAssist
             chkAlertLowerRes.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.BuffAlertLowRes;
             cboBuffPosition.SelectedIndex = cboBuffPosition.FindStringExact(MapAssistConfiguration.Loaded.RenderingConfiguration.BuffPosition.ToString().ToProperCase());
 
+            chkLinesHostiles.Checked = MapAssistConfiguration.Loaded.MapConfiguration.HostilePlayer.CanDrawLine();
+            chkLinesCorpse.Checked = MapAssistConfiguration.Loaded.MapConfiguration.Corpse.CanDrawLine();
+            chkLinesNextArea.Checked = MapAssistConfiguration.Loaded.MapConfiguration.NextArea.CanDrawLine();
+            chkLinesQuest.Checked = MapAssistConfiguration.Loaded.MapConfiguration.Quest.CanDrawLine();
+            chkLinesWaypoint.Checked = MapAssistConfiguration.Loaded.MapConfiguration.Waypoint.CanDrawLine();
+            chkLinesShrines.Checked = MapAssistConfiguration.Loaded.MapConfiguration.Shrine.CanDrawLine();
+
             chkLife.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.ShowLife;
             chkMana.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.ShowMana;
             chkLifePerc.Checked = MapAssistConfiguration.Loaded.RenderingConfiguration.ShowLifePerc;

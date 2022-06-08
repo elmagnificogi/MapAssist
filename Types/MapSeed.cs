@@ -5,8 +5,10 @@ namespace MapAssist.Types
 {
     public class MapSeed
     {
+        private static readonly NLog.Logger _log = NLog.LogManager.GetCurrentClassLogger();
+
         private BackgroundWorker BackgroundCalculator;
-        private ulong GameSeedXor { get; set; } = 0;
+        private uint GameSeedXor { get; set; } = 0;
 
         public bool IsReady => BackgroundCalculator != null && GameSeedXor != 0;
 
@@ -25,17 +27,36 @@ namespace MapAssist.Types
 
                 BackgroundCalculator.DoWork += (sender, args) =>
                 {
-                    Parallel.For(0, uint.MaxValue, (trySeed, state) =>
-                    {
-                        if ((((uint)trySeed * 0x6AC690C5 + 666) & 0xFFFFFFFF) == EndSeedHash)
-                        {
-                            GameSeedXor = InitSeedHash ^ (uint)trySeed;
+                    uint magic = 0x6AC690C5;
+                    uint offset = 666;
 
-                            state.Stop();
+                    uint divisor = 2 << 16 - 1;
+
+                    uint trySeed = 0;
+                    uint incr = 1;
+                    for (; trySeed < uint.MaxValue; trySeed += incr)
+                    {
+                        var seedResult = ((uint)trySeed * magic + offset) & 0xFFFFFFFF;
+
+                        if (seedResult == EndSeedHash)
+                        {
+                            GameSeedXor = (uint)InitSeedHash ^ trySeed;
+                            break;
                         }
-                    });
+
+                        if (incr == 1 && (seedResult % divisor) == (EndSeedHash % divisor))
+                        {
+                            incr = divisor;
+                        }
+                    }
 
                     BackgroundCalculator.Dispose();
+
+                    if (GameSeedXor == 0)
+                    {
+                        _log.Info("Failed to brute force map seed");
+                        BackgroundCalculator = null;
+                    }
                 };
 
                 BackgroundCalculator.RunWorkerAsync();
