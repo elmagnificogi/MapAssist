@@ -1045,11 +1045,9 @@ namespace MapAssist.Helpers
                     DrawText(gfx, anchor, fpsText, font, fontSize, textColor, textShadow, textAlign);
                     anchor.Y += lineHeight;
                 }
-
                 anchor.Y += lineHeight;
             }
-
-            if (errorLoadingAreaData)
+            if (_gameData.MapSeedReady && errorLoadingAreaData)
             {
                 DrawText(gfx, anchor, "ERROR LOADING AREA!", font, fontSize * 1.5f, Color.Orange, textShadow, textAlign);
                 anchor.Y += lineHeight;
