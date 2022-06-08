@@ -1,4 +1,5 @@
-﻿using MapAssist.Helpers;
+﻿using MapAssist.Forms;
+using MapAssist.Helpers;
 using MapAssist.Integrations;
 using MapAssist.Settings;
 using MapAssist.Types;
@@ -1514,6 +1515,12 @@ namespace MapAssist
         private void chkLinesShrines_CheckedChanged(object sender, EventArgs e)
         {
             HandleLineToggle(chkLinesShrines, MapAssistConfiguration.Loaded.MapConfiguration.Shrine);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var sponsor = new Sponsor();
+            sponsor.ShowDialog();
         }
     }
 }

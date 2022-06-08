@@ -121,7 +121,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Barbs {
             get {
@@ -181,7 +181,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap BladeShield {
             get {
@@ -191,7 +191,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap BladesOfIce {
             get {
@@ -201,7 +201,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Blaze {
             get {
@@ -251,15 +251,6 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Ching {
-            get {
-                return ResourceManager.GetStream("Ching", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap ClawMastery {
@@ -270,7 +261,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap ClawsOfThunder {
             get {
@@ -280,7 +271,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Cleansing {
             get {
@@ -310,21 +301,11 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap CobraStrike {
             get {
                 object obj = ResourceManager.GetObject("CobraStrike", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Cold {
-            get {
-                object obj = ResourceManager.GetObject("Cold", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -570,7 +551,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap FistsOfFire {
             get {
@@ -580,7 +561,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Frenzy {
             get {
@@ -600,7 +581,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap FrozenArmor {
             get {
@@ -750,7 +731,7 @@ namespace MapAssist.Properties {
         ///        .footer {
         ///            font-size: 0.7rem;
         ///            text-align: center;
-        ///            [rest of string was truncated]&quot;;.
+        ///            [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string InventoryExportTemplate {
             get {
@@ -889,7 +870,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Pierce {
             get {
@@ -929,7 +910,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] QualityLevels {
             get {
@@ -939,7 +920,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Quickness {
             get {
@@ -1089,11 +1070,11 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Superunique	Name	Class	hcIdx	MonSound	Mod1	Mod2	Mod3	MinGrp	MaxGrp	AutoPos	Stacks	Replaceable	Utrans	Utrans(N)	Utrans(H)	TC	TC(N)	TC(H)	*eol
+        ///   查找类似 Superunique	Name	Class	hcIdx	MonSound	Mod1	Mod2	Mod3	MinGrp	MaxGrp	AutoPos	Stacks	Replaceable	Utrans	Utrans(N)	Utrans(H)	TC	TC(N)	TC(H)	*eol
         ///Bishibosh	Bishibosh	fallenshaman1	0		8	9	0	2	2	1	0		11	11	11	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
         ///Bonebreak	Bonebreak	skeleton1	1		5	8	0	5	5	1	0		5	5	5	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
         ///Coldcrow	Coldcrow	cr_archer1	2		18	0	0	4	4	1	0		18	18	18	Act 1 Super A	Act 1 (N) Super A	Act 1 (H) Super A	0
-        ///Rakanishu	Rakanishu	fallen2	3		17	6	0	8 [rest of string was truncated]&quot;;.
+        ///Rakanishu	Rakanishu	fallen2	3		17	6	0	8 [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string SuperUniques {
             get {
@@ -1102,7 +1083,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Teleport {
             get {
@@ -1152,7 +1133,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap TigerStrike {
             get {
@@ -1162,7 +1143,7 @@ namespace MapAssist.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Valkyrie {
             get {
@@ -1177,6 +1158,16 @@ namespace MapAssist.Properties {
         internal static System.Drawing.Bitmap Venom {
             get {
                 object obj = ResourceManager.GetObject("Venom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap VenQrcode {
+            get {
+                object obj = ResourceManager.GetObject("VenQrcode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1247,6 +1238,16 @@ namespace MapAssist.Properties {
         internal static System.Drawing.Bitmap Wolverine {
             get {
                 object obj = ResourceManager.GetObject("Wolverine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap ZenQrcode {
+            get {
+                object obj = ResourceManager.GetObject("ZenQrcode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

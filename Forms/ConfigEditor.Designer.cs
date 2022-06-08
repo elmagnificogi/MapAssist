@@ -88,6 +88,7 @@
             this.integrationTabs = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.grpHotkeys = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCopyRoomKey = new System.Windows.Forms.TextBox();
@@ -247,6 +248,7 @@
             this.chkShowArea = new System.Windows.Forms.CheckBox();
             this.chkShowGameName = new System.Windows.Forms.CheckBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBoxCM = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -259,7 +261,6 @@
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label37 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -1029,6 +1030,16 @@
             this.grpHotkeys.TabIndex = 9;
             this.grpHotkeys.TabStop = false;
             this.grpHotkeys.Text = "快捷键";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(93, 17);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(233, 12);
+            this.label37.TabIndex = 30;
+            this.label37.Text = "注意不要和游戏内以及其他软件快捷键冲突";
             // 
             // label36
             // 
@@ -2921,6 +2932,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.button4);
             this.tabPage9.Controls.Add(this.pictureBoxCM);
             this.tabPage9.Controls.Add(this.label7);
             this.tabPage9.Controls.Add(this.button2);
@@ -2932,14 +2944,28 @@
             this.tabPage9.Text = "交流";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.button4.Location = new System.Drawing.Point(230, 261);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(69, 38);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "赞助";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // pictureBoxCM
             // 
             this.pictureBoxCM.Image = global::MapAssist.Properties.Resources.community;
             this.pictureBoxCM.InitialImage = null;
-            this.pictureBoxCM.Location = new System.Drawing.Point(81, 44);
+            this.pictureBoxCM.Location = new System.Drawing.Point(91, 48);
+            this.pictureBoxCM.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBoxCM.Name = "pictureBoxCM";
-            this.pictureBoxCM.Size = new System.Drawing.Size(218, 211);
-            this.pictureBoxCM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCM.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxCM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxCM.TabIndex = 6;
             this.pictureBoxCM.TabStop = false;
             this.pictureBoxCM.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -2956,9 +2982,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(87, 258);
+            this.button2.Location = new System.Drawing.Point(81, 261);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 38);
+            this.button2.Size = new System.Drawing.Size(143, 38);
             this.button2.TabIndex = 1;
             this.button2.Text = " 查看使用帮助";
             this.button2.UseVisualStyleBackColor = true;
@@ -3068,16 +3094,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(93, 17);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(233, 12);
-            this.label37.TabIndex = 30;
-            this.label37.Text = "注意不要和游戏内以及其他软件快捷键冲突";
             // 
             // ConfigEditor
             // 
@@ -3393,5 +3409,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button button4;
     }
 }
