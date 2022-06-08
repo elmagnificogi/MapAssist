@@ -264,13 +264,21 @@ namespace MapAssist
 
                 if (keys == new Hotkey(MapAssistConfiguration.Loaded.HC.ESCKey))
                 {
-                    WindowsExternal.SetForegroundWindow(_gameData.MainWindowHandle);
-                    WindowsExternal.SendEscapeKey(_gameData.MainWindowHandle);
-                    var windowRect = WindowsExternal.GetWindowRect(_gameData.MainWindowHandle);
+                    try
+                    {
+                        WindowsExternal.SetForegroundWindow(_gameData.MainWindowHandle);
+                        WindowsExternal.SendEscapeKey(_gameData.MainWindowHandle);
+                        var windowRect = WindowsExternal.GetWindowRect(_gameData.MainWindowHandle);
 
-                    var width = windowRect.Right - windowRect.Left;
-                    var height = windowRect.Bottom - windowRect.Top;
-                    WindowsExternal.LeftMouseClick(windowRect.Left + width / 2, windowRect.Top + height / 20 * 9);
+                        var width = windowRect.Right - windowRect.Left;
+                        var height = windowRect.Bottom - windowRect.Top;
+                        WindowsExternal.LeftMouseClick(windowRect.Left + width / 2, windowRect.Top + height / 20 * 9);
+                    }
+                    catch
+                    {
+
+                    }
+
                 }
             }
 
