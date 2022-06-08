@@ -170,13 +170,13 @@ namespace MapAssist
                         }
                     };
 
-                globalHook.MouseMove += (sender, args) =>
-                {
-                    if (overlay != null)
-                    {
-                        overlay.MouseMoveHandler(sender, args);
-                    }
-                };
+                //globalHook.MouseMove += (sender, args) =>
+                //{
+                //    if (overlay != null)
+                //    {
+                //        overlay.MouseMoveHandler(sender, args);
+                //    }
+                //};
 
                 configEditor = new ConfigEditor();
                 backWorkOverlay.DoWork += new DoWorkEventHandler(RunOverlay);

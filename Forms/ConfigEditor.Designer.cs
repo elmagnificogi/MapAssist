@@ -48,6 +48,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabDrawing = new System.Windows.Forms.TabControl();
             this.tabIcon = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.iconOpacity = new System.Windows.Forms.TrackBar();
             this.lblIconOpacityValue = new System.Windows.Forms.Label();
             this.btnIconColor = new System.Windows.Forms.Button();
@@ -258,7 +259,7 @@
             this.txtEscKey = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxAuthorizedWindowTitle.SuspendLayout();
@@ -524,6 +525,16 @@
             this.tabIcon.TabIndex = 0;
             this.tabIcon.Text = "图标";
             this.tabIcon.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(8, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "透明度";
             // 
             // iconOpacity
             // 
@@ -946,7 +957,7 @@
             // 
             // txtMapPositionsKey
             // 
-            this.txtMapPositionsKey.Location = new System.Drawing.Point(160, 69);
+            this.txtMapPositionsKey.Location = new System.Drawing.Point(160, 87);
             this.txtMapPositionsKey.MaxLength = 1;
             this.txtMapPositionsKey.Name = "txtMapPositionsKey";
             this.txtMapPositionsKey.Size = new System.Drawing.Size(94, 21);
@@ -990,6 +1001,7 @@
             // 
             this.grpHotkeys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpHotkeys.Controls.Add(this.label37);
             this.grpHotkeys.Controls.Add(this.label36);
             this.grpHotkeys.Controls.Add(this.label13);
             this.grpHotkeys.Controls.Add(this.txtCopyRoomKey);
@@ -1021,7 +1033,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(6, 172);
+            this.label36.Location = new System.Drawing.Point(6, 190);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(89, 12);
             this.label36.TabIndex = 29;
@@ -1030,7 +1042,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 74);
+            this.label13.Location = new System.Drawing.Point(6, 92);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 28;
@@ -1038,7 +1050,7 @@
             // 
             // txtCopyRoomKey
             // 
-            this.txtCopyRoomKey.Location = new System.Drawing.Point(160, 144);
+            this.txtCopyRoomKey.Location = new System.Drawing.Point(160, 162);
             this.txtCopyRoomKey.MaxLength = 1;
             this.txtCopyRoomKey.Name = "txtCopyRoomKey";
             this.txtCopyRoomKey.Size = new System.Drawing.Size(94, 21);
@@ -1049,7 +1061,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 147);
+            this.label33.Location = new System.Drawing.Point(6, 165);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(77, 12);
             this.label33.TabIndex = 26;
@@ -1058,7 +1070,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(154, 219);
+            this.label32.Location = new System.Drawing.Point(154, 237);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(209, 12);
             this.label32.TabIndex = 25;
@@ -1066,7 +1078,7 @@
             // 
             // roomNameTemplete
             // 
-            this.roomNameTemplete.Location = new System.Drawing.Point(267, 195);
+            this.roomNameTemplete.Location = new System.Drawing.Point(267, 213);
             this.roomNameTemplete.MaxLength = 20;
             this.roomNameTemplete.Name = "roomNameTemplete";
             this.roomNameTemplete.Size = new System.Drawing.Size(126, 21);
@@ -1077,7 +1089,7 @@
             // 
             // txtAddRoomKey
             // 
-            this.txtAddRoomKey.Location = new System.Drawing.Point(160, 194);
+            this.txtAddRoomKey.Location = new System.Drawing.Point(160, 212);
             this.txtAddRoomKey.MaxLength = 1;
             this.txtAddRoomKey.Name = "txtAddRoomKey";
             this.txtAddRoomKey.Size = new System.Drawing.Size(94, 21);
@@ -1088,7 +1100,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 197);
+            this.label31.Location = new System.Drawing.Point(6, 215);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(77, 12);
             this.label31.TabIndex = 22;
@@ -1096,7 +1108,7 @@
             // 
             // txtShareRoomKey
             // 
-            this.txtShareRoomKey.Location = new System.Drawing.Point(160, 169);
+            this.txtShareRoomKey.Location = new System.Drawing.Point(160, 187);
             this.txtShareRoomKey.MaxLength = 1;
             this.txtShareRoomKey.Name = "txtShareRoomKey";
             this.txtShareRoomKey.Size = new System.Drawing.Size(94, 21);
@@ -1106,7 +1118,7 @@
             // 
             // txtHideMapKey
             // 
-            this.txtHideMapKey.Location = new System.Drawing.Point(160, 44);
+            this.txtHideMapKey.Location = new System.Drawing.Point(160, 62);
             this.txtHideMapKey.MaxLength = 1;
             this.txtHideMapKey.Name = "txtHideMapKey";
             this.txtHideMapKey.Size = new System.Drawing.Size(94, 21);
@@ -1117,7 +1129,7 @@
             // lblHideMapKey
             // 
             this.lblHideMapKey.AutoSize = true;
-            this.lblHideMapKey.Location = new System.Drawing.Point(6, 47);
+            this.lblHideMapKey.Location = new System.Drawing.Point(6, 65);
             this.lblHideMapKey.Name = "lblHideMapKey";
             this.lblHideMapKey.Size = new System.Drawing.Size(53, 12);
             this.lblHideMapKey.TabIndex = 18;
@@ -1125,7 +1137,7 @@
             // 
             // txtZoomOutKey
             // 
-            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 119);
+            this.txtZoomOutKey.Location = new System.Drawing.Point(160, 137);
             this.txtZoomOutKey.MaxLength = 1;
             this.txtZoomOutKey.Name = "txtZoomOutKey";
             this.txtZoomOutKey.Size = new System.Drawing.Size(94, 21);
@@ -1135,7 +1147,7 @@
             // 
             // txtZoomInKey
             // 
-            this.txtZoomInKey.Location = new System.Drawing.Point(160, 94);
+            this.txtZoomInKey.Location = new System.Drawing.Point(160, 112);
             this.txtZoomInKey.MaxLength = 1;
             this.txtZoomInKey.Name = "txtZoomInKey";
             this.txtZoomInKey.Size = new System.Drawing.Size(94, 21);
@@ -1145,7 +1157,7 @@
             // 
             // txtToggleMapKey
             // 
-            this.txtToggleMapKey.Location = new System.Drawing.Point(160, 19);
+            this.txtToggleMapKey.Location = new System.Drawing.Point(160, 37);
             this.txtToggleMapKey.MaxLength = 1;
             this.txtToggleMapKey.Name = "txtToggleMapKey";
             this.txtToggleMapKey.Size = new System.Drawing.Size(94, 21);
@@ -1155,7 +1167,7 @@
             // 
             // txtExportItemsKey
             // 
-            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 243);
+            this.txtExportItemsKey.Location = new System.Drawing.Point(160, 261);
             this.txtExportItemsKey.MaxLength = 1;
             this.txtExportItemsKey.Name = "txtExportItemsKey";
             this.txtExportItemsKey.Size = new System.Drawing.Size(94, 21);
@@ -1167,7 +1179,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 122);
+            this.label15.Location = new System.Drawing.Point(6, 140);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(53, 12);
             this.label15.TabIndex = 11;
@@ -1176,7 +1188,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 97);
+            this.label14.Location = new System.Drawing.Point(6, 115);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 10;
@@ -1185,7 +1197,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 22);
+            this.label12.Location = new System.Drawing.Point(6, 40);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 12);
             this.label12.TabIndex = 8;
@@ -1194,7 +1206,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 246);
+            this.label22.Location = new System.Drawing.Point(3, 264);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(77, 12);
             this.label22.TabIndex = 17;
@@ -1203,7 +1215,7 @@
             // 
             // txtToggleConfigKey
             // 
-            this.txtToggleConfigKey.Location = new System.Drawing.Point(160, 180);
+            this.txtToggleConfigKey.Location = new System.Drawing.Point(160, 198);
             this.txtToggleConfigKey.MaxLength = 1;
             this.txtToggleConfigKey.Name = "txtToggleConfigKey";
             this.txtToggleConfigKey.Size = new System.Drawing.Size(94, 21);
@@ -3057,15 +3069,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label6
+            // label37
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(8, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "透明度";
+            this.label37.AutoSize = true;
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(93, 17);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(233, 12);
+            this.label37.TabIndex = 30;
+            this.label37.Text = "注意不要和游戏内以及其他软件快捷键冲突";
             // 
             // ConfigEditor
             // 
@@ -3380,5 +3392,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label37;
     }
 }
