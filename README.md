@@ -1,5 +1,9 @@
 # MapAssist 使用指南
 
+地图是开源且永久免费的，如果想赞助欢迎赞助我写的多开
+
+多开群:949152338
+
 
 
 ## 视频
@@ -66,13 +70,19 @@ https://www.bilibili.com/video/BV1jZ4y147Yx?share_source=copy_web
 
 #### 掉落声音
 
-修改掉落声音
+修改掉落声音，声音文件放在同目录下就行了
 
-![image-20220522162732168](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221627263.png)
+![image-20220608134553868](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202206081345894.png)
 
-声音文件放在同目录下就行了
+声音文件是wav格式，增加或者替换都可以
 
-![image-20220522162814230](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205221628263.png)
+![image-20220608134600691](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202206081346716.png)
+
+![image-20220608134512712](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202206081345745.png)
+
+
+
+
 
 
 
@@ -159,6 +169,10 @@ DC追踪功能，请根据需要自行选择
 
 #### 快捷键设置
 
+**不要和已有游戏快捷键冲突或者是某些其他软件的全局快捷键冲突**
+
+
+
 F8可以直接复制粘贴当前房间名和密码，在外面只需要`ctrl-v`粘贴就行了
 
 - 不需要的快捷键可以按下`Backspace`删除
@@ -207,17 +221,7 @@ F12仅复制当前房间名
 
 ## 游戏更新地图失效
 
-任何时候如果游戏更新了，但是地图失效了，可以通过替换`D2R.exe`，继续使用，等到更新了再同步战网更新就行了。
-
-```
-一.战网更新
-二.战网进一下游戏
-三.关游戏
-四.用旧版D2R.EXE替换新版D2R.EXE
-五.把旧版D2R.EXE发送快捷方式到桌面
-六.路径后面 添加 MOD指令
-七.进游戏开全图
-```
+请在频道内等待新版，**替换老客户端的方法已经失效了**
 
 
 
