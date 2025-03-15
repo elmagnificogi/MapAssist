@@ -221,13 +221,3 @@ F12仅复制当前房间名
 ## 游戏更新地图失效
 
 请在频道内等待新版，**替换老客户端的方法已经失效了**
-
-
-
-## 交流
-
-暗黑2社区，请使用手机QQ扫码加入
-
-> https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1Sfn6V&appChannel=share&businessType=9&from=246610&biz=ka
-
-![community](http://img.elmagnifico.tech:9514/static/upload/elmagnifico/202205151608035.png)
