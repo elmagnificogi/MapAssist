@@ -24,13 +24,6 @@ https://www.bilibili.com/video/BV1jZ4y147Yx?share_source=copy_web
 -  下载速度过慢，请将文件转发给自己下载，可以满速
 
 
-
-后续更新会在我的频道同步
-
-> https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=udWIV&appChannel=share&businessType=7&from=246610&biz=ka
-
-
-
 ## 启动
 
 打开MapAssist.exe
