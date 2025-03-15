@@ -892,7 +892,8 @@ namespace MapAssist.Helpers
                 if (superUniques.Count() > 0) return superUniques;
 
                 return new (UnitMonster, string)[] { };
-            };
+            }
+            ;
 
             var activeMonsters = getActiveMonsters();
             if (activeMonsters.Length == 0) return;
@@ -1486,10 +1487,12 @@ namespace MapAssist.Helpers
                 Point _transform(Point point)
                 {
                     return point.Multiply(render.IconSize).Subtract(halfSize).Rotate(addRotation ? _rotateRadians : 0).Multiply(scaleWidth, heightScale);
-                };
+                }
+                ;
 
                 return _transform;
-            };
+            }
+            ;
 
             switch (render.IconShape)
             {
