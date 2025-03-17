@@ -516,7 +516,8 @@ namespace MapAssist.Integrations.ResurrectedTrade
                 _nextExportPid = context.ProcessId;
                 _nextExport = DateTime.Now + TimeSpan.FromSeconds(1);
                 return;
-            };
+            }
+            ;
             // Prevent posting more exports until the loop submitting the exports have adjusted the time.
             _nextExport = DateTime.MaxValue;
             // Update the last process id.
